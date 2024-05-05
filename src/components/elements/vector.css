@@ -1,0 +1,12 @@
+.vector {
+  backdrop-filter: blur(6px);
+  box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(-8deg, rgba(255, 255, 255, 0.5) 0%, rgba(68, 0, 214, 0.5) 100%);
+  transform: rotate(-15deg);
+}
+.vector-flag {
+  backdrop-filter: blur(6px);
+  box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(203deg, rgba(68, 0, 214, 0.44) 0%, rgba(255, 255, 255, 0.44) 100%),
+    rgba(0, 0, 0, 0.15);
+}

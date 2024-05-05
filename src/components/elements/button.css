@@ -1,0 +1,34 @@
+.button {
+  @apply inline-flex  cursor-pointer select-none items-center justify-center space-x-1 whitespace-nowrap rounded-full bg-main
+    px-[22px] py-3 text-[16px] text-black transition-colors duration-200 hover:bg-[#BCFF00] sm:px-6 sm:text-[15px];
+}
+.button.is-create {
+  @apply inline-flex w-[180px] cursor-pointer select-none items-center items-center justify-center  bg-main  font-AProM leading-none
+     text-[#161618] hover:bg-[#BCFF00] sm:h-[60px]  sm:w-[230px] sm:text-[20px];
+}
+.button.is-create:hover .create {
+  display: none;
+}
+.button.is-create:hover .arrow {
+  display: inline;
+}
+.button.is-white {
+  @apply inline-flex  w-[180px] cursor-pointer select-none items-center justify-center bg-white2 font-AProM leading-none  text-[#161618]
+     hover:bg-[#d4d4d4] sm:h-[60px] sm:w-[230px]  sm:text-[20px];
+}
+.button.is-white:hover .create {
+  display: none;
+}
+.button.is-white:hover .arrow {
+  display: inline;
+}
+.button.is-black {
+  @apply inline-flex w-[180px] cursor-pointer select-none items-center justify-center bg-black py-3 font-AProR leading-none text-white2
+     hover:bg-[#272727] sm:h-[60px] sm:w-[200px]  sm:text-[17px];
+}
+.button.is-black:hover .create {
+  display: none;
+}
+.button.is-black:hover .arrow {
+  display: inline;
+}

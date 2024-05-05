@@ -6,7 +6,7 @@ module.exports = {
   darkMode: false,
   purge: [
     './html/**/*.{html,js}',
-    './build/tournaments/html/**/*.{html,js}',
+    './build/imbapay/html/**/*.{html,js}',
     './dist/**/*.{html,js}',
     './apps/**/templates/**/*.html',
     './apps/**/templates/**/**/*.html'
@@ -14,7 +14,19 @@ module.exports = {
 
   theme: {
     fontFamily: {
-      AeonikProR: ['AeonikPro-R', 'sans-serif']
+      AProR: ['AeonikPro-R', 'sans-serif'],
+      AProM: ['AeonikPro-M', 'sans-serif'],
+      AProL: ['AeonikPro-L', 'sans-serif'],
+      AProBl: ['AeonikPro-Bl', 'sans-serif'],
+      AProBo: ['AeonikPro-Bo', 'sans-serif'],
+      ABl: ['Aeonik-Bl', 'sans-serif'],
+      AM: ['Aeonik-M', 'sans-serif'],
+      AR: ['Aeonik-R', 'sans-serif'],
+      SFProBo: ['SF-Pro-Bo', 'sans-serif'],
+      SFProM: ['SF-Pro-M', 'sans-serif'],
+      SFProR: ['SF-Pro-R', 'sans-serif'],
+      PJakarBo: ['PlusJakartaDisplay-Bo', 'sans-serif'],
+      PJakarR: ['PlusJakartaDisplay-R', 'sans-serif']
     },
     spacing: {
       sm: '0.5rem', // 8px
@@ -30,7 +42,7 @@ module.exports = {
         max: '320px'
       },
       xs: {
-        min: '320px'
+        min: '343px'
       },
       // => @media (min-width: 375px) { ... }
 
@@ -40,8 +52,10 @@ module.exports = {
       md: '768px',
       // => @media (min-width: 768px) { ... }
 
-      lg: '1320px'
+      lg: '1320px',
       // => @media (min-width: 1024px) { ... }
+      xl: '1500px'
+      // => @media (min-width: 1460px) { ... }
     },
     fontSize: {
       '2xs': [
@@ -100,6 +114,7 @@ module.exports = {
       white: '#e8ebe6',
       white2: '#fff',
       white10: 'rgba(255, 255, 255, 0.1)',
+      white15: 'rgba(255, 255, 255, 0.15)',
       red: '#a8200d',
       bg1: '#161617',
       bg3: '#27272a',
@@ -107,7 +122,11 @@ module.exports = {
       red2: '#ff2102'
     },
     fill: (theme) => theme('colors'),
-    extend: {}
+    extend: {
+      backgroundImage: {
+        bg1: "url('../html/home_page/img/bg.jpg')"
+      }
+    }
   },
   plugins: [require('@tailwindcss/typography')]
 }

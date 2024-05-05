@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'SF-Pro-B';
+  font-family: 'SF-Pro-Bo';
+  font-weight: 700;
   src: url('./fonts/SF-Pro-Display-Bold.otf');
 }
 @font-face {
@@ -35,15 +36,40 @@
   src: url('./fonts/AeonikPro-Black.ttf');
 }
 @font-face {
-  font-family: 'PlusJakartaDisplay-B';
+  font-family: 'Aeonik-Bl';
+  src: url('./fonts/Aeonik-Black.ttf');
+}
+@font-face {
+  font-family: 'Aeonik-M';
+  src: url('./fonts/Aeonik-Medium.ttf');
+}
+@font-face {
+  font-family: 'Aeonik-R';
+  src: url('./fonts/Aeonik-Regular.ttf');
+}
+@font-face {
+  font-family: 'PlusJakartaDisplay-Bo';
   src: url('./fonts/PlusJakartaDisplay-Bold.otf');
 }
 @font-face {
   font-family: 'PlusJakartaDisplay-R';
   src: url('./fonts/PlusJakartaDisplay-Regular.otf');
 }
+* {
+  padding: 0;
+  margin: 0;
+}
 
 body {
   background-color: black;
-  font-family: 'AeonikPro', sans-serif;
+  font-family: 'AeonikPro-R', sans-serif;
+  color: white;
+}
+
+.gradient-foto {
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.2) 0.95%, rgba(0, 0, 0, 0.2) 99%);
+}
+
+.fill:hover svg path {
+  fill: #d7ff00;
 }
