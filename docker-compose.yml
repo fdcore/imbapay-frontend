@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  app:
+    image: bcui
+    build: .
+    container_name: bcui
+    volumes:
+      - ./dist:/srv/app/dist:rw
+      - ../../apps:/srv/app/apps:rw
+      - ./src:/srv/app/src:rw
+      - ./html:/srv/app/html:rw
+      - ./static:/srv/app/static:rw
+      - ./tailwind.config.js:/srv/app/tailwind.config.js:rw
+    ports:
+      - "8080:8080"

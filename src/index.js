@@ -1,0 +1,13 @@
+import './style.css'
+import './blocks/containers.css'
+// import './blocks/funding_store.css'
+// import './blocks/helpers.css'
+import './blocks/menu.css'
+// import './blocks/profile.css'
+// import './blocks/footer.css'
+
+import './components/elements/button.css'
+import './components/elements/vector.css'
+import './components/elements/static-card.css'
+import './components/animate/animated.css'
+import './components/animate/slider.css'
