@@ -19,7 +19,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
+
     <title>IMBAPAY</title>
+    <link href="/style.css" rel="stylesheet" />
   </head>
 
   <body class="" x-data="{open: false}" x-bind:class="{'overflow-hidden' : open, 'block': !open}">
@@ -1319,7 +1321,7 @@
                 class="item w-full border-b-[1px] border-[#ffffff]/[0.1] pb-[22px] pt-[22px] font-AProR sm:border-none"
               >
                 <div
-                  class="flex cursor-pointer items-center justify-between gap-5 text-[16px] sm:text-[16px] sm:text-[24px]"
+                  class="flex cursor-pointer items-center justify-between gap-5 text-[16px] sm:text-[24px]"
                   @click="checked(3)"
                   :class="{'text-[#D7FF00]' : item == 3, ' text-white2': item != 3} "
                 >
@@ -1618,7 +1620,6 @@
         </div>
       </div>
     </div>
-    <script src="/bundle.js"></script>
 
     <script>
       const swiper2 = new Swiper('.swiper2', {
