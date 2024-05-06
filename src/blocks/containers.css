@@ -29,4 +29,8 @@
     padding-left: 12px;
     padding-right: 12px;
   }
+  .imba-container.plan {
+    width: 100%;
+    padding: 0;
+  }
 }

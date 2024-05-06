@@ -201,7 +201,7 @@
           </div>
 
           <img
-            class="bottom-0 h-[550px] w-full object-fill lg:absolute lg:right-[0px] lg:h-[600px] xl:right-0 xl:h-[800px] xl:w-[938px]"
+            class="bottom-0 h-[280px] w-full object-fill md:h-[530px] lg:absolute lg:right-[0px] lg:h-[600px] xl:right-0 xl:h-[800px] xl:w-[938px]"
             src="./img/img-top.png"
             alt=""
           />
@@ -214,7 +214,7 @@
       <div class="imba-container">
         <div class="relative">
           <div
-            class="ml:h-[580px] ml:rounded-[48px] relative h-[220px] w-full overflow-hidden rounded-[30px] bg-main sm:h-[350px] md:h-[480px] xl:h-[920px]"
+            class="ml:h-[580px] ml:rounded-[48px] relative h-[220px] w-full overflow-hidden rounded-[30px] bg-main sm:h-[350px] md:h-[580px] xl:h-[920px]"
           >
             <div
               class="swiper mySwiper z-0 mt-[20px] w-full overflow-x-hidden sm:mt-[50px] md:mt-[70px]"
@@ -232,7 +232,7 @@
           </div>
 
           <div
-            class="block-card-money plan mx-auto mt-5 flex grid-cols-2 grid-rows-2 flex-col items-center justify-around gap-5 md:grid xl:absolute xl:bottom-0 xl:left-[50%] xl:mt-0 xl:translate-x-[-50%] xl:grid-cols-4 xl:grid-rows-1"
+            class="block-card-money plan mx-auto mt-5 flex grid-cols-2 grid-rows-2 flex-col items-center justify-around gap-5 md:grid xl:absolute xl:bottom-0 xl:left-[50%] xl:mt-0 xl:flex xl:translate-x-[-50%] xl:flex-row"
           >
             <!-- items -->
             <div
@@ -390,13 +390,13 @@
           <div class="flex h-[30px] w-full items-center rounded-full bg-white10 md:hidden">
             <span
               class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-white"
-              @click="tab(1)"
+              @click="item = 1"
               :class="{'text-white2' : item == 1, ' text-grey  bg-transparent': item != 1} "
               >Personal Account</span
             >
             <span
               class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-main"
-              @click="tab(2)"
+              @click="item = 2"
               :class="{'text-[#D7FF00]' : item == 2, ' text-grey bg-transparent': item != 2} "
               >Corporate Account</span
             >
@@ -706,13 +706,19 @@
     </div>
     <!-- advantages -->
     <div class="relative w-full">
+      <span
+        class="absolute bottom-0 right-[0px] -z-10 block h-[210px] w-[210px] rounded-full bg-main blur-[160px] md:bottom-[50px] md:blur-[150px]"
+      ></span>
+      <img
+        class="ml:h-auto ml:w-auto absolute bottom-[-60px] right-0 h-[300px] w-[300px] md:h-[500px] md:w-[500px]"
+        src="./img/mask-line.png"
+        alt=""
+      />
       <div class="imba-container relative">
         <span
-          class="absolute left-[300px] top-[0px] block h-[180px] w-[180px] rounded-full bg-main blur-[140px]"
+          class="absolute top-[0px] block h-[180px] w-[180px] rounded-full bg-main blur-[140px] md:left-[300px]"
         ></span>
-        <span
-          class="absolute bottom-[50px] right-[300px] block h-[200px] w-[200px] rounded-full bg-main blur-[190px]"
-        ></span>
+
         <div class="mb-[60px] pt-[60px] sm:pb-[60px] sm:pt-[100px] lg:pt-[100px] xl:pt-[160px]">
           <h2
             class="text-center font-AProBo text-[36px] uppercase tracking-[-0.02em] sm:text-left sm:text-[50px] md:text-[76px]"
@@ -920,6 +926,13 @@
           delay: -1
         }
       })
+    </script>
+    <script>
+      function tabs() {
+        return {
+          item: 1
+        }
+      }
     </script>
   </body>
 </html>
