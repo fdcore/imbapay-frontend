@@ -16,6 +16,13 @@
     padding-right: 20px;
   }
 }
+@media (max-width: 1050px) {
+  .imba-container {
+    max-width: 760px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 @media (max-width: 767px) {
   .imba-container {
     max-width: 640px;
@@ -28,5 +35,8 @@
     max-width: 375px;
     padding-left: 12px;
     padding-right: 12px;
+  }
+  .plan {
+    padding: 0;
   }
 }
