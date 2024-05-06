@@ -1,15 +1,30 @@
 {
   "scripts": {
+<<<<<<< HEAD
     "start": "webpack serve --mode=development --open",
     "build": "webpack --env production"
+=======
+    "start": "npx tailwindcss -i ./src/style.css -o ./html/style.css -w",
+    "build": "npx tailwindcss -i ./src/style.css -o ./html/style.css -m",
+    "server": "cd html && npx http-server"
+>>>>>>> 6066cf6363c5a5d4a8092983681dce8287f60ae1
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
+<<<<<<< HEAD
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "mini-css-extract-plugin": "^2.6.0",
     "postcss": "^8.4.12",
+=======
+    "autoprefixer": "^10.4.19",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+>>>>>>> 6066cf6363c5a5d4a8092983681dce8287f60ae1
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.4.3",
     "prettier": "^3.2.5",
@@ -17,7 +32,11 @@
     "sass": "^1.50.1",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
+<<<<<<< HEAD
     "tailwindcss": "^3.0.24",
+=======
+    "tailwindcss": "^3.4.3",
+>>>>>>> 6066cf6363c5a5d4a8092983681dce8287f60ae1
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.8.1"

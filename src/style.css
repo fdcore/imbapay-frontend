@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+=======
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./blocks/containers.css";
+@import "./blocks/menu.css";
+@import "./components/elements/button.css";
+@import "./components/elements/vector.css";
+@import "./components/elements/static-card.css";
+@import "./components/animate/animated.css";
+@import "./components/animate/slider.css";
+>>>>>>> 6066cf6363c5a5d4a8092983681dce8287f60ae1
 
 @font-face {
   font-family: 'SF-Pro-Bo';

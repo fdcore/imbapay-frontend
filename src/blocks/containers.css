@@ -16,6 +16,7 @@
     padding-right: 20px;
   }
 }
+<<<<<<< HEAD
 @media (max-width: 1050px) {
   .imba-container {
     max-width: 760px;
@@ -23,6 +24,8 @@
     padding-right: 20px;
   }
 }
+=======
+>>>>>>> 6066cf6363c5a5d4a8092983681dce8287f60ae1
 @media (max-width: 767px) {
   .imba-container {
     max-width: 640px;
@@ -36,7 +39,10 @@
     padding-left: 12px;
     padding-right: 12px;
   }
+<<<<<<< HEAD
   .plan {
     padding: 0;
   }
+=======
+>>>>>>> 6066cf6363c5a5d4a8092983681dce8287f60ae1
 }
