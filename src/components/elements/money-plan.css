@@ -1,0 +1,9 @@
+.block-card-money {
+  width: calc(100% - 80px);
+}
+
+@media (max-width: 1499px) {
+  .block-card-money {
+    width: 100%;
+  }
+}
