@@ -1,14 +1,14 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@import "./blocks/containers.css";
-@import "./blocks/menu.css";
-@import "./components/elements/button.css";
-@import "./components/elements/vector.css";
-@import "./components/elements/static-card.css";
-@import "./components/animate/animated.css";
-@import "./components/animate/slider.css";
+@import './blocks/containers.css';
+@import './blocks/menu.css';
+@import './components/elements/button.css';
+@import './components/elements/vector.css';
+@import './components/elements/static-card.css';
+@import './components/animate/animated.css';
+@import './components/animate/slider.css';
 
 @font-face {
   font-family: 'SF-Pro-Bo';
@@ -80,4 +80,13 @@ body {
 
 .fill:hover svg path {
   fill: #d7ff00;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
 }
