@@ -2,8 +2,12 @@
   @apply inline-flex  cursor-pointer select-none items-center justify-center space-x-1 whitespace-nowrap rounded-full bg-main
     px-[22px] py-3 text-[16px] text-black transition-colors duration-200 hover:bg-[#BCFF00] sm:px-6 sm:text-[15px];
 }
+.button-mobile {
+  @apply inline-flex  cursor-pointer select-none items-center justify-center  gap-2 whitespace-nowrap rounded-full bg-main
+    px-4   py-2  transition-colors duration-200 hover:bg-[#BCFF00];
+}
 .button.is-create {
-  @apply inline-flex w-[180px] cursor-pointer select-none items-center items-center justify-center  bg-main  font-AProM leading-none
+  @apply inline-flex w-[180px] cursor-pointer select-none items-center  justify-center  bg-main  font-AProM leading-none
      text-[#161618] hover:bg-[#BCFF00] sm:h-[60px]  sm:w-[230px] sm:text-[20px];
 }
 .button.is-create:hover .create {
@@ -23,8 +27,16 @@
   display: inline;
 }
 .button.is-black {
-  @apply inline-flex w-[180px] cursor-pointer select-none items-center justify-center bg-black py-3 font-AProR leading-none text-white2
+  @apply inline-flex w-[180px] cursor-pointer select-none items-center justify-center bg-black py-3  leading-none text-white2
      hover:bg-[#272727] sm:h-[60px] sm:w-[200px]  sm:text-[17px];
+}
+.button.is-black-profile {
+  @apply inline-flex cursor-pointer select-none items-center justify-center gap-2 bg-white10 py-3  leading-none text-white2
+     hover:bg-[#272727];
+}
+.button-mobile.is-black-profile-mobile {
+  @apply inline-flex cursor-pointer select-none items-center justify-center gap-2  bg-white10 py-3  leading-none text-white2
+     hover:bg-[#272727];
 }
 .button.is-black:hover .create {
   display: none;

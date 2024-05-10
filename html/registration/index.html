@@ -20,7 +20,7 @@
     <link href="../style.css" rel="stylesheet" />
   </head>
 
-  <body x-data="form()">
+  <body x-data="form()" class="overflow-hidden">
     <!-- header -->
     <div class="relative w-full">
       <div class="header w-full ml:bg-[#161617]">
@@ -73,13 +73,13 @@
       </div>
     </div>
     <img
-      class="absolute right-0 top-0 -z-20 -rotate-90 ml:bottom-0 ml:top-auto ml:rotate-0"
+      class="absolute right-0 top-0 -z-20 w-full -rotate-90 md:max-w-[900px] ml:bottom-0 ml:top-auto ml:h-auto ml:rotate-0"
       src="./img/bg-right.png"
       alt=""
     />
-    <!-- <img class="absolute left-0 top-0 -z-20 hidden ml:block" src="./img/line.png" alt="" /> -->
+    <img class="absolute left-0 top-0 -z-20 hidden h-full ml:block" src="./img/line.png" alt="" />
     <div
-      class="absolute bottom-0 left-0 right-0 top-0 z-50 flex hidden h-full w-full items-end justify-center bg-[#444444]/[0.6] p-2 backdrop-blur-[10px] md:hidden"
+      class="absolute bottom-0 left-0 right-0 top-0 z-50 hidden h-full w-full items-end justify-center bg-[#444444]/[0.6] p-2 backdrop-blur-[10px] md:hidden"
     >
       <div
         class="relative mx-auto flex h-[230px] w-full flex-col justify-end rounded-[35px] bg-white2 p-6 pt-14 backdrop-blur-[150px]"

@@ -1,0 +1,29 @@
+.menu-profile.is-active {
+  font-family: 'AeonikPro-R';
+  color: #fff;
+}
+.menu-profile.is-active .spanicon {
+  background-color: #d7ff00;
+}
+.menu-profile.is-active > .spanicon > svg > path {
+  fill: black;
+}
+.menu-profile:hover > .spanicon > svg > path {
+  fill: black;
+}
+.spanicon-top:hover > span > svg > path {
+  fill: black;
+}
+
+.bell::before {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  background-color: #e74848;
+  z-index: 1;
+}
