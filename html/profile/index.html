@@ -17,24 +17,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
     <title>Profile</title>
     <link href="../style.css" rel="stylesheet" />
   </head>
 
-  <body class="overflow-hidden">
-    <div class="relative h-[100vh] w-full">
+  <body>
+    <div class="relative">
       <img
-        class="absolute right-0 top-0 -z-20 w-full -rotate-90 md:max-w-[900px] ml:bottom-0 ml:top-auto ml:h-auto ml:rotate-0"
+        class="fixed right-0 top-[-10px] -z-20 w-full -rotate-90 md:max-w-[900px] ml:bottom-0 ml:top-auto ml:h-auto ml:rotate-0"
         src="../img/bg-right.png"
         alt=""
       />
       <!-- bg-[#d7ff00]/[0.1] -->
-      <div class="profile-container">
+      <div class="profile-container h-[100vh]">
         <!-- footer-mobile -->
         <div
-          class="fixed bottom-0 left-[50%] w-[375px] translate-x-[-50%] p-1 sm:w-[640px] ml:hidden"
+          class="fixed bottom-0 left-[50%] z-50 w-[375px] translate-x-[-50%] p-1 sm:w-[640px] ml:hidden"
         >
           <div
             class="relative flex h-[70px] w-full justify-between rounded-[15px] bg-white10 backdrop-blur-[30px]"
@@ -86,7 +87,7 @@
           </div>
         </div>
         <div
-          class="mt-4 grid grid-cols-1 grid-rows-2 gap-4 ml:mt-0 ml:h-[100vh] ml:grid-cols-[218px_calc(100%_-_248px)] ml:grid-rows-[136px_calc(100vh_-_176px)] ml:gap-0 ml:gap-x-[30px]"
+          class="mt-4 grid grid-cols-1 grid-rows-[170px_auto] gap-4 ml:mt-0 ml:grid-cols-[218px_calc(100%_-_248px)] ml:grid-rows-[136px_minmax(200px,650px)] ml:gap-0 ml:gap-x-[30px]"
         >
           <!-- logo -->
           <div class="hidden h-full w-full items-center ml:flex">
@@ -581,13 +582,13 @@
             </ul>
           </div>
           <!-- content -->
-          <div class="grid h-full w-full grid-cols-2 grid-rows-[160px_auto] gap-[10px]">
+          <div class="grid w-full gap-[10px] ml:grid-cols-2 ml:grid-rows-[160px_auto]">
             <!-- cards -->
-            <div class="widthcardBlock col-span-2 flex h-full w-full">
+            <div class="widthcardBlock hidden h-full w-full ml:col-span-2 ml:flex">
               <!-- card 0-->
-              <div class="card relative h-full">
+              <div class="card relative h-full hover:z-50">
                 <div
-                  class="flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#4ec2ec] p-6 backdrop-blur-[20px]"
+                  class="item-card flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#4ec2ec] p-6 backdrop-blur-[20px]"
                 >
                   <img
                     class="absolute bottom-0 right-0"
@@ -623,9 +624,9 @@
               </div>
 
               <!-- card 1-->
-              <div class="card w- relative h-full">
+              <div class="card relative h-full hover:z-50">
                 <div
-                  class="flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#ec4e70] p-6 backdrop-blur-[20px]"
+                  class="item-card flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#ec4e70] p-6 backdrop-blur-[20px]"
                 >
                   <img
                     class="absolute bottom-0 right-0"
@@ -660,9 +661,9 @@
                 </div>
               </div>
               <!-- card 1-->
-              <div class="card relative h-full">
+              <div class="card relative h-full hover:z-50">
                 <div
-                  class="flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#6b4eec] p-6 backdrop-blur-[20px]"
+                  class="item-card flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#6b4eec] p-6 backdrop-blur-[20px]"
                 >
                   <img
                     class="absolute bottom-0 right-0"
@@ -697,9 +698,9 @@
                 </div>
               </div>
               <!-- card 1-->
-              <div class="card relative h-full">
+              <div class="card relative h-full hover:z-50">
                 <div
-                  class="flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#4ee1ec] p-6 backdrop-blur-[20px]"
+                  class="item-card flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#4ee1ec] p-6 backdrop-blur-[20px]"
                 >
                   <img
                     class="absolute bottom-0 right-0"
@@ -737,7 +738,7 @@
               <!-- card add -->
               <div class="card relative h-full">
                 <div
-                  class="flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-white10 p-6 backdrop-blur-[20px]"
+                  class="item-card flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-white10 p-6 backdrop-blur-[20px]"
                 >
                   <a
                     href="/"
@@ -760,8 +761,191 @@
                 </div>
               </div>
             </div>
+            <div class="swiper mySwiperCard w-[375px] sm:w-[610px] md:w-[640px] ml:hidden">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <!-- card 0-->
+                <div class="swiper-slide h-full w-[202px]">
+                  <div
+                    class="item-card-mobile flex w-[202px] flex-col justify-between gap-[100px] rounded-[35px] bg-[#4ec2ec] p-4 backdrop-blur-[20px]"
+                  >
+                    <img
+                      class="absolute bottom-0 right-0"
+                      src="../img/profile/card-bg/Group.png"
+                      alt=""
+                    />
+                    <div class="flex items-center gap-4">
+                      <span class="w-[54px]">
+                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                      </span>
+                      <div class="flex flex-col">
+                        <span class="font-AProM text-[22px] uppercase text-black">USD</span>
+                        <span class="flex text-[14px] text-black">
+                          <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                              fill="black"
+                              style="fill: black; fill-opacity: 1"
+                            />
+                          </svg>
+                          <span class="">...2587 3443</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="font-AProBo text-[30px] text-black">267,93</div>
+                  </div>
+                </div>
+
+                <!-- card 1-->
+                <div class="swiper-slide h-full w-[202px]">
+                  <div
+                    class="item-card-mobile flex w-[202px] flex-col justify-between gap-[100px] rounded-[35px] bg-[#ec4e70] p-4 backdrop-blur-[20px]"
+                  >
+                    <img
+                      class="absolute bottom-0 right-0"
+                      src="../img/profile/card-bg/Group.png"
+                      alt=""
+                    />
+                    <div class="flex items-center gap-4">
+                      <span class="w-[54px]">
+                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                      </span>
+                      <div class="flex flex-col">
+                        <span class="font-AProM text-[22px] uppercase text-black">USD</span>
+                        <span class="flex text-[14px] text-black">
+                          <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                              fill="black"
+                              style="fill: black; fill-opacity: 1"
+                            />
+                          </svg>
+                          <span class="">...2587 3443</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="font-AProBo text-[30px] text-black">267,93</div>
+                  </div>
+                </div>
+                <!-- card 1-->
+                <div class="swiper-slide h-full w-[202px]">
+                  <div
+                    class="item-card-mobile flex w-[202px] flex-col justify-between gap-[100px] rounded-[35px] bg-[#6b4eec] p-4 backdrop-blur-[20px]"
+                  >
+                    <img
+                      class="absolute bottom-0 right-0"
+                      src="../img/profile/card-bg/Group.png"
+                      alt=""
+                    />
+                    <div class="flex items-center gap-4">
+                      <span class="w-[54px]">
+                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                      </span>
+                      <div class="flex flex-col">
+                        <span class="font-AProM text-[22px] uppercase text-black">USD</span>
+                        <span class="flex text-[14px] text-black">
+                          <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                              fill="black"
+                              style="fill: black; fill-opacity: 1"
+                            />
+                          </svg>
+                          <span class="">...2587 3443</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="font-AProBo text-[30px] text-black">267,93</div>
+                  </div>
+                </div>
+                <!-- card 1-->
+                <div class="swiper-slide h-full w-[202px]">
+                  <div
+                    class="item-card-mobile flex w-[202px] flex-col justify-between gap-[100px] rounded-[35px] bg-[#4ee1ec] p-4 backdrop-blur-[20px]"
+                  >
+                    <img
+                      class="fixed bottom-0 right-0"
+                      src="../img/profile/card-bg/Group.png"
+                      alt=""
+                    />
+                    <div class="flex items-center gap-4">
+                      <span class="w-[54px]">
+                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                      </span>
+                      <div class="flex flex-col">
+                        <span class="font-AProM text-[22px] uppercase text-black">USD</span>
+                        <span class="flex text-[14px] text-black">
+                          <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                              fill="black"
+                              style="fill: black; fill-opacity: 1"
+                            />
+                          </svg>
+                          <span class="">...2587 3443</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="font-AProBo text-[30px] text-black">267,93</div>
+                  </div>
+                </div>
+
+                <!-- card add -->
+                <div class="swiper-slide h-full w-[202px]">
+                  <div
+                    class="item-card-mobile flex h-full w-[202px] flex-col justify-between gap-[100px] rounded-[35px] bg-white10 p-4 backdrop-blur-[20px]"
+                  >
+                    <a
+                      href="/"
+                      class="group flex h-[54px] w-[54px] items-center justify-center rounded-full bg-white10 transition-colors duration-300 hover:bg-grey"
+                    >
+                      <svg
+                        width="19"
+                        height="18"
+                        viewBox="0 0 19 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.4642 8.35713H10.3924V1.28613H9.10691V8.35713H2.03516V9.64338H9.10691V16.7144H10.3924V9.64338H17.4642V8.35713Z"
+                          class="fill-white group-hover:fill-[#b3ff00]"
+                        />
+                      </svg>
+                    </a>
+                    <div class="font-AProM text-[16px] text-white2">Open an account</div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- transactions -->
-            <div class="col-span-1 row-span-1 overflow-y-hidden bg-black">
+            <div
+              class="order-3 row-span-1 max-h-[650px] w-[375px] rounded-[35px] bg-black md:w-auto ml:order-2 ml:col-span-1"
+            >
               <div class="flex h-full w-full flex-col gap-4 rounded-[35px] bg-white10 p-6">
                 <div class="flex items-start justify-between">
                   <h3 class="w-full font-AProM text-[22px] text-white2">Transactions</h3>
@@ -787,8 +971,8 @@
                     />
                   </div>
                 </div>
-                <div class="overflow-y-hidden rounded-[25px]">
-                  <ul class="">
+                <div class="overflow-hidden rounded-[25px]">
+                  <ul class="w-full">
                     <li
                       class="mb-2 w-full rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]"
                     >
@@ -1350,7 +1534,9 @@
               </div>
             </div>
             <!-- recent -->
-            <div class="col-span-1 row-span-1 flex flex-col gap-2">
+            <div
+              class="order-2 row-span-1 flex max-h-[650px] flex-col gap-2 ml:order-3 ml:col-span-1"
+            >
               <div class="rounded-[35px] bg-black">
                 <div class="rounded-[35px] bg-white10 p-6">
                   <h3 class="w-full font-AProM text-[22px] text-white2">Recent</h3>
@@ -1390,7 +1576,7 @@
               </div>
               <div class="relative overflow-hidden rounded-[35px] bg-black/[0.9]">
                 <div
-                  class="absolute right-[50px] top-[-30%] h-[300px] w-[300px] rounded-full bg-white/[0.06] blur-[50px]"
+                  class="absolute right-[50px] top-[-30%] h-[300px] w-[300px] rounded-[50%_/_0_0_100%_100%] bg-white/[0.06] blur-[50px]"
                 ></div>
                 <div class="rounded-t-[35px] bg-white10 px-6 pb-8 pt-6">
                   <h3 class="w-full font-AProM text-[22px] text-white2">Exchange rate</h3>
@@ -1419,8 +1605,8 @@
                     >
                   </div>
                 </div>
-                <div class="h-[300px] overflow-hidden rounded-b-[35px] bg-white10">
-                  <div id="curve_chart" style="width: 100%; height: 300px; background: red"></div>
+                <div class="relative flex h-[300px] w-full items-end rounded-b-[35px] bg-white10">
+                  <canvas class="absolute bottom-0 rounded-[35px]" id="myChart"></canvas>
                 </div>
               </div>
             </div>
@@ -1429,41 +1615,130 @@
       </div>
     </div>
     <script>
+      var swiper = new Swiper('.mySwiperCard', {
+        enabled: true,
+        // slidesPerView: 1,
+        slidesPerView: 'auto',
+        spaceBetween: 30
+      })
+    </script>
+    <script>
       const card = document.querySelectorAll('.card')
       const widthCard = document.querySelector('.widthcardBlock').offsetWidth
       const cardWidth = document.querySelector('.card').offsetWidth
-      console.log(card.length)
-      console.log(widthCard)
-      console.log(cardWidth)
-      console.log(cardWidth * card.length)
       let mr = Math.round((-1 * (card.length * cardWidth - widthCard)) / (card.length - 1))
-      console.log(mr)
       card.forEach((item) => {
         item.style.marginRight = mr + 'px'
+        item.addEventListener('mousemove', rotate)
+        item.addEventListener('mouseout', stopRotate)
+      })
+
+      // animate
+      function rotate(event) {
+        const itemCard = this.querySelector('.item-card')
+        const halfHeight = itemCard.offsetHeight / 2
+        const halfWidth = itemCard.offsetWidth / 2
+        itemCard.style.transform = `rotateX(${-(event.offsetY - halfHeight) / 10}deg) rotateY(${(event.offsetX - halfWidth) / 10}deg)`
+      }
+
+      function stopRotate(event) {
+        const itemCard = this.querySelector('.item-card')
+        itemCard.style.transform = 'rotate(0)'
+      }
+      // animate mobile card
+      const swiperSlide = document.querySelectorAll('.swiper-slide')
+      function rotateMob(event) {
+        const itemCard = this.querySelector('.item-card-mobile')
+        const halfHeight = itemCard.offsetHeight / 2
+        const halfWidth = itemCard.offsetWidth / 2
+        itemCard.style.transform = `rotateX(${-(event.offsetY - halfHeight) / 10}deg) rotateY(${(event.offsetX - halfWidth) / 10}deg)`
+      }
+      function stopRotateMob(event) {
+        const itemCard = this.querySelector('.item-card-mobile')
+        itemCard.style.transform = 'rotate(0)'
+      }
+      swiperSlide.forEach((item) => {
+        item.addEventListener('mousemove', rotateMob)
+        item.addEventListener('mouseout', stopRotateMob)
       })
     </script>
-    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', { packages: ['corechart'] })
-      google.charts.setOnLoadCallback(drawChart)
+    <script>
+      var ctx = document.getElementById('myChart').getContext('2d')
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['', ''],
-          ['2004', 1000],
-          ['2005', 1170],
-          ['2006', 660],
-          ['2007', 1030]
-        ])
+      // Создание градиента
+      var gradient = ctx.createLinearGradient(0, 0, 0, 400)
+      gradient.addColorStop(0, 'rgba(215, 255, 0,0.3)')
+      gradient.addColorStop(1, 'rgb(0,0,0,00)')
 
-        var options = {
-          curveType: 'function'
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+          datasets: [
+            {
+              data: [5, 20, 30, 5, 15, 60, 55.5, 25, 70, 20, 55, 36, 33.3, 77],
+              fill: true,
+              borderColor: '#434F02',
+              backgroundColor: gradient,
+              tension: 0.3,
+              hitRadius: 10,
+              beginAtZero: true,
+              pointBackgroundColor: 'rgba(215,255,0,1)',
+              pointBorderColor: 'transparent', // Цвет границы точек
+              pointBorderWidth: 2, // Ширина границы точек
+              pointRadius: 1, // Радиус точек
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: 'rgba(215,255,0,1)',
+              pointHoverBorderWidth: 10,
+              pointHoverBorderColor: 'rgba(215,255,0,0.3)' // Радиус точек при наведении
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          responsive: true,
+          scales: {
+            x: {
+              display: false
+            },
+            y: {
+              display: false,
+              suggestedMax: 100 // Задать максимальное значение на оси Y
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              mode: 'index',
+              callbacks: {
+                label: function (context) {
+                  return context.parsed.y
+                },
+                title: function () {
+                  return // Убираем отображение заголовка
+                }
+              },
+              custom: function (tooltip) {
+                if (!tooltip.dataPoints) return
+                tooltip.displayColors = false // Убираем легенду из подсказки
+              },
+              enabled: true,
+              backgroundColor: 'rgb(215, 255, 0,1)',
+              pointStyle: 'circle',
+              cornerRadius: 5,
+              bodyColor: 'black',
+              bodyFontFamily: 'Aeonik-M',
+              bodyFontSize: 12,
+
+              xAlign: 'center',
+              yAlign: 'bottom',
+              titleFontSize: 20
+            }
+          }
         }
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'))
-
-        chart.draw(data, options)
-      }
-    </script> -->
+      })
+    </script>
   </body>
 </html>

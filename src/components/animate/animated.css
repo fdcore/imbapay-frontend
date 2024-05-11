@@ -1,1 +1,15 @@
+.card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.swiper-slide {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
 
+.item-card {
+  transition: transform 0.2s;
+}
+.item-card-mobile {
+  transition: transform 0.2s;
+}
