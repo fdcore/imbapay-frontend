@@ -18,7 +18,7 @@
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
-   <title>Issue an invoise</title>
+   <title>Internal Transfers</title>
    <link href="../style.css" rel="stylesheet" />
 </head>
 <!-- class="overflow-hidden" -->
@@ -751,364 +751,827 @@
                         <span>
                            Issue an Invoice
                         </span>
-                        <button class="button w-[125px] h-[56px]">
-                           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                 d="M16.7142 8.35713H9.64241V1.28613H8.35691V8.35713H1.28516V9.64338H8.35691V16.7144H9.64241V9.64338H16.7142V8.35713Z"
-                                 fill="black" style="fill:black;fill-opacity:1;" />
-                           </svg>
-                           <span class="mt-1 font-AProM text-[16px]">Create</span>
-                        </button>
+
                      </div>
                   </div>
-                  <div class="grid grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 gap-2 px-4 md:p-0 mb-[10px]">
-                     <div class="rounded-[15px] lg:rounded-[35px] relative p-4 lg:p-6 bg-white10 flex flex-col">
-                        <div class="w-full h-full absolute rounded-[15px] left-0 top-0 -z-10 backdrop-blur-[20px]">
-                        </div>
-                        <span class="text-grey">Invoices Issued</span>
-                        <span class="text-[30px] text-white2 font-AProM">30</span>
-                     </div>
-                     <div class="rounded-[15px] lg:rounded-[35px]  relative p-4 lg:p-6 bg-white10 flex flex-col">
-                        <div class="w-full h-full absolute rounded-[15px] left-0 top-0  -z-10 backdrop-blur-[20px]">
-                        </div>
-                        <span class="text-grey">Successfully Paid</span>
-                        <span class="text-[30px] text-white2 font-AProM">25 822.80</span>
-                     </div>
-                     <div class="rounded-[15px] lg:rounded-[35px]  relative p-4 lg:p-6 bg-white10 flex flex-col">
-                        <div class="w-full h-full absolute rounded-[15px]  left-0 top-0 -z-10 backdrop-blur-[20px]">
-                        </div>
-                        <span class="text-grey">Successful Invoices</span>
-                        <span class="text-[30px] text-white2 font-AProM">18</span>
-                     </div>
-                     <div class="rounded-[15px] lg:rounded-[35px]  relative p-4 lg:p-6 bg-white10 flex flex-col">
-                        <div class="w-full h-full absolute rounded-[15px]  left-0 top-0 -z-10 backdrop-blur-[20px]">
-                        </div>
-                        <span class="text-grey">Awaiting Payment</span>
-                        <span class="text-[30px] text-white2 font-AProM">0</span>
-                     </div>
 
-                  </div>
-                  <div class="relative ml:bg-white10 overflow-hidden px-4  ml:rounded-[35px]  ml:m-0 pb-[150px] md:p-0">
-                     <div class="hidden ml:block absolute rounded-[25px] -z-10 h-full w-full backdrop-blur-[15px]">
-                     </div>
-                     <div class=" w-full h-full  ml:p-6 ">
-                        <div class="flex   justify-between ml:mb-6 mb-[22px]">
-                           <h3 class="text-[22px] font-AProM ">
-                              Invoice History
-                           </h3>
-                           <span
-                              class=" text-grey text-[12px] cursor-pointer hover:text-main/[0.5] flex items-center gap-1">
-                              Sort by
-                              <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                    fill="#9B9B9B"
-                                    style="fill:#9B9B9B;fill:color(display-p3 0.6078 0.6078 0.6078);fill-opacity:1;" />
-                              </svg>
-                           </span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                           <!-- items -->
-                           <div
-                              class="relative  rounded-[15px] ml:rounded-none ml:bg-transparent bg-white10 w-full p-4 flex items-center justify-between">
-                              <div class="absolute top-0 left-0 -z-10 w-full h-full backdrop-blur-[20px]"></div>
-                              <div class="flex items-center gap-2">
-                                 <span
-                                    class="w-[44px] ml:w-[50px] ml:h-[50px] ml:bg-white10 h-[44px] rounded-full bg-bg3 flex items-center justify-center">
-                                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
-                                          fill="white" style="fill:white;fill-opacity:1;" />
-                                    </svg>
-                                 </span>
-                                 <div class="font-AProM flex flex-col">
-                                    <span class=" text-white2 text-[14px] ml:text-[16px]">International Transfer
-                                       Invoice</span>
-                                    <span class="text-[14px] text-main ml:hidden">25 822.80 UAH</span>
-                                    <span class="font-AProR text-grey text-[12px] ml:text-[14px]">03.04.2024</span>
+
+                  <div class=" grid xl:grid-cols-2 gap-[10px] grid-cols-1">
+                     <div class="relative ml:bg-white10 rounded-[25px] ml:rounded-[35px]">
+                        <div class="absolute hidden ml:block -z-10 h-full w-full backdrop-blur-[15px]"></div>
+                        <div class="p-4 ml:p-6">
+                           <form action="" class="w-full flex flex-col gap-4">
+                              <div class="w-full flex flex-col gap-1">
+                                 <label class="text-grey text-[14px]" for="amount">Top-up amount</label>
+                                 <div class="relative">
+                                    <input
+                                       class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[64px] md:h-[75px]  rounded-[20px] pl-5 pr-[140px] text-[18px] ml:text-[22px] text-white2 border-[2px] border-white/[0.3]"
+                                       type="number" id="amount" placeholder="Select amount">
+                                    <div class="absolute top-[20px] md:top-[25px]  right-5 group  ">
+                                       <div class="flex items-center gap-1">
+                                          <img src="../img/profile/flag/use.svg" alt="">
+                                          <span class="md:text-[22px] font-AProM leading-none mt-1">EN</span>
+                                          <span>
+                                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                   d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                   fill="white" style="fill:white;fill-opacity:1;" />
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div class="hidden group-hover:flex mt-4  flex-col gap-2">
+                                          <div class="flex items-center gap-1">
+                                             <img src="../img/profile/flag/use.svg" alt="">
+                                             <span class="md:text-[22px] font-AProM leading-none mt-1">RU</span>
+                                             <span>
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </svg>
+                                             </span>
+                                          </div>
+                                          <div class="flex items-center gap-1">
+                                             <img src="../img/profile/flag/use.svg" alt="">
+                                             <span class="md:text-[22px] font-AProM leading-none mt-1">UK</span>
+                                             <span>
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </svg>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
                                  </div>
                               </div>
-                              <div class="flex flex-col items-end justify-center gap-1">
-                                 <span class=" text-main ml:block ml:text-white2 hidden">25 822.80 UAH</span>
-                                 <div class="flex gap-1 items-center">
-                                    <span
-                                       class="w-8 h-8 ml:hidden rounded-full bg-[rgba(215,255,0,0.2)] flex items-center justify-center">
+                              <div class="w-full flex flex-col gap-1">
+                                 <label class="text-grey text-[14px]" for="method">Payment method</label>
+                                 <div class="relative">
+                                    <input
+                                       class="bg-transparent placeholder:text-[16px] font-AProBo w-full h-[64px] md:h-[75px] rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 border-[2px] border-white/[0.3]"
+                                       type="number" id="method" placeholder="" disabled>
+                                    <div class="absolute flex items-center gap-2 top-0 h-full left-[20px]">
+                                       <img src="../img/profile/flag/use.svg" alt="">
+                                       <span>UAH balance</span>
+                                    </div>
 
-                                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd"
-                                             d="M18 4.1546L7.02187 14.897C6.62567 15.2846 5.98972 15.2761 5.6041 14.8779L0 9.09068L1.12967 7.9665L6.3334 13.3402L16.9006 3L18 4.1546Z"
-                                             fill="#D7FF00"
-                                             style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-                                       </svg>
-                                    </span>
+                                    <button
+                                       class="absolute hover:text-main text-grey hover:border-main transition-colors duration-300 top-[50%] translate-y-[-50%] right-[20px] border-[1px] border-white/[0.5] h-8 px-4 rounded-full">
+                                       Change
+                                    </button>
+                                 </div>
+                              </div>
+                              <div class="w-full flex flex-col gap-1">
+                                 <label class="text-grey text-[14px]" for="method">Recipient</label>
+
+                                 <div class="relative">
+                                    <input
+                                       class="bg-transparent  placeholder:text-[16px] placeholder:font-AProR font-AProBo w-full h-[64px] md:h-[75px] rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 border-[2px] border-white/[0.3]"
+                                       type="number" id="method" placeholder="Recipient's name, email, phone number">
                                     <span
-                                       class="w-6 h-6 rounded-full hidden ml:flex items-center justify-center bg-main">
-                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <g clip-path="url(#clip0_437_58798)">
-                                             <path
-                                                d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
-                                                fill="#D7FF00"
-                                                style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                                       class="absolute cursor-pointer hover:bg-main text-black top-[50%] translate-y-[-50%] right-6  w-4 h-4 rounded-full bg-grey flex items-center justify-center">
+                                       x
+                                    </span>
+                                 </div>
+
+                                 <div class="">
+                                    <!-- error -->
+                                    <div class="flex items-center text-red2 text-[14px]">
+                                       <span>
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M18 8.7789L10.9251 15.7843C10.5279 16.1776 9.88544 16.1689 9.49898 15.7651L6 12.1088L6.75311 11.3504L10.2223 14.9756L17.2671 8L18 8.7789Z"
-                                                fill="black" style="fill:black;fill-opacity:1;" />
-                                          </g>
-                                          <defs>
-                                             <clipPath id="clip0_437_58798">
-                                                <rect width="24" height="24" fill="white"
-                                                   style="fill:white;fill-opacity:1;" />
-                                             </clipPath>
-                                          </defs>
-                                       </svg>
-                                    </span>
-                                    <span class="hidden ml:inline-block text-[14px] text-main">Paid</span>
+                                                d="M1.14258 7.99893C1.14258 11.7703 4.22858 14.8556 7.99991 14.8556C11.7712 14.8556 14.8572 11.7703 14.8572 7.9996C14.8572 4.22627 11.7712 1.1416 7.99991 1.1416C4.22858 1.1416 1.14258 4.22627 1.14258 7.99893ZM2.28591 7.99893C2.28591 4.8556 4.85724 2.28427 7.99991 2.28427C11.1426 2.28427 13.7146 4.8556 13.7146 7.99893C13.7146 11.1416 11.1426 13.7129 7.99991 13.7129C4.85724 13.7129 2.28591 11.1416 2.28591 7.99893ZM8.57125 4.57094H7.42858V9.14293H8.57125V4.57094ZM7.99991 12.0003C8.11447 12.0035 8.2285 11.9837 8.33527 11.942C8.44204 11.9004 8.53938 11.8378 8.62153 11.7579C8.70369 11.678 8.76899 11.5824 8.81358 11.4769C8.85817 11.3713 8.88115 11.2579 8.88115 11.1433C8.88115 11.0287 8.85817 10.9152 8.81358 10.8097C8.76899 10.7041 8.70369 10.6085 8.62153 10.5286C8.53938 10.4488 8.44204 10.3861 8.33527 10.3445C8.2285 10.3029 8.11447 10.2831 7.99991 10.2863C7.77856 10.295 7.56918 10.3891 7.41565 10.5488C7.26213 10.7085 7.17638 10.9214 7.17638 11.1429C7.17638 11.3645 7.26213 11.5774 7.41565 11.7371C7.56918 11.8968 7.77856 11.9915 7.99991 12.0003Z"
+                                                fill="#FF2102"
+                                                style="fill:#FF2102;fill:color(display-p3 1.0000 0.1299 0.0083);fill-opacity:1;" />
+                                          </svg>
+                                       </span>
+                                       <span class="mt-[2px]">Recipient not found</span>
+                                    </div>
+                                    <!-- ok -->
+                                    <div class="">
+                                       <div
+                                          class="rounded-[20px] cursor-pointer tran hover:bg-bg3 px-4 py-3 flex items-center">
+                                          <span
+                                             class=" flex justify-center items-center mr-2 w-[50px] h-[50px] rounded-full bg-white/[0.04]">
+                                             DM
+                                          </span>
+                                          <div class="flex flex-col">
+                                             <span class="font-AProM text-[14px] ml:text-[16px]">Dmytro</span>
+                                             <span class="text-grey text-[12px] ml:text-[14px]">Card in UAH ending in
+                                                1831</span>
+                                          </div>
+                                       </div>
+                                       <div
+                                          class="rounded-[20px] cursor-pointer hover:bg-bg3 px-4 py-3 flex items-center">
+                                          <span
+                                             class=" flex justify-center items-center mr-2 w-[50px] h-[50px] rounded-full bg-white/[0.04]">
+                                             DM
+                                          </span>
+                                          <div class="flex flex-col">
+                                             <span class="font-AProM text-[14px] ml:text-[16px]">Dmytro</span>
+                                             <span class="text-grey text-[12px] ml:text-[14px]">Card in UAH ending in
+                                                1831</span>
+                                          </div>
+                                       </div>
+                                    </div>
                                  </div>
+                              </div>
+
+                              <div class="w-full flex flex-col gap-1">
+                                 <label class="text-grey text-[14px]" for="currency">Top-up amount</label>
+                                 <div class="relative">
+                                    <input
+                                       class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[64px] md:h-[75px] rounded-[20px] pl-5 pr-[140px] text-[18px] ml:text-[22px] text-white2 border-[2px] border-white/[0.3]"
+                                       type="number" id="currency" placeholder="Select currency">
+                                    <div class="absolute top-[20px] md:top-[25px]  right-5 group  ">
+                                       <div class="flex items-center gap-1">
+                                          <img src="../img/profile/flag/use.svg" alt="">
+                                          <span class="md:text-[22px] font-AProM leading-none mt-1">EN</span>
+                                          <span>
+                                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                   d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                   fill="white" style="fill:white;fill-opacity:1;" />
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div class="hidden group-hover:flex mt-4  flex-col gap-2">
+                                          <div class="flex items-center gap-1">
+                                             <img src="../img/profile/flag/use.svg" alt="">
+                                             <span class="md:text-[22px] font-AProM leading-none mt-1">RU</span>
+                                             <span>
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </svg>
+                                             </span>
+                                          </div>
+                                          <div class="flex items-center gap-1">
+                                             <img src="../img/profile/flag/use.svg" alt="">
+                                             <span class="md:text-[22px] font-AProM leading-none mt-1">UK</span>
+                                             <span>
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </svg>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="w-full flex flex-col gap-1">
+                                 <label class="text-grey text-[14px]" for="method">Payment note</label>
+
+                                 <input
+                                    class="bg-transparent placeholder:text-[16px] placeholder:font-AProR font-AProBo w-full h-[64px] md:h-[75px] rounded-[20px] pl-5 pr-[140px] text-[18px] ml:text-[22px] text-white2 border-[2px] border-white/[0.3]"
+                                    type="number" id="method" placeholder="Comment">
+
+
+                              </div>
+                              <span class="inline-block w-full border-t-[1px] border-white/[0.1] mt-10"></span>
+                              <div class="font-AProM text-[18px] text-white2 mb-6">Available on your balance <span
+                                    class="text-main uppercase">25 882,55 UAH</span></div>
+                              <div class="flex text-[14px] ml:text-[16px] justify-between text-white2 mb-2">
+                                 <span>Transfer fee</span>
+                                 <span class="font-AProM">0 UAH</span>
+                              </div>
+                              <div class="flex text-[14px] ml:text-[16px] justify-between text-white2 mb-6">
+                                 <span>Total cost</span>
+                                 <span class="font-AProM text-[22px]">545 UAH</span>
+                              </div>
+                              <button class="button w-full text-[16px] font-AProM">Start</button>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="relative ml:bg-white10 w-full  rounded-[25px] ml:rounded-[35px]">
+                        <div class="absolute hidden ml:block -z-10 h-full w-full backdrop-blur-[15px]"></div>
+                        <div class="p-6 hidden ml:block">
+                           <div class="flex items-start justify-between">
+                              <a href="../profile/search.html"
+                                 class="w-full font-AProM text-[22px] text-white2">Transactions</a>
+                              <div class="relative h-[56px] w-full">
+                                 <svg class="absolute left-[16px] top-[50%] translate-y-[-50%]" width="19" height="18"
+                                    viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M18.286 16.543L14.257 12.514C15.329 11.186 15.929 9.514 15.929 7.714C15.929 3.471 12.457 0 8.214 0C3.971 0 0.5 3.471 0.5 7.714C0.5 11.957 3.971 15.429 8.214 15.429C10.014 15.429 11.686 14.786 13.014 13.757L17.043 17.786L18.286 16.543ZM8.257 13.714C4.957 13.714 2.257 11.014 2.257 7.714C2.257 4.414 4.957 1.714 8.257 1.714C11.557 1.714 14.257 4.414 14.257 7.714C14.257 11.014 11.557 13.714 8.257 13.714Z"
+                                       fill="white" style="fill: white; fill-opacity: 1" />
+                                 </svg>
+                                 <input
+                                    class="h-full w-full rounded-full border-[1px] border-white10 bg-transparent pl-[45px] text-[14px] text-grey"
+                                    type="text" placeholder="Search Transactions" />
                               </div>
                            </div>
-                           <!-- items -->
-                           <div
-                              class="relative  rounded-[15px] ml:rounded-none ml:bg-transparent bg-white10 w-full p-4 flex items-center justify-between">
-                              <div class="absolute top-0 left-0 -z-10 w-full h-full  backdrop-blur-[20px]"></div>
-                              <div class="flex items-center gap-2">
-                                 <span
-                                    class="w-[44px] ml:w-[50px] ml:h-[50px] ml:bg-white10 h-[44px] rounded-full bg-bg3 flex items-center justify-center">
-                                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
-                                          fill="white" style="fill:white;fill-opacity:1;" />
-                                    </svg>
-                                 </span>
-                                 <div class="font-AProM flex flex-col">
-                                    <span class=" text-white2 text-[14px] ml:text-[16px]">International Transfer
-                                       Invoice</span>
-                                    <span class="text-[14px] text-main ml:hidden">25 822.80 UAH</span>
-                                    <span class="font-AProR text-grey text-[12px] ml:text-[14px]">03.04.2024</span>
-                                 </div>
-                              </div>
-                              <div class="flex flex-col items-end justify-center gap-1">
-                                 <span class=" text-main ml:block ml:text-white2 hidden">25 822.80 UAH</span>
-                                 <div class="flex gap-1 items-center">
-                                    <span
-                                       class="w-8 h-8 ml:hidden rounded-full bg-[rgba(215,255,0,0.2)] flex items-center justify-center">
-
-                                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd"
-                                             d="M18 4.1546L7.02187 14.897C6.62567 15.2846 5.98972 15.2761 5.6041 14.8779L0 9.09068L1.12967 7.9665L6.3334 13.3402L16.9006 3L18 4.1546Z"
-                                             fill="#D7FF00"
-                                             style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-                                       </svg>
-                                    </span>
-                                    <span
-                                       class="w-6 h-6 rounded-full hidden ml:flex items-center justify-center bg-main">
-                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <g clip-path="url(#clip0_437_58798)">
+                           <div class="rounded-[25px] mt-2 lg:overflow-hidden">
+                              <ul class="w-full">
+                                 <li
+                                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]">
+                                    <div
+                                       class="flex w-full items-center justify-between rounded-[35px] bg-white10 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                                       <span class="leading-snug">April 2024</span>
+                                       <span>
+                                          <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
                                              <path
-                                                d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
-                                                fill="#D7FF00"
-                                                style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-                                             <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M18 8.7789L10.9251 15.7843C10.5279 16.1776 9.88544 16.1689 9.49898 15.7651L6 12.1088L6.75311 11.3504L10.2223 14.9756L17.2671 8L18 8.7789Z"
-                                                fill="black" style="fill:black;fill-opacity:1;" />
-                                          </g>
-                                          <defs>
-                                             <clipPath id="clip0_437_58798">
-                                                <rect width="24" height="24" fill="white"
-                                                   style="fill:white;fill-opacity:1;" />
-                                             </clipPath>
-                                          </defs>
-                                       </svg>
-                                    </span>
-                                    <span class="hidden ml:inline-block text-[14px] text-main">Paid</span>
-                                 </div>
-                              </div>
-                           </div>
-                           <!-- items -->
-                           <div
-                              class="relative  rounded-[15px] ml:rounded-none ml:bg-transparent bg-white10 w-full p-4 flex items-center justify-between">
-                              <div class="absolute top-0 left-0 -z-10 w-full h-full  backdrop-blur-[20px]"></div>
-                              <div class="flex items-center gap-2">
-                                 <span
-                                    class="w-[44px] ml:w-[50px] ml:h-[50px] ml:bg-white10 h-[44px] rounded-full bg-bg3 flex items-center justify-center">
-                                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
-                                          fill="white" style="fill:white;fill-opacity:1;" />
-                                    </svg>
-                                 </span>
-                                 <div class="font-AProM flex flex-col">
-                                    <span class=" text-white2 text-[14px] ml:text-[16px]">International Transfer
-                                       Invoice</span>
-                                    <span class="text-[14px] text-red2 ml:hidden">25 822.80 UAH</span>
-                                    <span class="font-AProR text-grey text-[12px] ml:text-[14px]">03.04.2024</span>
-                                 </div>
-                              </div>
-                              <div class="flex flex-col items-end justify-center gap-1">
-                                 <span class=" text-main ml:block ml:text-white2 hidden">25 822.80 UAH</span>
-                                 <div class="flex gap-1 items-center">
-                                    <span
-                                       class="w-8 h-8 ml:hidden rounded-full bg-[rgba(255,33,2,0.2)] flex items-center justify-center">
-
-                                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd"
-                                             d="M9.01514 10.5996L15.9106 17.495L17.3248 16.0808L10.4294 9.18537L17.5102 2.10457L16.0959 0.690356L9.01514 7.77116L2.12199 0.878008L0.707779 2.29222L7.60093 9.18537L0.89315 15.8931L2.30736 17.3074L9.01514 10.5996Z"
-                                             fill="#FF2102"
-                                             style="fill:#FF2102;fill:color(display-p3 1.0000 0.1299 0.0083);fill-opacity:1;" />
-                                       </svg>
-                                    </span>
-                                    <span
-                                       class="w-6 h-6 rounded-full hidden ml:flex items-center justify-center bg-[#E8EBE6]/[0.5]">
-                                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd"
-                                             d="M5.9334 7.08358L10.85 12L11.8672 10.9828L6.95062 6.06639L12 1.01716L10.9829 0L5.9334 5.04929L1.01718 0.133193L0 1.15035L4.91627 6.06639L0.132871 10.8497L1.15005 11.8668L5.9334 7.08358Z"
-                                             fill="black" style="fill:black;fill-opacity:1;" />
-                                       </svg>
-                                    </span>
-                                    <span class="hidden ml:inline-block text-[14px] text-grey">Unpaid</span>
-                                 </div>
-                              </div>
-                           </div>
-                           <!-- items -->
-                           <div
-                              class="relative  rounded-[15px] ml:rounded-none ml:bg-transparent bg-white10 w-full p-4 flex items-center justify-between">
-                              <div class="absolute top-0 left-0 -z-10 w-full h-full  backdrop-blur-[20px]"></div>
-                              <div class="flex items-center gap-2">
-                                 <span
-                                    class="w-[44px] ml:w-[50px] ml:h-[50px] ml:bg-white10 h-[44px] rounded-full bg-bg3 flex items-center justify-center">
-                                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
-                                          fill="white" style="fill:white;fill-opacity:1;" />
-                                    </svg>
-                                 </span>
-                                 <div class="font-AProM flex flex-col">
-                                    <span class=" text-white2 text-[14px] ml:text-[16px]">International Transfer
-                                       Invoice</span>
-                                    <span class="text-[14px] text-main ml:hidden">25 822.80 UAH</span>
-                                    <span class="font-AProR text-grey text-[12px] ml:text-[14px]">03.04.2024</span>
-                                 </div>
-                              </div>
-                              <div class="flex flex-col items-end justify-center gap-1">
-                                 <span class=" text-main ml:block ml:text-white2 hidden">25 822.80 UAH</span>
-                                 <div class="flex gap-1 items-center">
-                                    <span
-                                       class="w-8 h-8 ml:hidden rounded-full bg-[rgba(215,255,0,0.2)] flex items-center justify-center">
-
-                                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd"
-                                             d="M18 4.1546L7.02187 14.897C6.62567 15.2846 5.98972 15.2761 5.6041 14.8779L0 9.09068L1.12967 7.9665L6.3334 13.3402L16.9006 3L18 4.1546Z"
-                                             fill="#D7FF00"
-                                             style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-                                       </svg>
-                                    </span>
-                                    <span
-                                       class="w-6 h-6 rounded-full hidden ml:flex items-center justify-center bg-main">
-                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <g clip-path="url(#clip0_437_58798)">
+                                                d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                                                fill="white" style="fill: white; fill-opacity: 1" />
+                                          </svg>
+                                       </span>
+                                    </div>
+                                    <ul class="my-4 px-6">
+                                       <li class="rounded-[25px] border-[1px] border-[#fff]/[0.1] px-5 py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                                      Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="text-right font-AProM text-[16px] text-white2">
+                                                   25 822.80 UAH
+                                                </span>
+                                                <span class="text-[14px] text-grey">662,89 USD</span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 text-[14px] text-grey xl:w-[290px]">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                       <li class="rounded-[25px] py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-[16px] text-white2">Liam Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                                <span class="text-[14px] text-grey"></span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                       <li class="rounded-[25px] py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-[16px] text-white2">Liam Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                                <span class="text-[14px] text-grey"></span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li
+                                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]">
+                                    <div
+                                       class="flex w-full items-center justify-between rounded-[35px] bg-white10 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                                       <span class="leading-snug">April 2024</span>
+                                       <span>
+                                          <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
                                              <path
-                                                d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
-                                                fill="#D7FF00"
-                                                style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-                                             <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M18 8.7789L10.9251 15.7843C10.5279 16.1776 9.88544 16.1689 9.49898 15.7651L6 12.1088L6.75311 11.3504L10.2223 14.9756L17.2671 8L18 8.7789Z"
-                                                fill="black" style="fill:black;fill-opacity:1;" />
-                                          </g>
-                                          <defs>
-                                             <clipPath id="clip0_437_58798">
-                                                <rect width="24" height="24" fill="white"
-                                                   style="fill:white;fill-opacity:1;" />
-                                             </clipPath>
-                                          </defs>
-                                       </svg>
-                                    </span>
-                                    <span class="hidden ml:inline-block text-[14px] text-main">Paid</span>
-                                 </div>
-                              </div>
-                           </div>
-                           <!-- items -->
-                           <div
-                              class="relative  rounded-[15px] ml:rounded-none ml:bg-transparent bg-white10 w-full p-4 flex items-center justify-between">
-                              <div class="absolute top-0 left-0 -z-10 w-full h-full  backdrop-blur-[20px]"></div>
-                              <div class="flex items-center gap-2">
-                                 <span
-                                    class="w-[44px] ml:w-[50px] ml:h-[50px] ml:bg-white10 h-[44px] rounded-full bg-bg3 flex items-center justify-center">
-                                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
-                                          fill="white" style="fill:white;fill-opacity:1;" />
-                                    </svg>
-                                 </span>
-                                 <div class="font-AProM flex flex-col">
-                                    <span class=" text-white2 text-[14px] ml:text-[16px]">International Transfer
-                                       Invoice</span>
-                                    <span class="text-[14px] text-main ml:hidden">25 822.80 UAH</span>
-                                    <span class="font-AProR text-grey text-[12px] ml:text-[14px]">03.04.2024</span>
-                                 </div>
-                              </div>
-                              <div class="flex flex-col items-end justify-center gap-1">
-                                 <span class=" text-main ml:block ml:text-white2 hidden">25 822.80 UAH</span>
-                                 <div class="flex gap-1 items-center">
-                                    <span
-                                       class="w-8 h-8 ml:hidden rounded-full bg-[rgba(215,255,0,0.2)] flex items-center justify-center">
-
-                                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd"
-                                             d="M18 4.1546L7.02187 14.897C6.62567 15.2846 5.98972 15.2761 5.6041 14.8779L0 9.09068L1.12967 7.9665L6.3334 13.3402L16.9006 3L18 4.1546Z"
-                                             fill="#D7FF00"
-                                             style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-                                       </svg>
-                                    </span>
-                                    <span
-                                       class="w-6 h-6 rounded-full hidden ml:flex items-center justify-center bg-main">
-                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <g clip-path="url(#clip0_437_58798)">
+                                                d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                                                fill="white" style="fill: white; fill-opacity: 1" />
+                                          </svg>
+                                       </span>
+                                    </div>
+                                    <ul class="my-4 hidden px-6">
+                                       <li class="rounded-[25px] border-[1px] border-[#fff]/[0.1] px-5 py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-[16px] text-white2">Liam Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="font-AProM text-[16px] text-white2">
+                                                   25 822.80 UAH
+                                                </span>
+                                                <span class="text-[14px] text-grey">662,89 USD</span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 w-[290px] text-[14px] text-grey">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                       <li class="rounded-[25px] py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-[16px] text-white2">Liam Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                                <span class="text-[14px] text-grey"></span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                       <li class="rounded-[25px] py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-[16px] text-white2">Liam Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                                <span class="text-[14px] text-grey"></span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li
+                                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]">
+                                    <div
+                                       class="flex w-full items-center justify-between rounded-[35px] bg-white10 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                                       <span class="leading-snug">April 2024</span>
+                                       <span>
+                                          <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
                                              <path
-                                                d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
-                                                fill="#D7FF00"
-                                                style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-                                             <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M18 8.7789L10.9251 15.7843C10.5279 16.1776 9.88544 16.1689 9.49898 15.7651L6 12.1088L6.75311 11.3504L10.2223 14.9756L17.2671 8L18 8.7789Z"
-                                                fill="black" style="fill:black;fill-opacity:1;" />
-                                          </g>
-                                          <defs>
-                                             <clipPath id="clip0_437_58798">
-                                                <rect width="24" height="24" fill="white"
-                                                   style="fill:white;fill-opacity:1;" />
-                                             </clipPath>
-                                          </defs>
-                                       </svg>
-                                    </span>
-                                    <span class="hidden ml:inline-block text-[14px] text-main">Paid</span>
-                                 </div>
-                              </div>
+                                                d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                                                fill="white" style="fill: white; fill-opacity: 1" />
+                                          </svg>
+                                       </span>
+                                    </div>
+                                    <ul class="my-4 hidden px-6">
+                                       <li class="rounded-[25px] border-[1px] border-[#fff]/[0.1] px-5 py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-[16px] text-white2">Liam Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="font-AProM text-[16px] text-white2">
+                                                   25 822.80 UAH
+                                                </span>
+                                                <span class="text-[14px] text-grey">662,89 USD</span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 w-[290px] text-[14px] text-grey">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                       <li class="rounded-[25px] py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-[16px] text-white2">Liam Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                                <span class="text-[14px] text-grey"></span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                       <li class="rounded-[25px] py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-[16px] text-white2">Liam Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                                <span class="text-[14px] text-grey"></span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li
+                                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]">
+                                    <div
+                                       class="flex w-full items-center justify-between rounded-[35px] bg-white10 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                                       <span class="leading-snug">April 2024</span>
+                                       <span>
+                                          <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                                                fill="white" style="fill: white; fill-opacity: 1" />
+                                          </svg>
+                                       </span>
+                                    </div>
+                                    <ul class="my-4 hidden px-6">
+                                       <li class="rounded-[25px] border-[1px] border-[#fff]/[0.1] px-5 py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-[16px] text-white2">Liam Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="font-AProM text-[16px] text-white2">
+                                                   25 822.80 UAH
+                                                </span>
+                                                <span class="text-[14px] text-grey">662,89 USD</span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 w-[290px] text-[14px] text-grey">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                       <li class="rounded-[25px] py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-[16px] text-white2">Liam Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                                <span class="text-[14px] text-grey"></span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                       <li class="rounded-[25px] py-2">
+                                          <div class="flex items-center justify-between">
+                                             <div class="flex items-center">
+                                                <span
+                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                                         d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                   </svg>
+                                                </span>
+                                                <div class="flex flex-col">
+                                                   <span class="font-AProM text-[16px] text-white2">Liam Johnson</span>
+                                                   <span class="text-[14px] text-grey">03.04.2024</span>
+                                                </div>
+                                             </div>
+                                             <div class="flex flex-col items-end justify-start">
+                                                <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                                <span class="text-[14px] text-grey"></span>
+                                             </div>
+                                          </div>
+                                          <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                             Welcome to your trusted partner in the realm of international financial
+                                             transactions.
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
                            </div>
                         </div>
-                        <div class="ml:hidden flex gap-2 items-center w-full justify-center mt-6">
-                           <span class="">
-                              <svg class="animate-spin" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M12 2.25C6.616 2.25 2.25 6.616 2.25 12C2.25 17.384 6.616 21.75 12 21.75V19.313C10.5539 19.3128 9.14035 18.8838 7.93805 18.0803C6.73575 17.2768 5.79871 16.1348 5.2454 14.7987C4.6921 13.4627 4.54738 11.9925 4.82955 10.5743C5.11171 9.15596 5.80809 7.85318 6.83064 6.83064C7.85318 5.80809 9.15596 5.11171 10.5743 4.82955C11.9925 4.54738 13.4627 4.6921 14.7987 5.2454C16.1348 5.79871 17.2768 6.73575 18.0803 7.93805C18.8838 9.14035 19.3128 10.5539 19.313 12H21.75C21.75 6.616 17.384 2.25 12 2.25Z"
-                                    fill="white" style="fill:white;fill-opacity:1;" />
-                              </svg>
-                           </span>
-                           <span>Load more</span>
+                        <div class="flex h-full w-full flex-col gap-4 rounded-[35px] p-4 ml:hidden">
+                           <h3 class="w-full font-AProM text-[22px] text-white2">Transactions</h3>
+
+                           <div class="lg:overflow-hidden">
+                              <ul class="">
+                                 <li class="mb-2 rounded-[15px] bg-[#161617] p-4">
+                                    <div class="flex items-center justify-between">
+                                       <div class="flex items-center">
+                                          <span
+                                             class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                             <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                   d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                   fill="white" style="fill: white; fill-opacity: 1" />
+                                             </svg>
+                                          </span>
+                                          <div class="flex flex-col">
+                                             <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
+                                             <span class="text-[12px] text-grey">03.04.2024</span>
+                                          </div>
+                                       </div>
+                                       <div class="flex flex-col items-end justify-start">
+                                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
+                                             <span class="mr-2 mt-1">25 822.80 UAH </span>
+                                             <span>
+                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <g clip-path="url(#clip0_2103_11424)">
+                                                      <path
+                                                         d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                                         fill="#9B9B9B" style="
+                                                   fill: #9b9b9b;
+                                                   fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                   fill-opacity: 1;
+                                                 " />
+                                                      <path
+                                                         d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                                         fill="#9B9B9B" style="
+                                                   fill: #9b9b9b;
+                                                   fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                   fill-opacity: 1;
+                                                 " />
+                                                      <path
+                                                         d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                                         fill="#9B9B9B" style="
+                                                   fill: #9b9b9b;
+                                                   fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                   fill-opacity: 1;
+                                                 " />
+                                                   </g>
+                                                   <defs>
+                                                      <clipPath id="clip0_2103_11424">
+                                                         <rect width="18" height="18" fill="white"
+                                                            style="fill: white; fill-opacity: 1"
+                                                            transform="translate(0 0.5)" />
+                                                      </clipPath>
+                                                   </defs>
+                                                </svg>
+                                             </span>
+                                          </span>
+                                          <span class="text-[12px] text-grey">662,89 USD</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 rounded-[15px] bg-[#161617] p-4">
+                                    <div class="flex items-center justify-between">
+                                       <div class="flex items-center">
+                                          <span
+                                             class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                             <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                   d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                   fill="white" style="fill: white; fill-opacity: 1" />
+                                             </svg>
+                                          </span>
+                                          <div class="flex flex-col">
+                                             <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
+                                             <span class="text-[12px] text-grey">03.04.2024</span>
+                                          </div>
+                                       </div>
+                                       <div class="flex flex-col items-end justify-start">
+                                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
+                                             <span class="mr-2 mt-1">25 822.80 UAH </span>
+                                             <span>
+                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <g clip-path="url(#clip0_2103_11424)">
+                                                      <path
+                                                         d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                                         fill="#9B9B9B" style="
+                                                   fill: #9b9b9b;
+                                                   fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                   fill-opacity: 1;
+                                                 " />
+                                                      <path
+                                                         d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                                         fill="#9B9B9B" style="
+                                                   fill: #9b9b9b;
+                                                   fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                   fill-opacity: 1;
+                                                 " />
+                                                      <path
+                                                         d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                                         fill="#9B9B9B" style="
+                                                   fill: #9b9b9b;
+                                                   fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                   fill-opacity: 1;
+                                                 " />
+                                                   </g>
+                                                   <defs>
+                                                      <clipPath id="clip0_2103_11424">
+                                                         <rect width="18" height="18" fill="white"
+                                                            style="fill: white; fill-opacity: 1"
+                                                            transform="translate(0 0.5)" />
+                                                      </clipPath>
+                                                   </defs>
+                                                </svg>
+                                             </span>
+                                          </span>
+                                          <span class="text-[12px] text-grey">662,89 USD</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 rounded-[15px] bg-[#161617] p-4">
+                                    <div class="flex items-center justify-between">
+                                       <div class="flex items-center">
+                                          <span
+                                             class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                             <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                   d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                   fill="white" style="fill: white; fill-opacity: 1" />
+                                             </svg>
+                                          </span>
+                                          <div class="flex flex-col">
+                                             <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
+                                             <span class="text-[12px] text-grey">03.04.2024</span>
+                                          </div>
+                                       </div>
+                                       <div class="flex flex-col items-end justify-start">
+                                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
+                                             <span class="mr-2 mt-1">25 822.80 UAH </span>
+                                             <span>
+                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <g clip-path="url(#clip0_2103_11424)">
+                                                      <path
+                                                         d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                                         fill="#9B9B9B" style="
+                                                   fill: #9b9b9b;
+                                                   fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                   fill-opacity: 1;
+                                                 " />
+                                                      <path
+                                                         d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                                         fill="#9B9B9B" style="
+                                                   fill: #9b9b9b;
+                                                   fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                   fill-opacity: 1;
+                                                 " />
+                                                      <path
+                                                         d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                                         fill="#9B9B9B" style="
+                                                   fill: #9b9b9b;
+                                                   fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                   fill-opacity: 1;
+                                                 " />
+                                                   </g>
+                                                   <defs>
+                                                      <clipPath id="clip0_2103_11424">
+                                                         <rect width="18" height="18" fill="white"
+                                                            style="fill: white; fill-opacity: 1"
+                                                            transform="translate(0 0.5)" />
+                                                      </clipPath>
+                                                   </defs>
+                                                </svg>
+                                             </span>
+                                          </span>
+                                          <span class="text-[12px] text-grey">662,89 USD</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 w-full">
+                                    <a class="inline-block w-full cursor-pointer rounded-full bg-white2 px-6 py-3 text-center font-AProM text-[16px] leading-snug text-bg2 hover:bg-[#d1d1d1]"
+                                       href="./transactions.html">
+                                       See all
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
                         </div>
                      </div>
                   </div>

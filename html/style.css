@@ -876,6 +876,11 @@ video {
   margin-bottom: 22px;
 }
 
+.my-\[7px\] {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1200,6 +1205,14 @@ video {
   height: 100%;
 }
 
+.h-\[234px\] {
+  height: 234px;
+}
+
+.h-\[700px\] {
+  height: 700px;
+}
+
 .max-h-\[441px\] {
   max-height: 441px;
 }
@@ -1384,6 +1397,10 @@ video {
   width: 100%;
 }
 
+.w-\[367px\] {
+  width: 367px;
+}
+
 .max-w-\[960px\] {
   max-width: 960px;
 }
@@ -1504,6 +1521,14 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-\[370px_auto\] {
+  grid-template-columns: 370px auto;
 }
 
 .grid-rows-2 {
@@ -1987,6 +2012,14 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-white\/\[0\.04\] {
+  background-color: rgb(232 235 230 / 0.04);
+}
+
+.bg-\[rgba\(34\2c 34\2c 34\2c 0\.06\)\] {
+  background-color: rgba(34,34,34,0.06);
+}
+
 .from-\[\#000000\] {
   --tw-gradient-from: #000000 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
@@ -2183,6 +2216,11 @@ video {
 .py-\[8px\] {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .pb-0 {
@@ -2542,6 +2580,10 @@ video {
 
 .opacity-\[0\.6\] {
   opacity: 0.6;
+}
+
+.opacity-5 {
+  opacity: 0.05;
 }
 
 .blur-\[100px\] {

@@ -18,7 +18,7 @@
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
-   <title>Internal Transfers</title>
+   <title>Account</title>
    <link href="../style.css" rel="stylesheet" />
 </head>
 <!-- class="overflow-hidden" -->
@@ -750,289 +750,535 @@
                      <div
                         class="relative flex flex-col ml:flex-row justify-between w-full h-full text-[30px] font-AProM ml:items-center mb-4">
 
-                        Send money
+                        Account
 
                      </div>
                   </div>
 
 
                   <!-- 1 -->
-                  <div class=" grid lg:grid-cols-2 gap-[10px] grid-cols-1">
-                     <div class="relative ml:bg-white10 rounded-[25px] ml:rounded-[35px]">
-                        <div class="absolute hidden ml:block -z-10 h-full w-full backdrop-blur-[15px]"></div>
-                        <div class="p-4 ml:p-6">
-                           <form action="" class="w-full flex flex-col gap-4">
-                              <div class="w-full flex flex-col gap-1">
-                                 <label class="text-grey text-[14px]" for="amount">Top-up amount</label>
-                                 <div class="relative">
-                                    <input
-                                       class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[64px] md:h-[75px]  rounded-[20px] pl-5 pr-[140px] text-[18px] ml:text-[22px] text-white2 border-[2px] border-white/[0.3]"
-                                       type="number" id="amount" placeholder="Select amount">
-                                    <div class="absolute top-[20px] md:top-[25px]  right-5 group  ">
-                                       <div class="flex items-center gap-1">
-                                          <img src="../img/profile/flag/use.svg" alt="">
-                                          <span class="md:text-[22px] font-AProM leading-none mt-1">EN</span>
-                                          <span>
-                                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                  <div class="">
+                     <div class="relative ml:bg-white10 rounded-[35px] ml:rounded-[35px]">
+                        <div class="absolute hidden ml:block rounded-[35px] -z-10 h-full w-full backdrop-blur-[15px]">
+                        </div>
+                        <div class="p-4 ml:p-6 grid grid-cols-[370px_auto] gap-6">
+                           <div class="w-full pt-6">
+                              <h3 class="font-AProM text-[22px]">Lorem ipsum sit amet</h3>
+                              <span class="text-grey">Ultrices curabitur donec nunc vel.</span>
+                              <div class="mt-6">
+                                 <div class="py-[10px]">&#8226; <span class="ml-1">Sell on your own terms</span></div>
+                                 <span class="w-full inline-block border-t-[1px] my-[7px] border-white10"></span>
+                                 <div class="py-[10px]">&#8226; <span class="ml-1">Bandwidth & storage is
+                                       included</span></div>
+                                 <span class="w-full inline-block border-t-[1px] my-[7px] border-white10"></span>
+                                 <div class="py-[10px]">&#8226; <span class="ml-1">We’ll get you onboarded</span></div>
+                                 <span class="w-full inline-block border-t-[1px] my-[7px] border-white10"></span>
+                                 <div class="py-[10px]">&#8226; <span class="ml-1">Live stream</span></div>
+                                 <span class="w-full inline-block border-t-[1px] my-[7px] border-white10"></span>
+                                 <div class="py-[10px]">&#8226; <span class="ml-1">We’ll migrate you for free</span>
+                                 </div>
+                                 <span class="w-full inline-block border-t-[1px] my-[7px] border-white10"></span>
+                                 <div class="py-[10px]">&#8226; <span class="ml-1">We’ll get you onboarded</span></div>
+                                 <span class="w-full inline-block border-t-[1px] my-[7px] border-white10"></span>
+                                 <div class="py-[10px]">&#8226; <span class="ml-1">Live stream</span></div>
+                                 <span class="w-full inline-block border-t-[1px] my-[7px] border-white10"></span>
+                                 <div class="py-[10px]">&#8226; <span class="ml-1">Sell on your own terms</span></div>
+                                 <span class="w-full inline-block border-t-[1px] my-[7px] border-white10"></span>
+                                 <div class="py-[10px]">&#8226; <span class="ml-1">Robust integrations</span></div>
+                              </div>
+                           </div>
+                           <div class=" w-full grid grid-cols-2 gap-2 h-[700px]">
+                              <div class="rounded-[35px] w-full h-full relative ">
+                                 <div
+                                    class="absolute hidden rounded-[35px] ml:block -z-10 h-full w-full backdrop-blur-[15px]">
+                                 </div>
+                                 <div class="rounded-[35px]  h-full  w-full p-4 bg-white2 ml:p-6">
+                                    <h3 class="text-black mb-6 text-[22px] font-AProM text-center">Personal Account</h3>
+                                    <div class="flex flex-col gap-2">
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                   d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                                   fill="white" style="fill:white;fill-opacity:1;" />
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
                                              </svg>
                                           </span>
                                        </div>
-                                       <div class="hidden group-hover:flex mt-4  flex-col gap-2">
-                                          <div class="flex items-center gap-1">
-                                             <img src="../img/profile/flag/use.svg" alt="">
-                                             <span class="md:text-[22px] font-AProM leading-none mt-1">RU</span>
-                                             <span>
-                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
-                                                   <path
-                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                                      fill="white" style="fill:white;fill-opacity:1;" />
-                                                </svg>
-                                             </span>
-                                          </div>
-                                          <div class="flex items-center gap-1">
-                                             <img src="../img/profile/flag/use.svg" alt="">
-                                             <span class="md:text-[22px] font-AProM leading-none mt-1">UK</span>
-                                             <span>
-                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
-                                                   <path
-                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                                      fill="white" style="fill:white;fill-opacity:1;" />
-                                                </svg>
-                                             </span>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="w-full flex flex-col gap-1">
-                                 <label class="text-grey text-[14px]" for="method">Payment method</label>
-                                 <div class="relative">
-                                    <input
-                                       class="bg-transparent placeholder:text-[16px] font-AProBo w-full h-[64px] md:h-[75px] rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 border-[2px] border-white/[0.3]"
-                                       type="number" id="method" placeholder="" disabled>
-                                    <div class="absolute flex items-center gap-2 top-0 h-full left-[20px]">
-                                       <img src="../img/profile/flag/use.svg" alt="">
-                                       <span>UAH balance</span>
-                                    </div>
-
-                                    <button
-                                       class="absolute hover:text-main text-grey hover:border-main transition-colors duration-300 top-[50%] translate-y-[-50%] right-[20px] border-[1px] border-white/[0.5] h-8 px-4 rounded-full">
-                                       Change
-                                    </button>
-                                 </div>
-                              </div>
-                              <div class="w-full flex flex-col gap-1">
-                                 <label class="text-grey text-[14px]" for="method">Recipient</label>
-
-                                 <div class="relative">
-                                    <input
-                                       class="bg-transparent  placeholder:text-[16px] placeholder:font-AProR font-AProBo w-full h-[64px] md:h-[75px] rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 border-[2px] border-white/[0.3]"
-                                       type="number" id="method" placeholder="Recipient's name, email, phone number">
-                                    <span
-                                       class="absolute cursor-pointer hover:bg-main text-black top-[50%] translate-y-[-50%] right-6  w-4 h-4 rounded-full bg-grey flex items-center justify-center">
-                                       x
-                                    </span>
-                                 </div>
-
-                                 <div class="">
-                                    <!-- error -->
-                                    <div class="flex items-center text-red2 text-[14px]">
-                                       <span>
-                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M1.14258 7.99893C1.14258 11.7703 4.22858 14.8556 7.99991 14.8556C11.7712 14.8556 14.8572 11.7703 14.8572 7.9996C14.8572 4.22627 11.7712 1.1416 7.99991 1.1416C4.22858 1.1416 1.14258 4.22627 1.14258 7.99893ZM2.28591 7.99893C2.28591 4.8556 4.85724 2.28427 7.99991 2.28427C11.1426 2.28427 13.7146 4.8556 13.7146 7.99893C13.7146 11.1416 11.1426 13.7129 7.99991 13.7129C4.85724 13.7129 2.28591 11.1416 2.28591 7.99893ZM8.57125 4.57094H7.42858V9.14293H8.57125V4.57094ZM7.99991 12.0003C8.11447 12.0035 8.2285 11.9837 8.33527 11.942C8.44204 11.9004 8.53938 11.8378 8.62153 11.7579C8.70369 11.678 8.76899 11.5824 8.81358 11.4769C8.85817 11.3713 8.88115 11.2579 8.88115 11.1433C8.88115 11.0287 8.85817 10.9152 8.81358 10.8097C8.76899 10.7041 8.70369 10.6085 8.62153 10.5286C8.53938 10.4488 8.44204 10.3861 8.33527 10.3445C8.2285 10.3029 8.11447 10.2831 7.99991 10.2863C7.77856 10.295 7.56918 10.3891 7.41565 10.5488C7.26213 10.7085 7.17638 10.9214 7.17638 11.1429C7.17638 11.3645 7.26213 11.5774 7.41565 11.7371C7.56918 11.8968 7.77856 11.9915 7.99991 12.0003Z"
-                                                fill="#FF2102"
-                                                style="fill:#FF2102;fill:color(display-p3 1.0000 0.1299 0.0083);fill-opacity:1;" />
-                                          </svg>
-                                       </span>
-                                       <span class="mt-[2px]">Recipient not found</span>
-                                    </div>
-                                    <!-- ok -->
-                                    <div class="">
                                        <div
-                                          class="rounded-[20px] cursor-pointer tran hover:bg-bg3 px-4 py-3 flex items-center">
-                                          <span
-                                             class=" flex justify-center items-center mr-2 w-[50px] h-[50px] rounded-full bg-white/[0.04]">
-                                             DM
-                                          </span>
-                                          <div class="flex flex-col">
-                                             <span class="font-AProM text-[14px] ml:text-[16px]">Dmytro</span>
-                                             <span class="text-grey text-[12px] ml:text-[14px]">Card in UAH ending in
-                                                1831</span>
-                                          </div>
-                                       </div>
-                                       <div
-                                          class="rounded-[20px] cursor-pointer hover:bg-bg3 px-4 py-3 flex items-center">
-                                          <span
-                                             class=" flex justify-center items-center mr-2 w-[50px] h-[50px] rounded-full bg-white/[0.04]">
-                                             DM
-                                          </span>
-                                          <div class="flex flex-col">
-                                             <span class="font-AProM text-[14px] ml:text-[16px]">Dmytro</span>
-                                             <span class="text-grey text-[12px] ml:text-[14px]">Card in UAH ending in
-                                                1831</span>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-                              <div class="w-full flex flex-col gap-1">
-                                 <label class="text-grey text-[14px]" for="currency">Top-up amount</label>
-                                 <div class="relative">
-                                    <input
-                                       class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[64px] md:h-[75px] rounded-[20px] pl-5 pr-[140px] text-[18px] ml:text-[22px] text-white2 border-[2px] border-white/[0.3]"
-                                       type="number" id="currency" placeholder="Select currency">
-                                    <div class="absolute top-[20px] md:top-[25px]  right-5 group  ">
-                                       <div class="flex items-center gap-1">
-                                          <img src="../img/profile/flag/use.svg" alt="">
-                                          <span class="md:text-[22px] font-AProM leading-none mt-1">EN</span>
-                                          <span>
-                                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                   d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                                   fill="white" style="fill:white;fill-opacity:1;" />
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
                                              </svg>
                                           </span>
                                        </div>
-                                       <div class="hidden group-hover:flex mt-4  flex-col gap-2">
-                                          <div class="flex items-center gap-1">
-                                             <img src="../img/profile/flag/use.svg" alt="">
-                                             <span class="md:text-[22px] font-AProM leading-none mt-1">RU</span>
-                                             <span>
-                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
                                                    <path
-                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
                                                       fill="white" style="fill:white;fill-opacity:1;" />
-                                                </svg>
-                                             </span>
-                                          </div>
-                                          <div class="flex items-center gap-1">
-                                             <img src="../img/profile/flag/use.svg" alt="">
-                                             <span class="md:text-[22px] font-AProM leading-none mt-1">UK</span>
-                                             <span>
-                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
                                                    <path
-                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
                                                       fill="white" style="fill:white;fill-opacity:1;" />
-                                                </svg>
-                                             </span>
-                                          </div>
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full py-[10px]  flex justify-center">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full py-[10px] flex justify-center opacity-[0.12]">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center opacity-[0.12]">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center opacity-[0.12]">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center opacity-[0.12]">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center opacity-[0.12]">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
                                        </div>
                                     </div>
+                                    <button class="button is-black mt-6" style="width: 100%;">Go</button>
                                  </div>
                               </div>
-                              <div class="w-full flex flex-col gap-1">
-                                 <label class="text-grey text-[14px]" for="method">Payment note</label>
-
-                                 <input
-                                    class="bg-transparent placeholder:text-[16px] placeholder:font-AProR font-AProBo w-full h-[64px] md:h-[75px] rounded-[20px] pl-5 pr-[140px] text-[18px] ml:text-[22px] text-white2 border-[2px] border-white/[0.3]"
-                                    type="number" id="method" placeholder="Comment">
-
-
+                              <div class="rounded-[35px] w-full relative ">
+                                 <div
+                                    class="absolute hidden    rounded-[35px] ml:block -z-10 h-full w-full backdrop-blur-[15px]">
+                                 </div>
+                                 <div class="rounded-[35px]  h-full  w-full p-4 bg-main ml:p-6">
+                                    <h3 class="text-black mb-6 text-[22px] font-AProM text-center">Corporate Account
+                                    </h3>
+                                    <div class="flex flex-col gap-2">
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full py-[10px]  flex justify-center">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full py-[10px] flex justify-center opacity-[0.12]">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center opacity-[0.12]">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center opacity-[0.12]">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center opacity-[0.12]">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                       <div
+                                          class="bg-[rgba(34,34,34,0.06)] rounded-full w-full  py-[10px]  flex justify-center opacity-[0.12]">
+                                          <span class="">
+                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_437_59182)">
+                                                   <path
+                                                      d="M12.875 24.8496C19.5024 24.8496 24.875 19.477 24.875 12.8496C24.875 6.22219 19.5024 0.849609 12.875 0.849609C6.24758 0.849609 0.875 6.22219 0.875 12.8496C0.875 19.477 6.24758 24.8496 12.875 24.8496Z"
+                                                      fill="black" style="fill:black;fill-opacity:1;" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M18.875 9.62851L11.8001 16.6339C11.4029 17.0272 10.7604 17.0185 10.374 16.6147L6.875 12.9584L7.62811 12.2L11.0973 15.8252L18.1421 8.84961L18.875 9.62851Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;" />
+                                                </g>
+                                                <defs>
+                                                   <clipPath id="clip0_437_59182">
+                                                      <rect width="24" height="24" fill="white"
+                                                         style="fill:white;fill-opacity:1;"
+                                                         transform="translate(0.875 0.849609)" />
+                                                   </clipPath>
+                                                </defs>
+                                             </svg>
+                                          </span>
+                                       </div>
+                                    </div>
+                                    <button class="button is-black mt-6" style="width: 100%;">Go</button>
+                                 </div>
                               </div>
-                           </form>
+                           </div>
                         </div>
                      </div>
-                     <div class="relative ml:bg-white10 w-full h-[234px] rounded-[25px] ml:rounded-[35px]">
-                        <div class="absolute hidden ml:block -z-10 h-full w-full backdrop-blur-[15px]"></div>
-                        <div class="p-4 ml:p-6 ">
-                           <div class="font-AProM text-[18px] text-white2 mb-6">Available on your balance <span
-                                 class="text-main uppercase">25 882,55 UAH</span></div>
-                           <div class="flex text-[14px] ml:text-[16px] justify-between text-white2 mb-2">
-                              <span>Transfer fee</span>
-                              <span class="font-AProM">0 UAH</span>
-                           </div>
-                           <div class="flex text-[14px] ml:text-[16px] justify-between text-white2 mb-6">
-                              <span>Total cost</span>
-                              <span class="font-AProM text-[22px]">545 UAH</span>
-                           </div>
-                           <button class="button w-full text-[16px] font-AProM">Continue</button>
-                        </div>
-                     </div>
+
                   </div>
 
 
-                  <!-- 2 -->
-                  <div class="grid lg:grid-cols-2 gap-[10px] grid-cols-1 px-4 ml:p-0">
-                     <div class="relative bg-white10 rounded-[25px] ml:rounded-[35px]">
-                        <div class="absolute  -z-10 h-full w-full backdrop-blur-[15px]"></div>
-                        <div class="p-4 ml:p-6">
 
-                           <div class="flex justify-between">
-
-                              <div class=" flex items-center gap-2 left-[20px]">
-                                 <img src="../img/profile/flag/use.svg" alt="">
-                                 <span>UAH balance</span>
-                              </div>
-
-                              <button
-                                 class="hover:text-main hover:border-main text-grey transition-colors duration-300  border-[1px] border-white/[0.5] h-8 px-4 rounded-full">
-                                 Change
-                              </button>
-                           </div>
-                           <span class="w-full border-t-[1px] border-white/[0.1] h-0 inline-block my-6"></span>
-                           <div class="">
-                              <span class="font-AProM ml:text-[18px] inline-block mb-4">Transfer details</span>
-                              <div class="flex flex-col gap-2">
-                                 <div class="flex justify-between">
-                                    <span class="text-[14px] ml:text-[16px]">You are sending exactly</span>
-                                    <span class="font-AProM text-[18px]">500 UAH</span>
-                                 </div>
-                                 <div class="flex justify-between">
-                                    <span class="text-[14px] ml:text-[16px]">Fee (included)</span>
-                                    <span class="text-[14px] ml:text-[16px]">45 UAH</span>
-                                 </div>
-                                 <div class="flex justify-between">
-                                    <span class="text-[14px] ml:text-[16px]">Amount we will send</span>
-                                    <span class="text-[14px] ml:text-[16px]">45 UAH</span>
-                                 </div>
-                                 <div class="flex justify-between">
-                                    <span class="text-[14px] ml:text-[16px]">You receive</span>
-                                    <span class="font-AProM text-[18px]">455 UAH</span>
-                                 </div>
-                              </div>
-                           </div>
-                           <span class="w-full border-t-[1px] border-white/[0.1] h-0 inline-block my-6"></span>
-                           <div class="">
-                              <span class="font-AProM ml:text-[18px] inline-block mb-4">Transfer details</span>
-                              <div class="flex flex-col gap-2">
-                                 <div class="flex justify-between">
-                                    <span class="text-[14px] ml:text-[16px]">Account holder's name</span>
-                                    <span class="text-[14px] ml:text-[16px]">Name Surname</span>
-                                 </div>
-                                 <div class="flex justify-between">
-                                    <span class="text-[14px] ml:text-[16px]">Card number</span>
-                                    <span class="text-[14px] ml:text-[16px]">*****************8456</span>
-                                 </div>
-                                 <div class="flex justify-between">
-                                    <span class="text-[14px] ml:text-[16px]">Email</span>
-                                    <span class="text-[14px] ml:text-[16px]">example@gmail.com</span>
-                                 </div>
-                                 <div class="flex justify-between">
-                                    <span class="text-[14px] ml:text-[16px]">Bank name</span>
-                                    <span class="text-[14px] ml:text-[16px]">JSC CB PRIVATBANK</span>
-                                 </div>
-                              </div>
-                           </div>
-                           <button class="button text-[16px] font-AProM w-full mt-6">Proceed to payment</button>
-                        </div>
-
-                     </div>
-                  </div>
-                  <div class="w-full ">
-
-                  </div>
                </div>
 
             </div>
