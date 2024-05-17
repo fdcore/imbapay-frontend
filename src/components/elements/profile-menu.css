@@ -5,7 +5,10 @@
 .menu-profile.is-active .spanicon {
   background-color: #d7ff00;
 }
-.menu-profile.is-active > .spanicon > svg > path {
+.menu-profile.is-active  > .spanicon > svg > path {
+  fill: black;
+}
+.menu-profile.is-active > div > .spanicon > svg > path {
   fill: black;
 }
 .menu-profile:hover > .spanicon > svg > path {

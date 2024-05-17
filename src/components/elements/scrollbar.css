@@ -1,0 +1,46 @@
+.custom-scrollbar {
+   scrollbar-width: thin; /* Толщина скроллбара */
+   scrollbar-color: #333333 rgba(255, 255, 255, 0.05); /* Цвет скроллбара */
+
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+   width: 4px;
+   border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+   width: 2px;
+   height: 100px;
+   background: rgba(255, 255, 255, 0.05);
+   border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+   border-radius: 5px;
+   background-color: #E8EBE6;
+   opacity: 0.2;
+}
+
+
+/* Для Webkit браузеров (Chrome, Safari) */
+.custom-scrollbar::-webkit-scrollbar-button {
+   display: none;
+}
+
+
+
+/* Для Internet Explorer */
+.custom-scrollbar {
+   -ms-overflow-style: none;
+}
+
+/* Для Edge */
+.custom-scrollbar {
+   -ms-overflow-style: none;
+}
+
+
+.custom-scrollbar::-webkit-scrollbar-button {
+   display: none;
+}

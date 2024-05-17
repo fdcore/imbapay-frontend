@@ -37,6 +37,6 @@ module.exports = {
   ],
   devServer: {
     static: 'html'
-    // watchContentBase: true,
+    // watchContentBase: true
   }
 }

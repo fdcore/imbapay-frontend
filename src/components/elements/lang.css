@@ -1,0 +1,40 @@
+.lang  span:first-child {
+   background: transparent;
+}
+.lang  svg {
+   display: none;
+}
+.lang.is-active  span:first-child {
+   background: #D7FF00;
+}
+.lang.is-active  svg {
+   display: inline;
+}
+
+
+
+.swipe-hide {
+    transition: all 3s ease; /* Добавляем плавную анимацию */
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 1000;
+    bottom: 5px;
+}
+
+.swipe-hide.hide {
+   
+    bottom: -110%; /* Прячем блок за пределы экрана */
+    opacity: 0;
+    z-index: -10;
+   display: none;
+}
+.bg-lang {
+    opacity: 0.9;
+}
+.bg-lang.hide-bg {
+   transition: all 2s ease;
+    opacity: 0;
+    z-index: -5;
+}

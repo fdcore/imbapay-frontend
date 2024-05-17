@@ -1,0 +1,57 @@
+.custom-radio {
+   position: relative;
+   margin-bottom: 10px;
+ }
+ 
+ .custom-radio input {
+   display: none;
+ }
+ 
+ .custom-radio label {
+   position: relative;
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   background-color: transparent;
+   border: 1px solid gray;
+   border-radius: 50%;
+   cursor: pointer;
+ }
+ 
+ .custom-radio input:checked + label {
+   background-color: transparent; /* измените цвет при выборе */
+   border: 1px solid #d7ff00;
+ }
+ 
+ .custom-radio label:after {
+   content: '';
+   display: block;
+   width: 10px;
+   height: 10px;
+   background-color: #d7ff00;
+   border-radius: 50%;
+   position: absolute;
+   top: 6px;
+   left: 6px;
+   opacity: 0;
+   transition: opacity 0.2s;
+ }
+ 
+ .custom-radio input:checked + label:after {
+   opacity: 1;
+ }
+
+
+ .field-file__input {
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: 100%;
+}
+
+.field-file__input:focus ~ .field-file__label {
+   color: #6979F8;
+}
+.field-file__input:focus ~ .field-file__label .field-file__icon {
+   border-color: #3444c3;
+}

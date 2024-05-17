@@ -7,7 +7,11 @@
 @import './components/elements/button.css';
 @import './components/elements/vector.css';
 @import './components/elements/profile-menu.css';
+@import './components/elements/lang.css';
+@import './components/elements/checkbox.css';
+@import './components/elements/scrollbar.css';
 @import './components/elements/static-card.css';
+@import './components/elements/radioinput.css';
 @import './components/animate/animated.css';
 @import './components/animate/slider.css';
 
