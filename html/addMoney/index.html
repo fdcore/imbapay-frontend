@@ -17,13 +17,14 @@
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
    <title>Add Money</title>
    <link href="../style.css" rel="stylesheet" />
 </head>
 <!-- class="overflow-hidden" -->
 
-<body>
+<body x-data="{open: false}">
    <!-- block desktop ml:flex-->
    <div
       class="fixed bottom-0 left-0 right-0 top-0 z-[10000] hidden h-[100vh] w-full items-center justify-center bg-[rgba(68,68,68,0.9)]">
@@ -54,62 +55,68 @@
       </div>
    </div>
    <!-- lang mobile -->
-   <div class="bg-lang bottom-0 left-0 right-0 top-0 z-[100] hidden h-[100vh] w-full bg-[#060605]/[0.9] ml:hidden">
-   </div>
+   <div class="bg-lang fixed hidden  bottom-0 left-0 right-0 top-0 z-[20]  bg-[#060605]/[0.9] ml:hidden">
 
-   <div class="swipe-hide hidden w-[99%] rounded-[35px] bg-white2 ml:hidden">
-      <span class="mx-auto mt-2 block h-[3px] w-[40px] rounded-full bg-grey"></span>
-      <div class="w-[375px] cursor-pointer rounded-[16px] p-6">
-         <a href="/"
-            class="lang is-active flex h-[48px] items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
-               <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+
+      <div class="swipe-down  absolute   w-[99%] rounded-[35px] bg-white2 ml:hidden">
+         <div class="mx-auto mt-2 close-lang block h-[3px] w-[40px] rounded-full bg-grey" data-swipe-threshold="20"
+            data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"></div>
+         <div class="w-[375px] cursor-pointer rounded-[16px] p-6">
+            <a href="/"
+               class="lang is-active flex h-[48px] items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
   15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-               </svg>
-            </span>
-            <span class="text-[14px] text-black"> English (UK) </span>
-         </a>
-         <a href="/"
-            class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
-               <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+                  </svg>
+               </span>
+               <span class="text-[14px] text-black"> English (UK) </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
   15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-               </svg>
-            </span>
-            <span class="text-[14px] text-black"> Украї́нська мо́ва </span>
-         </a>
-         <a href="/"
-            class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
-               <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+                  </svg>
+               </span>
+               <span class="text-[14px] text-black"> Украї́нська мо́ва </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
   15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-               </svg>
-            </span>
-            <span class="text-[14px] text-black"> Русский </span>
-         </a>
-         <a href="/"
-            class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
-               <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+                  </svg>
+               </span>
+               <span class="text-[14px] text-black"> Русский </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
   15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-               </svg>
-            </span>
-            <span class="text-[14px] text-black"> Deutsch </span>
-         </a>
-         <a href="/"
-            class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
-               <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+                  </svg>
+               </span>
+               <span class="text-[14px] text-black"> Deutsch </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
   15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-               </svg>
-            </span>
-            <span class="text-[14px] text-black"> Polski </span>
-         </a>
+                  </svg>
+               </span>
+               <span class="text-[14px] text-black"> Polski </span>
+            </a>
+         </div>
       </div>
    </div>
    <!-- block mobile -->
@@ -135,7 +142,8 @@
       <div class="profile-container ">
          <div class="">
             <!-- footer-mobile -->
-            <div class="fixed bottom-0 left-[50%] z-50 w-full translate-x-[-50%] p-1 sm:w-[640px] ml:hidden">
+            <div
+               class="fixed footer-mobile bottom-0 left-[50%] z-10 w-full translate-x-[-50%] p-1 sm:w-[640px] ml:hidden">
                <div class="rounded-[15px] bg-black">
                   <div class="relative flex w-full justify-between rounded-[15px] bg-white10">
                      <a href="/"
@@ -205,7 +213,7 @@
                </div>
             </div>
             <div
-               class="grid grid-cols-1 gap-4  mb-[100px] ml:mt-0 ml:grid-cols-[218px_calc(100%_-_248px)] ml:grid-rows-[136px_1fr] ml:gap-0 ml:gap-x-[30px]">
+               class="grid grid-cols-1 gap-4 xl:mb-0 mb-[100px] ml:mt-0 ml:grid-cols-[218px_calc(100%_-_248px)] ml:grid-rows-[136px_1fr] ml:gap-0 ml:gap-x-[30px]">
                <!-- logo -->
                <div class="hidden h-full w-full items-center ml:flex">
                   <a href="/html/profile/index.html" class="text-[28px]">imbapay.</a>
@@ -738,7 +746,9 @@
                         <div class="flex items-center gap-3">
                            <!-- lang -->
                            <div class="relative group">
-                              <img class="" src="../img/profile/flag/use.svg" alt="" />
+                              <div class="open-lang cursor-pointer">
+                                 <img class="" src="../img/profile/flag/use.svg" alt="" />
+                              </div>
                               <!-- lang block-->
 
 
@@ -766,9 +776,9 @@
                      </div>
                   </div>
                   <div class="grid grid-cols-1 xl:grid-cols-2 xl:grid-rows-[minmax(200px_440px)_441px] gap-[10px]">
-                     <div class="bg-white10 rounded-b-[30px] ml:rounded-[35px] relative p-6">
+                     <div class="bg-white10 rounded-b-[30px] ml:rounded-[35px] relative ">
                         <div class="h-full w-full absolute -z-10 backdrop-blur-[15px]"></div>
-                        <div class="">
+                        <div class="p-6">
                            <form action="" class="w-full flex flex-col gap-4">
                               <div class="w-full flex flex-col gap-1">
                                  <label class="text-grey text-[14px]" for="amount">Top-up amount</label>
@@ -884,7 +894,7 @@
                                     </div>
                                  </div>
                               </div>
-                              <button class="button">Continue</button>
+                              <button class="button open-btn">Continue</button>
                            </form>
                         </div>
                      </div>
@@ -1281,32 +1291,172 @@
 
 
 
+
+   <!-- modal -->
+   <div class=" fixed  top-0 bottom-0 left-0 right-0 z-10 modals  hidden">
+      <div
+         class="fixed   top-0 bottom-0 left-0 right-0 z-10 bg-[rgba(68,68,68,0.9)] sm:bg-black/[0.9] backdrop-blur-[5px] ">
+      </div>
+
+      <div
+         class="absolute p-4 pt-2 z-20 modal sm:bottom-auto sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]  w-full sm:w-[540px] rounded-t-[35px] sm:rounded-[35px] sm:p-6 bg-black2 sm:bg-white10"
+         x-data="tabs()">
+         <div class="sm:hidden w-[50px] h-1 bg-white10 mb-4 mx-auto mobile-close" data-swipe-threshold="20"
+            data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"></div>
+         <div class="flex justify-between items-center font-AProM text-[22px] mb-[50px]">
+            <span>Account top-up</span>
+            <span class="hidden sm:inline-block close-modal">
+               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                     d="M7.17438 8.19878L12.3015 13.3259L13.3622 12.2652L8.23504 7.13812L13.5003 1.87287L12.4396 0.812212L7.17438 6.07746L2.04846 0.951536L0.987804 2.0122L6.11372 7.13812L1.12592 12.1259L2.18658 13.1866L7.17438 8.19878Z"
+                     fill="#D7FF00" style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+               </svg>
+            </span>
+         </div>
+         <div class="flex h-[30px] w-full items-center rounded-full bg-white10 mb-6">
+            <span
+               class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-white"
+               @click="item = 1"
+               :class="{'text-white2' : item == 1, ' text-grey  bg-transparent': item != 1} ">SEPA</span>
+            <span
+               class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-main"
+               @click="item = 2"
+               :class="{'text-[#D7FF00]' : item == 2, ' text-grey bg-transparent': item != 2} ">SWIFT</span>
+            <span
+               class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-main"
+               @click="item = 3"
+               :class="{'text-[#D7FF00]' : item == 3, ' text-grey bg-transparent': item != 3} ">USDT-trc20</span>
+         </div>
+         <div class="">
+            <!-- item 1 -->
+            <div class="flex flex-col gap-4" x-show="item === 1">
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Recipient's name</label>
+                  <input
+                     class=" w-full font-AProM text-[14px] sm:text-[16px] mt-1 bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="Ivan Ivanov">
+               </div>
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Recipient's address</label>
+                  <input
+                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="Primeraya Street, 10, Kyiv, Ukraine">
+               </div>
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">IBAN (International Bank Account Number)</label>
+                  <input
+                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="DE89370400440532013000">
+               </div>
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Recipient bank's BIC/SWIFT code</label>
+                  <input
+                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="DE89370400440532013000">
+               </div>
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Recipient bank's name</label>
+                  <input
+                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="Deutsche Bank">
+               </div>
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Recipient bank's address</label>
+                  <input
+                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="Taunusanlage 12, 60325 Frankfurt am Main, Германия">
+               </div>
+            </div>
+            <!-- item 2 -->
+            <div class="flex flex-col gap-4" x-show="item === 2">
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Recipient's name</label>
+                  <input
+                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  placeholder:text-white2 bg-transparent py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="Ivan Ivanov">
+               </div>
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Recipient's address</label>
+                  <input
+                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="Primeraya Street, 10, Kyiv, Ukraine">
+               </div>
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Recipient's account number (usually in the IBAN
+                     format
+                     for European banks)</label>
+                  <input
+                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent placeholder:text-white2  py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="DE89370400440532013000">
+               </div>
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Recipient bank's BIC/SWIFT code</label>
+                  <input
+                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent placeholder:text-white2  py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="DE89370400440532013000">
+               </div>
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Recipient bank's name</label>
+                  <input
+                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent  placeholder:text-white2 py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="Deutsche Bank">
+               </div>
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Recipient bank's address</label>
+                  <input
+                     class=" w-full font-AProM mt-1  text-[14px] sm:text-[16px] bg-transparent placeholder:text-white2  py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                     type="text" id="name" placeholder="Taunusanlage 12, 60325 Frankfurt am Main, Германия">
+               </div>
+               <div class="">
+                  <label class="text-grey text-[14px]" for="name">Purpose of payment</label>
+                  <textarea
+                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 px-4 h-[100px] rounded-[20px] h- resize-none border-[1px] border-[rgba(255,255,255,0.3)]"
+                     id="name" rows="3" placeholder='A specific purpose of the transfer is indicated, for example, 
+                     "account top-up"'></textarea>
+               </div>
+            </div>
+            <div class="" x-show="item === 3">
+               <div class="w-full h-[400px] flex justify-center items-center">
+                  <img src="../img/logo-tron.png" alt="">
+               </div>
+               <div class="mt-4">
+                  <label class="text-grey text-[14px]" for="name">USDT-TRC20 adress to pay</label>
+                  <div class="relative">
+                     <input
+                        class=" w-full font-AProM mt-1  text-[14px] sm:text-[16px] bg-transparent placeholder:text-white2  py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
+                        type="text" id="name" value="TJkaKnn6f8C9b7L9z3X9jdE7y5kq6G2uEY" disabled>
+                     <span class="absolute h-full  inline-flex top-0 right-6 cursor-pointer items-center">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <g clip-path="url(#clip0_437_56514)">
+                              <path
+                                 d="M15 6H7.5C6.67157 6 6 6.67157 6 7.5V15C6 15.8284 6.67157 16.5 7.5 16.5H15C15.8284 16.5 16.5 15.8284 16.5 15V7.5C16.5 6.67157 15.8284 6 15 6Z"
+                                 fill="white" fill-opacity="0.1" stroke="#9B9B9B"
+                                 style="fill:white;fill-opacity:0.1;stroke:#9B9B9B;stroke:color(display-p3 0.6078 0.6078 0.6078);stroke-opacity:1;"
+                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                 d="M3 12C2.175 12 1.5 11.325 1.5 10.5V3C1.5 2.175 2.175 1.5 3 1.5H10.5C11.325 1.5 12 2.175 12 3"
+                                 stroke="#9B9B9B"
+                                 style="stroke:#9B9B9B;stroke:color(display-p3 0.6078 0.6078 0.6078);stroke-opacity:1;"
+                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           </g>
+                           <defs>
+                              <clipPath id="clip0_437_56514">
+                                 <rect width="18" height="18" fill="white" style="fill:white;fill-opacity:1;" />
+                              </clipPath>
+                           </defs>
+                        </svg>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+
    <script>
-      const swipeHide = document.querySelector('.swipe-hide')
 
-      let isSwiping = false
-      let touchStartX = 0
-      let touchEndX = 0
-
-      swipeHide.addEventListener('touchstart', (e) => {
-         isSwiping = true
-         touchStartX = e.touches[0].clientX
-      })
-
-      swipeHide.addEventListener('touchmove', (e) => {
-         if (!isSwiping) {
-            return
-         }
-         touchEndX = e.touches[0].clientX
-      })
-
-      swipeHide.addEventListener('touchend', () => {
-         if (touchEndX < touchStartX) {
-            swipeHide.classList.add('hide') // Добавляем класс hide при свайпе вниз
-            document.querySelector('.bg-lang').classList.add('hide-bg')
-         }
-         isSwiping = false
-      })
    </script>
    <script>
       function toggleShow() {
@@ -1314,6 +1464,89 @@
          element.classList.toggle('hidden');
       }
    </script>
+
+   <script src="./swiped-events.min.js"></script>
+   <script>
+      function tabs() {
+         return {
+            item: 1,
+
+         }
+      }
+
+      const openLang = document.querySelector('.open-lang');
+      const bgLang = document.querySelector('.bg-lang');
+      const swipeDown = document.querySelector('.swipe-down');
+      const closeLang = document.querySelector('.close-lang');
+
+
+
+
+      const mobileClose = document.querySelector('.mobile-close');
+      const openBtn = document.querySelector('.open-btn');
+      const modal = document.querySelector('.modals');
+      const closeClick = document.querySelector('.close-modal')
+      let disableScroll = function () {
+         document.body.classList.add('overflow-y-hidden');
+      }
+
+      let enableScroll = function () {
+         document.body.classList.remove('overflow-y-hidden');
+      }
+      const openModalDesktop = () => {
+         modal.classList.add('is-open');
+         disableScroll();
+         setTimeout(() => {
+            modal.querySelector('.modal').classList.add('visible');
+         }, 300);
+
+      }
+      openBtn.addEventListener('click', (e) => {
+         e.preventDefault();
+         openModalDesktop();
+      });
+      const closeModal = () => {
+         modal.querySelector('.modal').classList.remove('visible');
+         setTimeout(() => {
+            modal.classList.remove('is-open');
+            enableScroll();
+         }, 400);
+
+      }
+      closeClick.addEventListener('click', (e) => {
+         closeModal();
+      })
+      mobileClose.addEventListener('swiped-down', function (e) {
+         closeModal();
+      });
+
+      // block lang
+
+
+      const closeModalLang = () => {
+         swipeDown.classList.remove('visible');
+         setTimeout(() => {
+            bgLang.classList.remove('is-open');
+            enableScroll();
+         }, 400);
+
+      }
+
+      openLang.addEventListener('click', (e) => {
+
+         e.preventDefault();
+         bgLang.classList.add('is-open');
+         disableScroll();
+         setTimeout(() => {
+            swipeDown.classList.add('visible');
+         }, 300);
+      });
+      closeLang.addEventListener('swiped-down', function (e) {
+         console.log('ddd')
+         closeModalLang();
+      });
+   </script>
+
 </body>
 
 </html>

@@ -2,16 +2,18 @@
 	display: block;
 }
 
+.footer-mobile {
+   display: block;
+}
 
 @media (max-width: 640px) {
-   .swipe-down {
+   .modal {
       transform: none;
       transform: translateY(150vh);
       transition: transform 0.3s;
-      bottom: 4px;
-      left: 0;
+      bottom: 0;
+      top: auto;
    }
-   
    .visible {
       transform: translateY(0);
       
