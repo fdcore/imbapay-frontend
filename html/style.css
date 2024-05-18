@@ -1386,6 +1386,10 @@ video {
   width: 130px;
 }
 
+.w-\[170px\] {
+  width: 170px;
+}
+
 .w-\[175px\] {
   width: 175px;
 }
@@ -1548,10 +1552,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[170px\] {
-  width: 170px;
 }
 
 .max-w-\[395px\] {
@@ -3321,7 +3321,7 @@ video {
   display: block;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 960px) {
   .swipe-down {
     transform: none;
     transform: translateY(150vh);
