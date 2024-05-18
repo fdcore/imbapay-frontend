@@ -6,6 +6,10 @@
   perspective: 1000px;
   transform-style: preserve-3d;
 }
+.swiper-slide.card-bank {
+  perspective: none;
+  transform-style:unset;
+}
 
 .item-card {
   transition: transform 0.2s;

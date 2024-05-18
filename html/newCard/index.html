@@ -729,8 +729,8 @@
                </div>
                <!-- content  -->
                <div class="w-full relative ">
-                  <div class="h-full w-full absolute  -z-10 backdrop-blur-[15px]"></div>
-                  <div class=" ml:bg-transparent bg-white10  px-4 pt-[22px]  ml:p-0">
+                  <div class="h-full w-full absolute hidden -z-10 backdrop-blur-[15px]"></div>
+                  <div class=" ml:bg-transparent   px-4 pt-[22px]  ml:p-0">
                      <div class="mb-[22px] flex w-full items-center justify-between gap-2 ml:hidden">
                         <a href="../profile/myProfile.html" class="group flex cursor-pointer items-center">
                            <span
@@ -771,9 +771,11 @@
                            </div>
                         </div>
                      </div>
-                     <div class="relative  w-full h-full text-[30px] font-AProM ml:mb-6 flex">
-                        Top up your account <span class="ml-2"><svg width="24" height="24" viewBox="0 0 24 24"
-                              fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <div class="relative  w-full h-full text-[30px] font-AProM ml:mb-4 flex items-center">
+                        <span class="ml:mt-2">Card Issuance</span>
+                        <span class="ml-2 relative group">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
                               <g clip-path="url(#clip0_437_59349)">
                                  <path
                                     d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
@@ -787,514 +789,999 @@
                                     <rect width="24" height="24" fill="white" style="fill:white;fill-opacity:1;" />
                                  </clipPath>
                               </defs>
-                           </svg></span>
+                           </svg>
+                           <div
+                              class="absolute rounded-[16px] group-hover:block hidden w-[275px] ml:w-[320px] left-[50%] translate-x-[-50%] top-10 z-50 min-h-[50px] bg-white2 p-6">
+                              <svg class="absolute top-[-8%] z-40 left-[50%] translate-x-[-50%]" width="25" height="12"
+                                 viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M24.6588 11.3662L0.339844 11.3662C0.400916 11.2822 0.469341 11.2018 0.545117 11.1261L11.0851 0.586076C11.8662 -0.194973 13.1325 -0.194975 13.9135 0.586074L24.4535 11.1261C24.5293 11.2018 24.5977 11.2822 24.6588 11.3662Z"
+                                    fill="white" style="fill:white;fill-opacity:1;" />
+                              </svg>
+                              <p class="text-black2 text-[14px] ml:text-[16px]">
+                                 For legal reasons, we need to ask for your recipient’s address. Don’t worry, they won’t
+                                 get any post from us.
+                              </p>
+                           </div>
+                        </span>
                      </div>
                   </div>
-                  <div class="grid grid-cols-1 xl:grid-cols-2 xl:grid-rows-[minmax(200px_440px)_441px] gap-[10px]">
-                     <div class="bg-white10 rounded-b-[30px] ml:rounded-[35px] relative ">
-                        <div class="h-full w-full absolute -z-10 backdrop-blur-[15px]"></div>
-                        <div class="p-6">
-                           <form action="" class="w-full flex flex-col gap-4">
-                              <div class="w-full flex flex-col gap-1">
-                                 <label class="text-grey text-[14px]" for="amount">Top-up amount</label>
-                                 <div class="relative">
-                                    <input
-                                       class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[64px] md:h-[75px]  rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 border-[2px] border-white/[0.3]"
-                                       type="number" id="amount" placeholder="Select amount">
-                                    <div class="absolute top-[20px] md:top-[25px]  right-5 group  ">
-                                       <div class="flex items-center gap-1">
-                                          <img src="../img/profile/flag/use.svg" alt="">
-                                          <span class="md:text-[22px] font-AProM leading-none mt-1">EN</span>
-                                          <span>
-                                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                   d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                                   fill="white" style="fill:white;fill-opacity:1;" />
-                                             </svg>
-                                          </span>
-                                       </div>
-                                       <div class="hidden group-hover:flex mt-4  flex-col gap-2">
-                                          <div class="flex items-center gap-1">
-                                             <img src="../img/profile/flag/use.svg" alt="">
-                                             <span class="md:text-[22px] font-AProM leading-none mt-1">RU</span>
-                                             <span>
-                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
-                                                   <path
-                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                                      fill="white" style="fill:white;fill-opacity:1;" />
-                                                </svg>
-                                             </span>
-                                          </div>
-                                          <div class="flex items-center gap-1">
-                                             <img src="../img/profile/flag/use.svg" alt="">
-                                             <span class="md:text-[22px] font-AProM leading-none mt-1">UK</span>
-                                             <span>
-                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
-                                                   <path
-                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                                      fill="white" style="fill:white;fill-opacity:1;" />
-                                                </svg>
-                                             </span>
-                                          </div>
-                                       </div>
+                  <!-- mobile card -->
+                  <div class=" h-[250px] w-[auto] xl:hidden  sm:w-[630px] lg:w-full relative overflow-hidden">
+                     <div class="swiper-container w-[95%] sm:w-[70%] lg:w-[95%]">
+                        <div class="swiper-wrapper">
+                           <!-- card -->
+                           <div class="swiper-slide card-bank">
+                              <div
+                                 class="relative  bg-[rgba(85,127,221,0.85)] w-[340px] h-[206px] text-white2 flex flex-col justify-between  rounded-[20px] p-[22px]">
+                                 <img class="absolute top-0 w-full h-full -z-10 rounded-[20px] left-0  "
+                                    src="../img/invoice/gradient-card.png" alt="">
+                                 <div class="flex justify-between items-center">
+                                    <div class="flex flex-col">
+                                       <span class="text-[12px] open-btn">Current Balance</span>
+                                       <span class="font-AProBo text-[20px] ">5 750,20 ₴</span>
                                     </div>
-                                 </div>
-                              </div>
-                              <div class="w-full flex flex-col gap-1">
-                                 <label class="text-grey text-[14px]" for="method">Payment method</label>
-                                 <div class="relative">
-                                    <input
-                                       class="bg-transparent placeholder:text-[16px] font-AProBo w-full h-[64px] md:h-[75px] rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 border-[2px] border-white/[0.3]"
-                                       type="number" id="method" placeholder="">
-                                    <div class="absolute flex items-center gap-2 top-0 h-full left-[20px]">
-                                       <img src="../img/profile/flag/use.svg" alt="">
-                                       <span>UAH balance</span>
-                                    </div>
-
-                                    <button
-                                       class="absolute top-[50%] translate-y-[-50%] right-[20px] border-[1px] border-grey h-8 px-4 rounded-full">
-                                       Change
-                                    </button>
-                                 </div>
-
-                              </div>
-                              <div class="w-full flex flex-col gap-1">
-                                 <label class="text-grey text-[14px]" for="currency">Top-up currency</label>
-                                 <div class="relative">
-                                    <input
-                                       class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[64px] md:h-[75px] rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 border-[2px] border-white/[0.3]"
-                                       type="number" id="currency" placeholder="Select currency">
-                                    <div class="absolute top-[20px] md:top-[25px]  right-5 group  ">
-                                       <div class="flex items-center gap-1">
-                                          <img src="../img/profile/flag/use.svg" alt="">
-                                          <span class="md:text-[22px] font-AProM leading-none mt-1">EN</span>
-                                          <span>
-                                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                   d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                                   fill="white" style="fill:white;fill-opacity:1;" />
-                                             </svg>
-                                          </span>
-                                       </div>
-                                       <div class="hidden group-hover:flex mt-4  flex-col gap-2">
-                                          <div class="flex items-center gap-1">
-                                             <img src="../img/profile/flag/use.svg" alt="">
-                                             <span class="md:text-[22px] font-AProM leading-none mt-1">RU</span>
-                                             <span>
-                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
-                                                   <path
-                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                                      fill="white" style="fill:white;fill-opacity:1;" />
-                                                </svg>
-                                             </span>
-                                          </div>
-                                          <div class="flex items-center gap-1">
-                                             <img src="../img/profile/flag/use.svg" alt="">
-                                             <span class="md:text-[22px] font-AProM leading-none mt-1">UK</span>
-                                             <span>
-                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
-                                                   <path
-                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                                      fill="white" style="fill:white;fill-opacity:1;" />
-                                                </svg>
-                                             </span>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <button class="button open-btn">Continue</button>
-                           </form>
-                        </div>
-                     </div>
-                     <!-- transactions -->
-                     <div class="ml:bg-white10 rounded-[35px] relative">
-                        <!-- transactions desktop-->
-                        <div class="h-full w-full absolute -z-10 backdrop-blur-[15px]"></div>
-
-                        <div class="hidden md:flex max-h-[441px] w-full flex-col gap-4 rounded-[35px] bg-white10 p-6">
-                           <div class="flex items-start justify-between">
-                              <a href="../profile/search.html"
-                                 class="w-full font-AProM text-[22px] text-white2">Transactions</a>
-                              <div class="relative h-[56px] w-full">
-                                 <svg class="absolute left-[16px] top-[50%] translate-y-[-50%]" width="19" height="18"
-                                    viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                       d="M18.286 16.543L14.257 12.514C15.329 11.186 15.929 9.514 15.929 7.714C15.929 3.471 12.457 0 8.214 0C3.971 0 0.5 3.471 0.5 7.714C0.5 11.957 3.971 15.429 8.214 15.429C10.014 15.429 11.686 14.786 13.014 13.757L17.043 17.786L18.286 16.543ZM8.257 13.714C4.957 13.714 2.257 11.014 2.257 7.714C2.257 4.414 4.957 1.714 8.257 1.714C11.557 1.714 14.257 4.414 14.257 7.714C14.257 11.014 11.557 13.714 8.257 13.714Z"
-                                       fill="white" style="fill: white; fill-opacity: 1" />
-                                 </svg>
-                                 <input
-                                    class="h-full w-full rounded-full border-[1px] border-white10 bg-transparent pl-[45px] text-[14px] text-grey"
-                                    type="text" placeholder="Search Transactions" />
-                              </div>
-                           </div>
-                           <div class="rounded-[25px] lg:overflow-hidden">
-                              <ul class="w-full">
-                                 <li
-                                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2">
-                                    <div
-                                       class="flex w-full items-center justify-between rounded-[35px] bg-bg3 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
-                                       <span class="leading-snug">April 2024</span>
-                                       <span>
-                                          <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    <div class="flex items-center justify-end gap-2 w-1/2">
+                                       <span
+                                          class="px-4 h-9 rounded-[15px] border-[1px] border-white2 flex items-center text-[14px] justify-center">Active</span>
+                                       <span
+                                          class="w-9 relative group cursor-pointer h-9 rounded-full border-[1px] border-white10 flex items-center justify-center">
+                                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
-                                             <path
-                                                d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
-                                                fill="white" style="fill: white; fill-opacity: 1" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15.2571 10.0924L16.2854 10.7029C16.4466 10.7997 16.5426 10.9279 16.5426 11.1529C16.5749 11.3134 16.5749 11.4747 16.4789 11.6352L14.9999 14.1747C14.9039 14.3029 14.7749 14.4312 14.6144 14.4634C14.4531 14.4957 14.2926 14.4957 14.1321 14.3997L13.1031 13.7884C12.5571 14.2707 11.9144 14.6247 11.2071 14.8812V16.0707C11.2065 16.2409 11.1386 16.4041 11.0182 16.5245C10.8978 16.6449 10.7347 16.7128 10.5644 16.7134H7.60714C7.43686 16.7128 7.27371 16.6449 7.1533 16.5245C7.03289 16.4041 6.96498 16.2409 6.96439 16.0707V14.8174C6.27582 14.5611 5.63479 14.1918 5.06764 13.7247L4.03939 14.3352C3.91039 14.4312 3.71764 14.4312 3.55714 14.3997C3.39664 14.3674 3.26764 14.2707 3.17164 14.1102L1.69264 11.5707C1.62814 11.4424 1.59664 11.2497 1.62814 11.0884C1.66039 10.9279 1.75714 10.7997 1.91764 10.7029L2.94664 10.0924C2.88256 9.73168 2.85019 9.36603 2.84989 8.99966C2.84989 8.64566 2.88214 8.29241 2.94664 7.90616L1.91764 7.29566C1.78939 7.19966 1.66039 7.07066 1.62814 6.91016C1.59664 6.74966 1.59664 6.58841 1.69264 6.42791L3.23539 3.82466C3.33214 3.69566 3.46039 3.56741 3.62164 3.53516C3.78214 3.50291 3.94264 3.50291 4.10314 3.59966L5.13214 4.21016C5.67814 3.72791 6.32164 3.37466 7.02814 3.11741V1.92791C7.02874 1.75749 7.09675 1.59424 7.21732 1.4738C7.33789 1.35337 7.50123 1.28555 7.67164 1.28516H10.6281C10.7986 1.28555 10.9619 1.35337 11.0825 1.4738C11.203 1.59424 11.271 1.75749 11.2716 1.92791V3.14966C11.9599 3.40612 12.6007 3.77542 13.1676 4.24241L14.1966 3.63116C14.3249 3.53516 14.5176 3.53516 14.6789 3.56741C14.8394 3.59966 14.9676 3.69566 15.0644 3.85616L16.5096 6.42791C16.6064 6.55616 16.6064 6.74966 16.5741 6.91016C16.5419 7.07066 16.4459 7.19966 16.2846 7.29566L15.2564 7.90616C15.3209 8.26016 15.3524 8.64566 15.3524 8.99966C15.3524 9.35291 15.3216 9.70616 15.2571 10.0924ZM14.0676 8.99966C14.0676 8.58116 14.0039 8.16341 13.9071 7.74566C13.8426 7.45616 13.9394 7.16741 14.2604 7.00616L15.1604 6.49241L14.3249 5.04566L13.4249 5.56016C13.3041 5.6328 13.1625 5.66275 13.0226 5.64521C12.8828 5.62766 12.753 5.56363 12.6539 5.46341C12.0426 4.88516 11.3039 4.43516 10.4676 4.21016C10.3296 4.1788 10.2065 4.10113 10.1187 3.99005C10.031 3.87897 9.98393 3.7412 9.98539 3.59966V2.57066H8.31439V3.63116C8.31602 3.77283 8.26905 3.91078 8.18129 4.02201C8.09353 4.13324 7.9703 4.21103 7.83214 4.24241C7.00546 4.45913 6.25123 4.89164 5.64664 5.49566C5.54753 5.59606 5.41752 5.6602 5.27753 5.67775C5.13754 5.6953 4.99572 5.66524 4.87489 5.59241L3.97489 5.07791L3.13939 6.52466L4.03939 7.03841C4.26439 7.16741 4.39264 7.45616 4.32814 7.74566C4.22729 8.15648 4.17345 8.57743 4.16764 9.00041C4.16764 9.41816 4.23214 9.83591 4.32814 10.2537C4.42489 10.5109 4.29664 10.8004 4.03939 10.9609L3.13939 11.4754L3.97489 12.9214L4.81039 12.4392C4.93122 12.3663 5.07304 12.3363 5.21303 12.3538C5.35302 12.3714 5.48303 12.4355 5.58214 12.5359C6.19264 13.1142 6.93214 13.5642 7.76764 13.7892C7.9058 13.8205 8.02903 13.8983 8.11679 14.0096C8.20455 14.1208 8.25152 14.2587 8.24989 14.4004V15.4287H9.92164V14.3682C9.92164 14.0787 10.1144 13.8214 10.4031 13.7577C11.2302 13.5408 11.9847 13.1081 12.5894 12.5037C12.6885 12.4034 12.8183 12.3394 12.9581 12.3219C13.098 12.3043 13.2396 12.3343 13.3604 12.4069L14.2604 12.9214L15.0966 11.4754L14.1966 10.9609C13.9716 10.8327 13.8426 10.5432 13.9071 10.2537C14.0079 9.84332 14.0617 9.42288 14.0676 9.00041V8.99966ZM5.90314 8.99966C5.90552 8.14785 6.24495 7.33161 6.84727 6.72928C7.44959 6.12696 8.26583 5.78753 9.11764 5.78516C9.96945 5.78753 10.7857 6.12696 11.388 6.72928C11.9903 7.33161 12.3298 8.14785 12.3321 8.99966C12.3296 9.85133 11.99 10.6674 11.3877 11.2695C10.7854 11.8717 9.96932 12.211 9.11764 12.2134C8.26609 12.211 7.45008 11.8718 6.8478 11.2698C6.24552 10.6678 5.90591 9.85195 5.90314 9.00041V8.99966ZM7.18939 8.99966C7.19097 9.51057 7.39464 10.0001 7.75591 10.3614C8.11719 10.7227 8.60672 10.9263 9.11764 10.9279C9.62869 10.9265 10.1184 10.7229 10.4799 10.3617C10.8413 10.0004 11.0451 9.5107 11.0466 8.99966C11.0453 8.48848 10.8416 7.99864 10.4801 7.63718C10.1187 7.27572 9.62882 7.07204 9.11764 7.07066C8.60647 7.07224 8.1167 7.27611 7.75538 7.63771C7.39407 7.99931 7.19058 8.48923 7.18939 9.00041V8.99966Z"
+                                                fill="white" style="fill:white;fill-opacity:1;" />
+                                          </svg>
+                                          <div
+                                             class="absolute rounded-[16px] group-hover:block hidden left-[50%] translate-x-[-50%] top-10 z-[50] bg-white2 p-4">
+                                             <svg class="absolute top-[-5%]  left-[50%] translate-x-[-50%]" width="25"
+                                                height="12" viewBox="0 0 25 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                   d="M24.6588 11.3662L0.339844 11.3662C0.400916 11.2822 0.469341 11.2018 0.545117 11.1261L11.0851 0.586076C11.8662 -0.194973 13.1325 -0.194975 13.9135 0.586074L24.4535 11.1261C24.5293 11.2018 24.5977 11.2822 24.6588 11.3662Z"
+                                                   fill="white" style="fill:white;fill-opacity:1;" />
+                                             </svg>
+                                             <div class="flex flex-col gap-1">
+                                                <button
+                                                   class="rounded-full whitespace-nowrap flex hover:text-black2 hover:border-black2 border-[1px] border-grey p-2 px-4  items-center text-grey text-[14px] justify-center">To
+                                                   block a card</button>
+                                                <button
+                                                   class="rounded-full whitespace-nowrap hover:text-black2  hover:border-black2 border-[1px] border-red2 p-2 px-4 flex items-center text-red2 text-[14px] justify-center">To
+                                                   delete a card</button>
+                                             </div>
+                                          </div>
+                                       </span>
+                                    </div>
+                                 </div>
+                                 <div class="flex flex-col gap-4">
+                                    <div class="">
+                                       <span class="text-[12px] ">Card number</span>
+                                       <div class="flex items-center gap-3">
+                                          <span class="font-AProM text-[14px] ">5282 3456 7890 1289</span>
+                                          <span class="cursor-pointer group">
+                                             <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-white2 group-hover:stroke-main"
+                                                   d="M12.5 5.5H6.25C5.55964 5.5 5 6.05964 5 6.75V13C5 13.6904 5.55964 14.25 6.25 14.25H12.5C13.1904 14.25 13.75 13.6904 13.75 13V6.75C13.75 6.05964 13.1904 5.5 12.5 5.5Z"
+                                                   stroke-linecap="round" stroke-linejoin="round" />
+                                                <path class="stroke-white2 group-hover:stroke-main"
+                                                   d="M2.5 10.5C1.8125 10.5 1.25 9.9375 1.25 9.25V3C1.25 2.3125 1.8125 1.75 2.5 1.75H8.75C9.4375 1.75 10 2.3125 10 3"
+                                                   stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                          </span>
+                                       </div>
+                                    </div>
+                                    <div class="flex gap-10 justify-between items-end">
+                                       <div class="flex gap-10">
+                                          <div class="">
+                                             <span class="text-[12px] ">Expiry date</span>
+                                             <div class="flex items-center gap-3">
+                                                <span class="font-AProM text-[14px] ">09/25</span>
+
+                                             </div>
+                                          </div>
+                                          <div class="">
+                                             <span class="text-[12px] ">CVV</span>
+                                             <div class="flex items-center gap-3">
+                                                <span class="font-AProM text-[14px] ">568</span>
+                                                <span class="cursor-pointer group">
+                                                   <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path class="stroke-white2 group-hover:stroke-main"
+                                                         d="M12.5 5.5H6.25C5.55964 5.5 5 6.05964 5 6.75V13C5 13.6904 5.55964 14.25 6.25 14.25H12.5C13.1904 14.25 13.75 13.6904 13.75 13V6.75C13.75 6.05964 13.1904 5.5 12.5 5.5Z"
+                                                         stroke-linecap="round" stroke-linejoin="round" />
+                                                      <path class="stroke-white2 group-hover:stroke-main"
+                                                         d="M2.5 10.5C1.8125 10.5 1.25 9.9375 1.25 9.25V3C1.25 2.3125 1.8125 1.75 2.5 1.75H8.75C9.4375 1.75 10 2.3125 10 3"
+                                                         stroke-linecap="round" stroke-linejoin="round" />
+                                                   </svg>
+                                                </span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <span>
+                                          <svg width="88" height="32" viewBox="0 0 88 32" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <ellipse cx="53.2579" cy="15.543" rx="15.5431" ry="15.543" fill="white"
+                                                fill-opacity="0.4" style="fill:white;fill-opacity:0.4;" />
+                                             <g filter="url(#filter0_b_437_80124)">
+                                                <ellipse cx="72.4571" cy="16.457" rx="15.5431" ry="15.543" fill="white"
+                                                   fill-opacity="0.5" style="fill:white;fill-opacity:0.5;" />
+                                             </g>
+                                             <defs>
+                                                <filter id="filter0_b_437_80124" x="52.4696" y="-3.5304" width="39.9749"
+                                                   height="39.9749" filterUnits="userSpaceOnUse"
+                                                   color-interpolation-filters="sRGB">
+                                                   <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                   <feGaussianBlur in="BackgroundImageFix" stdDeviation="2.22223" />
+                                                   <feComposite in2="SourceAlpha" operator="in"
+                                                      result="effect1_backgroundBlur_437_80124" />
+                                                   <feBlend mode="normal" in="SourceGraphic"
+                                                      in2="effect1_backgroundBlur_437_80124" result="shape" />
+                                                </filter>
+                                             </defs>
                                           </svg>
                                        </span>
                                     </div>
-                                    <ul class="my-4 px-6">
-                                       <li class="rounded-[25px] py-2">
-                                          <div class="flex items-center justify-between">
-                                             <div class="flex items-center">
-                                                <span
-                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
-                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                                      xmlns="http://www.w3.org/2000/svg">
-                                                      <path fill-rule="evenodd" clip-rule="evenodd"
-                                                         d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
-                                                         fill="white" style="fill: white; fill-opacity: 1" />
-                                                   </svg>
-                                                </span>
-                                                <div class="flex flex-col">
-                                                   <span class="font-AProM text-white2 xl:text-[16px]">Liam
-                                                      Johnson</span>
-                                                   <span class="text-[14px] text-grey">03.04.2024</span>
-                                                </div>
-                                             </div>
-                                             <div class="flex flex-col items-end justify-start">
-                                                <span class="text-right font-AProM text-[16px] text-white2">
-                                                   25 822.80 UAH
-                                                </span>
-                                                <span class="text-[14px] text-grey">662,89 USD</span>
-                                                <span class="text-[14px] text-grey">Payment note</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- card -->
+                           <div class="swiper-slide card-bank">
+                              <div
+                                 class="relative  bg-main/[0.9] w-[340px] h-[206px] text-black2 flex flex-col justify-between  rounded-[35px] p-6">
+                                 <img class="absolute top-0 w-full h-full  rounded-[35px] left-0 -z-10 "
+                                    src="../img/invoice/gradient-card.png" alt="">
+                                 <div class="flex justify-between items-center">
+                                    <div class="flex flex-col">
+                                       <span class="text-[12px] ">Current Balance</span>
+                                       <span class="font-AProBo text-[20px] ">5 750,20 ₴</span>
+                                    </div>
+                                    <div class="flex items-center justify-end gap-2 w-1/2">
+                                       <span
+                                          class="px-4 h-9 rounded-[15px] border-[1px] border-black2 flex items-center text-[14px] justify-center">Active</span>
+                                       <span
+                                          class="w-9 relative group cursor-pointer h-9 rounded-full border-[1px] border-[#090a08] flex items-center justify-center">
+                                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15.2571 10.0924L16.2854 10.7029C16.4466 10.7997 16.5426 10.9279 16.5426 11.1529C16.5749 11.3134 16.5749 11.4747 16.4789 11.6352L14.9999 14.1747C14.9039 14.3029 14.7749 14.4312 14.6144 14.4634C14.4531 14.4957 14.2926 14.4957 14.1321 14.3997L13.1031 13.7884C12.5571 14.2707 11.9144 14.6247 11.2071 14.8812V16.0707C11.2065 16.2409 11.1386 16.4041 11.0182 16.5245C10.8978 16.6449 10.7347 16.7128 10.5644 16.7134H7.60714C7.43686 16.7128 7.27371 16.6449 7.1533 16.5245C7.03289 16.4041 6.96498 16.2409 6.96439 16.0707V14.8174C6.27582 14.5611 5.63479 14.1918 5.06764 13.7247L4.03939 14.3352C3.91039 14.4312 3.71764 14.4312 3.55714 14.3997C3.39664 14.3674 3.26764 14.2707 3.17164 14.1102L1.69264 11.5707C1.62814 11.4424 1.59664 11.2497 1.62814 11.0884C1.66039 10.9279 1.75714 10.7997 1.91764 10.7029L2.94664 10.0924C2.88256 9.73168 2.85019 9.36603 2.84989 8.99966C2.84989 8.64566 2.88214 8.29241 2.94664 7.90616L1.91764 7.29566C1.78939 7.19966 1.66039 7.07066 1.62814 6.91016C1.59664 6.74966 1.59664 6.58841 1.69264 6.42791L3.23539 3.82466C3.33214 3.69566 3.46039 3.56741 3.62164 3.53516C3.78214 3.50291 3.94264 3.50291 4.10314 3.59966L5.13214 4.21016C5.67814 3.72791 6.32164 3.37466 7.02814 3.11741V1.92791C7.02874 1.75749 7.09675 1.59424 7.21732 1.4738C7.33789 1.35337 7.50123 1.28555 7.67164 1.28516H10.6281C10.7986 1.28555 10.9619 1.35337 11.0825 1.4738C11.203 1.59424 11.271 1.75749 11.2716 1.92791V3.14966C11.9599 3.40612 12.6007 3.77542 13.1676 4.24241L14.1966 3.63116C14.3249 3.53516 14.5176 3.53516 14.6789 3.56741C14.8394 3.59966 14.9676 3.69566 15.0644 3.85616L16.5096 6.42791C16.6064 6.55616 16.6064 6.74966 16.5741 6.91016C16.5419 7.07066 16.4459 7.19966 16.2846 7.29566L15.2564 7.90616C15.3209 8.26016 15.3524 8.64566 15.3524 8.99966C15.3524 9.35291 15.3216 9.70616 15.2571 10.0924ZM14.0676 8.99966C14.0676 8.58116 14.0039 8.16341 13.9071 7.74566C13.8426 7.45616 13.9394 7.16741 14.2604 7.00616L15.1604 6.49241L14.3249 5.04566L13.4249 5.56016C13.3041 5.6328 13.1625 5.66275 13.0226 5.64521C12.8828 5.62766 12.753 5.56363 12.6539 5.46341C12.0426 4.88516 11.3039 4.43516 10.4676 4.21016C10.3296 4.1788 10.2065 4.10113 10.1187 3.99005C10.031 3.87897 9.98393 3.7412 9.98539 3.59966V2.57066H8.31439V3.63116C8.31602 3.77283 8.26905 3.91078 8.18129 4.02201C8.09353 4.13324 7.9703 4.21103 7.83214 4.24241C7.00546 4.45913 6.25123 4.89164 5.64664 5.49566C5.54753 5.59606 5.41752 5.6602 5.27753 5.67775C5.13754 5.6953 4.99572 5.66524 4.87489 5.59241L3.97489 5.07791L3.13939 6.52466L4.03939 7.03841C4.26439 7.16741 4.39264 7.45616 4.32814 7.74566C4.22729 8.15648 4.17345 8.57743 4.16764 9.00041C4.16764 9.41816 4.23214 9.83591 4.32814 10.2537C4.42489 10.5109 4.29664 10.8004 4.03939 10.9609L3.13939 11.4754L3.97489 12.9214L4.81039 12.4392C4.93122 12.3663 5.07304 12.3363 5.21303 12.3538C5.35302 12.3714 5.48303 12.4355 5.58214 12.5359C6.19264 13.1142 6.93214 13.5642 7.76764 13.7892C7.9058 13.8205 8.02903 13.8983 8.11679 14.0096C8.20455 14.1208 8.25152 14.2587 8.24989 14.4004V15.4287H9.92164V14.3682C9.92164 14.0787 10.1144 13.8214 10.4031 13.7577C11.2302 13.5408 11.9847 13.1081 12.5894 12.5037C12.6885 12.4034 12.8183 12.3394 12.9581 12.3219C13.098 12.3043 13.2396 12.3343 13.3604 12.4069L14.2604 12.9214L15.0966 11.4754L14.1966 10.9609C13.9716 10.8327 13.8426 10.5432 13.9071 10.2537C14.0079 9.84332 14.0617 9.42288 14.0676 9.00041V8.99966ZM5.90314 8.99966C5.90552 8.14785 6.24495 7.33161 6.84727 6.72928C7.44959 6.12696 8.26583 5.78753 9.11764 5.78516C9.96945 5.78753 10.7857 6.12696 11.388 6.72928C11.9903 7.33161 12.3298 8.14785 12.3321 8.99966C12.3296 9.85133 11.99 10.6674 11.3877 11.2695C10.7854 11.8717 9.96932 12.211 9.11764 12.2134C8.26609 12.211 7.45008 11.8718 6.8478 11.2698C6.24552 10.6678 5.90591 9.85195 5.90314 9.00041V8.99966ZM7.18939 8.99966C7.19097 9.51057 7.39464 10.0001 7.75591 10.3614C8.11719 10.7227 8.60672 10.9263 9.11764 10.9279C9.62869 10.9265 10.1184 10.7229 10.4799 10.3617C10.8413 10.0004 11.0451 9.5107 11.0466 8.99966C11.0453 8.48848 10.8416 7.99864 10.4801 7.63718C10.1187 7.27572 9.62882 7.07204 9.11764 7.07066C8.60647 7.07224 8.1167 7.27611 7.75538 7.63771C7.39407 7.99931 7.19058 8.48923 7.18939 9.00041V8.99966Z"
+                                                fill="#090a08" />
+                                          </svg>
+                                          <div
+                                             class="absolute rounded-[16px] group-hover:block hidden left-[50%] translate-x-[-50%] top-10 z-[9999] bg-white2 p-4">
+                                             <svg class="absolute top-[-5%] z-40 left-[50%] translate-x-[-50%]"
+                                                width="25" height="12" viewBox="0 0 25 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                   d="M24.6588 11.3662L0.339844 11.3662C0.400916 11.2822 0.469341 11.2018 0.545117 11.1261L11.0851 0.586076C11.8662 -0.194973 13.1325 -0.194975 13.9135 0.586074L24.4535 11.1261C24.5293 11.2018 24.5977 11.2822 24.6588 11.3662Z"
+                                                   fill="white" />
+                                             </svg>
+                                             <div class="flex flex-col gap-1">
+                                                <button
+                                                   class="rounded-full whitespace-nowrap flex border-[1px] hover:text-black2  hover:border-black2  border-grey p-4  items-center text-grey text-[14px] justify-center">To
+                                                   block a card</button>
+                                                <button
+                                                   class="rounded-full whitespace-nowrap  border-[1px] hover:text-black2  hover:border-black2  border-red2 p-4 flex items-center text-red2 text-[14px] justify-center">To
+                                                   delete a card</button>
                                              </div>
                                           </div>
+                                       </span>
+                                    </div>
+                                 </div>
+                                 <div class="flex flex-col gap-4">
+                                    <div class="">
+                                       <span class="text-[12px] ">Card number</span>
+                                       <div class="flex items-center gap-3">
+                                          <span class="font-AProM text-[14px] ">5282 3456 7890 1289</span>
+                                          <span class="cursor-pointer group">
+                                             <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path class="stroke-black2 group-hover:stroke-white"
+                                                   d="M12.5 5.5H6.25C5.55964 5.5 5 6.05964 5 6.75V13C5 13.6904 5.55964 14.25 6.25 14.25H12.5C13.1904 14.25 13.75 13.6904 13.75 13V6.75C13.75 6.05964 13.1904 5.5 12.5 5.5Z"
+                                                   stroke-linecap="round" stroke-linejoin="round" />
+                                                <path class="stroke-black2 group-hover:stroke-white"
+                                                   d="M2.5 10.5C1.8125 10.5 1.25 9.9375 1.25 9.25V3C1.25 2.3125 1.8125 1.75 2.5 1.75H8.75C9.4375 1.75 10 2.3125 10 3"
+                                                   stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                          </span>
+                                       </div>
+                                    </div>
+                                    <div class="flex gap-10 justify-between items-end">
+                                       <div class="flex gap-10">
+                                          <div class="">
+                                             <span class="text-[12px] ">Expiry date</span>
+                                             <div class="flex items-center gap-3">
+                                                <span class="font-AProM text-[14px] ">09/25</span>
 
-                                       </li>
-                                       <li class="rounded-[25px] py-2">
-                                          <div class="flex items-center justify-between">
-                                             <div class="flex items-center">
-                                                <span
-                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
-                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                             </div>
+                                          </div>
+                                          <div class="">
+                                             <span class="text-[12px] ">CVV</span>
+                                             <div class="flex items-center gap-3">
+                                                <span class="font-AProM text-[14px] ">568</span>
+                                                <span class="cursor-pointer group">
+                                                   <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
                                                       xmlns="http://www.w3.org/2000/svg">
-                                                      <path fill-rule="evenodd" clip-rule="evenodd"
-                                                         d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
-                                                         fill="white" style="fill: white; fill-opacity: 1" />
+                                                      <path class="stroke-black2 group-hover:stroke-white"
+                                                         d="M12.5 5.5H6.25C5.55964 5.5 5 6.05964 5 6.75V13C5 13.6904 5.55964 14.25 6.25 14.25H12.5C13.1904 14.25 13.75 13.6904 13.75 13V6.75C13.75 6.05964 13.1904 5.5 12.5 5.5Z"
+                                                         stroke-linecap="round" stroke-linejoin="round" />
+                                                      <path class="stroke-black2 group-hover:stroke-white"
+                                                         d="M2.5 10.5C1.8125 10.5 1.25 9.9375 1.25 9.25V3C1.25 2.3125 1.8125 1.75 2.5 1.75H8.75C9.4375 1.75 10 2.3125 10 3"
+                                                         stroke-linecap="round" stroke-linejoin="round" />
                                                    </svg>
                                                 </span>
-                                                <div class="flex flex-col">
-                                                   <span class="font-AProM text-[16px] text-white2">Liam
-                                                      Johnson</span>
-                                                   <span class="text-[14px] text-grey">03.04.2024</span>
-                                                </div>
-                                             </div>
-                                             <div class="flex flex-col items-end justify-start">
-                                                <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
-                                                <span class="text-[14px] text-grey"></span>
                                              </div>
                                           </div>
-                                          <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
-                                             Welcome to your trusted partner in the realm of international financial
-                                             transactions.
-                                          </div>
-                                       </li>
-                                       <li class="rounded-[25px] py-2">
-                                          <div class="flex items-center justify-between">
-                                             <div class="flex items-center">
-                                                <span
-                                                   class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
-                                                   <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                                      xmlns="http://www.w3.org/2000/svg">
-                                                      <path fill-rule="evenodd" clip-rule="evenodd"
-                                                         d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
-                                                         fill="white" style="fill: white; fill-opacity: 1" />
-                                                   </svg>
-                                                </span>
-                                                <div class="flex flex-col">
-                                                   <span class="font-AProM text-[16px] text-white2">Liam
-                                                      Johnson</span>
-                                                   <span class="text-[14px] text-grey">03.04.2024</span>
-                                                </div>
-                                             </div>
-                                             <div class="flex flex-col items-end justify-start">
-                                                <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
-                                                <span class="text-[14px] text-grey"></span>
-                                             </div>
-                                          </div>
-                                          <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
-                                             Welcome to your trusted partner in the realm of international financial
-                                             transactions.
-                                          </div>
-                                       </li>
-                                    </ul>
-                                 </li>
-
-                              </ul>
+                                       </div>
+                                       <span>
+                                          <svg width="88" height="32" viewBox="0 0 88 32" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <ellipse cx="53.2579" cy="15.543" rx="15.5431" ry="15.543" fill="white"
+                                                fill-opacity="0.4" style="fill:white;fill-opacity:0.4;" />
+                                             <g filter="url(#filter0_b_437_80124)">
+                                                <ellipse cx="72.4571" cy="16.457" rx="15.5431" ry="15.543" fill="white"
+                                                   fill-opacity="0.5" style="fill:white;fill-opacity:0.5;" />
+                                             </g>
+                                             <defs>
+                                                <filter id="filter0_b_437_80124" x="52.4696" y="-3.5304" width="39.9749"
+                                                   height="39.9749" filterUnits="userSpaceOnUse"
+                                                   color-interpolation-filters="sRGB">
+                                                   <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                   <feGaussianBlur in="BackgroundImageFix" stdDeviation="2.22223" />
+                                                   <feComposite in2="SourceAlpha" operator="in"
+                                                      result="effect1_backgroundBlur_437_80124" />
+                                                   <feBlend mode="normal" in="SourceGraphic"
+                                                      in2="effect1_backgroundBlur_437_80124" result="shape" />
+                                                </filter>
+                                             </defs>
+                                          </svg>
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- card add -->
+                           <div class="swiper-slide card-bank">
+                              <div
+                                 class="relative   w-[340px] h-[206px] text-white2 flex items-center flex-col justify-center gap-2 bg-white10 rounded-[35px] p-6">
+                                 <div class="h-full w-full hidden ml:block absolute -z-10 backdrop-blur-[15px]"></div>
+                                 <span class="bg-bg3 rounded-full p-3 open-btn cursor-pointer group hover:bg-black">
+                                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path class="fill-white group-hover:fill-main"
+                                          d="M17.2142 8.35713H10.1424V1.28613H8.85691V8.35713H1.78516V9.64338H8.85691V16.7144H10.1424V9.64338H17.2142V8.35713Z" />
+                                    </svg>
+                                 </span>
+                                 <span class="font-AProM ">
+                                    Order New Card
+                                 </span>
+                              </div>
                            </div>
                         </div>
+                        <div class="swiper-pagination"></div>
+                     </div>
+                  </div>
 
-                        <!-- transactions mobile-->
-                        <div class="w-full rounded-[35px] md:hidden px-3">
-                           <div class="flex h-full w-full flex-col gap-4 rounded-[35px]">
-                              <h3 class="w-full font-AProM text-[22px] text-white2">Transactions</h3>
+                  <!-- desktop card -->
+                  <div class="xl:flex gap-3 hidden mb-4">
+                     <!-- card -->
+                     <div
+                        class="relative bg-[rgba(85,127,221,0.85)] ml:w-[397px] h-[240px] text-white2 flex flex-col justify-between  rounded-[35px] p-6">
+                        <img class="absolute top-0 w-full h-full  rounded-[35px] left-0 -z-10 "
+                           src="../img/invoice/gradient-card.png" alt="">
+                        <div class="flex justify-between items-center">
+                           <div class="flex flex-col">
+                              <span class="text-[14px] open-btn">Current Balance</span>
+                              <span class="font-AProBo text-[28px] ">5 750,20 ₴</span>
+                           </div>
+                           <div class="flex items-center justify-end gap-2 w-1/2">
+                              <span
+                                 class="px-4 h-10 rounded-[15px] border-[1px] border-white2 flex items-center justify-center">Active</span>
+                              <span
+                                 class="w-10 relative group cursor-pointer h-10 rounded-full border-[1px] border-white10 flex items-center justify-center">
+                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                       d="M15.2571 10.0924L16.2854 10.7029C16.4466 10.7997 16.5426 10.9279 16.5426 11.1529C16.5749 11.3134 16.5749 11.4747 16.4789 11.6352L14.9999 14.1747C14.9039 14.3029 14.7749 14.4312 14.6144 14.4634C14.4531 14.4957 14.2926 14.4957 14.1321 14.3997L13.1031 13.7884C12.5571 14.2707 11.9144 14.6247 11.2071 14.8812V16.0707C11.2065 16.2409 11.1386 16.4041 11.0182 16.5245C10.8978 16.6449 10.7347 16.7128 10.5644 16.7134H7.60714C7.43686 16.7128 7.27371 16.6449 7.1533 16.5245C7.03289 16.4041 6.96498 16.2409 6.96439 16.0707V14.8174C6.27582 14.5611 5.63479 14.1918 5.06764 13.7247L4.03939 14.3352C3.91039 14.4312 3.71764 14.4312 3.55714 14.3997C3.39664 14.3674 3.26764 14.2707 3.17164 14.1102L1.69264 11.5707C1.62814 11.4424 1.59664 11.2497 1.62814 11.0884C1.66039 10.9279 1.75714 10.7997 1.91764 10.7029L2.94664 10.0924C2.88256 9.73168 2.85019 9.36603 2.84989 8.99966C2.84989 8.64566 2.88214 8.29241 2.94664 7.90616L1.91764 7.29566C1.78939 7.19966 1.66039 7.07066 1.62814 6.91016C1.59664 6.74966 1.59664 6.58841 1.69264 6.42791L3.23539 3.82466C3.33214 3.69566 3.46039 3.56741 3.62164 3.53516C3.78214 3.50291 3.94264 3.50291 4.10314 3.59966L5.13214 4.21016C5.67814 3.72791 6.32164 3.37466 7.02814 3.11741V1.92791C7.02874 1.75749 7.09675 1.59424 7.21732 1.4738C7.33789 1.35337 7.50123 1.28555 7.67164 1.28516H10.6281C10.7986 1.28555 10.9619 1.35337 11.0825 1.4738C11.203 1.59424 11.271 1.75749 11.2716 1.92791V3.14966C11.9599 3.40612 12.6007 3.77542 13.1676 4.24241L14.1966 3.63116C14.3249 3.53516 14.5176 3.53516 14.6789 3.56741C14.8394 3.59966 14.9676 3.69566 15.0644 3.85616L16.5096 6.42791C16.6064 6.55616 16.6064 6.74966 16.5741 6.91016C16.5419 7.07066 16.4459 7.19966 16.2846 7.29566L15.2564 7.90616C15.3209 8.26016 15.3524 8.64566 15.3524 8.99966C15.3524 9.35291 15.3216 9.70616 15.2571 10.0924ZM14.0676 8.99966C14.0676 8.58116 14.0039 8.16341 13.9071 7.74566C13.8426 7.45616 13.9394 7.16741 14.2604 7.00616L15.1604 6.49241L14.3249 5.04566L13.4249 5.56016C13.3041 5.6328 13.1625 5.66275 13.0226 5.64521C12.8828 5.62766 12.753 5.56363 12.6539 5.46341C12.0426 4.88516 11.3039 4.43516 10.4676 4.21016C10.3296 4.1788 10.2065 4.10113 10.1187 3.99005C10.031 3.87897 9.98393 3.7412 9.98539 3.59966V2.57066H8.31439V3.63116C8.31602 3.77283 8.26905 3.91078 8.18129 4.02201C8.09353 4.13324 7.9703 4.21103 7.83214 4.24241C7.00546 4.45913 6.25123 4.89164 5.64664 5.49566C5.54753 5.59606 5.41752 5.6602 5.27753 5.67775C5.13754 5.6953 4.99572 5.66524 4.87489 5.59241L3.97489 5.07791L3.13939 6.52466L4.03939 7.03841C4.26439 7.16741 4.39264 7.45616 4.32814 7.74566C4.22729 8.15648 4.17345 8.57743 4.16764 9.00041C4.16764 9.41816 4.23214 9.83591 4.32814 10.2537C4.42489 10.5109 4.29664 10.8004 4.03939 10.9609L3.13939 11.4754L3.97489 12.9214L4.81039 12.4392C4.93122 12.3663 5.07304 12.3363 5.21303 12.3538C5.35302 12.3714 5.48303 12.4355 5.58214 12.5359C6.19264 13.1142 6.93214 13.5642 7.76764 13.7892C7.9058 13.8205 8.02903 13.8983 8.11679 14.0096C8.20455 14.1208 8.25152 14.2587 8.24989 14.4004V15.4287H9.92164V14.3682C9.92164 14.0787 10.1144 13.8214 10.4031 13.7577C11.2302 13.5408 11.9847 13.1081 12.5894 12.5037C12.6885 12.4034 12.8183 12.3394 12.9581 12.3219C13.098 12.3043 13.2396 12.3343 13.3604 12.4069L14.2604 12.9214L15.0966 11.4754L14.1966 10.9609C13.9716 10.8327 13.8426 10.5432 13.9071 10.2537C14.0079 9.84332 14.0617 9.42288 14.0676 9.00041V8.99966ZM5.90314 8.99966C5.90552 8.14785 6.24495 7.33161 6.84727 6.72928C7.44959 6.12696 8.26583 5.78753 9.11764 5.78516C9.96945 5.78753 10.7857 6.12696 11.388 6.72928C11.9903 7.33161 12.3298 8.14785 12.3321 8.99966C12.3296 9.85133 11.99 10.6674 11.3877 11.2695C10.7854 11.8717 9.96932 12.211 9.11764 12.2134C8.26609 12.211 7.45008 11.8718 6.8478 11.2698C6.24552 10.6678 5.90591 9.85195 5.90314 9.00041V8.99966ZM7.18939 8.99966C7.19097 9.51057 7.39464 10.0001 7.75591 10.3614C8.11719 10.7227 8.60672 10.9263 9.11764 10.9279C9.62869 10.9265 10.1184 10.7229 10.4799 10.3617C10.8413 10.0004 11.0451 9.5107 11.0466 8.99966C11.0453 8.48848 10.8416 7.99864 10.4801 7.63718C10.1187 7.27572 9.62882 7.07204 9.11764 7.07066C8.60647 7.07224 8.1167 7.27611 7.75538 7.63771C7.39407 7.99931 7.19058 8.48923 7.18939 9.00041V8.99966Z"
+                                       fill="white" style="fill:white;fill-opacity:1;" />
+                                 </svg>
+                                 <div
+                                    class="absolute rounded-[16px] group-hover:block hidden left-[50%] translate-x-[-50%] top-14 z-50 bg-white2 p-6">
+                                    <svg class="absolute top-[-5%] z-40 left-[50%] translate-x-[-50%]" width="25"
+                                       height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M24.6588 11.3662L0.339844 11.3662C0.400916 11.2822 0.469341 11.2018 0.545117 11.1261L11.0851 0.586076C11.8662 -0.194973 13.1325 -0.194975 13.9135 0.586074L24.4535 11.1261C24.5293 11.2018 24.5977 11.2822 24.6588 11.3662Z"
+                                          fill="white" style="fill:white;fill-opacity:1;" />
+                                    </svg>
+                                    <div class="flex flex-col gap-2">
+                                       <button
+                                          class="rounded-full whitespace-nowrap flex border-[1px] border-grey p-4  items-center text-grey text-[14px] justify-center">To
+                                          block a card</button>
+                                       <button
+                                          class="rounded-full whitespace-nowrap  border-[1px] border-red2 p-4 flex items-center text-red2 text-[14px] justify-center">To
+                                          delete a card</button>
+                                    </div>
+                                 </div>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                           <div class="">
+                              <span class="text-[12px] ">Card number</span>
+                              <div class="flex items-center gap-3">
+                                 <span class="font-AProM text-[14px] ml:text-[16px]">5282 3456 7890 1289</span>
+                                 <span class="cursor-pointer group">
+                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path class="stroke-white2 group-hover:stroke-main"
+                                          d="M12.5 5.5H6.25C5.55964 5.5 5 6.05964 5 6.75V13C5 13.6904 5.55964 14.25 6.25 14.25H12.5C13.1904 14.25 13.75 13.6904 13.75 13V6.75C13.75 6.05964 13.1904 5.5 12.5 5.5Z"
+                                          stroke-linecap="round" stroke-linejoin="round" />
+                                       <path class="stroke-white2 group-hover:stroke-main"
+                                          d="M2.5 10.5C1.8125 10.5 1.25 9.9375 1.25 9.25V3C1.25 2.3125 1.8125 1.75 2.5 1.75H8.75C9.4375 1.75 10 2.3125 10 3"
+                                          stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="flex gap-10">
+                              <div class="">
+                                 <span class="text-[12px] ">Expiry date</span>
+                                 <div class="flex items-center gap-3">
+                                    <span class="font-AProM text-[14px] ml:text-[16px]">09/25</span>
 
-                              <div class="lg:overflow-hidden">
-                                 <ul class="">
-                                    <li class="mb-2 rounded-[15px] bg-bg2 p-4">
-                                       <div class="flex items-center justify-between">
-                                          <div class="flex items-center">
-                                             <span
-                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
-                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
-                                                   <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
-                                                      fill="white" style="fill: white; fill-opacity: 1" />
-                                                </svg>
-                                             </span>
-                                             <div class="flex flex-col">
-                                                <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                                                <span class="text-[12px] text-grey">03.04.2024</span>
-                                             </div>
-                                          </div>
-                                          <div class="flex flex-col items-end justify-start">
-                                             <span
-                                                class="flex items-center text-right font-AProM text-[14px] text-white2">
-                                                <span class="mr-2 mt-1">25 822.80 UAH </span>
-                                                <span>
-                                                   <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                                      xmlns="http://www.w3.org/2000/svg">
-                                                      <g clip-path="url(#clip0_2103_11424)">
-                                                         <path
-                                                            d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                                            fill="#9B9B9B" style="
-                                                  fill: #9b9b9b;
-                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
-                                                  fill-opacity: 1;
-                                                " />
-                                                         <path
-                                                            d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                                            fill="#9B9B9B" style="
-                                                  fill: #9b9b9b;
-                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
-                                                  fill-opacity: 1;
-                                                " />
-                                                         <path
-                                                            d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                                            fill="#9B9B9B" style="
-                                                  fill: #9b9b9b;
-                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
-                                                  fill-opacity: 1;
-                                                " />
-                                                      </g>
-                                                      <defs>
-                                                         <clipPath id="clip0_2103_11424">
-                                                            <rect width="18" height="18" fill="white"
-                                                               style="fill: white; fill-opacity: 1"
-                                                               transform="translate(0 0.5)" />
-                                                         </clipPath>
-                                                      </defs>
-                                                   </svg>
-                                                </span>
-                                             </span>
-                                             <span class="text-[12px] text-grey">662,89 USD</span>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li class="mb-2 rounded-[15px] bg-[#161617] p-4">
-                                       <div class="flex items-center justify-between">
-                                          <div class="flex items-center">
-                                             <span
-                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
-                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
-                                                   <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
-                                                      fill="white" style="fill: white; fill-opacity: 1" />
-                                                </svg>
-                                             </span>
-                                             <div class="flex flex-col">
-                                                <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                                                <span class="text-[12px] text-grey">03.04.2024</span>
-                                             </div>
-                                          </div>
-                                          <div class="flex flex-col items-end justify-start">
-                                             <span
-                                                class="flex items-center text-right font-AProM text-[14px] text-white2">
-                                                <span class="mr-2 mt-1">25 822.80 UAH </span>
-                                                <span>
-                                                   <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                                      xmlns="http://www.w3.org/2000/svg">
-                                                      <g clip-path="url(#clip0_2103_11424)">
-                                                         <path
-                                                            d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                                            fill="#9B9B9B" style="
-                                                  fill: #9b9b9b;
-                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
-                                                  fill-opacity: 1;
-                                                " />
-                                                         <path
-                                                            d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                                            fill="#9B9B9B" style="
-                                                  fill: #9b9b9b;
-                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
-                                                  fill-opacity: 1;
-                                                " />
-                                                         <path
-                                                            d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                                            fill="#9B9B9B" style="
-                                                  fill: #9b9b9b;
-                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
-                                                  fill-opacity: 1;
-                                                " />
-                                                      </g>
-                                                      <defs>
-                                                         <clipPath id="clip0_2103_11424">
-                                                            <rect width="18" height="18" fill="white"
-                                                               style="fill: white; fill-opacity: 1"
-                                                               transform="translate(0 0.5)" />
-                                                         </clipPath>
-                                                      </defs>
-                                                   </svg>
-                                                </span>
-                                             </span>
-                                             <span class="text-[12px] text-grey">662,89 USD</span>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li class="mb-2 rounded-[15px] bg-[#161617] p-4">
-                                       <div class="flex items-center justify-between">
-                                          <div class="flex items-center">
-                                             <span
-                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
-                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
-                                                   <path fill-rule="evenodd" clip-rule="evenodd"
-                                                      d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
-                                                      fill="white" style="fill: white; fill-opacity: 1" />
-                                                </svg>
-                                             </span>
-                                             <div class="flex flex-col">
-                                                <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                                                <span class="text-[12px] text-grey">03.04.2024</span>
-                                             </div>
-                                          </div>
-                                          <div class="flex flex-col items-end justify-start">
-                                             <span
-                                                class="flex items-center text-right font-AProM text-[14px] text-white2">
-                                                <span class="mr-2 mt-1">25 822.80 UAH </span>
-                                                <span>
-                                                   <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                                      xmlns="http://www.w3.org/2000/svg">
-                                                      <g clip-path="url(#clip0_2103_11424)">
-                                                         <path
-                                                            d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                                            fill="#9B9B9B" style="
-                                                  fill: #9b9b9b;
-                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
-                                                  fill-opacity: 1;
-                                                " />
-                                                         <path
-                                                            d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                                            fill="#9B9B9B" style="
-                                                  fill: #9b9b9b;
-                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
-                                                  fill-opacity: 1;
-                                                " />
-                                                         <path
-                                                            d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                                            fill="#9B9B9B" style="
-                                                  fill: #9b9b9b;
-                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
-                                                  fill-opacity: 1;
-                                                " />
-                                                      </g>
-                                                      <defs>
-                                                         <clipPath id="clip0_2103_11424">
-                                                            <rect width="18" height="18" fill="white"
-                                                               style="fill: white; fill-opacity: 1"
-                                                               transform="translate(0 0.5)" />
-                                                         </clipPath>
-                                                      </defs>
-                                                   </svg>
-                                                </span>
-                                             </span>
-                                             <span class="text-[12px] text-grey">662,89 USD</span>
-                                          </div>
-                                       </div>
-                                    </li>
-                                    <li class="mb-2 w-full">
-                                       <a class="inline-block w-full cursor-pointer rounded-full bg-white2 px-6 py-3 text-center font-AProM text-[16px] leading-snug text-bg2 hover:bg-[#d1d1d1]"
-                                          href="./transactions.html">
-                                          See all
-                                       </a>
-                                    </li>
-                                 </ul>
+                                 </div>
+                              </div>
+                              <div class="">
+                                 <span class="text-[12px] ">CVV</span>
+                                 <div class="flex items-center gap-3">
+                                    <span class="font-AProM text-[14px] ml:text-[16px]">568</span>
+                                    <span class="cursor-pointer group">
+                                       <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path class="stroke-white2 group-hover:stroke-main"
+                                             d="M12.5 5.5H6.25C5.55964 5.5 5 6.05964 5 6.75V13C5 13.6904 5.55964 14.25 6.25 14.25H12.5C13.1904 14.25 13.75 13.6904 13.75 13V6.75C13.75 6.05964 13.1904 5.5 12.5 5.5Z"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                          <path class="stroke-white2 group-hover:stroke-main"
+                                             d="M2.5 10.5C1.8125 10.5 1.25 9.9375 1.25 9.25V3C1.25 2.3125 1.8125 1.75 2.5 1.75H8.75C9.4375 1.75 10 2.3125 10 3"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                       </svg>
+                                    </span>
+                                 </div>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <!-- Instructions and recommendations -->
+                     <!-- card -->
                      <div
-                        class="relative  row-start-2 xl:col-start-2 border-b-[1px] border-b-grey md:border-none xl:row-start-1 xl:row-end-3  ">
-                        <div class="absolute -z-10 w-full h-full backdrop-blur-[15px]">
-
+                        class="relative bg-main/[0.9] ml:w-[397px] h-[240px] text-black2 flex flex-col justify-between  rounded-[35px] p-6">
+                        <img class="absolute top-0 w-full h-full  rounded-[35px] left-0 -z-10 "
+                           src="../img/invoice/gradient-card.png" alt="">
+                        <div class="flex justify-between items-center">
+                           <div class="flex flex-col">
+                              <span class="text-[14px] open-btn">Current Balance</span>
+                              <span class="font-AProBo text-[28px] ">5 750,20 ₴</span>
+                           </div>
+                           <div class="flex items-center justify-end gap-2 w-1/2">
+                              <span
+                                 class="px-4 h-10 rounded-[15px] border-[1px] border-black2 flex items-center justify-center">Active</span>
+                              <span
+                                 class="w-10 relative group cursor-pointer h-10 rounded-full border-[1px] border-[#090a08] flex items-center justify-center">
+                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                       d="M15.2571 10.0924L16.2854 10.7029C16.4466 10.7997 16.5426 10.9279 16.5426 11.1529C16.5749 11.3134 16.5749 11.4747 16.4789 11.6352L14.9999 14.1747C14.9039 14.3029 14.7749 14.4312 14.6144 14.4634C14.4531 14.4957 14.2926 14.4957 14.1321 14.3997L13.1031 13.7884C12.5571 14.2707 11.9144 14.6247 11.2071 14.8812V16.0707C11.2065 16.2409 11.1386 16.4041 11.0182 16.5245C10.8978 16.6449 10.7347 16.7128 10.5644 16.7134H7.60714C7.43686 16.7128 7.27371 16.6449 7.1533 16.5245C7.03289 16.4041 6.96498 16.2409 6.96439 16.0707V14.8174C6.27582 14.5611 5.63479 14.1918 5.06764 13.7247L4.03939 14.3352C3.91039 14.4312 3.71764 14.4312 3.55714 14.3997C3.39664 14.3674 3.26764 14.2707 3.17164 14.1102L1.69264 11.5707C1.62814 11.4424 1.59664 11.2497 1.62814 11.0884C1.66039 10.9279 1.75714 10.7997 1.91764 10.7029L2.94664 10.0924C2.88256 9.73168 2.85019 9.36603 2.84989 8.99966C2.84989 8.64566 2.88214 8.29241 2.94664 7.90616L1.91764 7.29566C1.78939 7.19966 1.66039 7.07066 1.62814 6.91016C1.59664 6.74966 1.59664 6.58841 1.69264 6.42791L3.23539 3.82466C3.33214 3.69566 3.46039 3.56741 3.62164 3.53516C3.78214 3.50291 3.94264 3.50291 4.10314 3.59966L5.13214 4.21016C5.67814 3.72791 6.32164 3.37466 7.02814 3.11741V1.92791C7.02874 1.75749 7.09675 1.59424 7.21732 1.4738C7.33789 1.35337 7.50123 1.28555 7.67164 1.28516H10.6281C10.7986 1.28555 10.9619 1.35337 11.0825 1.4738C11.203 1.59424 11.271 1.75749 11.2716 1.92791V3.14966C11.9599 3.40612 12.6007 3.77542 13.1676 4.24241L14.1966 3.63116C14.3249 3.53516 14.5176 3.53516 14.6789 3.56741C14.8394 3.59966 14.9676 3.69566 15.0644 3.85616L16.5096 6.42791C16.6064 6.55616 16.6064 6.74966 16.5741 6.91016C16.5419 7.07066 16.4459 7.19966 16.2846 7.29566L15.2564 7.90616C15.3209 8.26016 15.3524 8.64566 15.3524 8.99966C15.3524 9.35291 15.3216 9.70616 15.2571 10.0924ZM14.0676 8.99966C14.0676 8.58116 14.0039 8.16341 13.9071 7.74566C13.8426 7.45616 13.9394 7.16741 14.2604 7.00616L15.1604 6.49241L14.3249 5.04566L13.4249 5.56016C13.3041 5.6328 13.1625 5.66275 13.0226 5.64521C12.8828 5.62766 12.753 5.56363 12.6539 5.46341C12.0426 4.88516 11.3039 4.43516 10.4676 4.21016C10.3296 4.1788 10.2065 4.10113 10.1187 3.99005C10.031 3.87897 9.98393 3.7412 9.98539 3.59966V2.57066H8.31439V3.63116C8.31602 3.77283 8.26905 3.91078 8.18129 4.02201C8.09353 4.13324 7.9703 4.21103 7.83214 4.24241C7.00546 4.45913 6.25123 4.89164 5.64664 5.49566C5.54753 5.59606 5.41752 5.6602 5.27753 5.67775C5.13754 5.6953 4.99572 5.66524 4.87489 5.59241L3.97489 5.07791L3.13939 6.52466L4.03939 7.03841C4.26439 7.16741 4.39264 7.45616 4.32814 7.74566C4.22729 8.15648 4.17345 8.57743 4.16764 9.00041C4.16764 9.41816 4.23214 9.83591 4.32814 10.2537C4.42489 10.5109 4.29664 10.8004 4.03939 10.9609L3.13939 11.4754L3.97489 12.9214L4.81039 12.4392C4.93122 12.3663 5.07304 12.3363 5.21303 12.3538C5.35302 12.3714 5.48303 12.4355 5.58214 12.5359C6.19264 13.1142 6.93214 13.5642 7.76764 13.7892C7.9058 13.8205 8.02903 13.8983 8.11679 14.0096C8.20455 14.1208 8.25152 14.2587 8.24989 14.4004V15.4287H9.92164V14.3682C9.92164 14.0787 10.1144 13.8214 10.4031 13.7577C11.2302 13.5408 11.9847 13.1081 12.5894 12.5037C12.6885 12.4034 12.8183 12.3394 12.9581 12.3219C13.098 12.3043 13.2396 12.3343 13.3604 12.4069L14.2604 12.9214L15.0966 11.4754L14.1966 10.9609C13.9716 10.8327 13.8426 10.5432 13.9071 10.2537C14.0079 9.84332 14.0617 9.42288 14.0676 9.00041V8.99966ZM5.90314 8.99966C5.90552 8.14785 6.24495 7.33161 6.84727 6.72928C7.44959 6.12696 8.26583 5.78753 9.11764 5.78516C9.96945 5.78753 10.7857 6.12696 11.388 6.72928C11.9903 7.33161 12.3298 8.14785 12.3321 8.99966C12.3296 9.85133 11.99 10.6674 11.3877 11.2695C10.7854 11.8717 9.96932 12.211 9.11764 12.2134C8.26609 12.211 7.45008 11.8718 6.8478 11.2698C6.24552 10.6678 5.90591 9.85195 5.90314 9.00041V8.99966ZM7.18939 8.99966C7.19097 9.51057 7.39464 10.0001 7.75591 10.3614C8.11719 10.7227 8.60672 10.9263 9.11764 10.9279C9.62869 10.9265 10.1184 10.7229 10.4799 10.3617C10.8413 10.0004 11.0451 9.5107 11.0466 8.99966C11.0453 8.48848 10.8416 7.99864 10.4801 7.63718C10.1187 7.27572 9.62882 7.07204 9.11764 7.07066C8.60647 7.07224 8.1167 7.27611 7.75538 7.63771C7.39407 7.99931 7.19058 8.48923 7.18939 9.00041V8.99966Z"
+                                       fill="#090a08" />
+                                 </svg>
+                                 <div
+                                    class="absolute rounded-[16px] group-hover:block hidden left-[50%] translate-x-[-50%] top-14 z-50 bg-white2 p-6">
+                                    <svg class="absolute top-[-5%] z-40 left-[50%] translate-x-[-50%]" width="25"
+                                       height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M24.6588 11.3662L0.339844 11.3662C0.400916 11.2822 0.469341 11.2018 0.545117 11.1261L11.0851 0.586076C11.8662 -0.194973 13.1325 -0.194975 13.9135 0.586074L24.4535 11.1261C24.5293 11.2018 24.5977 11.2822 24.6588 11.3662Z"
+                                          fill="white" />
+                                    </svg>
+                                    <div class="flex flex-col gap-2">
+                                       <button
+                                          class="rounded-full whitespace-nowrap flex border-[1px] border-grey p-4  items-center text-grey text-[14px] justify-center">To
+                                          block a card</button>
+                                       <button
+                                          class="rounded-full whitespace-nowrap  border-[1px] border-red2 p-4 flex items-center text-red2 text-[14px] justify-center">To
+                                          delete a card</button>
+                                    </div>
+                                 </div>
+                              </span>
+                           </div>
                         </div>
-                        <div class="h-full md:bg-white10 md:rounded-[35px] px-3 pb-6 md:p-6 ">
-                           <h3 class="w-full font-AProM text-[22px] text-white2">
-                              Instructions and recommendations
-                           </h3>
-                           <p class="text-[16px] text-grey leading-snug">
-                              Welcome to your trusted partner in the realm of international financial transactions. Our
-                              service is designed to provide you with a fast, secure, and efficient way to send money
-                              globally. Whether you're managing business transactions or supporting family abroad, we
-                              are
-                              here to facilitate your needs with state-of-the-art technology. <br /><br />
-                              Experience the ease of transferring money without the usual complications associated with
-                              traditional banking. Our platform allows users to complete transactions in just a few
-                              clicks,
-                              ensuring that your money reaches its destination swiftly. With user-centric design, our
-                              service simplifies the process, saving you time and effort.<br /><br />
-                              Security is our top priority. We employ advanced encryption and fraud prevention systems
-                              to
-                              protect your financial information and ensure the integrity of every transaction. Your
-                              peace
-                              of mind is paramount, and our robust security measures are in place to keep your data safe
-                              from unauthorized access.<br /><br />
-                              Our service is accessible from anywhere in the world, providing you the flexibility to
-                              manage
-                              your finances on the go. Whether you are at home, in the office, or traveling, our
-                              platform
-                              is available 24/7, allowing you to perform transactions whenever necessary.<br /><br />
-                              <span class="inline-block cursor-pointer xl:hidden text-main">more ...</span>
-                           </p>
+                        <div class="flex flex-col gap-4">
+                           <div class="">
+                              <span class="text-[12px] ">Card number</span>
+                              <div class="flex items-center gap-3">
+                                 <span class="font-AProM text-[14px] ml:text-[16px]">5282 3456 7890 1289</span>
+                                 <span class="cursor-pointer group">
+                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path class="stroke-black2 group-hover:stroke-main"
+                                          d="M12.5 5.5H6.25C5.55964 5.5 5 6.05964 5 6.75V13C5 13.6904 5.55964 14.25 6.25 14.25H12.5C13.1904 14.25 13.75 13.6904 13.75 13V6.75C13.75 6.05964 13.1904 5.5 12.5 5.5Z"
+                                          stroke-linecap="round" stroke-linejoin="round" />
+                                       <path class="stroke-black2 group-hover:stroke-main"
+                                          d="M2.5 10.5C1.8125 10.5 1.25 9.9375 1.25 9.25V3C1.25 2.3125 1.8125 1.75 2.5 1.75H8.75C9.4375 1.75 10 2.3125 10 3"
+                                          stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="flex gap-10">
+                              <div class="">
+                                 <span class="text-[12px] ">Expiry date</span>
+                                 <div class="flex items-center gap-3">
+                                    <span class="font-AProM text-[14px] ml:text-[16px]">09/25</span>
 
-                           <p class="hidden xl:inline-block text-[16px] text-grey leading-snug">
-                              We understand that fees can be a concern, which is why we strive to keep our costs
-                              competitive. Our transparent pricing structure ensures that you know exactly what you are
-                              paying for, with no hidden fees. We believe in fairness and clarity in all our financial
-                              dealings.<br /><br />
-                              Customer support is a critical aspect of our service. Our dedicated team is always ready
-                              to
-                              assist you with any queries or issues you might encounter. Whether it's a question about a
-                              transaction or guidance on using our platform, we are here to help, ensuring a smooth and
-                              hassle-free experience.<br /><br />
-                              Our service is accessible from anywhere in the world, providing you the flexibility to
-                              manage
-                              your finances on the go. Whether you are at home, in the office, or traveling, our
-                              platform
-                              is available 24/7, allowing you to perform transactions whenever necessary.
-                           </p>
+                                 </div>
+                              </div>
+                              <div class="">
+                                 <span class="text-[12px] ">CVV</span>
+                                 <div class="flex items-center gap-3">
+                                    <span class="font-AProM text-[14px] ml:text-[16px]">568</span>
+                                    <span class="cursor-pointer group">
+                                       <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path class="stroke-black2 group-hover:stroke-main"
+                                             d="M12.5 5.5H6.25C5.55964 5.5 5 6.05964 5 6.75V13C5 13.6904 5.55964 14.25 6.25 14.25H12.5C13.1904 14.25 13.75 13.6904 13.75 13V6.75C13.75 6.05964 13.1904 5.5 12.5 5.5Z"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                          <path class="stroke-black2 group-hover:stroke-main"
+                                             d="M2.5 10.5C1.8125 10.5 1.25 9.9375 1.25 9.25V3C1.25 2.3125 1.8125 1.75 2.5 1.75H8.75C9.4375 1.75 10 2.3125 10 3"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                       </svg>
+                                    </span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- card -->
+                     <div
+                        class="relative  ml:w-[397px] h-[240px] text-white2 flex items-center flex-col justify-center gap-2 bg-white10 rounded-[35px] p-6">
+                        <div class="h-full w-full hidden ml:block absolute -z-10 backdrop-blur-[15px]"></div>
+                        <span class="bg-bg3 rounded-full open-btn   p-3 cursor-pointer group hover:bg-black">
+                           <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path class="fill-white group-hover:fill-main"
+                                 d="M17.2142 8.35713H10.1424V1.28613H8.85691V8.35713H1.78516V9.64338H8.85691V16.7144H10.1424V9.64338H17.2142V8.35713Z" />
+                           </svg>
+                        </span>
+                        <span class="font-AProM">
+                           Order New Card
+                        </span>
+                     </div>
 
+
+                  </div>
+                  <!-- transactions -->
+                  <div class="ml:bg-white10 rounded-[35px] relative">
+                     <!-- transactions desktop-->
+                     <div class="h-full w-full hidden ml:block absolute -z-10 backdrop-blur-[15px]"></div>
+
+                     <div class="hidden ml:flex max-h-[550px] w-full flex-col  gap-4 rounded-[35px] bg-white10 p-6">
+                        <div class="flex items-start justify-between">
+                           <a href="../profile/search.html"
+                              class="w-full font-AProM text-[22px] text-white2">Transactions</a>
+                           <div class="relative h-[56px] w-full">
+                              <svg class="absolute left-[16px] top-[50%] translate-y-[-50%]" width="19" height="18"
+                                 viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M18.286 16.543L14.257 12.514C15.329 11.186 15.929 9.514 15.929 7.714C15.929 3.471 12.457 0 8.214 0C3.971 0 0.5 3.471 0.5 7.714C0.5 11.957 3.971 15.429 8.214 15.429C10.014 15.429 11.686 14.786 13.014 13.757L17.043 17.786L18.286 16.543ZM8.257 13.714C4.957 13.714 2.257 11.014 2.257 7.714C2.257 4.414 4.957 1.714 8.257 1.714C11.557 1.714 14.257 4.414 14.257 7.714C14.257 11.014 11.557 13.714 8.257 13.714Z"
+                                    fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                              <input
+                                 class="h-full w-full rounded-full border-[1px] border-white10 bg-transparent pl-[45px] text-[14px] text-grey"
+                                 type="text" placeholder="Search Transactions" />
+                           </div>
+                        </div>
+                        <div class="rounded-[25px] ml:overflow-hidden">
+                           <ul class="w-full">
+                              <li
+                                 class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2">
+                                 <div
+                                    class="flex w-full items-center justify-between rounded-[35px] bg-bg3 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                                    <span class="leading-snug">April 2024</span>
+                                    <span>
+                                       <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                                             fill="white" style="fill: white; fill-opacity: 1" />
+                                       </svg>
+                                    </span>
+                                 </div>
+                                 <ul class="my-4 px-6">
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="text-right font-AProM text-[16px] text-white2">
+                                                25 822.80 UAH
+                                             </span>
+                                             <span class="text-[14px] text-grey">662,89 USD</span>
+                                             <span class="text-[14px] text-grey">Payment note</span>
+                                          </div>
+                                       </div>
+
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li
+                                 class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2">
+                                 <div
+                                    class="flex w-full items-center justify-between rounded-[35px] bg-bg3 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                                    <span class="leading-snug">April 2024</span>
+                                    <span>
+                                       <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                                             fill="white" style="fill: white; fill-opacity: 1" />
+                                       </svg>
+                                    </span>
+                                 </div>
+                                 <ul class="my-4 px-6 hidden">
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="text-right font-AProM text-[16px] text-white2">
+                                                25 822.80 UAH
+                                             </span>
+                                             <span class="text-[14px] text-grey">662,89 USD</span>
+                                             <span class="text-[14px] text-grey">Payment note</span>
+                                          </div>
+                                       </div>
+
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li
+                                 class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2">
+                                 <div
+                                    class="flex w-full items-center justify-between rounded-[35px] bg-bg3 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                                    <span class="leading-snug">April 2024</span>
+                                    <span>
+                                       <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                                             fill="white" style="fill: white; fill-opacity: 1" />
+                                       </svg>
+                                    </span>
+                                 </div>
+                                 <ul class="my-4 px-6 hidden">
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="text-right font-AProM text-[16px] text-white2">
+                                                25 822.80 UAH
+                                             </span>
+                                             <span class="text-[14px] text-grey">662,89 USD</span>
+                                             <span class="text-[14px] text-grey">Payment note</span>
+                                          </div>
+                                       </div>
+
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </li>
+
+                           </ul>
+                        </div>
+                     </div>
+
+                     <!-- transactions mobile-->
+                     <div class="w-full rounded-[35px] ml:hidden px-3">
+                        <div class="flex h-full w-full flex-col gap-4 rounded-[35px]">
+                           <h3 class="w-full font-AProM text-[22px] text-white2">Transactions</h3>
+
+                           <div class="lg:overflow-hidden">
+                              <ul class="">
+                                 <li class="mb-2 rounded-[15px] bg-bg2 p-4">
+                                    <div class="flex items-center justify-between">
+                                       <div class="flex items-center">
+                                          <span
+                                             class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                             <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                   d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                   fill="white" style="fill: white; fill-opacity: 1" />
+                                             </svg>
+                                          </span>
+                                          <div class="flex flex-col">
+                                             <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
+                                             <span class="text-[12px] text-grey">03.04.2024</span>
+                                          </div>
+                                       </div>
+                                       <div class="flex flex-col items-end justify-start">
+                                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
+                                             <span class="mr-2 mt-1">25 822.80 UAH </span>
+                                             <span>
+                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <g clip-path="url(#clip0_2103_11424)">
+                                                      <path
+                                                         d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                                         fill="#9B9B9B" style="
+                                                  fill: #9b9b9b;
+                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                  fill-opacity: 1;
+                                                " />
+                                                      <path
+                                                         d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                                         fill="#9B9B9B" style="
+                                                  fill: #9b9b9b;
+                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                  fill-opacity: 1;
+                                                " />
+                                                      <path
+                                                         d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                                         fill="#9B9B9B" style="
+                                                  fill: #9b9b9b;
+                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                  fill-opacity: 1;
+                                                " />
+                                                   </g>
+                                                   <defs>
+                                                      <clipPath id="clip0_2103_11424">
+                                                         <rect width="18" height="18" fill="white"
+                                                            style="fill: white; fill-opacity: 1"
+                                                            transform="translate(0 0.5)" />
+                                                      </clipPath>
+                                                   </defs>
+                                                </svg>
+                                             </span>
+                                          </span>
+                                          <span class="text-[12px] text-grey">662,89 USD</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 rounded-[15px] bg-[#161617] p-4">
+                                    <div class="flex items-center justify-between">
+                                       <div class="flex items-center">
+                                          <span
+                                             class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                             <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                   d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                   fill="white" style="fill: white; fill-opacity: 1" />
+                                             </svg>
+                                          </span>
+                                          <div class="flex flex-col">
+                                             <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
+                                             <span class="text-[12px] text-grey">03.04.2024</span>
+                                          </div>
+                                       </div>
+                                       <div class="flex flex-col items-end justify-start">
+                                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
+                                             <span class="mr-2 mt-1">25 822.80 UAH </span>
+                                             <span>
+                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <g clip-path="url(#clip0_2103_11424)">
+                                                      <path
+                                                         d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                                         fill="#9B9B9B" style="
+                                                  fill: #9b9b9b;
+                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                  fill-opacity: 1;
+                                                " />
+                                                      <path
+                                                         d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                                         fill="#9B9B9B" style="
+                                                  fill: #9b9b9b;
+                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                  fill-opacity: 1;
+                                                " />
+                                                      <path
+                                                         d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                                         fill="#9B9B9B" style="
+                                                  fill: #9b9b9b;
+                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                  fill-opacity: 1;
+                                                " />
+                                                   </g>
+                                                   <defs>
+                                                      <clipPath id="clip0_2103_11424">
+                                                         <rect width="18" height="18" fill="white"
+                                                            style="fill: white; fill-opacity: 1"
+                                                            transform="translate(0 0.5)" />
+                                                      </clipPath>
+                                                   </defs>
+                                                </svg>
+                                             </span>
+                                          </span>
+                                          <span class="text-[12px] text-grey">662,89 USD</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 rounded-[15px] bg-[#161617] p-4">
+                                    <div class="flex items-center justify-between">
+                                       <div class="flex items-center">
+                                          <span
+                                             class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                             <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                   d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                   fill="white" style="fill: white; fill-opacity: 1" />
+                                             </svg>
+                                          </span>
+                                          <div class="flex flex-col">
+                                             <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
+                                             <span class="text-[12px] text-grey">03.04.2024</span>
+                                          </div>
+                                       </div>
+                                       <div class="flex flex-col items-end justify-start">
+                                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
+                                             <span class="mr-2 mt-1">25 822.80 UAH </span>
+                                             <span>
+                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <g clip-path="url(#clip0_2103_11424)">
+                                                      <path
+                                                         d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                                         fill="#9B9B9B" style="
+                                                  fill: #9b9b9b;
+                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                  fill-opacity: 1;
+                                                " />
+                                                      <path
+                                                         d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                                         fill="#9B9B9B" style="
+                                                  fill: #9b9b9b;
+                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                  fill-opacity: 1;
+                                                " />
+                                                      <path
+                                                         d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                                         fill="#9B9B9B" style="
+                                                  fill: #9b9b9b;
+                                                  fill: color(display-p3 0.6078 0.6078 0.6078);
+                                                  fill-opacity: 1;
+                                                " />
+                                                   </g>
+                                                   <defs>
+                                                      <clipPath id="clip0_2103_11424">
+                                                         <rect width="18" height="18" fill="white"
+                                                            style="fill: white; fill-opacity: 1"
+                                                            transform="translate(0 0.5)" />
+                                                      </clipPath>
+                                                   </defs>
+                                                </svg>
+                                             </span>
+                                          </span>
+                                          <span class="text-[12px] text-grey">662,89 USD</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 w-full">
+                                    <a class="inline-block w-full cursor-pointer rounded-full bg-white2 px-6 py-3 text-center font-AProM text-[16px] leading-snug text-bg2 hover:bg-[#d1d1d1]"
+                                       href="./transactions.html">
+                                       See all
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -1314,158 +1801,201 @@
       </div>
 
       <div
-         class="absolute p-4 pt-2 z-20 modal sm:bottom-auto sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]  w-full sm:w-[540px] rounded-t-[35px] sm:rounded-[35px] sm:p-6 bg-black2 sm:bg-white10"
+         class="absolute  z-20 modal sm:bottom-auto sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]  w-full sm:w-[540px] rounded-t-[35px] sm:rounded-[35px]  bg-white2 sm:bg-white10"
          x-data="tabs()">
-         <div class="sm:hidden w-[50px] h-1 bg-white10 mb-4 mx-auto mobile-close" data-swipe-threshold="20"
+         <div class="sm:hidden w-[50px] h-1 bg-bgdark mb-4 mt-2 mx-auto mobile-close" data-swipe-threshold="20"
             data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"></div>
-         <div class="flex justify-between items-center font-AProM text-[22px] mb-[50px]">
-            <span>Account top-up</span>
-            <span class="hidden sm:inline-block close-modal">
-               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                     d="M7.17438 8.19878L12.3015 13.3259L13.3622 12.2652L8.23504 7.13812L13.5003 1.87287L12.4396 0.812212L7.17438 6.07746L2.04846 0.951536L0.987804 2.0122L6.11372 7.13812L1.12592 12.1259L2.18658 13.1866L7.17438 8.19878Z"
-                     fill="#D7FF00" style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-               </svg>
-            </span>
-         </div>
-         <div class="flex h-[30px] w-full items-center rounded-full bg-white10 mb-6">
-            <span
-               class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-white"
-               @click="item = 1"
-               :class="{'text-white2' : item == 1, ' text-grey  bg-transparent': item != 1} ">SEPA</span>
-            <span
-               class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-main"
-               @click="item = 2"
-               :class="{'text-[#D7FF00]' : item == 2, ' text-grey bg-transparent': item != 2} ">SWIFT</span>
-            <span
-               class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-main"
-               @click="item = 3"
-               :class="{'text-[#D7FF00]' : item == 3, ' text-grey bg-transparent': item != 3} ">USDT-trc20</span>
-         </div>
-         <div class="">
-            <!-- item 1 -->
-            <div class="flex flex-col gap-4" x-show="item === 1">
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Recipient's name</label>
-                  <input
-                     class=" w-full font-AProM text-[14px] sm:text-[16px] mt-1 bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="Ivan Ivanov">
-               </div>
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Recipient's address</label>
-                  <input
-                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="Primeraya Street, 10, Kyiv, Ukraine">
-               </div>
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">IBAN (International Bank Account Number)</label>
-                  <input
-                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="DE89370400440532013000">
-               </div>
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Recipient bank's BIC/SWIFT code</label>
-                  <input
-                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="DE89370400440532013000">
-               </div>
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Recipient bank's name</label>
-                  <input
-                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="Deutsche Bank">
-               </div>
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Recipient bank's address</label>
-                  <input
-                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="Taunusanlage 12, 60325 Frankfurt am Main, Германия">
-               </div>
+         <!-- item -->
+         <div class="hidden">
+            <div class="flex justify-between items-center font-AProM text-[22px]  px-6 pt-6">
+               <span class="text-black sm:text-white2 text-[18px] font-AProM">Order New Card</span>
+               <span class="hidden sm:inline-block close-modal">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.17438 8.19878L12.3015 13.3259L13.3622 12.2652L8.23504 7.13812L13.5003 1.87287L12.4396 0.812212L7.17438 6.07746L2.04846 0.951536L0.987804 2.0122L6.11372 7.13812L1.12592 12.1259L2.18658 13.1866L7.17438 8.19878Z"
+                        fill="#D7FF00"
+                        style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                  </svg>
+               </span>
             </div>
-            <!-- item 2 -->
-            <div class="flex flex-col gap-4" x-show="item === 2">
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Recipient's name</label>
-                  <input
-                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  placeholder:text-white2 bg-transparent py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="Ivan Ivanov">
-               </div>
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Recipient's address</label>
-                  <input
-                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 placeholder:text-white2  px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="Primeraya Street, 10, Kyiv, Ukraine">
-               </div>
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Recipient's account number (usually in the IBAN
-                     format
-                     for European banks)</label>
-                  <input
-                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent placeholder:text-white2  py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="DE89370400440532013000">
-               </div>
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Recipient bank's BIC/SWIFT code</label>
-                  <input
-                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent placeholder:text-white2  py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="DE89370400440532013000">
-               </div>
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Recipient bank's name</label>
-                  <input
-                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent  placeholder:text-white2 py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="Deutsche Bank">
-               </div>
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Recipient bank's address</label>
-                  <input
-                     class=" w-full font-AProM mt-1  text-[14px] sm:text-[16px] bg-transparent placeholder:text-white2  py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                     type="text" id="name" placeholder="Taunusanlage 12, 60325 Frankfurt am Main, Германия">
-               </div>
-               <div class="">
-                  <label class="text-grey text-[14px]" for="name">Purpose of payment</label>
-                  <textarea
-                     class=" w-full font-AProM mt-1 text-[14px] sm:text-[16px]  bg-transparent py-3 px-4 h-[100px] rounded-[20px] h- resize-none border-[1px] border-[rgba(255,255,255,0.3)]"
-                     id="name" rows="3" placeholder='A specific purpose of the transfer is indicated, for example, 
-                     "account top-up"'></textarea>
-               </div>
-            </div>
-            <div class="" x-show="item === 3">
-               <div class="w-full h-[400px] flex justify-center items-center">
-                  <img src="../img/logo-tron.png" alt="">
-               </div>
-               <div class="mt-4">
-                  <label class="text-grey text-[14px]" for="name">USDT-TRC20 adress to pay</label>
-                  <div class="relative">
+            <span class="inline-block h-0 w-full border-[1px] border-bgdark sm:border-white/[0.1]"></span>
+            <div class=" rounded-[24px] bg-white10 mb-4 mx-6 sm:p-4">
+               <span class="font-AProM text-black sm:text-white2 sm:text-[18px]">Card Type</span>
+               <div class="flex flex-col mt-4 gap-2">
+                  <div class="flex justify-between gap-4 flex-col ml:flex-row">
+                     <div
+                        class="custom-radio flex justify-start items-center w-full m-0 rounded-[20px] px-5 border-[1px] border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent">
+                        <input type="radio" id="radio1" name="custom_radio" checked="">
+                        <label for="radio1"></label>
+                        <span class="text-black sm:text-white2 ml-2">Physical</span>
+                     </div>
+                     <div
+                        class="custom-radio flex justify-start items-center w-full m-0 rounded-[20px] px-5 border-[1px] border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent">
+                        <input type="radio" id="radio2" name="custom_radio">
+                        <label for="radio2"></label>
+                        <span class="text-black sm:text-white2 ml-2">Virtual</span>
+                     </div>
+                  </div>
+                  <div class="flex flex-col w-full">
+                     <label class="text-[14px] text-grey " for="">Exact Address</label>
                      <input
-                        class=" w-full font-AProM mt-1  text-[14px] sm:text-[16px] bg-transparent placeholder:text-white2  py-3 px-4 rounded-[20px] border-[1px] border-[rgba(255,255,255,0.3)]"
-                        type="text" id="name" value="TJkaKnn6f8C9b7L9z3X9jdE7y5kq6G2uEY" disabled>
-                     <span class="absolute h-full  inline-flex top-0 right-6 cursor-pointer items-center">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <g clip-path="url(#clip0_437_56514)">
-                              <path
-                                 d="M15 6H7.5C6.67157 6 6 6.67157 6 7.5V15C6 15.8284 6.67157 16.5 7.5 16.5H15C15.8284 16.5 16.5 15.8284 16.5 15V7.5C16.5 6.67157 15.8284 6 15 6Z"
-                                 fill="white" fill-opacity="0.1" stroke="#9B9B9B"
-                                 style="fill:white;fill-opacity:0.1;stroke:#9B9B9B;stroke:color(display-p3 0.6078 0.6078 0.6078);stroke-opacity:1;"
-                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                 d="M3 12C2.175 12 1.5 11.325 1.5 10.5V3C1.5 2.175 2.175 1.5 3 1.5H10.5C11.325 1.5 12 2.175 12 3"
-                                 stroke="#9B9B9B"
-                                 style="stroke:#9B9B9B;stroke:color(display-p3 0.6078 0.6078 0.6078);stroke-opacity:1;"
-                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                           </g>
-                           <defs>
-                              <clipPath id="clip0_437_56514">
-                                 <rect width="18" height="18" fill="white" style="fill:white;fill-opacity:1;" />
-                              </clipPath>
-                           </defs>
-                        </svg>
-                     </span>
+                        class="rounded-[20px] px-5 border-[1px] mt-1 border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
+                        type="text" name="" id="">
+                  </div>
+                  <div class="flex justify-between gap-4 flex-col sm:flex-row">
+                     <div class="flex flex-col w-full">
+                        <label class="text-[14px] text-grey " for="">City</label>
+                        <input
+                           class="rounded-[20px] px-5 border-[1px] mt-1 border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
+                           type="text" name="" id="">
+                     </div>
+
+                     <div class="flex flex-col w-full">
+                        <label class="text-[14px] text-grey " for="">State</label>
+                        <input
+                           class="rounded-[20px] px-5 border-[1px] mt-1 border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
+                           type="text" name="" id="">
+                     </div>
+
+                  </div>
+                  <div class="flex justify-between gap-4 flex-col sm:flex-row">
+                     <div class="flex flex-col w-full">
+                        <label class="text-[14px] text-grey " for="">ZIP Code</label>
+                        <input
+                           class="rounded-[20px] px-5 border-[1px] mt-1 border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
+                           type="text" name="" id="">
+                     </div>
+                     <div class="flex flex-col w-full">
+                        <label class="text-[14px] text-grey" for="">Phone</label>
+
+                        <div class="relative w-full flex gap-2">
+                           <select
+                              class="text-grey px-2 ml:absolute rounded-[20px] border-[1px] mt-1 border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] top-0 left-0 bg-transparent ml:h-full ml:border-none phone"
+                              name="" id="">
+                              <option class="bg-transparent" value="" selected="">+380</option>
+                              <option class="bg-transparent" value="">+381</option>
+                              <option class="bg-transparent" value="">+382</option>
+                           </select>
+                           <input
+                              class="rounded-[20px] w-full  px-5 pl-[70px] border-[1px] mt-1 border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
+                              type="text" name="" id="">
+
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
+            <div class=" rounded-[24px] bg-white10 mb-6 mx-6 sm:p-4">
+               <span class="font-AProM text-black sm:text-white2 sm:text-[18px]">Card Currency</span>
+               <div class="flex flex-col mt-4 gap-2">
+                  <div class="flex justify-between gap-4 ">
+                     <div
+                        class="custom-radio flex justify-start items-center w-full m-0 rounded-[20px] px-5 border-[1px] border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent">
+                        <input type="radio" id="radio3" name="custom_radio2" checked="">
+                        <label for="radio3"></label>
+                        <span class="text-black sm:text-white2 ml-2">Hryvnia</span>
+                     </div>
+                     <div
+                        class="custom-radio flex justify-start items-center w-full m-0 rounded-[20px] px-5 border-[1px] border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent">
+                        <input type="radio" id="radio4" name="custom_radio2">
+                        <label for="radio4"></label>
+                        <span class="text-black sm:text-white2 ml-2">Euro</span>
+                     </div>
+                  </div>
 
+               </div>
+            </div>
+            <span class="inline-block h-0 w-full border-[1px] border-bgdark sm:border-white/[0.1]"></span>
+            <div class="p-6">
+               <a href="/" class="button w-full">
+                  Order
+               </a>
+            </div>
+         </div>
+         <!-- item -->
+         <div class="hidden">
+            <div class="flex justify-between items-center font-AProM text-[22px] px-4 sm:px-6 pt-4 sm:pt-6">
+               <span class="text-black sm:text-white2 text-[18px] font-AProM">Order New Card</span>
+               <span class="hidden sm:inline-block close-modal">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.17438 8.19878L12.3015 13.3259L13.3622 12.2652L8.23504 7.13812L13.5003 1.87287L12.4396 0.812212L7.17438 6.07746L2.04846 0.951536L0.987804 2.0122L6.11372 7.13812L1.12592 12.1259L2.18658 13.1866L7.17438 8.19878Z"
+                        fill="#D7FF00"
+                        style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                  </svg>
+               </span>
+            </div>
+            <span class="inline-block h-0 w-full border-[1px] border-bgdark sm:border-white/[0.1]"></span>
+            <div class=" rounded-[24px] bg-white10 mb-4  mx-4 sm:mx-6 sm:p-4">
+               <span class="font-AProM text-black sm:text-white2 sm:text-[18px]">Card Type</span>
+               <div class="flex flex-col mt-4 gap-2">
+                  <div class="flex justify-between gap-4 flex-col ml:flex-row">
+                     <div
+                        class="custom-radio flex justify-start items-center w-full m-0 rounded-[20px] px-5 border-[1px] border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent">
+                        <input type="radio" id="radio1" name="custom_radio" checked="">
+                        <label for="radio1"></label>
+                        <span class="text-black sm:text-white2 ml-2">Physical</span>
+                     </div>
+                     <div
+                        class="custom-radio flex justify-start items-center w-full m-0 rounded-[20px] px-5 border-[1px] border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent">
+                        <input type="radio" id="radio2" name="custom_radio">
+                        <label for="radio2"></label>
+                        <span class="text-black sm:text-white2 ml-2">Virtual</span>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <div class=" rounded-[24px] bg-white10 mb-6 mx-4 sm:mx-6 sm:p-4">
+               <span class="font-AProM text-black sm:text-white2 sm:text-[18px]">Card Currency</span>
+               <div class="flex flex-col mt-4 gap-2">
+                  <div class="flex justify-between gap-4 ">
+                     <div
+                        class="custom-radio flex justify-start items-center w-full m-0 rounded-[20px] px-5 border-[1px] border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent">
+                        <input type="radio" id="radio3" name="custom_radio2" checked="">
+                        <label for="radio3"></label>
+                        <span class="text-black sm:text-white2 ml-2">Hryvnia</span>
+                     </div>
+                     <div
+                        class="custom-radio flex justify-start items-center w-full m-0 rounded-[20px] px-5 border-[1px] border-bgdark sm:border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent">
+                        <input type="radio" id="radio4" name="custom_radio2">
+                        <label for="radio4"></label>
+                        <span class="text-black sm:text-white2 ml-2">Euro</span>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <span class="inline-block h-0 w-full border-[1px] border-bgdark sm:border-white/[0.1]"></span>
+            <div class="p-4 sm:p-6">
+               <a href="/" class="button w-full">
+                  Order
+               </a>
+            </div>
+         </div>
+         <!-- item -->
+         <div class="">
+            <div class="flex justify-center items-center flex-col p-4 sm:p-6">
+
+               <span class="hidden sm:inline-block close-modal mb-6">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.17438 8.19878L12.3015 13.3259L13.3622 12.2652L8.23504 7.13812L13.5003 1.87287L12.4396 0.812212L7.17438 6.07746L2.04846 0.951536L0.987804 2.0122L6.11372 7.13812L1.12592 12.1259L2.18658 13.1866L7.17438 8.19878Z"
+                        fill="#D7FF00"
+                        style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                  </svg>
+               </span>
+               <img class="w-[170px] sm:block hidden" src="../img/newCard/Group47307.png" alt="Rectangle">
+               <img class="w-[170px] sm:hidden" src="../img/newCard/Group47307(1).png" alt="Rectangle">
+               <h3 class="text-[22px] text-center sm:text-white2 text-black2 leading-tight mt-6">Your card has been <br
+                     class=" sm:hidden"> successfully
+                  ordered
+               </h3>
+               <p class="text-center text-grey mb-6 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+                  ipsum dolor sit amet, consectetur adipiscing elit.</p>
+               <a href="/" class="button w-full sm:w-auto">Okay</a>
+            </div>
+         </div>
       </div>
    </div>
 
@@ -1479,7 +2009,43 @@
          element.classList.toggle('hidden');
       }
    </script>
+   <script>
+      var mySwiper = new Swiper('.swiper-container', {
+         slidesPerView: 1,
+         spaceBetween: 8,
+         loop: false,
+         pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+         },
+         breakpoints: {
+            320: {
+               slidesPerView: 1,
+               slidesOffsetBefore: 8,
+               spaceBetween: 8,
+            },
+            640: {
+               slidesPerView: 1,
+               slidesOffsetBefore: 0,
+               spaceBetween: 30,
+            },
+            768: {
+               slidesPerView: 1,
+               slidesOffsetBefore: 0,
+            },
+            960: {
+               slidesPerView: 1,
+               slidesOffsetBefore: 0,
+            },
+            1320: {
+               slidesPerView: 2,
+               slidesOffsetBefore: 0,
+            }
+         },
 
+
+      });
+   </script>
    <script src="./swiped-events.min.js"></script>
    <script>
       function tabs() {
@@ -1498,9 +2064,9 @@
 
 
       const mobileClose = document.querySelector('.mobile-close');
-      const openBtn = document.querySelector('.open-btn');
+      const openBtn = document.querySelectorAll('.open-btn');
       const modal = document.querySelector('.modals');
-      const closeClick = document.querySelector('.close-modal')
+      const closeClick = document.querySelectorAll('.close-modal')
       let disableScroll = function () {
          document.body.classList.add('overflow-y-hidden');
       }
@@ -1516,10 +2082,14 @@
          }, 300);
 
       }
-      openBtn.addEventListener('click', (e) => {
-         e.preventDefault();
-         openModalDesktop();
+
+      openBtn.forEach(element => {
+         element.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModalDesktop();
+         });
       });
+
       const closeModal = () => {
          modal.querySelector('.modal').classList.remove('visible');
          setTimeout(() => {
@@ -1528,9 +2098,12 @@
          }, 400);
 
       }
-      closeClick.addEventListener('click', (e) => {
-         closeModal();
+      closeClick.forEach(elem => {
+         elem.addEventListener('click', (e) => {
+            closeModal();
+         })
       })
+
       mobileClose.addEventListener('swiped-down', function (e) {
          closeModal();
       });

@@ -23,12 +23,13 @@ input[type="checkbox"] {
    top: 4px;
    left: 4px;
    transition: 0.5s;
+   transform: translateX(0%);
  }
 
  
  .settings:checked + .settings:after {
    left: calc(100% - 4px);
-   transform: translateX(-100%);
+   transform: translateX(100%);
    background-color: black;
  }
  
