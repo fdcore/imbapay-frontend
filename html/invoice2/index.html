@@ -18,7 +18,7 @@
    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
-   <title>invoice</title>
+   <title>invoice2</title>
    <link href="../style.css" rel="stylesheet" />
 </head>
 <!-- class="overflow-hidden" -->
@@ -766,7 +766,7 @@
                      <div
                         class="relative px-4 ml:p-0 flex flex-col ml:flex-row justify-between w-full h-full text-[30px] font-AProM ml:items-center mb-4">
                         <span>
-                           Invoice for payment
+                           Payment via requisites
                         </span>
 
                      </div>
@@ -774,143 +774,129 @@
                         <div class="relative bg-white10 rounded-[25px] ml:rounded-[35px]">
                            <div class="absolute  -z-10 h-full w-full backdrop-blur-[15px]"></div>
                            <div class="p-4 ml:p-6 pb-[150px]">
-
-                              <h3 class="text-[22px] font-AProM ml:mb-6 mb-[22px]">
-                                 Payment method
-                              </h3>
-                              <div
-                                 class="grid grid-cols-2 grid-rows-2 ml:grid-rows-1 ml:grid-cols-4 w-full gap-2 ml:gap-4 justify-between mb-[22px]">
-
-                                 <div
-                                    class="custom-radio flex justify-start items-center w-full m-0 rounded-[20px] px-5 border-[1px] border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent">
-                                    <input type="radio" id="radio1" name="custom_radio" checked="">
-                                    <label for="radio1"></label>
-                                    <span class="text-white2 ml-2">SWIFT</span>
+                              <div class="flex items-center justify-between">
+                                 <div class="flex items-center ml:text-[18px] gap-2  h-full ">
+                                    <img src="../img/profile/flag/use.svg" alt="">
+                                    <span>UAH balance</span>
                                  </div>
-
-                                 <div
-                                    class="custom-radio flex justify-start items-center w-full  m-0 rounded-[20px] px-5 border-[1px]  border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent ">
-                                    <input type="radio" id="radio2" name="custom_radio">
-                                    <label for="radio2"></label>
-                                    <span class="text-white2 ml-2">SEPA</span>
-                                 </div>
-                                 <div
-                                    class="custom-radio flex justify-start items-center w-full  m-0 rounded-[20px] px-5 border-[1px] border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent ">
-                                    <input type="radio" id="radio3" name="custom_radio">
-                                    <label for="radio3"></label>
-                                    <span class="text-white2 ml-2">Card</span>
-                                 </div>
-                                 <div
-                                    class="custom-radio flex justify-start items-center w-full  m-0 rounded-[20px] px-5 border-[1px]  border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent ">
-                                    <input type="radio" id="radio4" name="custom_radio">
-                                    <label for="radio4"></label>
-                                    <span class="text-white2 ml-2">QR</span>
-                                 </div>
+                                 <button
+                                    class=" hover:text-main text-grey hover:border-main transition-colors duration-300  border-[1px] border-white/[0.5] h-8 px-4 rounded-full">
+                                    Change
+                                 </button>
                               </div>
-                              <div
-                                 class="pay-card relative bg-main/[0.9] ml:w-[397px] h-[260px]  overflow-hidden rounded-[35px] p-6">
-                                 <img class="absolute top-0  rounded-[35px] left-0 -z-10"
-                                    src="../img/invoice/gradient-card.png" alt="">
-                                 <img src="../img/invoice/mastercard_logo.png" alt="">
-                                 <div class="w-full flex flex-col gap-1 mt-[10px]">
-                                    <label class="text-black2 text-[14px]" for="method">Card number</label>
-
-                                    <input
-                                       class="bg-transparent placeholder:text-black2 ml:placeholder:text-[16px] h-[44px] ml:h-[56px] placeholder:text-[14px] placeholder:font-AProR font-AProM w-full  rounded-[20px] pl-5  text-[16px] ml:text-[22px] text-black2 border-[2px] border-[rgba(159,159,159,0.3)]"
-                                       type="number" id="method" placeholder="**** **** **** ****">
 
 
+
+                              <span class="w-full border-t-[1px] border-white/[0.1] h-0 inline-block my-6"></span>
+                              <div class="flex flex-col gap-2">
+                                 <span class="text-[14px] ml:text-[16px]">Flora House Group s.r.o.</span>
+                                 <span class="text-[14px] ml:text-[16px]">C. 19546343</span>
+                                 <span class="text-[14px] ml:text-[16px] text-left">Revolučni 1082/8, Praha, 11000,
+                                    Ceska
+                                    republika <br>
+                                    Korespondenoni adresa: Revolucni 1082/8, Praha, 11000, Ceska republika</span>
+                                 <div class="text-[14px] ml:text-[16px] ">
+                                    <span class=" border-b-[1px] border-white2">florahouse699@gmail.com</span>
                                  </div>
-                                 <div class="flex justify-between gap-2 mt-[10px]">
-                                    <div class="w-full flex flex-col gap-1">
-                                       <label class="text-black2 text-[14px]" for="">Expiry Date</label>
+                                 <span class="text-[14px] ml:text-[16px]">+49 160 99043663</span>
 
-                                       <input
-                                          class="bg-transparent placeholder:text-black2 ml:placeholder:text-[16px] h-[44px] ml:h-[56px] placeholder:text-[14px] placeholder:font-AProR font-AProM w-full  rounded-[20px] px-3  text-[16px] ml:text-[22px] text-black2 border-[2px] border-[rgba(159,159,159,0.3)]"
-                                          type="data" id="" placeholder="Exp.date">
-
-
-                                    </div>
-                                    <div class="w-full flex flex-col gap-1">
-                                       <label class="text-black2 text-[14px]" for="">Sucurity Code</label>
-
-                                       <input
-                                          class="bg-transparent placeholder:text-black2 ml:placeholder:text-[16px] h-[44px] ml:h-[56px]  placeholder:text-[14px] placeholder:font-AProR font-AProM w-full  rounded-[20px] px-3  text-[16px] ml:text-[22px] text-black2 border-[2px] border-[rgba(159,159,159,0.3)]"
-                                          type="number" id="" placeholder="CVV">
-
-
-                                    </div>
-                                 </div>
                               </div>
                               <span class="w-full border-t-[1px] border-white/[0.1] h-0 inline-block my-6"></span>
-                              <div class="">
-                                 <span class="font-AProM ml:text-[18px] inline-block mb-4">Recipient details</span>
+                              <div class="flex flex-col">
+                                 <span class="font-AProM ml:text-[18px] inline-block mb-4">Bank details:</span>
+                                 <span class="font-AProM ml:text-[18px] text-main  inline-block mb-4">EURO</span>
                                  <div class="flex flex-col gap-2">
                                     <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Account holder's name</span>
-                                       <span class="text-[14px] ml:text-[16px]">Name Surname</span>
+                                       <span class="text-[14px] ml:text-[16px]">Beneficiary:</span>
+                                       <span class="text-[14px] ml:text-[16px]">Flora House Group s.r.o.</span>
                                     </div>
                                     <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Card number</span>
-                                       <span class="text-[14px] ml:text-[16px]">*****************8456</span>
+                                       <span class="text-[14px] ml:text-[16px]">IBAN:</span>
+                                       <span class="text-[14px] ml:text-[16px]">BE67967963086387</span>
                                     </div>
                                     <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Email</span>
-                                       <span class="text-[14px] ml:text-[16px]">example@gmail.com</span>
+                                       <span class="text-[14px] ml:text-[16px]">BIC: </span>
+                                       <span class="text-[14px] ml:text-[16px]">TRWIBEB1XXX</span>
                                     </div>
                                     <div class="flex justify-between">
                                        <span class="text-[14px] ml:text-[16px]">Bank name</span>
                                        <span class="text-[14px] ml:text-[16px]">JSC CB PRIVATBANK</span>
                                     </div>
+                                    <div class="flex justify-between  ml:text-center">
+                                       <span class="text-[14px] ml:text-[16px] w-[50%] ml:w-auto inline-block">Address
+                                          Wise:</span>
+                                       <span class="text-[14px] ml:text-[16px]  text-right">Rue du Trône 100, 3rd floor
+                                          Brussels
+                                          1050 Belgium</span>
+                                    </div>
+                                 </div>
+                                 <span class="font-AProM ml:text-[18px] text-main  inline-block mb-4 mt-4">Dollar
+                                 </span>
+                                 <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between">
+                                       <span class="text-[14px] ml:text-[16px]">Beneficiary::</span>
+                                       <span class="text-[14px] ml:text-[16px]">Flora House Group s.r.o.</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                       <span class="text-[14px] ml:text-[16px]">Swift/BIC:</span>
+                                       <span class="text-[14px] ml:text-[16px]">CMFGUS33</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                       <span class="text-[14px] ml:text-[16px]">Account number:</span>
+                                       <span class="text-[14px] ml:text-[16px]">8314359834</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                       <span class="text-[14px] ml:text-[16px]">Routing number:</span>
+                                       <span class="text-[14px] ml:text-[16px]">026073150</span>
+                                    </div>
+                                    <div class="flex justify-between  ml:items-center">
+                                       <span class="text-[14px] ml:text-[16px] w-[50%]  ml:w-auto inline-block">Address
+                                          Wise:</span>
+                                       <span class="text-[14px] ml:text-[16px] text-right">30 W. 26th Street, Sixth
+                                          Floor New <br>
+                                          York NY 10010 United States</span>
+                                    </div>
+                                 </div>
+                                 <span class="font-AProM ml:text-[18px] text-main  inline-block mb-4">GBP </span>
+                                 <div class="flex flex-col gap-2">
+                                    <div class="flex justify-between">
+                                       <span class="text-[14px] ml:text-[16px]">Beneficiary::</span>
+                                       <span class="text-[14px] ml:text-[16px]">Flora House Group s.r.o.</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                       <span class="text-[14px] ml:text-[16px]">Swift/BIC:</span>
+                                       <span class="text-[14px] ml:text-[16px]">TRWIGB2L</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                       <span class="text-[14px] ml:text-[16px]">IBAN:</span>
+                                       <span class="text-[14px] ml:text-[16px]">GB17TRWI23147057144050</span>
+                                    </div>
+                                    <div class="flex justify-between  ml:items-center">
+                                       <span class="text-[14px] ml:text-[16px] w-[50%]  ml:w-auto inline-block">Address
+                                          Wise:</span>
+                                       <span class="text-[14px] ml:text-[16px] w-[50%]  inline-block text-right">56
+                                          Shoreditch High
+                                          Street
+                                          London E1 6JJ,
+                                          United Kingdom</span>
+                                    </div>
                                  </div>
 
                               </div>
-                              <span class="w-full border-t-[1px] border-white/[0.1] h-0 inline-block my-6"></span>
-                              <div class="">
-                                 <span class="font-AProM ml:text-[18px] inline-block mb-4">Transfer details</span>
-                                 <div class="flex flex-col gap-2">
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Description</span>
-                                       <span class="text-[14px] ml:text-[16px]">Description Large Here</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">QTY</span>
-                                       <span class="text-[14px] ml:text-[16px]">1</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Price for 1</span>
-                                       <span class="text-[14px] ml:text-[16px]">34 UAH</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Total Price</span>
-                                       <span class="text-[14px] ml:text-[16px]">34 UAH</span>
-                                    </div>
-                                 </div>
-                              </div>
-                              <span class="w-full border-t-[1px] border-white/[0.1] h-0 inline-block my-6"></span>
-                              <div class="">
-                                 <div class="flex flex-col gap-2">
 
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Fee (included)</span>
-                                       <span class="text-[14px] ml:text-[16px]">45 UAH</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Amount we will send</span>
-                                       <span class="text-[14px] ml:text-[16px]">34 UAH</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                       <span class="text-[14px] ml:text-[16px]">Total</span>
-                                       <span class="font-AProM text-[22px]">455 UAH</span>
-                                    </div>
+                              <span class="w-full border-t-[1px] border-white/[0.1] h-0 inline-block my-6"></span>
+                              <div class="flex flex-col gap-2">
+                                 <div class="flex justify-between">
+                                    <span class="text-[14px] ml:text-[16px]">Director:</span>
+                                    <span class="text-[14px] ml:text-[16px]">Anna Khyzhchenko</span>
                                  </div>
+
+                                 <span class="text-[14px] ml:text-[16px]"><span
+                                       class="border-b-[1px] border-white2">https://www.florahousegroup.com/</span></span>
+
                               </div>
-                              <button
-                                 class=" w-full  inline-flex  cursor-pointer select-none items-center justify-center space-x-1 whitespace-nowrap rounded-full border-[1px] border-main
-                              px-[22px] py-3 text-[16px] text-main transition-colors duration-200 hover:border-[#BCFF00] hover:text-[#BCFF00] sm:px-6 sm:text-[15px]">Pay
-                                 the
-                                 invoice</button>
-                              <button class=" button text-[16px] font-AProM w-full mt-6">Pay Imbapay</button>
+
+                              <button class=" button text-[16px] font-AProM w-full mt-6">Proceed to payment</button>
                               <img class=" ml:hidden  absolute bottom-0 left-[50%] translate-x-[-50%]"
                                  src="../img/request/bg-mobile.png" alt="">
                            </div>

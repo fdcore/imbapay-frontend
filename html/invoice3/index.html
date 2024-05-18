@@ -766,24 +766,20 @@
                      <div
                         class="relative px-4 ml:p-0 flex flex-col ml:flex-row justify-between w-full h-full text-[30px] font-AProM ml:items-center mb-4">
                         <span>
-                           Invoice for payment
+                           Payment via requisites
                         </span>
 
                      </div>
-                     <div class=" grid xl:grid-cols-2 gap-[10px] grid-cols-1  px-4 ml:p-0">
-                        <div class="relative bg-white10 rounded-[25px] ml:rounded-[35px]">
+                     <div class=" grid xl:grid-cols-2 ml:gap-[10px] grid-cols-1  px-4 ml:p-0">
+                        <div class="relative bg-white10 rounded-t-[25px] ml:rounded-[35px]">
                            <div class="absolute  -z-10 h-full w-full backdrop-blur-[15px]"></div>
-                           <div class="p-4 ml:p-6 pb-[150px]">
-
-                              <h3 class="text-[22px] font-AProM ml:mb-6 mb-[22px]">
-                                 Payment method
-                              </h3>
+                           <div class="p-4 ml:p-6 ">
                               <div
                                  class="grid grid-cols-2 grid-rows-2 ml:grid-rows-1 ml:grid-cols-4 w-full gap-2 ml:gap-4 justify-between mb-[22px]">
 
                                  <div
                                     class="custom-radio flex justify-start items-center w-full m-0 rounded-[20px] px-5 border-[1px] border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent">
-                                    <input type="radio" id="radio1" name="custom_radio" checked="">
+                                    <input type="radio" id="radio1" name="custom_radio">
                                     <label for="radio1"></label>
                                     <span class="text-white2 ml-2">SWIFT</span>
                                  </div>
@@ -796,7 +792,7 @@
                                  </div>
                                  <div
                                     class="custom-radio flex justify-start items-center w-full  m-0 rounded-[20px] px-5 border-[1px] border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent ">
-                                    <input type="radio" id="radio3" name="custom_radio">
+                                    <input type="radio" id="radio3" name="custom_radio" checked="">
                                     <label for="radio3"></label>
                                     <span class="text-white2 ml-2">Card</span>
                                  </div>
@@ -807,114 +803,188 @@
                                     <span class="text-white2 ml-2">QR</span>
                                  </div>
                               </div>
-                              <div
-                                 class="pay-card relative bg-main/[0.9] ml:w-[397px] h-[260px]  overflow-hidden rounded-[35px] p-6">
-                                 <img class="absolute top-0  rounded-[35px] left-0 -z-10"
-                                    src="../img/invoice/gradient-card.png" alt="">
-                                 <img src="../img/invoice/mastercard_logo.png" alt="">
-                                 <div class="w-full flex flex-col gap-1 mt-[10px]">
-                                    <label class="text-black2 text-[14px]" for="method">Card number</label>
-
+                              <div class="flex flex-col gap-4">
+                                 <div class="flex flex-col w-full">
+                                    <label class="text-[14px] text-grey " for="">Recipient's name</label>
                                     <input
-                                       class="bg-transparent placeholder:text-black2 ml:placeholder:text-[16px] h-[44px] ml:h-[56px] placeholder:text-[14px] placeholder:font-AProR font-AProM w-full  rounded-[20px] pl-5  text-[16px] ml:text-[22px] text-black2 border-[2px] border-[rgba(159,159,159,0.3)]"
-                                       type="number" id="method" placeholder="**** **** **** ****">
-
-
+                                       class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
+                                       type="text" name="" id="">
                                  </div>
-                                 <div class="flex justify-between gap-2 mt-[10px]">
-                                    <div class="w-full flex flex-col gap-1">
-                                       <label class="text-black2 text-[14px]" for="">Expiry Date</label>
+                                 <div class="flex flex-col w-full">
+                                    <label class="text-[14px] text-grey " for="">Recipient's address</label>
+                                    <input
+                                       class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
+                                       type="text" name="" id="">
+                                 </div>
+                                 <div class="flex flex-col w-full">
+                                    <label class="text-[14px] text-grey " for="">Recipient's account number (usually in
+                                       the IBAN format for European banks)</label>
+                                    <input
+                                       class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
+                                       type="text" name="" id="">
+                                 </div>
+                                 <div class="flex flex-col w-full">
+                                    <label class="text-[14px] text-grey " for="">Recipient bank's BIC/SWIFT code</label>
+                                    <input
+                                       class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
+                                       type="text" name="" id="">
+                                 </div>
+                                 <div class="flex flex-col w-full">
+                                    <label class="text-[14px] text-grey " for="">Recipient bank's name</label>
+                                    <input
+                                       class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
+                                       type="text" name="" id="">
+                                 </div>
+                                 <div class="flex flex-col w-full">
+                                    <label class="text-[14px] text-grey " for="">Recipient bank's address</label>
+                                    <input
+                                       class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
+                                       type="text" name="" id="">
+                                 </div>
+                                 <div class="w-full flex flex-col gap-1">
+                                    <label class="text-grey text-[14px]" for="method">Purpose of payment</label>
 
+                                    <textarea
+                                       class="bg-transparent resize-none placeholder:text-[16px] placeholder:font-AProR font-AProBo w-full h-[170px] rounded-[20px] pl-5 pr-[140px] text-[18px] ml:text-[22px] text-white2 border-[2px] border-white/[0.3]"
+                                       type="number" id="method" placeholder="Comment">
+                                    </textarea>
+                                 </div>
+                                 <div class="w-full flex flex-col gap-1">
+                                    <label class="text-grey text-[14px]" for="amount">Top-up amount</label>
+                                    <div class="relative">
                                        <input
-                                          class="bg-transparent placeholder:text-black2 ml:placeholder:text-[16px] h-[44px] ml:h-[56px] placeholder:text-[14px] placeholder:font-AProR font-AProM w-full  rounded-[20px] px-3  text-[16px] ml:text-[22px] text-black2 border-[2px] border-[rgba(159,159,159,0.3)]"
-                                          type="data" id="" placeholder="Exp.date">
-
-
+                                          class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[64px] md:h-[75px]  rounded-[20px] pl-5 pr-[140px] text-[18px] ml:text-[22px] text-white2 border-[2px] border-white/[0.3]"
+                                          type="number" id="amount" placeholder="545,00">
+                                       <div class="absolute top-[20px] md:top-[25px]  right-5 group  ">
+                                          <div class="flex items-center gap-1">
+                                             <img src="../img/profile/flag/use.svg" alt="">
+                                             <span class="md:text-[22px] font-AProM leading-none mt-1">EN</span>
+                                             <span>
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;"></path>
+                                                </svg>
+                                             </span>
+                                          </div>
+                                          <div class="hidden group-hover:flex mt-4  flex-col gap-2">
+                                             <div class="flex items-center gap-1">
+                                                <img src="../img/profile/flag/use.svg" alt="">
+                                                <span class="md:text-[22px] font-AProM leading-none mt-1">RU</span>
+                                                <span>
+                                                   <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path
+                                                         d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                         fill="white" style="fill:white;fill-opacity:1;"></path>
+                                                   </svg>
+                                                </span>
+                                             </div>
+                                             <div class="flex items-center gap-1">
+                                                <img src="../img/profile/flag/use.svg" alt="">
+                                                <span class="md:text-[22px] font-AProM leading-none mt-1">UK</span>
+                                                <span>
+                                                   <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path
+                                                         d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                         fill="white" style="fill:white;fill-opacity:1;"></path>
+                                                   </svg>
+                                                </span>
+                                             </div>
+                                          </div>
+                                       </div>
                                     </div>
-                                    <div class="w-full flex flex-col gap-1">
-                                       <label class="text-black2 text-[14px]" for="">Sucurity Code</label>
-
+                                 </div>
+                                 <div class="w-full flex flex-col gap-1">
+                                    <label class="text-grey text-[14px]" for="method">Payment method</label>
+                                    <div class="relative">
                                        <input
-                                          class="bg-transparent placeholder:text-black2 ml:placeholder:text-[16px] h-[44px] ml:h-[56px]  placeholder:text-[14px] placeholder:font-AProR font-AProM w-full  rounded-[20px] px-3  text-[16px] ml:text-[22px] text-black2 border-[2px] border-[rgba(159,159,159,0.3)]"
-                                          type="number" id="" placeholder="CVV">
+                                          class="bg-transparent placeholder:text-[16px] font-AProBo w-full h-[64px] md:h-[75px] rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 border-[2px] border-white/[0.3]"
+                                          type="number" id="method" placeholder="" disabled="">
+                                       <div class="absolute flex items-center gap-2 top-0 h-full left-[20px]">
+                                          <img src="../img/profile/flag/use.svg" alt="">
+                                          <span>UAH balance</span>
+                                       </div>
 
-
+                                       <button
+                                          class="absolute hover:text-main text-grey hover:border-main transition-colors duration-300 top-[50%] translate-y-[-50%] right-[20px] border-[1px] border-white/[0.5] h-8 px-4 rounded-full">
+                                          Change
+                                       </button>
+                                    </div>
+                                 </div>
+                                 <div class="w-full flex flex-col gap-1">
+                                    <label class="text-grey text-[14px]" for="amount">Top-up amount</label>
+                                    <div class="relative">
+                                       <input
+                                          class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[64px] md:h-[75px]  rounded-[20px] pl-5 pr-[140px] text-[18px] ml:text-[22px] text-white2 border-[2px] border-white/[0.3]"
+                                          type="number" id="amount" placeholder="545,00">
+                                       <div class="absolute top-[20px] md:top-[25px]  right-5 group  ">
+                                          <div class="flex items-center gap-1">
+                                             <img src="../img/profile/flag/use.svg" alt="">
+                                             <span class="md:text-[22px] font-AProM leading-none mt-1">EN</span>
+                                             <span>
+                                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path
+                                                      d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                      fill="white" style="fill:white;fill-opacity:1;"></path>
+                                                </svg>
+                                             </span>
+                                          </div>
+                                          <div class="hidden group-hover:flex mt-4  flex-col gap-2">
+                                             <div class="flex items-center gap-1">
+                                                <img src="../img/profile/flag/use.svg" alt="">
+                                                <span class="md:text-[22px] font-AProM leading-none mt-1">RU</span>
+                                                <span>
+                                                   <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path
+                                                         d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                         fill="white" style="fill:white;fill-opacity:1;"></path>
+                                                   </svg>
+                                                </span>
+                                             </div>
+                                             <div class="flex items-center gap-1">
+                                                <img src="../img/profile/flag/use.svg" alt="">
+                                                <span class="md:text-[22px] font-AProM leading-none mt-1">UK</span>
+                                                <span>
+                                                   <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path
+                                                         d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                         fill="white" style="fill:white;fill-opacity:1;"></path>
+                                                   </svg>
+                                                </span>
+                                             </div>
+                                          </div>
+                                       </div>
                                     </div>
                                  </div>
                               </div>
-                              <span class="w-full border-t-[1px] border-white/[0.1] h-0 inline-block my-6"></span>
-                              <div class="">
-                                 <span class="font-AProM ml:text-[18px] inline-block mb-4">Recipient details</span>
-                                 <div class="flex flex-col gap-2">
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Account holder's name</span>
-                                       <span class="text-[14px] ml:text-[16px]">Name Surname</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Card number</span>
-                                       <span class="text-[14px] ml:text-[16px]">*****************8456</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Email</span>
-                                       <span class="text-[14px] ml:text-[16px]">example@gmail.com</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Bank name</span>
-                                       <span class="text-[14px] ml:text-[16px]">JSC CB PRIVATBANK</span>
-                                    </div>
-                                 </div>
 
-                              </div>
-                              <span class="w-full border-t-[1px] border-white/[0.1] h-0 inline-block my-6"></span>
-                              <div class="">
-                                 <span class="font-AProM ml:text-[18px] inline-block mb-4">Transfer details</span>
-                                 <div class="flex flex-col gap-2">
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Description</span>
-                                       <span class="text-[14px] ml:text-[16px]">Description Large Here</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">QTY</span>
-                                       <span class="text-[14px] ml:text-[16px]">1</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Price for 1</span>
-                                       <span class="text-[14px] ml:text-[16px]">34 UAH</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Total Price</span>
-                                       <span class="text-[14px] ml:text-[16px]">34 UAH</span>
-                                    </div>
-                                 </div>
-                              </div>
-                              <span class="w-full border-t-[1px] border-white/[0.1] h-0 inline-block my-6"></span>
-                              <div class="">
-                                 <div class="flex flex-col gap-2">
+                           </div>
 
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Fee (included)</span>
-                                       <span class="text-[14px] ml:text-[16px]">45 UAH</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                       <span class="text-[14px] ml:text-[16px]">Amount we will send</span>
-                                       <span class="text-[14px] ml:text-[16px]">34 UAH</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                       <span class="text-[14px] ml:text-[16px]">Total</span>
-                                       <span class="font-AProM text-[22px]">455 UAH</span>
-                                    </div>
-                                 </div>
+                        </div>
+                        <div
+                           class="relative bg-white10 w-full ml:h-[234px] rounded-b-[25px] pb-[150px] ml:p-0 ml:rounded-[35px]">
+                           <div class="absolute  -z-10 h-full w-full backdrop-blur-[15px]"></div>
+                           <div class="p-4 ml:p-6 ">
+                              <div class="font-AProM ml:text-[18px] text-white2 mb-6">Available on your balance <span
+                                    class="text-main uppercase">25 882,55 UAH</span></div>
+                              <div class="flex text-[14px] ml:text-[16px] justify-between text-white2 mb-2">
+                                 <span>Transfer fee</span>
+                                 <span class="font-AProM">0 UAH</span>
                               </div>
-                              <button
-                                 class=" w-full  inline-flex  cursor-pointer select-none items-center justify-center space-x-1 whitespace-nowrap rounded-full border-[1px] border-main
-                              px-[22px] py-3 text-[16px] text-main transition-colors duration-200 hover:border-[#BCFF00] hover:text-[#BCFF00] sm:px-6 sm:text-[15px]">Pay
-                                 the
-                                 invoice</button>
-                              <button class=" button text-[16px] font-AProM w-full mt-6">Pay Imbapay</button>
+                              <div class="flex text-[14px] ml:text-[16px] justify-between text-white2 mb-6">
+                                 <span>Total cost</span>
+                                 <span class="font-AProM text-[22px]">545 UAH</span>
+                              </div>
+                              <button class="button w-full text-[16px] font-AProM">Continue</button>
                               <img class=" ml:hidden  absolute bottom-0 left-[50%] translate-x-[-50%]"
                                  src="../img/request/bg-mobile.png" alt="">
                            </div>
-
                         </div>
                      </div>
                   </div>
