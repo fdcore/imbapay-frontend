@@ -1622,6 +1622,10 @@ video {
   width: 0.5rem;
 }
 
+.w-\[120px\] {
+  width: 120px;
+}
+
 .max-w-\[395px\] {
   max-width: 395px;
 }
@@ -5297,6 +5301,10 @@ input[type='number'] {
     width: 460px;
   }
 
+  .ml\:w-\[330px\] {
+    width: 330px;
+  }
+
   .ml\:max-w-\[280px\] {
     max-width: 280px;
   }
@@ -5396,6 +5404,10 @@ input[type='number'] {
 
   .ml\:gap-\[15px\] {
     gap: 15px;
+  }
+
+  .ml\:gap-10 {
+    gap: 2.5rem;
   }
 
   .ml\:gap-x-\[30px\] {
