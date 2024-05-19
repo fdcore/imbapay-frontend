@@ -44,3 +44,7 @@
 .custom-scrollbar::-webkit-scrollbar-button {
    display: none;
 }
+
+.inner-container::-webkit-scrollbar {
+   display: none;
+  }
