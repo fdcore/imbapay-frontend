@@ -894,11 +894,6 @@ video {
   margin: 0px;
 }
 
-.mx-3 {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
-}
-
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -1183,6 +1178,10 @@ video {
   height: 180px;
 }
 
+.h-\[18px\] {
+  height: 18px;
+}
+
 .h-\[200px\] {
   height: 200px;
 }
@@ -1319,6 +1318,10 @@ video {
   height: 100%;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
 .max-h-\[441px\] {
   max-height: 441px;
 }
@@ -1337,6 +1340,14 @@ video {
 
 .min-h-\[50px\] {
   min-height: 50px;
+}
+
+.min-h-\[20px\] {
+  min-height: 20px;
+}
+
+.min-h-\[37px\] {
+  min-height: 37px;
 }
 
 .w-1\/2 {
@@ -1383,6 +1394,10 @@ video {
   width: 103%;
 }
 
+.w-\[110px\] {
+  width: 110px;
+}
+
 .w-\[112px\] {
   width: 112px;
 }
@@ -1401,6 +1416,10 @@ video {
 
 .w-\[180px\] {
   width: 180px;
+}
+
+.w-\[18px\] {
+  width: 18px;
 }
 
 .w-\[195px\] {
@@ -1557,6 +1576,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[500px\] {
+  width: 500px;
+}
+
+.w-\[460px\] {
+  width: 460px;
 }
 
 .max-w-\[395px\] {
@@ -1895,6 +1922,10 @@ video {
   border-radius: 0.125rem;
 }
 
+.rounded-\[14px\] {
+  border-radius: 14px;
+}
+
 .rounded-b-\[25px\] {
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -1908,6 +1939,16 @@ video {
 .rounded-b-\[35px\] {
   border-bottom-right-radius: 35px;
   border-bottom-left-radius: 35px;
+}
+
+.rounded-l-full {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.rounded-r-full {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
 }
 
 .rounded-t-\[25px\] {
@@ -1985,6 +2026,10 @@ video {
 
 .border-\[rgba\(159\2c 159\2c 159\2c 0\.3\)\] {
   border-color: rgba(159,159,159,0.3);
+}
+
+.border-\[rgba\(255\2c 255\2c 255\2c 0\.04\)\] {
+  border-color: rgba(255,255,255,0.04);
 }
 
 .border-\[rgba\(255\2c 255\2c 255\2c 0\.3\)\] {
@@ -2163,6 +2208,10 @@ video {
 
 .bg-\[rgba\(232\2c 235\2c 230\2c 0\.03\)\] {
   background-color: rgba(232,235,230,0.03);
+}
+
+.bg-\[rgba\(255\2c 255\2c 255\2c 0\.04\)\] {
+  background-color: rgba(255,255,255,0.04);
 }
 
 .bg-\[rgba\(255\2c 255\2c 255\2c 0\.1\)\] {
@@ -2546,6 +2595,10 @@ video {
   padding-right: 140px;
 }
 
+.pr-\[60px\] {
+  padding-right: 60px;
+}
+
 .pt-10 {
   padding-top: 2.5rem;
 }
@@ -2600,6 +2653,10 @@ video {
 
 .pt-\[70px\] {
   padding-top: 70px;
+}
+
+.pr-\[70px\] {
+  padding-right: 70px;
 }
 
 .text-left {
@@ -3589,20 +3646,39 @@ textarea::-webkit-scrollbar {
   }
 }
 
-.select {
+.select2 {
   position: relative;
   display: block;
   width: 140px;
   height: 56px;
-  margin-bottom: 20px;
-  border: 1px solid rgba(155, 155, 155,0.3);
-  border-radius: 20px;
+}
+
+.select3 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 56px;
+}
+
+.select4 {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 56px;
+}
+
+@media (max-width: 960px) {
+  .select4 {
+    position: relative;
+    width: 120px;
+  }
 }
 
 .select__head {
   width: 100%;
   max-width: 100%;
-  padding: 16px 15px;
+  height: 100%;
+  padding: 19px 15px;
   font-size: 16px;
   line-height: 18px;
   color: #9B9B9B;
@@ -3632,8 +3708,8 @@ textarea::-webkit-scrollbar {
   top: 100%;
   left: 0;
   right: 0;
-  background: #fff;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  background: rgb(53, 53, 53);
+  border:1px solid rgba(155, 155, 155,0.3);
   border-radius: 10px;
   margin-top: 5px;
   max-height: 205px;
@@ -3643,7 +3719,7 @@ textarea::-webkit-scrollbar {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  color: #424348;
+  color: rgba(155, 155, 155,0.5);
   scrollbar-color: dark;
   scrollbar-width: thin;
   overscroll-behavior: contain;
@@ -3669,7 +3745,8 @@ textarea::-webkit-scrollbar {
 }
 
 .select__list .select__item:hover {
-  background-color: rgba(224, 229, 231, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #F8F9FA;
 }
 
 .card {
@@ -4086,6 +4163,10 @@ input[type='number'] {
   display: flex;
 }
 
+.group:hover .group-hover\:bg-\[rgba\(255\2c 255\2c 255\2c 0\.04\)\] {
+  background-color: rgba(255,255,255,0.04);
+}
+
 .group:hover .group-hover\:bg-main {
   --tw-bg-opacity: 1;
   background-color: rgb(215 255 0 / var(--tw-bg-opacity));
@@ -4426,6 +4507,10 @@ input[type='number'] {
     justify-content: center;
   }
 
+  .sm\:gap-0 {
+    gap: 0px;
+  }
+
   .sm\:rounded-\[20px\] {
     border-radius: 20px;
   }
@@ -4515,6 +4600,10 @@ input[type='number'] {
 
   .sm\:pt-10 {
     padding-top: 2.5rem;
+  }
+
+  .sm\:pt-4 {
+    padding-top: 1rem;
   }
 
   .sm\:pt-6 {
@@ -4771,6 +4860,11 @@ input[type='number'] {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .md\:translate-x-\[-40\%\] {
+    --tw-translate-x: -40%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .md\:translate-x-\[28\%\] {
     --tw-translate-x: 28%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4983,6 +5077,10 @@ input[type='number'] {
     z-index: -20;
   }
 
+  .ml\:order-first {
+    order: -9999;
+  }
+
   .ml\:order-last {
     order: 9999;
   }
@@ -5007,6 +5105,10 @@ input[type='number'] {
     margin-bottom: 100px;
   }
 
+  .ml\:mb-\[22px\] {
+    margin-bottom: 22px;
+  }
+
   .ml\:ml-4 {
     margin-left: 1rem;
   }
@@ -5017,6 +5119,10 @@ input[type='number'] {
 
   .ml\:mt-2 {
     margin-top: 0.5rem;
+  }
+
+  .ml\:mt-\[10px\] {
+    margin-top: 10px;
   }
 
   .ml\:block {
@@ -5087,6 +5193,10 @@ input[type='number'] {
     max-height: 768px;
   }
 
+  .ml\:min-h-\[208px\] {
+    min-height: 208px;
+  }
+
   .ml\:min-h-\[80px\] {
     min-height: 80px;
   }
@@ -5131,6 +5241,10 @@ input[type='number'] {
     width: auto;
   }
 
+  .ml\:max-w-\[280px\] {
+    max-width: 280px;
+  }
+
   .ml\:rotate-0 {
     --tw-rotate: 0deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -5138,6 +5252,10 @@ input[type='number'] {
 
   .ml\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ml\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .ml\:grid-cols-4 {
@@ -5148,8 +5266,16 @@ input[type='number'] {
     grid-template-columns: 218px calc(100% - 248px);
   }
 
+  .ml\:grid-cols-\[auto_400px\] {
+    grid-template-columns: auto 400px;
+  }
+
   .ml\:grid-rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+
+  .ml\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
   .ml\:grid-rows-\[136px_1fr\] {
@@ -5172,8 +5298,16 @@ input[type='number'] {
     flex-direction: row;
   }
 
+  .ml\:items-start {
+    align-items: flex-start;
+  }
+
   .ml\:items-center {
     align-items: center;
+  }
+
+  .ml\:justify-start {
+    justify-content: flex-start;
   }
 
   .ml\:justify-end {
@@ -5196,8 +5330,16 @@ input[type='number'] {
     gap: 1rem;
   }
 
+  .ml\:gap-6 {
+    gap: 1.5rem;
+  }
+
   .ml\:gap-\[10px\] {
     gap: 10px;
+  }
+
+  .ml\:gap-\[15px\] {
+    gap: 15px;
   }
 
   .ml\:gap-x-\[30px\] {
@@ -5211,6 +5353,10 @@ input[type='number'] {
 
   .ml\:overflow-y-scroll {
     overflow-y: scroll;
+  }
+
+  .ml\:rounded-\[20px\] {
+    border-radius: 20px;
   }
 
   .ml\:rounded-\[35px\] {
@@ -5281,6 +5427,16 @@ input[type='number'] {
     padding-right: 0px;
   }
 
+  .ml\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .ml\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
   .ml\:py-7 {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
@@ -5296,6 +5452,14 @@ input[type='number'] {
     padding-bottom: 6px;
   }
 
+  .ml\:pl-0 {
+    padding-left: 0px;
+  }
+
+  .ml\:pl-\[70px\] {
+    padding-left: 70px;
+  }
+
   .ml\:pt-6 {
     padding-top: 1.5rem;
   }
@@ -5308,6 +5472,10 @@ input[type='number'] {
     font-family: AeonikPro-Bo, sans-serif;
   }
 
+  .ml\:text-\[12px\] {
+    font-size: 12px;
+  }
+
   .ml\:text-\[14px\] {
     font-size: 14px;
   }
@@ -5318,6 +5486,10 @@ input[type='number'] {
 
   .ml\:text-\[18px\] {
     font-size: 18px;
+  }
+
+  .ml\:text-\[20px\] {
+    font-size: 20px;
   }
 
   .ml\:text-\[22px\] {
@@ -5351,6 +5523,11 @@ input[type='number'] {
   .ml\:hover\:border-main:hover {
     --tw-border-opacity: 1;
     border-color: rgb(215 255 0 / var(--tw-border-opacity));
+  }
+
+  .ml\:hover\:bg-bg3:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(39 39 42 / var(--tw-bg-opacity));
   }
 
   .ml\:hover\:text-main:hover {
@@ -5548,6 +5725,10 @@ input[type='number'] {
     width: 100%;
   }
 
+  .lg\:max-w-\[380px\] {
+    max-width: 380px;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -5570,6 +5751,10 @@ input[type='number'] {
 
   .lg\:gap-5 {
     gap: 1.25rem;
+  }
+
+  .lg\:gap-\[30px\] {
+    gap: 30px;
   }
 
   .lg\:overflow-hidden {
@@ -5649,6 +5834,10 @@ input[type='number'] {
 
   .lg\:text-\[16px\] {
     font-size: 16px;
+  }
+
+  .lg\:text-\[18px\] {
+    font-size: 18px;
   }
 
   .lg\:text-\[20px\] {
@@ -5841,6 +6030,10 @@ input[type='number'] {
     width: auto;
   }
 
+  .xl\:max-w-\[620px\] {
+    max-width: 620px;
+  }
+
   .xl\:translate-x-\[-50\%\] {
     --tw-translate-x: -50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -5855,8 +6048,16 @@ input[type='number'] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .xl\:grid-cols-\[auto_470px\] {
     grid-template-columns: auto 470px;
+  }
+
+  .xl\:grid-cols-\[auto_800px\] {
+    grid-template-columns: auto 800px;
   }
 
   .xl\:grid-rows-\[748px\] {
@@ -5869,6 +6070,10 @@ input[type='number'] {
 
   .xl\:flex-row {
     flex-direction: row;
+  }
+
+  .xl\:gap-\[100px\] {
+    gap: 100px;
   }
 
   .xl\:p-8 {

@@ -19,7 +19,7 @@
 
 
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
-   <title>Создать счёт</title>
+   <title>Саппорт</title>
    <link href="../style.css" rel="stylesheet" />
 </head>
 <!-- class="overflow-hidden" -->
@@ -743,9 +743,12 @@
                </div>
                <!-- content  -->
                <div class="w-full relative ">
-                  <div class="h-full w-full absolute hidden -z-10 backdrop-blur-[15px]"></div>
-                  <div class=" ml:bg-transparent   px-4 pt-[22px]  ml:p-0">
-                     <div class="mb-[22px] flex w-full items-center justify-between gap-2 ml:hidden">
+
+                  <div class=" ml:bg-transparent   relative ">
+                     <div class="h-full w-full absolute hidden -z-10 backdrop-blur-[15px]"></div>
+                     <!-- block mini header -->
+                     <div
+                        class="ml:mb-[22px] p-4 pt-[22px]  ml:p-0 flex w-full items-center justify-between gap-2 ml:hidden">
                         <a href="../profile/myProfile.html" class="group flex cursor-pointer items-center">
                            <span
                               class="spanicon-top flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10 group-hover:bg-main">
@@ -757,13 +760,13 @@
                               </svg>
                            </span>
                         </a>
+
                         <div class="flex items-center gap-3">
                            <!-- lang -->
                            <div class="relative group">
                               <div class="open-lang cursor-pointer">
                                  <img class="" src="../img/profile/flag/use.svg" alt="" />
                               </div>
-                              <!-- lang block-->
 
 
 
@@ -786,135 +789,73 @@
                         </div>
                      </div>
                   </div>
-                  <div class="px-4 ml:p-0 text-[30px] font-AProM text-white2 mb-4">
-                     Create an account
-                  </div>
-                  <div class="px-4 sm:p-0 flex flex-col gap-4">
-                     <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
-                        <div class="flex flex-col w-full">
-                           <label class="text-[14px] text-grey " for="">Product Name</label>
-                           <input
-                              class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                              type="text" name="" id="">
-                        </div>
-                        <div class="flex flex-col w-full">
-                           <label class="text-[14px] text-grey" for="">Phone</label>
 
-                           <div class="relative w-full flex gap-2">
 
-                              <div
-                                 class="border-[1px] ml:rounded-none ml:border-none rounded-[20px]  border-[rgba(255,255,255,0.3)] select4">
-                                 <input class="select__input" type="hidden" name="">
-                                 <div class="select__head">+381</div>
-                                 <ul class="select__list " style="display: none;">
-                                    <li class="select__item">+382</li>
-                                    <li class="select__item">+383</li>
-                                    <li class="select__item">+384</li>
-                                 </ul>
-                              </div>
-                              <input
-                                 class="rounded-[20px] w-full  px-5  ml:pl-[70px] border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                 type="text" name="" id="">
 
-                           </div>
-                        </div>
-                        <div class="flex flex-col w-full">
-                           <label class="text-[14px] text-grey" for="">Description</label>
-                           <input
-                              class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                              type="text" name="" id="">
-                        </div>
+                  <h3 class=" text-[30px] font-AProM text-white2 mb-4 inline-block">
+                     Support
+                  </h3>
+
+                  <!-- block -->
+                  <div class=" relative   ml:bg-white10   rounded-[25px] ml:rounded-[35px] ">
+                     <div
+                        class=" ml:block absolute hidden rounded-[25px] -z-10 h-full top-0 left-0 w-full backdrop-blur-[15px]">
                      </div>
-                     <div class="flex flex-col ml:flex-row w-full gap-4 itm justify-between">
-                        <div class="flex flex-col w-full">
-                           <label class="text-[14px] text-grey " for="">Product Name</label>
-                           <input
-                              class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                              type="text" name="" id="">
+                     <div class="">
+                        <div
+                           class="rounded-[25px] ml:rounded-[35px] bg-bg3 ml:bg-transparent border-b-[1px] border-[#fff]/[0.1] ">
+                           <h3 class="p-6  text-[22px] font-AProM hidden ml:inline-block">Request history</h3>
                         </div>
-
-                        <div class="w-full">
-                           <span class="text-[14px] text-grey ">Letter Language</span>
-                           <div class="rounded-[20px] border-[1px]  border-[rgba(255,255,255,0.3)]  select3">
-
-                              <input class="select__input" type="hidden" name="" id="lang">
-                              <div class="select__head">Русский</div>
-                              <ul class="select__list" style="display: none;">
-                                 <li class="select__item">select1</li>
-                                 <li class="select__item">select2</li>
-                                 <li class="select__item">select3</li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class=" relative  mt-6  bg-white10   rounded-[25px] ml:rounded-[35px] mx-4 sm:mx-0">
-                     <div class=" ml:block absolute rounded-[25px] -z-10 h-full w-full backdrop-blur-[15px]"></div>
-                     <div class="rounded-[25px] ml:rounded-[35px] p-4 ml:p-6">
-                        <h3>Product Name</h3>
-                        <form action="">
-                           <div class="flex flex-col gap-4">
-                              <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
-                                 <div class="flex flex-col w-full">
-                                    <label class="text-[14px] text-grey " for="">Product Name</label>
-                                    <input
-                                       class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
-                                 </div>
-                                 <div class="flex flex-col w-full">
-                                    <label class="text-[14px] text-grey" for="">Description</label>
-                                    <input
-                                       class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
-                                 </div>
-                              </div>
-                              <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
-                                 <div class="flex flex-col w-full">
-                                    <label class="text-[14px] text-grey" for="">Quantity</label>
-                                    <input
-                                       class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
-                                 </div>
-                                 <div class="flex flex-col w-full">
-                                    <label class="text-[14px] text-grey" for="">Amount</label>
-                                    <input
-                                       class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
-                                 </div>
-                              </div>
-                              <div class="flex justify-between flex-col sm:flex-row gap-[22px] sm:gap-0">
-                                 <div
-                                    class="sm:justify-start cursor-pointer group hover:text-main text-white2 justify-center flex items-center gap-2">
-                                    <span class=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                        <div class="p-6 h-[500px]  flex flex-col justify-between">
+                           <div class="flex flex-col gap-4 w-full">
+                              <div class="w-full flex justify-end items-end">
+                                 <div class="w-[460px] flex justify-end items-end">
+                                    <div class="flex items-center">
+                                       <svg width="17" height="10" viewBox="0 0 17 10" fill="none"
                                           xmlns="http://www.w3.org/2000/svg">
-                                          <rect width="16" height="16" rx="8" fill-opacity="0.1"
-                                             class="group-hover:fill-main fill-white2" />
-                                          <path class="group-hover:fill-main fill-white2"
-                                             d="M7.21839 11.4403V4.55957H8.77947V11.4403H7.21839ZM4.55859 8.78045V7.21937H11.4393V8.78045H4.55859Z" />
-                                       </svg></span>
-                                    <span class="font-AProM mt-1">Add Product</span>
-                                 </div>
-                                 <div class="flex items-center gap-4 justify-between ml:justify-end">
-                                    <div class="text-white2 text-[16px] md:text-[18px]">Total
-                                       <span class="font-AProM text-[22px]">23 545</span>
+                                          <path fill-rule="evenodd" clip-rule="evenodd"
+                                             d="M11.1328 0.596897L4.5691 7.81268L1.68658 4.93016L1.60246 4.85754C1.30885 4.63969 0.892186 4.6639 0.62592 4.93016C0.333027 5.22306 0.333027 5.69793 0.62592 5.99082L4.06446 9.42936L4.15147 9.50414C4.45536 9.72745 4.8877 9.69162 5.14959 9.4037L12.2425 1.60624L12.311 1.51878C12.5147 1.2152 12.4709 0.800147 12.1923 0.546763C11.8859 0.268042 11.4116 0.290487 11.1328 0.596897ZM15.6943 0.596897L8.60145 8.39436L8.53288 8.48182C8.32915 8.7854 8.37302 9.20045 8.65158 9.45384C8.95799 9.73256 9.43233 9.71011 9.71105 9.4037L16.8039 1.60624L16.8725 1.51878C17.0762 1.2152 17.0323 0.800147 16.7538 0.546763C16.4474 0.268042 15.973 0.290487 15.6943 0.596897Z"
+                                             fill="#D7FF00"
+                                             style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                                       </svg>
+                                       <div class="rounded-[14px] min-h-[37px]  bg-white2 px-4 py-2 text-black2">
+                                          <span
+                                             class="">ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</span>
+                                       </div>
                                     </div>
-                                    <div class="border-[1px] rounded-[20px] border-[rgba(255,255,255,0.3)] select2">
-                                       <input class="select__input" type="hidden" name="">
-                                       <div class="select__head">Currency</div>
-                                       <ul class="select__list " style="display: none;">
-                                          <li class="select__item">select1</li>
-                                          <li class="select__item">select2</li>
-                                          <li class="select__item">select3</li>
-                                       </ul>
+                                    <div class="">
+                                       <span
+                                          class="w-9  group hover:bg-main  h-9 cursor-pointer bg-white10  rounded-full flex transition-colors duration-300 items-center group-hover:bg-[rgba(255,255,255,0.04)] justify-center ">
+                                          AC
+                                       </span>
                                     </div>
                                  </div>
                               </div>
-                              <div class="flex flex-row w-full gap-4 justify-between">
-                                 <button class="button w-full ml:w-[calc(50%_-_8px)]">Issue Invoice</button>
+                           </div>
+                           <div class="">
+                              <div class="flex items-end gap-2 mb-4">
+                                 ... <img class="w-9" src="../img/chat/image.png" alt="AC">
+                              </div>
+                              <div class="relative">
+                                 <input class="bg-bg3 rounded-[15px] w-full ml:rounded-[20px] px-4 py-5 pr-[70px]"
+                                    type="text" name="" id="" placeholder="Enter your message...">
+
+                                 <span
+                                    class="w-9 absolute group hover:bg-main right-6 translate-y-[-50%] h-9 cursor-pointer bg-white10 top-[50%] rounded-full flex transition-colors duration-300 items-center group-hover:bg-[rgba(255,255,255,0.04)] justify-center ">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M16.5 6.5V18C16.5 20.21 14.71 22 12.5 22C10.29 22 8.5 20.21 8.5 18V5.5C8.5 4.12 9.62 3 11 3C12.38 3 13.5 4.12 13.5 5.5V16C13.5 16.55 13.05 17 12.5 17C11.95 17 11.5 16.55 11.5 16V6.5H10V16C10 17.38 11.12 18.5 12.5 18.5C13.88 18.5 15 17.38 15 16V5.5C15 3.29 13.21 1.5 11 1.5C8.79 1.5 7 3.29 7 5.5V18C7 21.04 9.46 23.5 12.5 23.5C15.54 23.5 18 21.04 18 18V6.5H16.5Z"
+                                          class="fill-[#9B9B9B] group-hover:fill-black transition-colors duration-300" />
+                                    </svg>
+                                 </span>
                               </div>
 
                            </div>
-                        </form>
+
+
+
+                        </div>
                      </div>
                   </div>
 

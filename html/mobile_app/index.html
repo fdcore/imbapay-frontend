@@ -19,7 +19,7 @@
 
 
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
-   <title>Создать счёт</title>
+   <title>Мобильное приложение</title>
    <link href="../style.css" rel="stylesheet" />
 </head>
 <!-- class="overflow-hidden" -->
@@ -743,9 +743,12 @@
                </div>
                <!-- content  -->
                <div class="w-full relative ">
-                  <div class="h-full w-full absolute hidden -z-10 backdrop-blur-[15px]"></div>
-                  <div class=" ml:bg-transparent   px-4 pt-[22px]  ml:p-0">
-                     <div class="mb-[22px] flex w-full items-center justify-between gap-2 ml:hidden">
+
+                  <div class=" relative ">
+                     <div class="h-full w-full hidden -z-10 backdrop-blur-[15px]"></div>
+                     <!-- block mini header -->
+                     <div
+                        class="ml:mb-[22px] p-4 pt-[22px] sm:pt-4 sm:p-0 flex w-full items-center justify-between gap-2 ml:hidden">
                         <a href="../profile/myProfile.html" class="group flex cursor-pointer items-center">
                            <span
                               class="spanicon-top flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10 group-hover:bg-main">
@@ -757,13 +760,13 @@
                               </svg>
                            </span>
                         </a>
+
                         <div class="flex items-center gap-3">
                            <!-- lang -->
                            <div class="relative group">
                               <div class="open-lang cursor-pointer">
                                  <img class="" src="../img/profile/flag/use.svg" alt="" />
                               </div>
-                              <!-- lang block-->
 
 
 
@@ -786,138 +789,272 @@
                         </div>
                      </div>
                   </div>
-                  <div class="px-4 ml:p-0 text-[30px] font-AProM text-white2 mb-4">
-                     Create an account
+
+
+                  <div class="grid ml:grid-cols-2 grid-cols-1 gap-4 mb-6 px-4 pb-4 sm:p-0">
+
+                     <h3 class=" text-[30px] font-AProM text-white2">
+                        Mobile app
+                     </h3>
+
                   </div>
-                  <div class="px-4 sm:p-0 flex flex-col gap-4">
-                     <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
-                        <div class="flex flex-col w-full">
-                           <label class="text-[14px] text-grey " for="">Product Name</label>
-                           <input
-                              class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                              type="text" name="" id="">
+                  <img class="fixed bottom-0 -z-10 left-[50%] hidden  ml:block md:translate-x-[-40%]"
+                     src="../img/mob_app/Earth.png" alt="">
+                  <!-- block -->
+                  <div class=" relative    bg-white10 mx-4 sm:mx-0 rounded-[25px] overflow-hidden ml:rounded-[35px] ">
+                     <div class="  absolute  rounded-[25px] -z-10 h-full top-0 left-0 w-full backdrop-blur-[15px]">
+                     </div>
+                     <div class=" grid grid-cols-1 ml:grid-cols-[auto_400px] gap-3 xl:grid-cols-[auto_800px]">
+                        <div
+                           class="relative flex items-end justify-center mx-auto w-full overflow-hidden order-last ml:order-first">
+                           <img class="absolute bottom-0 ml:hidden -z-10 w-full" src="../img/mob_app/Earth_mob.png"
+                              alt="">
+                           <img class="" src="../img/mob_app/mobile.png" alt="">
                         </div>
-                        <div class="flex flex-col w-full">
-                           <label class="text-[14px] text-grey" for="">Phone</label>
-
-                           <div class="relative w-full flex gap-2">
-
-                              <div
-                                 class="border-[1px] ml:rounded-none ml:border-none rounded-[20px]  border-[rgba(255,255,255,0.3)] select4">
-                                 <input class="select__input" type="hidden" name="">
-                                 <div class="select__head">+381</div>
-                                 <ul class="select__list " style="display: none;">
-                                    <li class="select__item">+382</li>
-                                    <li class="select__item">+383</li>
-                                    <li class="select__item">+384</li>
-                                 </ul>
+                        <div class="p-4 ml:p-6 ml:pl-0 ">
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque ultricies nunc
+                              et suscipit. In fringilla vitae orci sit amet consequat. Ut interdum faucibus quam, eget
+                              malesuada nisi tincidunt non. Sed nec lectus quis est porta condimentum sed at arcu. In eu
+                              nisi arcu. Pellentesque non lorem sodales, pellentesque ex nec, scelerisque quam. <br><br>
+                              Praesent pellentesque aliquam leo, quis pellentesque felis fringilla maximus. Ut sit amet
+                              lorem in odio dapibus hendrerit sit amet vitae mi. Pellentesque vehicula blandit tortor
+                              vel mattis. Nulla dapibus eros id tincidunt luctus. Duis a ultricies lectus, quis iaculis
+                              metus.</p>
+                           <div class=" flex gap-3 mt-10 justify-center ml:justify-start">
+                              <div class="bg-black rounded-[15px] flex gap-2 px-4 py-3 items-center">
+                                 <span>
+                                    <svg class="w-[18px] h-[18px] ml:w-6 ml:h-6" width="24" height="24"
+                                       viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M16.498 0C15.2185 0.0884995 13.723 0.907495 12.8515 1.97399C12.0565 2.94148 11.4025 4.37847 11.6575 5.77497C13.0555 5.81847 14.5 4.97997 15.337 3.89548C16.12 2.88598 16.7125 1.45799 16.498 0Z"
+                                          fill="white" style="fill:white;fill-opacity:1;" />
+                                       <path
+                                          d="M21.5553 8.05167C20.3268 6.51118 18.6003 5.61719 16.9698 5.61719C14.8174 5.61719 13.9069 6.64768 12.4114 6.64768C10.8694 6.64768 9.69789 5.62019 7.8364 5.62019C6.00791 5.62019 4.06092 6.73768 2.82643 8.64867C1.09094 11.3397 1.38794 16.3991 4.20042 20.7086C5.20692 22.2506 6.55091 23.9846 8.3089 23.9996C9.87339 24.0146 10.3144 22.9961 12.4339 22.9856C14.5534 22.9736 14.9554 24.0131 16.5169 23.9966C18.2763 23.9831 19.6938 22.0616 20.7003 20.5196C21.4218 19.4141 21.6903 18.8576 22.2498 17.6096C18.1803 16.0601 17.5278 10.2732 21.5553 8.05167Z"
+                                          fill="white" style="fill:white;fill-opacity:1;" />
+                                    </svg>
+                                 </span>
+                                 <div class="flex flex-col">
+                                    <span class="text-[10px] ml:text-[12px] ">Download on the</span>
+                                    <span class="font-AProM text-[18px] ml:text-[20px] leading-none">App Store</span>
+                                 </div>
                               </div>
-                              <input
-                                 class="rounded-[20px] w-full  px-5  ml:pl-[70px] border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                 type="text" name="" id="">
-
+                              <div class="bg-black rounded-[15px] flex gap-2 px-4 py-3 items-center">
+                                 <span>
+                                    <svg class="w-[18px] h-[18px] ml:w-6 ml:h-6" width="24" height="24"
+                                       viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                       <g clip-path="url(#clip0_437_56967)">
+                                          <path
+                                             d="M13.2149 11.522L1.60681 23.13C1.0519 22.6051 0.751953 21.8852 0.751953 21.1053V2.8984C0.751953 2.10354 1.0669 1.38366 1.6368 0.84375L13.2149 11.522Z"
+                                             fill="#2196F3"
+                                             style="fill:#2196F3;fill:color(display-p3 0.1294 0.5882 0.9529);fill-opacity:1;" />
+                                          <path
+                                             d="M23.2482 12.0017C23.2482 13.0515 22.6783 13.9814 21.7334 14.5063L18.434 16.336L14.3397 12.5566L13.2148 11.5218L17.5491 7.1875L21.7334 9.49711C22.6783 10.022 23.2482 10.9519 23.2482 12.0017Z"
+                                             fill="#FFC107"
+                                             style="fill:#FFC107;fill:color(display-p3 1.0000 0.7569 0.0275);fill-opacity:1;" />
+                                          <path
+                                             d="M13.2148 11.5221L1.63672 0.843912C1.78669 0.693938 1.98166 0.55896 2.17663 0.43898C3.12147 -0.130924 4.26128 -0.145921 5.23611 0.393988L17.549 7.18785L13.2148 11.5221Z"
+                                             fill="#4CAF50"
+                                             style="fill:#4CAF50;fill:color(display-p3 0.2980 0.6863 0.3137);fill-opacity:1;" />
+                                          <path
+                                             d="M18.4346 16.3367L5.23681 23.6104C4.77189 23.8804 4.24698 24.0004 3.73706 24.0004C3.19715 24.0004 2.65725 23.8654 2.17733 23.5654C1.96736 23.4455 1.77239 23.2955 1.60742 23.1305L13.2155 11.5225L14.3403 12.5573L18.4346 16.3367Z"
+                                             fill="#F44336"
+                                             style="fill:#F44336;fill:color(display-p3 0.9569 0.2627 0.2118);fill-opacity:1;" />
+                                       </g>
+                                       <defs>
+                                          <clipPath id="clip0_437_56967">
+                                             <rect width="24" height="24" fill="white"
+                                                style="fill:white;fill-opacity:1;" />
+                                          </clipPath>
+                                       </defs>
+                                    </svg>
+                                 </span>
+                                 <div class="flex flex-col">
+                                    <span class=" text-[10px] ml:text-[12px] ">Get it on</span>
+                                    <span class="font-AProM  text-[18px] ml:text-[20px] leading-none">Google Play</span>
+                                 </div>
+                              </div>
                            </div>
                         </div>
-                        <div class="flex flex-col w-full">
-                           <label class="text-[14px] text-grey" for="">Description</label>
-                           <input
-                              class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                              type="text" name="" id="">
-                        </div>
-                     </div>
-                     <div class="flex flex-col ml:flex-row w-full gap-4 itm justify-between">
-                        <div class="flex flex-col w-full">
-                           <label class="text-[14px] text-grey " for="">Product Name</label>
-                           <input
-                              class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                              type="text" name="" id="">
-                        </div>
-
-                        <div class="w-full">
-                           <span class="text-[14px] text-grey ">Letter Language</span>
-                           <div class="rounded-[20px] border-[1px]  border-[rgba(255,255,255,0.3)]  select3">
-
-                              <input class="select__input" type="hidden" name="" id="lang">
-                              <div class="select__head">Русский</div>
-                              <ul class="select__list" style="display: none;">
-                                 <li class="select__item">select1</li>
-                                 <li class="select__item">select2</li>
-                                 <li class="select__item">select3</li>
-                              </ul>
-                           </div>
-                        </div>
                      </div>
                   </div>
-                  <div class=" relative  mt-6  bg-white10   rounded-[25px] ml:rounded-[35px] mx-4 sm:mx-0">
-                     <div class=" ml:block absolute rounded-[25px] -z-10 h-full w-full backdrop-blur-[15px]"></div>
-                     <div class="rounded-[25px] ml:rounded-[35px] p-4 ml:p-6">
-                        <h3>Product Name</h3>
-                        <form action="">
-                           <div class="flex flex-col gap-4">
-                              <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
-                                 <div class="flex flex-col w-full">
-                                    <label class="text-[14px] text-grey " for="">Product Name</label>
-                                    <input
-                                       class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
-                                 </div>
-                                 <div class="flex flex-col w-full">
-                                    <label class="text-[14px] text-grey" for="">Description</label>
-                                    <input
-                                       class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
-                                 </div>
-                              </div>
-                              <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
-                                 <div class="flex flex-col w-full">
-                                    <label class="text-[14px] text-grey" for="">Quantity</label>
-                                    <input
-                                       class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
-                                 </div>
-                                 <div class="flex flex-col w-full">
-                                    <label class="text-[14px] text-grey" for="">Amount</label>
-                                    <input
-                                       class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
-                                 </div>
-                              </div>
-                              <div class="flex justify-between flex-col sm:flex-row gap-[22px] sm:gap-0">
-                                 <div
-                                    class="sm:justify-start cursor-pointer group hover:text-main text-white2 justify-center flex items-center gap-2">
-                                    <span class=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <rect width="16" height="16" rx="8" fill-opacity="0.1"
-                                             class="group-hover:fill-main fill-white2" />
-                                          <path class="group-hover:fill-main fill-white2"
-                                             d="M7.21839 11.4403V4.55957H8.77947V11.4403H7.21839ZM4.55859 8.78045V7.21937H11.4393V8.78045H4.55859Z" />
-                                       </svg></span>
-                                    <span class="font-AProM mt-1">Add Product</span>
-                                 </div>
-                                 <div class="flex items-center gap-4 justify-between ml:justify-end">
-                                    <div class="text-white2 text-[16px] md:text-[18px]">Total
-                                       <span class="font-AProM text-[22px]">23 545</span>
-                                    </div>
-                                    <div class="border-[1px] rounded-[20px] border-[rgba(255,255,255,0.3)] select2">
-                                       <input class="select__input" type="hidden" name="">
-                                       <div class="select__head">Currency</div>
-                                       <ul class="select__list " style="display: none;">
-                                          <li class="select__item">select1</li>
-                                          <li class="select__item">select2</li>
-                                          <li class="select__item">select3</li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="flex flex-row w-full gap-4 justify-between">
-                                 <button class="button w-full ml:w-[calc(50%_-_8px)]">Issue Invoice</button>
-                              </div>
+                  <!-- block -->
+                  <div
+                     class="mt-[22px] ml:mt-[10px] grid mx-4 sm:mx-0  ml:grid-cols-2 ml:grid-rows-2 xl:grid-cols-4 gap-[10px]">
+                     <!-- items -->
+                     <div
+                        class="relative  border-[1px] border-bg3 ml:border-none   ml:bg-white10  ml:min-h-[208px] rounded-[25px] ml:rounded-[35px] ">
+                        <div class="  absolute  rounded-[25px] -z-10 h-full top-0 left-0 w-full backdrop-blur-[15px]">
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-4 p-[22px] ml:p-6">
+                           <span
+                              class="w-[44px] h-[44px] ml:w-[54px] ml:h-[54px] bg-bg3 rounded-full flex transition-colors duration-300 items-center group-hover:bg-[rgba(255,255,255,0.04)] justify-center ">
+                              <svg width="26" height="24" viewBox="0 0 26 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M16.3492 15.6488C18.2416 16.8218 19.8243 19.3131 19.8243 20.0876C19.8243 21.0221 18.9705 21.1679 17.3124 21.1679H4.88812C3.22238 21.1679 2.12891 21.2571 2.12891 20.3226C2.12891 20.3226 2.18114 18.165 5.04491 16.0417C6.31317 15.1012 8.40061 14.135 10.7261 14.1299C12.7707 14.1255 14.7768 14.6743 16.3492 15.6488Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.58274"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                 <path
+                                    d="M8.78023 3.45577C10.1448 2.48123 11.9852 2.57004 13.2739 3.80104C14.8322 5.2897 14.9976 7.88881 13.6429 9.60132C12.2883 11.3138 9.92308 11.4956 8.36469 10.0069C6.8063 8.51825 6.64091 5.91914 7.9956 4.20663C8.23001 3.9103 8.49474 3.65973 8.78023 3.45577Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.39209"
+                                    stroke-linecap="round" />
+                                 <path
+                                    d="M24.1962 12.8C24.1962 14.1651 23.3851 15.3086 21.9804 15.9813L23.0606 17.0615C23.2664 17.2791 23.2664 17.572 23.0725 17.754L21.9131 18.9133L22.7045 19.7245C22.8865 19.9184 22.9103 20.1993 22.7164 20.4051L21.1337 21.9759C20.9516 22.1579 20.6905 22.15 20.5283 21.9957L19.6221 21.1331C19.4916 21.0105 19.4164 20.8403 19.4164 20.6543V15.9259C18.1937 15.3878 17.4023 14.1849 17.4023 12.8C17.4023 10.9403 18.9059 9.4248 20.8013 9.4248C22.6729 9.4248 24.1962 10.9403 24.1962 12.8Z"
+                                    stroke="#3A3A3A"
+                                    style="stroke:#3A3A3A;stroke:color(display-p3 0.2275 0.2275 0.2275);stroke-opacity:1;"
+                                    stroke-width="2.76979" />
+                                 <path
+                                    d="M19.7843 12.1303C19.7843 12.6922 20.2516 13.1472 20.7898 13.1472C21.3437 13.1472 21.7988 12.6922 21.7988 12.1303C21.7988 11.5882 21.3437 11.1332 20.7898 11.1332C20.2398 11.1332 19.7843 11.5882 19.7843 12.1303ZM24.1982 12.799C24.1982 14.1641 23.3867 15.3077 21.982 15.9803L23.0626 17.0605C23.2683 17.2782 23.2683 17.571 23.0745 17.753L21.9147 18.9123L22.7061 19.7235C22.8881 19.9174 22.9118 20.1983 22.7179 20.4041L21.1352 21.9749C20.9532 22.157 20.692 22.149 20.5298 21.9947L19.6241 21.1321C19.4935 21.0095 19.4179 20.8393 19.4179 20.6534V15.9249C18.1953 15.3868 17.4043 14.1839 17.4043 12.799C17.4043 10.9393 18.9075 9.42383 20.8028 9.42383C22.6744 9.42383 24.1982 10.9393 24.1982 12.799Z"
+                                    fill="white" style="fill:white;fill-opacity:1;" />
+                              </svg>
+                           </span>
 
-                           </div>
-                        </form>
+                           <span
+                              class="lg:text-[18px] font-AProM mb-2 leading-[120%] text-center inline-block ">Two-factor
+                              <br>
+                              authentication</span>
+
+
+                        </div>
                      </div>
-                  </div>
+                     <!-- items -->
+                     <div
+                        class="relative  border-[1px] border-bg3 ml:border-none   ml:bg-white10  ml:min-h-[208px] rounded-[25px] ml:rounded-[35px] ">
+                        <div class="  absolute  rounded-[25px] -z-10 h-full top-0 left-0 w-full backdrop-blur-[15px]">
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-4 p-[22px] ml:p-6">
+                           <span
+                              class="w-[44px] h-[44px] ml:w-[54px] ml:h-[54px] bg-bg3 rounded-full flex transition-colors duration-300 items-center group-hover:bg-[rgba(255,255,255,0.04)] justify-center ">
+                              <svg width="27" height="26" viewBox="0 0 27 26" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M1.86133 18.277C1.86133 17.5681 2.07485 16.8194 2.50103 16.0319C2.92891 15.2411 3.54602 14.506 4.35088 13.8193C5.15764 13.1309 6.12724 12.5695 7.26409 12.1312C8.40095 11.6928 9.68036 11.4756 11.0983 11.4756C12.5245 11.4756 13.8084 11.6914 14.9488 12.1312C16.0857 12.5695 17.0593 13.1314 17.8622 13.8193C18.6608 14.5034 19.2745 15.2419 19.7041 16.0319C20.1319 16.8186 20.3438 17.5681 20.3438 18.277C20.3438 19.4487 19.4637 20.0347 17.7034 20.0347H4.51371C2.74539 20.0347 1.86133 19.4487 1.86133 18.277Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.43659" />
+                                 <path
+                                    d="M11.0046 0.888672C13.1027 0.888672 14.8061 2.78454 14.8061 5.11958C14.8061 7.45462 13.1027 9.35049 11.0046 9.35049C8.90657 9.35049 7.20312 7.45462 7.20312 5.11958C7.20312 2.78454 8.90657 0.888672 11.0046 0.888672Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.48082" />
+                                 <path
+                                    d="M15.6666 14.0849L15.6666 14.0849C15.9081 13.7038 16.2851 13.4451 16.7007 13.2708C16.8868 13.1842 17.1363 13.091 17.4138 12.9903L17.4255 12.986L17.4255 12.9861C17.6502 12.909 17.884 12.8246 18.134 12.7344C18.2058 12.7085 18.2789 12.6821 18.3535 12.6553C18.6831 12.5368 18.9969 12.4248 19.2911 12.3252L19.2971 12.3231L19.2971 12.3231C19.5718 12.2328 19.7585 12.1634 19.8643 12.119L19.872 12.1157L19.8798 12.1127C20.1726 11.9976 20.4769 11.936 20.7887 11.936C21.0693 11.936 21.3552 11.9745 21.6326 12.0632L21.6486 12.0683L21.6643 12.0742C21.7403 12.1025 21.8291 12.1341 21.9393 12.1733C22.0437 12.2105 22.1674 12.2545 22.3178 12.3091L22.0728 12.9843L22.3178 12.3091C22.5504 12.3935 22.799 12.4805 23.0668 12.5742C23.129 12.596 23.1922 12.6182 23.2566 12.6407L23.2641 12.6433L23.2641 12.6434C23.3787 12.685 23.4947 12.7265 23.6099 12.7677C23.818 12.8421 24.0234 12.9156 24.2129 12.987C24.5132 13.0946 24.749 13.1878 24.9304 13.2668C25.3543 13.443 25.7285 13.7039 25.9699 14.0849L25.9732 14.0901L25.9732 14.0902C26.2012 14.4569 26.2884 14.8771 26.2884 15.3028V19.2503C26.2884 20.0425 26.1241 20.7649 25.7469 21.3782L25.7445 21.3821C25.3832 21.9612 24.8483 22.4797 24.1784 22.9485L24.1765 22.9498C23.5325 23.3974 22.6979 23.9166 21.6766 24.4987L21.6675 24.5039L21.6675 24.5038C21.3874 24.6581 21.0737 24.7368 20.7398 24.714L20.7386 24.7139C20.4941 24.6968 20.222 24.643 19.9698 24.5088L19.9594 24.5033L19.9492 24.4974C18.9383 23.9164 18.1045 23.3976 17.461 22.9505M15.6666 14.0849L17.87 22.36M15.6666 14.0849L15.6633 14.0902C15.4354 14.4569 15.3481 14.8771 15.3481 15.3028V19.2503C15.3481 20.0416 15.5121 20.7634 15.8884 21.3762M15.6666 14.0849L16.5015 21.0019M17.461 22.9505C17.4607 22.9502 17.4604 22.95 17.4601 22.9498L17.87 22.36M17.461 22.9505C17.4613 22.9507 17.4616 22.9509 17.4619 22.9511L17.87 22.36M17.461 22.9505C16.7827 22.4821 16.2437 21.9615 15.8884 21.3762M17.87 22.36C17.2449 21.9285 16.7887 21.4757 16.5015 21.0019M15.8884 21.3762C15.8888 21.3769 15.8892 21.3775 15.8896 21.3782L16.5015 21.0019M15.8884 21.3762C15.888 21.3755 15.8876 21.3749 15.8872 21.3742L16.5015 21.0019"
+                                    stroke="#393939"
+                                    style="stroke:#393939;stroke:color(display-p3 0.2235 0.2235 0.2235);stroke-opacity:1;"
+                                    stroke-width="1.43659" />
+                                 <path
+                                    d="M16.0664 15.3028C16.0664 14.9728 16.134 14.6936 16.2734 14.4694C16.4128 14.2494 16.6535 14.0674 16.9914 13.9278C17.1435 13.8559 17.3674 13.7713 17.6588 13.6655C17.9545 13.5639 18.267 13.4497 18.5965 13.3312C18.926 13.2128 19.2343 13.1028 19.5215 13.0055C19.8045 12.9124 20.0115 12.8362 20.1424 12.7812C20.3579 12.6966 20.5733 12.6543 20.7887 12.6543C21.0041 12.6543 21.2153 12.6839 21.4138 12.7474C21.5617 12.8024 21.7813 12.8785 22.0728 12.9843C22.3642 13.0901 22.681 13.2001 23.0189 13.3185C23.3568 13.4412 23.6736 13.5513 23.9651 13.6613C24.2607 13.767 24.4846 13.8559 24.6493 13.9278C24.9872 14.0674 25.2238 14.2494 25.3632 14.4694C25.5026 14.6936 25.5701 14.9728 25.5701 15.3028V19.2503C25.5701 19.9442 25.4265 20.528 25.1351 21.0019C24.8394 21.4757 24.3832 21.9285 23.7665 22.36C23.1456 22.7916 22.3304 23.2993 21.3209 23.8747C21.152 23.9678 20.9746 24.0101 20.7887 23.9974C20.6071 23.9847 20.4423 23.9466 20.3072 23.8747C19.3061 23.2993 18.4909 22.7916 17.87 22.36C17.2449 21.9285 16.7887 21.4757 16.5015 21.0019C16.21 20.528 16.0664 19.9442 16.0664 19.2503V15.3028Z"
+                                    fill="white" style="fill:white;fill-opacity:1;" />
+                                 <path
+                                    d="M16.0664 15.3028C16.0664 14.9728 16.134 14.6936 16.2734 14.4694C16.4128 14.2494 16.6535 14.0674 16.9914 13.9278C17.1435 13.8559 17.3674 13.7713 17.6588 13.6655C17.9545 13.5639 18.267 13.4497 18.5965 13.3312C18.926 13.2128 19.2343 13.1028 19.5215 13.0055C19.8045 12.9124 20.0115 12.8362 20.1424 12.7812C20.3579 12.6966 20.5733 12.6543 20.7887 12.6543C21.0041 12.6543 21.2153 12.6839 21.4138 12.7474C21.5617 12.8024 21.7813 12.8785 22.0728 12.9843C22.3642 13.0901 22.681 13.2001 23.0189 13.3185C23.3568 13.4412 23.6736 13.5513 23.9651 13.6613C24.2607 13.767 24.4846 13.8559 24.6493 13.9278C24.9872 14.0674 25.2238 14.2494 25.3632 14.4694C25.5026 14.6936 25.5701 14.9728 25.5701 15.3028V19.2503C25.5701 19.9442 25.4265 20.528 25.1351 21.0019C24.8394 21.4757 24.3832 21.9285 23.7665 22.36C23.1456 22.7916 22.3304 23.2993 21.3209 23.8747C21.152 23.9678 20.9746 24.0101 20.7887 23.9974C20.6071 23.9847 20.4423 23.9466 20.3072 23.8747C19.3061 23.2993 18.4909 22.7916 17.87 22.36C17.2449 21.9285 16.7887 21.4757 16.5015 21.0019C16.21 20.528 16.0664 19.9442 16.0664 19.2503V15.3028Z"
+                                    fill="white" style="fill:white;fill-opacity:1;" />
+                                 <path d="M18.2734 18.5632L20.1742 20.6257L23.3421 16.2891" stroke="#393939"
+                                    style="stroke:#393939;stroke:color(display-p3 0.2235 0.2235 0.2235);stroke-opacity:1;"
+                                    stroke-width="1.37931" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </span>
 
+                           <span class="lg:text-[18px] font-AProM mb-2 leading-[120%] text-center inline-block ">Secure
+                              storage <br>
+                              of your funds</span>
+
+
+                        </div>
+                     </div>
+                     <!-- items -->
+                     <div
+                        class="relative  border-[1px] border-bg3 ml:border-none   ml:bg-white10  ml:min-h-[208px] rounded-[25px] ml:rounded-[35px] ">
+                        <div class="  absolute  rounded-[25px] -z-10 h-full top-0 left-0 w-full backdrop-blur-[15px]">
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-4 p-[22px] ml:p-6">
+                           <span
+                              class="w-[44px] h-[44px] ml:w-[54px] ml:h-[54px] bg-bg3 rounded-full flex transition-colors duration-300 items-center group-hover:bg-[rgba(255,255,255,0.04)] justify-center ">
+                              <svg width="37" height="20" viewBox="0 0 37 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M23.1855 16.323C23.1855 15.8102 23.3307 15.2686 23.6206 14.6989C23.9116 14.1269 24.3315 13.5951 24.8789 13.0985C25.4277 12.6006 26.0873 12.1946 26.8606 11.8774C27.6339 11.5602 28.5042 11.4033 29.4687 11.4033C30.4387 11.4033 31.3122 11.5593 32.0878 11.8774C32.8611 12.1946 33.5234 12.6008 34.0695 13.0985C34.6128 13.5935 35.0301 14.1277 35.3223 14.6989C35.6133 15.2679 35.7574 15.8102 35.7574 16.323C35.7574 17.1706 35.1588 17.5945 33.9615 17.5945H24.9898C23.787 17.5945 23.1855 17.1706 23.1855 16.323Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.24814" />
+                                 <path
+                                    d="M23.1855 16.323C23.1855 15.8102 23.3307 15.2686 23.6206 14.6989C23.9116 14.1269 24.3315 13.5951 24.8789 13.0985C25.4277 12.6006 26.0873 12.1946 26.8606 11.8774C27.6339 11.5602 28.5042 11.4033 29.4687 11.4033C30.4387 11.4033 31.3122 11.5593 32.0878 11.8774C32.8611 12.1946 33.5234 12.6008 34.0695 13.0985C34.6128 13.5935 35.0301 14.1277 35.3223 14.6989C35.6133 15.2679 35.7574 15.8102 35.7574 16.323C35.7574 17.1706 35.1588 17.5945 33.9615 17.5945H24.9898C23.787 17.5945 23.1855 17.1706 23.1855 16.323Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.24814" />
+                                 <path
+                                    d="M29.3824 3.08887C30.888 3.08887 32.1105 4.44715 32.1105 6.12007C32.1105 7.79299 30.888 9.15127 29.3824 9.15127C27.8767 9.15127 26.6543 7.79299 26.6543 6.12007C26.6543 4.44715 27.8767 3.08887 29.3824 3.08887Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.24814" />
+                                 <path
+                                    d="M29.3824 3.08887C30.888 3.08887 32.1105 4.44715 32.1105 6.12007C32.1105 7.79299 30.888 9.15127 29.3824 9.15127C27.8767 9.15127 26.6543 7.79299 26.6543 6.12007C26.6543 4.44715 27.8767 3.08887 29.3824 3.08887Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.24814" />
+                                 <path
+                                    d="M1.74414 16.2712C1.74486 15.7664 1.88821 15.2334 2.17297 14.6729C2.45897 14.1101 2.87086 13.5872 3.40792 13.099C3.94622 12.6096 4.59294 12.2106 5.35091 11.8995C6.10889 11.5885 6.96155 11.4351 7.90639 11.4365C8.85659 11.438 9.71192 11.5929 10.4713 11.9073C11.2282 12.2206 11.8764 12.6215 12.4106 13.1124C12.9419 13.6005 13.3501 14.1271 13.6354 14.6901C13.9196 15.2508 14.0597 15.7851 14.059 16.2899C14.0578 17.1245 13.4708 17.5409 12.2979 17.5391L3.50973 17.5259C2.33148 17.5241 1.74289 17.1058 1.74414 16.2712Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.19665" />
+                                 <path
+                                    d="M1.74414 16.2712C1.74486 15.7664 1.88821 15.2334 2.17297 14.6729C2.45897 14.1101 2.87086 13.5872 3.40792 13.099C3.94622 12.6096 4.59294 12.2106 5.35091 11.8995C6.10889 11.5885 6.96155 11.4351 7.90639 11.4365C8.85659 11.438 9.71192 11.5929 10.4713 11.9073C11.2282 12.2206 11.8764 12.6215 12.4106 13.1124C12.9419 13.6005 13.3501 14.1271 13.6354 14.6901C13.9196 15.2508 14.0597 15.7851 14.059 16.2899C14.0578 17.1245 13.4708 17.5409 12.2979 17.5391L3.50973 17.5259C2.33148 17.5241 1.74289 17.1058 1.74414 16.2712Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.19665" />
+                                 <path
+                                    d="M8.07378 3.08887C9.57941 3.08887 10.8019 4.44715 10.8019 6.12007C10.8019 7.79299 9.57941 9.15127 8.07378 9.15127C6.56816 9.15127 5.3457 7.79299 5.3457 6.12007C5.3457 4.44715 6.56816 3.08887 8.07378 3.08887Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.24814" />
+                                 <path
+                                    d="M8.07378 3.08887C9.57941 3.08887 10.8019 4.44715 10.8019 6.12007C10.8019 7.79299 9.57941 9.15127 8.07378 9.15127C6.56816 9.15127 5.3457 7.79299 5.3457 6.12007C5.3457 4.44715 6.56816 3.08887 8.07378 3.08887Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.24814" />
+                                 <path
+                                    d="M10.9922 16.5861C10.9922 15.9886 11.1725 15.3575 11.5323 14.6937C11.8935 14.0272 12.4145 13.4076 13.0941 12.8288C13.7752 12.2486 14.5938 11.7754 15.5536 11.4059C16.5134 11.0365 17.5936 10.8534 18.7908 10.8534C19.9949 10.8534 21.0788 11.0352 22.0416 11.4059C23.0014 11.7754 23.8234 12.249 24.5014 12.8288C25.1755 13.4055 25.6937 14.0279 26.0564 14.6937C26.4176 15.3568 26.5964 15.9886 26.5964 16.5861C26.5964 17.5737 25.8534 18.0676 24.3673 18.0676H13.2315C11.7386 18.0676 10.9922 17.5737 10.9922 16.5861ZM18.7112 1.92969C20.4826 1.92969 21.9207 3.52766 21.9207 5.4958C21.9207 7.46394 20.4826 9.06192 18.7112 9.06192C16.9399 9.06192 15.5017 7.46394 15.5017 5.4958C15.5017 3.52766 16.9399 1.92969 18.7112 1.92969Z"
+                                    fill="#363636" stroke="#363636"
+                                    style="fill:#363636;fill:color(display-p3 0.2125 0.2125 0.2125);fill-opacity:1;stroke:#363636;stroke:color(display-p3 0.2125 0.2125 0.2125);stroke-opacity:1;"
+                                    stroke-width="3.15876" />
+                                 <path
+                                    d="M10.9922 16.5861C10.9922 15.9886 11.1725 15.3575 11.5323 14.6937C11.8935 14.0272 12.4145 13.4076 13.0941 12.8288C13.7752 12.2486 14.5938 11.7754 15.5536 11.4059C16.5134 11.0365 17.5936 10.8534 18.7908 10.8534C19.9949 10.8534 21.0788 11.0352 22.0416 11.4059C23.0014 11.7754 23.8234 12.249 24.5014 12.8288C25.1755 13.4055 25.6937 14.0279 26.0564 14.6937C26.4176 15.3568 26.5964 15.9886 26.5964 16.5861C26.5964 17.5737 25.8534 18.0676 24.3673 18.0676H13.2315C11.7386 18.0676 10.9922 17.5737 10.9922 16.5861ZM18.7112 1.92969C20.4826 1.92969 21.9207 3.52766 21.9207 5.4958C21.9207 7.46394 20.4826 9.06192 18.7112 9.06192C16.9399 9.06192 15.5017 7.46394 15.5017 5.4958C15.5017 3.52766 16.9399 1.92969 18.7112 1.92969Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.21086" />
+                                 <path
+                                    d="M10.9922 16.5861C10.9922 15.9886 11.1725 15.3575 11.5323 14.6937C11.8935 14.0272 12.4145 13.4076 13.0941 12.8288C13.7752 12.2486 14.5938 11.7754 15.5536 11.4059C16.5134 11.0365 17.5936 10.8534 18.7908 10.8534C19.9949 10.8534 21.0788 11.0352 22.0416 11.4059C23.0014 11.7754 23.8234 12.249 24.5014 12.8288C25.1755 13.4055 25.6937 14.0279 26.0564 14.6937C26.4176 15.3568 26.5964 15.9886 26.5964 16.5861C26.5964 17.5737 25.8534 18.0676 24.3673 18.0676H13.2315C11.7386 18.0676 10.9922 17.5737 10.9922 16.5861ZM18.7112 1.92969C20.4826 1.92969 21.9207 3.52766 21.9207 5.4958C21.9207 7.46394 20.4826 9.06192 18.7112 9.06192C16.9399 9.06192 15.5017 7.46394 15.5017 5.4958C15.5017 3.52766 16.9399 1.92969 18.7112 1.92969Z"
+                                    stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.21086" />
+                              </svg>
+                           </span>
+
+                           <span class="lg:text-[18px] font-AProM mb-2 leading-[120%] text-center inline-block ">Team of
+                              <br>
+                              professionals</span>
+
+
+                        </div>
+                     </div>
+                     <!-- items -->
+                     <div
+                        class="relative  border-[1px] border-bg3 ml:border-none   ml:bg-white10  ml:min-h-[208px] rounded-[25px] ml:rounded-[35px] ">
+                        <div class="  absolute  rounded-[25px] -z-10 h-full top-0 left-0 w-full backdrop-blur-[15px]">
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-4 p-[22px] ml:p-6">
+                           <span
+                              class="w-[44px] h-[44px] ml:w-[54px] ml:h-[54px] bg-bg3 rounded-full flex transition-colors duration-300 items-center group-hover:bg-[rgba(255,255,255,0.04)] justify-center ">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <g clip-path="url(#clip0_437_57013)">
+                                    <path
+                                       d="M1.39258 0.714844V17.7148C1.39258 18.346 1.90425 18.8577 2.53544 18.8577H19.5354"
+                                       stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="1.432"
+                                       stroke-linecap="round" stroke-linejoin="round" />
+                                    <mask id="path-2-inside-1_437_57013" fill="white">
+                                       <rect x="4.8418" y="0.857422" width="5.06667" height="15.4286" rx="1.42857" />
+                                    </mask>
+                                    <rect x="4.8418" y="0.857422" width="5.06667" height="15.4286" rx="1.42857"
+                                       stroke="white" style="stroke:white;stroke-opacity:1;" stroke-width="2.864"
+                                       mask="url(#path-2-inside-1_437_57013)" />
+                                    <rect x="12.5566" y="6.28613" width="5.06667" height="10" rx="1.42857" fill="white"
+                                       style="fill:white;fill-opacity:1;" />
+                                 </g>
+                                 <defs>
+                                    <clipPath id="clip0_437_57013">
+                                       <rect width="20" height="20" fill="white" style="fill:white;fill-opacity:1;"
+                                          transform="translate(0.25)" />
+                                    </clipPath>
+                                 </defs>
+                              </svg>
+                           </span>
+
+                           <span class="lg:text-[18px] font-AProM mb-2 leading-[120%] text-center inline-block ">Low
+                              fees, striving to <br>
+                              go even lower.</span>
+
+
+                        </div>
+                     </div>
+
+
+                  </div>
                </div>
             </div>
          </div>
