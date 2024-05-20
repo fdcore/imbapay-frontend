@@ -48,3 +48,13 @@
 .inner-container::-webkit-scrollbar {
    display: none;
   }
+
+
+
+  .scrolling-wrapper {
+   -webkit-overflow-scrolling:touch;
+ }
+
+ .scrolling-wrapper::-webkit-scrollbar {
+   display: none;
+  }
