@@ -54,62 +54,72 @@
       </div>
    </div>
    <!-- lang mobile -->
-   <div class="bg-lang bottom-0 left-0 right-0 top-0 z-[100] hidden h-[100vh] w-full bg-[#060605]/[0.9] ml:hidden">
-   </div>
+   <div class="bg-lang fixed hidden  bottom-0 left-0 right-0 top-0 z-[20]  bg-[#060605]/[0.9] ml:hidden">
 
-   <div class="swipe-hide hidden w-[99%] rounded-[35px] bg-white2 ml:hidden">
-      <span class="mx-auto mt-2 block h-[3px] w-[40px] rounded-full bg-grey"></span>
-      <div class="w-[375px] cursor-pointer rounded-[16px] p-6">
-         <a href="/"
-            class="lang is-active flex h-[48px] items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
-               <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+
+      <div class="swipe-down  absolute   w-[99%] rounded-[35px] bg-white2 ml:hidden">
+         <div class="mx-auto mt-2 close-lang block h-[3px] w-[40px] rounded-full bg-grey" data-swipe-threshold="20"
+            data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"></div>
+         <div class="w-[375px] cursor-pointer rounded-[16px] p-6">
+            <a href="/"
+               class="lang is-active flex h-[48px] items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
   15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-               </svg>
-            </span>
-            <span class="text-[14px] text-black"> English (UK) </span>
-         </a>
-         <a href="/"
-            class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
-               <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+                  </svg>
+               </span>
+               <span class="text-[14px] text-black"> English (EN) </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
   15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-               </svg>
-            </span>
-            <span class="text-[14px] text-black"> Украї́нська мо́ва </span>
-         </a>
-         <a href="/"
-            class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
-               <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+                  </svg>
+               </span>
+               <span class="w-8"></span>
+               <span class="text-[14px] text-black"> Украї́нська мо́ва </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class=" hidden h-8 w-8 items-center justify-center rounded-full  bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
   15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-               </svg>
-            </span>
-            <span class="text-[14px] text-black"> Русский </span>
-         </a>
-         <a href="/"
-            class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
-               <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+                  </svg>
+               </span>
+               <span class="w-8"></span>
+               <span class="text-[14px] text-black"> Русский </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
   15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-               </svg>
-            </span>
-            <span class="text-[14px] text-black"> Deutsch </span>
-         </a>
-         <a href="/"
-            class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
-               <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+                  </svg>
+               </span>
+               <span class="w-8"></span>
+               <span class="text-[14px] text-black"> Deutsch </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
   15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-               </svg>
-            </span>
-            <span class="text-[14px] text-black"> Polski </span>
-         </a>
+                  </svg>
+               </span>
+               <span class="w-8"></span>
+               <span class="text-[14px] text-black"> Polski </span>
+            </a>
+         </div>
       </div>
    </div>
 

@@ -54,75 +54,7 @@
          </a>
       </div>
    </div>
-   <!-- lang mobile -->
-   <div class="bg-lang fixed hidden  bottom-0 left-0 right-0 top-0 z-[20]  bg-[#060605]/[0.9] ml:hidden">
 
-
-      <div class="swipe-down  absolute   w-[99%] rounded-[35px] bg-white2 ml:hidden">
-         <div class="mx-auto mt-2 close-lang block h-[3px] w-[40px] rounded-full bg-grey" data-swipe-threshold="20"
-            data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"></div>
-         <div class="w-[375px] cursor-pointer rounded-[16px] p-6">
-            <a href="/"
-               class="lang is-active flex h-[48px] items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-               <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
-                  <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
-  15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-                  </svg>
-               </span>
-               <span class="text-[14px] text-black"> English (EN) </span>
-            </a>
-            <a href="/"
-               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-               <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
-                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
-  15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-                  </svg>
-               </span>
-               <span class="w-8"></span>
-               <span class="text-[14px] text-black"> Украї́нська мо́ва </span>
-            </a>
-            <a href="/"
-               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-               <span class=" hidden h-8 w-8 items-center justify-center rounded-full  bg-main">
-                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
-  15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-                  </svg>
-               </span>
-               <span class="w-8"></span>
-               <span class="text-[14px] text-black"> Русский </span>
-            </a>
-            <a href="/"
-               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-               <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
-                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
-  15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-                  </svg>
-               </span>
-               <span class="w-8"></span>
-               <span class="text-[14px] text-black"> Deutsch </span>
-            </a>
-            <a href="/"
-               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
-               <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
-                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
-  15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
-                  </svg>
-               </span>
-               <span class="w-8"></span>
-               <span class="text-[14px] text-black"> Polski </span>
-            </a>
-         </div>
-      </div>
-   </div>
    <!-- block mobile -->
    <div
       class="fixed bottom-0 left-0 right-0 top-0 z-[10000] hidden h-[100vh] w-full items-end justify-center bg-[#060605]/[0.9] p-1 ml:hidden">
@@ -767,9 +699,6 @@
                               <div class="open-lang cursor-pointer">
                                  <img class="" src="../img/profile/flag/use.svg" alt="" />
                               </div>
-
-
-
                            </div>
                            <!-- notification -->
                            <div class="relative group">
@@ -1408,75 +1337,82 @@
       </div>
    </div>
 
-
-   <script>
-      jQuery(($) => {
-         $('.select2').on('click', '.select__head', function () {
-            if ($(this).hasClass('open')) {
-               $(this).removeClass('open');
-               $(this).next().fadeOut();
-            } else {
-               $('.select__head').removeClass('open');
-               $('.select__list').fadeOut();
-               $(this).addClass('open');
-               $(this).next().fadeIn();
-            }
-         });
-
-         $('.select2').on('click', '.select__item', function () {
-            $('.select__head').removeClass('open');
-            $(this).parent().fadeOut();
-            $(this).parent().prev().text($(this).text());
-            $(this).parent().prev().prev().val($(this).text());
-         });
+   <!-- lang mobile NO POP-UP-->
+   <div class="bg-lang fixed hidden  bottom-0 left-0 right-0 top-0 z-[20]  bg-[#060605]/[0.9] ml:hidden">
 
 
-      });
-      jQuery(($) => {
-         $('.select3').on('click', '.select__head', function () {
-            if ($(this).hasClass('open')) {
-               $(this).removeClass('open');
-               $(this).next().fadeOut();
-            } else {
-               $('.select__head').removeClass('open');
-               $('.select__list').fadeOut();
-               $(this).addClass('open');
-               $(this).next().fadeIn();
-            }
-         });
-
-         $('.select3').on('click', '.select__item', function () {
-            $('.select__head').removeClass('open');
-            $(this).parent().fadeOut();
-            $(this).parent().prev().text($(this).text());
-            $(this).parent().prev().prev().val($(this).text());
-         });
-
-
-      });
-      jQuery(($) => {
-         $('.select4').on('click', '.select__head', function () {
-            if ($(this).hasClass('open')) {
-               $(this).removeClass('open');
-               $(this).next().fadeOut();
-            } else {
-               $('.select__head').removeClass('open');
-               $('.select__list').fadeOut();
-               $(this).addClass('open');
-               $(this).next().fadeIn();
-            }
-         });
-
-         $('.select4').on('click', '.select__item', function () {
-            $('.select__head').removeClass('open');
-            $(this).parent().fadeOut();
-            $(this).parent().prev().text($(this).text());
-            $(this).parent().prev().prev().val($(this).text());
-         });
-
-
-      });
-   </script>
+      <div class="swipe-down  absolute   w-[99%] rounded-[35px] bg-white2 ml:hidden">
+         <div class="mx-auto mt-2 close-lang block h-[3px] w-[40px] rounded-full bg-grey" data-swipe-threshold="20"
+            data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"></div>
+         <div class="w-[375px] cursor-pointer rounded-[16px] p-6">
+            <a href="/"
+               class="lang is-active flex h-[48px] items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+  15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
+                  </svg>
+               </span>
+               <span class="text-[14px] text-black"> English (EN) </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+  15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
+                  </svg>
+               </span>
+               <span class="w-8"></span>
+               <span class="text-[14px] text-black"> Украї́нська мо́ва </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class=" hidden h-8 w-8 items-center justify-center rounded-full  bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+  15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
+                  </svg>
+               </span>
+               <span class="w-8"></span>
+               <span class="text-[14px] text-black"> Русский </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+  15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
+                  </svg>
+               </span>
+               <span class="w-8"></span>
+               <span class="text-[14px] text-black"> Deutsch </span>
+            </a>
+            <a href="/"
+               class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+               <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
+                  <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+  15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
+                  </svg>
+               </span>
+               <span class="w-8"></span>
+               <span class="text-[14px] text-black"> Polski </span>
+            </a>
+         </div>
+      </div>
+   </div>
+   <!-- cursor -->
+   <div class="cursor2"></div>
+   <div class="cursor"></div>
+   <script src="../cursor.js"></script>
+   <!-- lang -->
+   <script src="../swiped-events.min.js"></script>
+   <script src="../open_lang.js"></script>
    <script>
       function toggleShow() {
          const element = document.querySelector('.absolute');
@@ -1485,94 +1421,13 @@
    </script>
 
    </script>
-   <script src="./swiped-events.min.js"></script>
    <script>
       function tabs() {
          return {
             item: 1,
 
          }
-      }
-
-      const openLang = document.querySelector('.open-lang');
-      const bgLang = document.querySelector('.bg-lang');
-      const swipeDown = document.querySelector('.swipe-down');
-      const closeLang = document.querySelector('.close-lang');
-
-
-
-
-      const mobileClose = document.querySelector('.mobile-close');
-      const openBtn = document.querySelectorAll('.open-btn');
-      const modal = document.querySelector('.modals');
-      const closeClick = document.querySelectorAll('.close-modal')
-      let disableScroll = function () {
-         document.body.classList.add('overflow-y-hidden');
-      }
-
-      let enableScroll = function () {
-         document.body.classList.remove('overflow-y-hidden');
-      }
-      const openModalDesktop = () => {
-         modal.classList.add('is-open');
-         disableScroll();
-         setTimeout(() => {
-            modal.querySelector('.modal').classList.add('visible');
-         }, 300);
-
-      }
-
-      openBtn.forEach(element => {
-         element.addEventListener('click', (e) => {
-            e.preventDefault();
-            openModalDesktop();
-         });
-      });
-
-      const closeModal = () => {
-         modal.querySelector('.modal').classList.remove('visible');
-         setTimeout(() => {
-            modal.classList.remove('is-open');
-            enableScroll();
-         }, 400);
-
-      }
-      closeClick.forEach(elem => {
-         elem.addEventListener('click', (e) => {
-            closeModal();
-         })
-      })
-
-      mobileClose.addEventListener('swiped-down', function (e) {
-         closeModal();
-      });
-
-      // block lang
-
-
-      const closeModalLang = () => {
-         swipeDown.classList.remove('visible');
-         setTimeout(() => {
-            bgLang.classList.remove('is-open');
-            enableScroll();
-         }, 400);
-
-      }
-
-      openLang.addEventListener('click', (e) => {
-
-         e.preventDefault();
-         bgLang.classList.add('is-open');
-         disableScroll();
-         setTimeout(() => {
-            swipeDown.classList.add('visible');
-         }, 300);
-      });
-      closeLang.addEventListener('swiped-down', function (e) {
-         console.log('ddd')
-         closeModalLang();
-      });
-   </script>
+      }</script>
 
 </body>
 

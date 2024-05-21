@@ -1,0 +1,39 @@
+
+
+.cursor {
+  width: 0px;
+  height: 0px;
+  border-radius: 100%;
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  box-shadow: 0 0 200px 50px rgb(129, 153, 49);
+  z-index: 99999;
+}
+
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 2px solid rgb(22, 133, 0);
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  box-shadow: 0 0 3px 1px rgb(0, 184, 31);
+  transition: width .3s, height .3s, opacity .3s;
+  z-index: 999999;
+}
+
+.hover {
+  background-color: transparent;
+  opacity: 0.5;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: .5;
+}

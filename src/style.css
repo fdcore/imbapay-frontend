@@ -5,6 +5,7 @@
 @import './blocks/containers.css';
 @import './blocks/menu.css';
 @import './components/elements/button.css';
+@import './components/elements/cursor.css';
 @import './components/elements/vector.css';
 @import './components/elements/profile-menu.css';
 @import './components/elements/lang.css';
@@ -79,6 +80,7 @@ body {
   background-color: black;
   font-family: 'AeonikPro-R', sans-serif;
   color: white;
+  cursor: none;
 }
 
 .gradient-foto {

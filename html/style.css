@@ -3423,6 +3423,44 @@ video {
   display: inline;
 }
 
+.cursor {
+  width: 0px;
+  height: 0px;
+  border-radius: 100%;
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  box-shadow: 0 0 200px 50px rgb(129, 153, 49);
+  z-index: 99999;
+}
+
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 2px solid rgb(22, 133, 0);
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  box-shadow: 0 0 3px 1px rgb(0, 184, 31);
+  transition: width .3s, height .3s, opacity .3s;
+  z-index: 999999;
+}
+
+.hover {
+  background-color: transparent;
+  opacity: 0.5;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: .5;
+}
+
 .vector {
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
@@ -4052,6 +4090,7 @@ body {
   background-color: black;
   font-family: 'AeonikPro-R', sans-serif;
   color: white;
+  cursor: none;
 }
 
 .gradient-foto {
@@ -4181,8 +4220,8 @@ input[type='number'] {
   background-color: rgb(187 255 0 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-\[rgba\(215\2c 255\2c 0\2c 0\.5\)\]:hover {
-  background-color: rgba(215,255,0,0.5);
+.hover\:bg-\[rgba\(215\2c 255\2c 0\2c 0\.1\)\]:hover {
+  background-color: rgba(215,255,0,0.1);
 }
 
 .hover\:bg-\[rgba\(232\2c 235\2c 230\2c 0\.1\)\]:hover {
@@ -4220,10 +4259,6 @@ input[type='number'] {
 
 .hover\:bg-white10:hover {
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-.hover\:bg-\[rgba\(215\2c 255\2c 0\2c 0\.1\)\]:hover {
-  background-color: rgba(215,255,0,0.1);
 }
 
 .hover\:fill-black:hover {
