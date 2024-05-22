@@ -80,7 +80,7 @@ body {
   background-color: black;
   font-family: 'AeonikPro-R', sans-serif;
   color: white;
-  cursor: none;
+  /* cursor: none; */
 }
 
 .gradient-foto {

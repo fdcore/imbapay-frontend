@@ -1,938 +1,845 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
-    <title>IMBAPAY</title>
-    <link href="../style.css" rel="stylesheet" />
-  </head>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <body class="" x-data="{open: false}">
-    <div class="border-b-[1px] border-white15 pb-6 pt-3 md:hidden" x-show="!open ">
-      <div class="imba-container menu-mobile md:hidden">
-        <div class="flex items-center justify-between">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
+  <title>IMBAPAY</title>
+  <link href="../style.css" rel="stylesheet" />
+</head>
+
+<body class="" x-data="{open: false}">
+  <div class="border-b-[1px] border-white15 pb-6 pt-3 md:hidden" x-show="!open ">
+    <div class="imba-container menu-mobile md:hidden">
+      <div class="flex items-center justify-between">
+        <span class="text-[28px]">imbapay.</span>
+        <div class="mobile-icon mobile-icon-open h-[44px] w-[44px] cursor-pointer rounded-full bg-bg3"
+          @click="open = !open">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M19.7139 6.00391H4.28589V7.71791H19.7139V6.00391ZM19.7139 11.1479H4.28589V12.8629H19.7139V11.1479ZM4.28589 16.2899H19.7139V18.0049H4.28589V16.2899Z"
+              fill="white" style="fill: white; fill-opacity: 1" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0 top-0 h-[100vh] w-full" x-bind:class="{'z-20': open, '-z-10 ': !open}"
+    x-show="open">
+    <div class="menu-mobile flex h-[100vh] flex-col justify-between bg-[#060605] md:pr-[17px]">
+      <div class="border-b-[1px] border-white15 pb-6 pt-3">
+        <div class="imba-container flex w-full items-center justify-between">
           <span class="text-[28px]">imbapay.</span>
-          <div
-            class="mobile-icon mobile-icon-open h-[44px] w-[44px] cursor-pointer rounded-full bg-bg3"
-            @click="open = !open"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+          <div class="mobile-icon mobile-icon-close h-[44px] w-[44px] cursor-pointer rounded-full bg-bg3"
+            @click="open = !open">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M19.7139 6.00391H4.28589V7.71791H19.7139V6.00391ZM19.7139 11.1479H4.28589V12.8629H19.7139V11.1479ZM4.28589 16.2899H19.7139V18.0049H4.28589V16.2899Z"
-                fill="white"
-                style="fill: white; fill-opacity: 1"
-              />
+                d="M13.414 12L20 5.414L18.586 4L12 10.586L5.414 4L4 5.414L10.586 12L4 18.586L5.414 20L12 13.414L18.586 20L20 18.586L13.414 12Z"
+                fill="white" style="fill: white; fill-opacity: 1" />
             </svg>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="absolute bottom-0 left-0 right-0 top-0 h-[100vh] w-full"
-      x-bind:class="{'z-20': open, '-z-10 ': !open}"
-      x-show="open"
-    >
-      <div class="menu-mobile flex h-[100vh] flex-col justify-between bg-[#060605] md:pr-[17px]">
-        <div class="border-b-[1px] border-white15 pb-6 pt-3">
-          <div class="imba-container flex w-full items-center justify-between">
-            <span class="text-[28px]">imbapay.</span>
-            <div
-              class="mobile-icon mobile-icon-close h-[44px] w-[44px] cursor-pointer rounded-full bg-bg3"
-              @click="open = !open"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13.414 12L20 5.414L18.586 4L12 10.586L5.414 4L4 5.414L10.586 12L4 18.586L5.414 20L12 13.414L18.586 20L20 18.586L13.414 12Z"
-                  fill="white"
-                  style="fill: white; fill-opacity: 1"
-                />
-              </svg>
-            </div>
-          </div>
+      <div class="imba-container flex flex-col justify-center" style="height: calc(100% - 48px)">
+        <div class="flex flex-col items-center gap-6 text-[16px] text-[#f5f5f7]">
+          <a class="cursor-pointer hover:text-[#bcff00]" href="/">Features</a>
+
+          <a class="cursor-pointer hover:text-[#bcff00]" href="/">Advantages</a>
+
+          <a class="cursor-pointer hover:text-[#bcff00]" href="/">Reviews</a>
+
+          <a class="cursor-pointer hover:text-[#bcff00]" href="/">Case study</a>
+
+          <a class="cursor-pointer hover:text-[#bcff00]" href="/">FAQ</a>
         </div>
-        <div class="imba-container flex flex-col justify-center" style="height: calc(100% - 48px)">
-          <div class="flex flex-col items-center gap-6 text-[16px] text-[#f5f5f7]">
-            <a class="cursor-pointer hover:text-[#bcff00]" href="/">Features</a>
-
-            <a class="cursor-pointer hover:text-[#bcff00]" href="/">Advantages</a>
-
-            <a class="cursor-pointer hover:text-[#bcff00]" href="/">Reviews</a>
-
-            <a class="cursor-pointer hover:text-[#bcff00]" href="/">Case study</a>
-
-            <a class="cursor-pointer hover:text-[#bcff00]" href="/">FAQ</a>
-          </div>
-        </div>
-        <div class="imba-container">
+      </div>
+      <div class="imba-container">
+        <div class="flex items-center justify-center gap-5 border-t-[1px] border-white15 pb-2 pt-6">
           <div
-            class="flex items-center justify-center gap-5 border-t-[1px] border-white15 pb-2 pt-6"
-          >
-            <a
-              href="/"
-              class="flex w-[180px] items-center justify-center rounded-full border-[1px] border-bg3 py-3 text-[15px] text-[#f5f5f7] hover:border-black hover:bg-black hover:text-[#bcff00]"
-            >
-              <img src="./use.svg" alt="" />
-              <span class="ml-1 cursor-pointer">UK</span>
-            </a>
-            <a class="button w-[180px]" href="/">Sign in</a>
+            class="flex w-[180px] open-lang items-center justify-center rounded-full border-[1px] border-bg3 py-3 text-[15px] text-[#f5f5f7] hover:border-black hover:bg-black hover:text-[#bcff00]">
+            <img src="./use.svg" alt="" />
+            <span class="ml-1 cursor-pointer">UK</span>
           </div>
+          <a class="button w-[180px]" href="/">Sign in</a>
         </div>
       </div>
     </div>
-    <!-- header -->
-    <div class="relative w-full">
-      <div class="header w-full border-b-[1px] border-white15">
-        <div
-          class="imba-container menu-desktop hidden h-[80px] items-center justify-between md:flex"
-        >
-          <span class="text-[28px]">imbapay.</span>
-          <div class="flex gap-4 lg:gap-3">
-            <div class="flex items-center gap-5 text-[#f5f5f7] sm:text-[13px] lg:text-[15px]">
-              <a class="cursor-pointer py-5 hover:text-[#bcff00] lg:px-6" href="/">Features</a>
+  </div>
+  <!-- header -->
+  <div class="relative w-full">
+    <div class="header w-full border-b-[1px] border-white15">
+      <div class="imba-container menu-desktop hidden h-[80px] items-center justify-between md:flex">
+        <span class="text-[28px]">imbapay.</span>
+        <div class="flex gap-4 lg:gap-3">
+          <div class="flex items-center gap-5 text-[#f5f5f7] sm:text-[13px] lg:text-[15px]">
+            <a class="cursor-pointer py-5 hover:text-[#bcff00] lg:px-6" href="/">Features</a>
 
-              <a class="cursor-pointer py-5 hover:text-[#bcff00] lg:px-6" href="/">Advantages</a>
+            <a class="cursor-pointer py-5 hover:text-[#bcff00] lg:px-6" href="/">Advantages</a>
 
-              <a class="cursor-pointer py-5 hover:text-[#bcff00] lg:px-6" href="/">Reviews</a>
+            <a class="cursor-pointer py-5 hover:text-[#bcff00] lg:px-6" href="/">Reviews</a>
 
-              <a class="cursor-pointer py-5 hover:text-[#bcff00] lg:px-6" href="/">Case study</a>
+            <a class="cursor-pointer py-5 hover:text-[#bcff00] lg:px-6" href="/">Case study</a>
 
-              <a class="cursor-pointer py-5 hover:text-[#bcff00] lg:px-6" href="/">FAQ</a>
-            </div>
-            <div class="flex items-center gap-5">
-              <div class="flex items-center px-4 text-[15px] text-[#f5f5f7]">
-                <img src="./use.svg" alt="" />
+            <a class="cursor-pointer py-5 hover:text-[#bcff00] lg:px-6" href="/">FAQ</a>
+          </div>
+          <div class="flex items-center gap-5">
+
+            <div class="relative group " x-data="{ openBlock: false }">
+              <div class="flex items-center px-4 text-[15px] text-[#f5f5f7]" @click="openBlock = ! openBlock">
+                <img class="" src="../img/profile/flag/use.svg" alt="">
                 <span class="ml-1 cursor-pointer hover:text-[#bcff00]">UK</span>
               </div>
-              <a class="button" href="/">Sign in</a>
+              <!-- lang block-->
+              <div class=" absolute z-[500] top-[55px]  left-[50%] translate-x-[-50%]" x-show="openBlock"
+                @click.outside="openBlock = false" style="display: none;">
+                <span
+                  class="-z-10 w-6 h-6 block bg-white2 rotate-45 rounded-sm absolute top-[-22px] translate-y-[50%] left-[50%] translate-x-[-50%]"></span>
+                <div class="rounded-[20px] bg-white2">
+                  <div class="w-[250px] xl:w-[375px] cursor-pointer rounded-[16px] p-6 bg-[#fff]/[0.2]">
+                    <a href="/"
+                      class="h-[48px] flex items-center justify-start gap-2 lang is-active hover:bg-white hover:rounded-lg">
+                      <span class="w-8 h-8 flex items-center justify-center rounded-full bg-main">
+                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black"></path>
+                        </svg>
+                      </span>
+                      <span class="text-[14px] text-black">
+                        English (EN)
+                      </span>
+                    </a>
+                    <a href="/"
+                      class="h-[48px] flex cursor-pointer  items-center  lang justify-start gap-2 hover:bg-white hover:rounded-lg">
+                      <span class="w-8 hidden h-8  items-center justify-center rounded-full bg-main ">
+                        <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black"></path>
+                        </svg>
+                      </span>
+                      <span class="w-8"></span>
+                      <span class="text-[14px] text-black">
+                        Украї́нська мо́ва
+                      </span>
+                    </a>
+                    <a href="/"
+                      class="h-[48px] flex cursor-pointer  items-center lang justify-start gap-2 hover:bg-white hover:rounded-lg">
+                      <span class="w-8 hidden h-8  items-center justify-center rounded-full bg-main ">
+                        <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black"></path>
+                        </svg>
+                      </span>
+                      <span class="w-8"></span>
+                      <span class="text-[14px] text-black">
+                        Русский
+                      </span>
+                    </a>
+                    <a href="/"
+                      class="h-[48px] flex cursor-pointer  items-center lang justify-start gap-2 hover:bg-white hover:rounded-lg">
+                      <span class="w-8 hidden h-8  items-center justify-center rounded-full bg-main ">
+                        <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black"></path>
+                        </svg>
+                      </span>
+                      <span class="w-8"></span>
+                      <span class="text-[14px] text-black">
+                        Deutsch
+                      </span>
+                    </a>
+                    <a href="/"
+                      class="h-[48px] flex cursor-pointer  items-center lang justify-start gap-2 hover:bg-white hover:rounded-lg">
+                      <span class="w-8 hidden h-8  items-center justify-center rounded-full bg-main ">
+                        <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black"></path>
+                        </svg>
+                      </span>
+                      <span class="w-8"></span>
+                      <span class="text-[14px] text-black">
+                        Polski
+                      </span>
+                    </a>
+
+
+                  </div>
+                </div>
+              </div>
             </div>
+            <a class="button" href="/">Sign in</a>
           </div>
         </div>
       </div>
-      <!-- mobile -->
+    </div>
+    <!-- mobile -->
 
-      <!-- content -->
-      <div class="imba-container">
-        <div class="relative">
-          <div
-            class="h-auto pt-[60px] text-center sm:pt-[100px] sm:text-left lg:h-[1130px] xl:h-[880px] xl:pt-[195px]"
-          >
-            <h1
-              class="text-center font-AProBo text-[36px] uppercase leading-[88%] tracking-[-0.02em] sm:text-left sm:font-AProBl sm:text-[55px] md:text-[70px] lg:w-[764px] lg:text-[100px] xl:text-[120px]"
-            >
-              Pay only for <br class="lg:hidden" />
-              what you use.
-            </h1>
-            <p class="mt-[22px] text-center text-[16px] sm:mt-6 sm:text-left sm:text-[24px]">
-              Open an account that helps you save money worldwide
-            </p>
-            <a class="button is-create mx-auto mt-[22px] sm:mx-0 sm:mt-9" href="/">
-              <span class="create">Create an account</span>
-              <span class="arrow hidden">
-                <svg
-                  class="h-4"
-                  width="33"
-                  height="32"
-                  viewBox="0 0 33 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M16.9756 24.2615L16.2685 24.9686L17.6827 26.3828L18.3898 25.6757L26.6741 17.3914C27.0647 17.0009 27.0647 16.3677 26.6741 15.9772L18.3898 7.69285L17.6827 6.98574L16.2685 8.39996L16.9756 9.10707L23.5524 15.6839L5.63454 15.6839L5.63454 17.6839L23.5532 17.6839L16.9756 24.2615Z"
-                    fill="#090A08"
-                    style="
+    <!-- content -->
+    <div class="imba-container">
+      <div class="relative">
+        <div class="h-auto pt-[60px] text-center sm:pt-[100px] sm:text-left lg:h-[1130px] xl:h-[880px] xl:pt-[195px]">
+          <h1
+            class="text-center font-AProBo text-[36px] uppercase leading-[88%] tracking-[-0.02em] sm:text-left sm:font-AProBl sm:text-[55px] md:text-[70px] lg:w-[764px] lg:text-[100px] xl:text-[120px]">
+            Pay only for <br class="lg:hidden" />
+            what you use.
+          </h1>
+          <p class="mt-[22px] text-center text-[16px] sm:mt-6 sm:text-left sm:text-[24px]">
+            Open an account that helps you save money worldwide
+          </p>
+          <a class="button is-create mx-auto mt-[22px] sm:mx-0 sm:mt-9" href="/">
+            <span class="create">Create an account</span>
+            <span class="arrow hidden">
+              <svg class="h-4" width="33" height="32" viewBox="0 0 33 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.9756 24.2615L16.2685 24.9686L17.6827 26.3828L18.3898 25.6757L26.6741 17.3914C27.0647 17.0009 27.0647 16.3677 26.6741 15.9772L18.3898 7.69285L17.6827 6.98574L16.2685 8.39996L16.9756 9.10707L23.5524 15.6839L5.63454 15.6839L5.63454 17.6839L23.5532 17.6839L16.9756 24.2615Z"
+                  fill="#090A08" style="
                       fill: #090a08;
                       fill: color(display-p3 0.0353 0.0392 0.0314);
                       fill-opacity: 1;
-                    "
-                  />
+                    " />
+              </svg>
+            </span>
+          </a>
+          <div class="mb-[50px] mt-6 flex justify-center gap-10 font-AR tracking-[-0.02em] sm:mt-10 sm:justify-start">
+            <div class="flex items-center gap-4 text-[16px] sm:text-[24px]">
+              <span
+                class="flex h-[22px] w-[22px] items-center justify-center rounded-full border-[1px] border-white2 text-[12px] sm:h-8 sm:w-8 sm:text-[24px]">1</span>
+              <span>160 countries</span>
+            </div>
+            <div class="flex items-center gap-4 text-[16px] sm:text-[24px]">
+              <span
+                class="flex h-[22px] w-[22px] items-center justify-center rounded-full border-[1px] border-white2 text-[12px] sm:h-8 sm:w-8 sm:text-[24px]">2</span>
+              <span class="">40 currencies</span>
+            </div>
+          </div>
+        </div>
+
+        <img
+          class="bottom-0 h-[280px] w-full object-fill md:h-[530px] lg:absolute lg:right-[0px] lg:h-[600px] xl:right-0 xl:h-[800px] xl:w-[938px]"
+          src="./img/img-top.png" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <!-- slider money -->
+  <div class="w-full">
+    <div class="imba-container">
+      <div class="relative">
+        <div
+          class="ml:h-[580px] ml:rounded-[48px] relative h-[220px] w-full overflow-hidden rounded-[30px] bg-main sm:h-[350px] md:h-[580px] xl:h-[920px]">
+          <div class="swiper mySwiper z-0 mt-[20px] w-full overflow-x-hidden sm:mt-[50px] md:mt-[70px]">
+            <div class="swiper-wrapper">
+              <img class="swiper-slide" src="./img/slider-money/tbrender002.png" alt="" />
+              <img class="swiper-slide" src="./img/slider-money/tbrender002.png" alt="" />
+            </div>
+          </div>
+          <img
+            class="absolute bottom-[-60px] left-[50%] h-[280px] w-[375px] translate-x-[-50%] sm:h-[350px] sm:w-[400px] md:h-auto md:w-auto"
+            src="./img/img-money.png" alt="" />
+        </div>
+
+        <div
+          class="block-card-money plan mx-auto mt-5 flex grid-cols-2 grid-rows-2 flex-col items-center justify-around gap-5 md:grid xl:absolute xl:bottom-0 xl:left-[50%] xl:mt-0 xl:flex xl:translate-x-[-50%] xl:flex-row">
+          <!-- items -->
+          <div
+            class="h-auto w-full rounded-[30px] border-[1px] border-bgdark bg-white2 p-[22px] md:h-[340px] md:p-10 lg:h-[300px] xl:h-[427px] xl:w-[330px]">
+            <span class="relative flex h-8 w-8 items-center justify-center text-[20px] text-black">
+              1
+              <svg class="absolute left-0 top-0 h-full w-full" width="31" height="32" viewBox="0 0 31 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M30.5 16C30.5 24.5755 23.7694 31.5 15.5 31.5C7.23057 31.5 0.5 24.5755 0.5 16C0.5 7.4245 7.23057 0.5 15.5 0.5C23.7694 0.5 30.5 7.4245 30.5 16Z"
+                  stroke="black" style="stroke: black; stroke-opacity: 1" />
+              </svg>
+            </span>
+            <h2
+              class="mb-[14px] mt-5 h-auto font-AProBo text-[22px] uppercase leading-none text-black2 md:mb-4 md:text-[30px] xl:h-[120px]">
+              Send <br class="hidden md:inline" />
+              money.
+            </h2>
+            <p class="text-[16px] text-black2 opacity-[0.6] md:text-[20px]">
+              Transfer money between banks or from your account.
+            </p>
+          </div>
+          <!-- items -->
+          <div
+            class="h-auto w-full rounded-[30px] border-[1px] border-bgdark bg-white2 p-[22px] md:h-[340px] md:p-10 lg:h-[300px] xl:h-[427px] xl:w-[330px]">
+            <span class="relative flex h-8 w-8 items-center justify-center text-[20px] text-black">
+              2
+              <svg class="absolute left-0 top-0 h-full w-full" width="31" height="32" viewBox="0 0 31 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M30.5 16C30.5 24.5755 23.7694 31.5 15.5 31.5C7.23057 31.5 0.5 24.5755 0.5 16C0.5 7.4245 7.23057 0.5 15.5 0.5C23.7694 0.5 30.5 7.4245 30.5 16Z"
+                  stroke="black" style="stroke: black; stroke-opacity: 1" />
+              </svg>
+            </span>
+            <h2
+              class="mb-[14px] mt-5 h-auto font-AProBo text-[22px] uppercase leading-none text-black2 md:mb-4 md:text-[30px] xl:h-[120px]">
+              Use debit <br class="hidden md:inline" />
+              Wise card.
+            </h2>
+            <p class="text-[16px] text-black2 opacity-[0.6] md:text-[20px]">
+              Get a new card and use it to pay for goods and services abroad, as well as for
+              cashing out money at an ATM.
+            </p>
+          </div>
+          <!-- items -->
+          <div
+            class="h-auto w-full rounded-[30px] border-[1px] border-bgdark bg-white2 p-[22px] md:h-[340px] md:p-10 lg:h-[300px] xl:h-[427px] xl:w-[330px]">
+            <span class="relative flex h-8 w-8 items-center justify-center text-[20px] text-black">
+              3
+              <svg class="absolute left-0 top-0 h-full w-full" width="31" height="32" viewBox="0 0 31 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M30.5 16C30.5 24.5755 23.7694 31.5 15.5 31.5C7.23057 31.5 0.5 24.5755 0.5 16C0.5 7.4245 7.23057 0.5 15.5 0.5C23.7694 0.5 30.5 7.4245 30.5 16Z"
+                  stroke="black" style="stroke: black; stroke-opacity: 1" />
+              </svg>
+            </span>
+            <h2
+              class="mb-[14px] mt-5 h-auto font-AProBo text-[22px] uppercase leading-none text-black2 md:mb-4 md:text-[30px] xl:h-[120px]">
+              Receive <br class="hidden xl:inline" />
+              money and <br />
+              replenish <br class="hidden xl:inline" />
+              check.
+            </h2>
+            <p class="text-[16px] text-black2 opacity-[0.6] md:text-[20px]">
+              Receive money or add it to your account.
+            </p>
+          </div>
+          <!-- items -->
+          <div
+            class="h-auto w-full rounded-[30px] border-[1px] border-bgdark bg-white2 p-[22px] md:h-[340px] md:p-10 lg:h-[300px] xl:h-[427px] xl:w-[330px]">
+            <span class="relative flex h-8 w-8 items-center justify-center text-[20px] text-black">
+              4
+              <svg class="absolute left-0 top-0 h-full w-full" width="31" height="32" viewBox="0 0 31 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M30.5 16C30.5 24.5755 23.7694 31.5 15.5 31.5C7.23057 31.5 0.5 24.5755 0.5 16C0.5 7.4245 7.23057 0.5 15.5 0.5C23.7694 0.5 30.5 7.4245 30.5 16Z"
+                  stroke="black" style="stroke: black; stroke-opacity: 1" />
+              </svg>
+            </span>
+            <h2
+              class="mb-[14px] mt-5 h-auto font-AProBo text-[22px] uppercase leading-none text-black2 md:mb-4 md:text-[30px] xl:h-[120px]">
+              Store <br class="hidden xl:inline" />
+              money for <br class="ml:inline hidden" />
+              your <br class="inline sm:hidden" />
+              account.
+            </h2>
+            <p class="text-[16px] text-black2 opacity-[0.6] md:text-[20px]">
+              Store funds in 40+ currencies in your Wise account.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- plan  -->
+
+  <div class="mt-[60px]" x-data="tabs()">
+    <div class="imba-container plan">
+      <div class="ml:py-[120px] ml:px-0 ml:rounded-[35px] h-auto w-full rounded-[25px] bg-white10 px-4 py-[60px] ">
+        <h2 class="text-center font-AProBo text-[36px] uppercase tracking-[-0.02em] sm:text-[50px] lg:text-[76px]">
+          Plan comparison<span class="hidden sm:inline">.</span>
+        </h2>
+        <div class="flex h-[30px] w-full items-center rounded-full bg-white10 md:hidden">
+          <span
+            class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-white"
+            @click="item = 1" :class="{'text-white2' : item == 1, ' text-grey  bg-transparent': item != 1} ">Personal
+            Account</span>
+          <span
+            class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-main"
+            @click="item = 2" :class="{'text-[#D7FF00]' : item == 2, ' text-grey bg-transparent': item != 2} ">Corporate
+            Account</span>
+        </div>
+        <div class="mt-[60px] hidden justify-center gap-6 md:flex">
+          <div class="w-[400px] rounded-[24px] bg-white2 p-6 text-center lg:w-[473px] lg:p-10">
+            <h3 class="mb-6 text-center font-AProBo text-[30px] text-black">Personal Account</h3>
+            <ul>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Bandwidth &
+                  storage is included</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>We’ll get you
+                  onboarded</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Robust
+                  integrations</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Live
+                  stream</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+            </ul>
+            <a class="button is-black" href="/" style="width: 100%">
+              <span class="create">Create an account</span>
+              <span class="arrow hidden">
+                <svg class="h-4 sm:h-[32px]" width="33" height="32" viewBox="0 0 33 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.9756 24.2615L16.2685 24.9686L17.6827 26.3828L18.3898 25.6757L26.6741 17.3914C27.0647 17.0009 27.0647 16.3677 26.6741 15.9772L18.3898 7.69285L17.6827 6.98574L16.2685 8.39996L16.9756 9.10707L23.5524 15.6839L5.63454 15.6839L5.63454 17.6839L23.5532 17.6839L16.9756 24.2615Z"
+                    fill="#fff" style="fill: #ffffff; fill: #fff; fill-opacity: 1" />
                 </svg>
               </span>
             </a>
-            <div
-              class="mb-[50px] mt-6 flex justify-center gap-10 font-AR tracking-[-0.02em] sm:mt-10 sm:justify-start"
-            >
-              <div class="flex items-center gap-4 text-[16px] sm:text-[24px]">
-                <span
-                  class="flex h-[22px] w-[22px] items-center justify-center rounded-full border-[1px] border-white2 text-[12px] sm:h-8 sm:w-8 sm:text-[24px]"
-                  >1</span
-                >
-                <span>160 countries</span>
-              </div>
-              <div class="flex items-center gap-4 text-[16px] sm:text-[24px]">
-                <span
-                  class="flex h-[22px] w-[22px] items-center justify-center rounded-full border-[1px] border-white2 text-[12px] sm:h-8 sm:w-8 sm:text-[24px]"
-                  >2</span
-                >
-                <span class="">40 currencies</span>
-              </div>
-            </div>
           </div>
-
-          <img
-            class="bottom-0 h-[280px] w-full object-fill md:h-[530px] lg:absolute lg:right-[0px] lg:h-[600px] xl:right-0 xl:h-[800px] xl:w-[938px]"
-            src="./img/img-top.png"
-            alt=""
-          />
+          <div class="w-[400px] rounded-[24px] bg-main p-6 text-center lg:w-[473px] lg:p-10">
+            <h3 class="mb-6 text-center font-AProBo text-[30px] text-black">Personal Account</h3>
+            <ul>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Bandwidth &
+                  storage is included</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>We’ll get you
+                  onboarded</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Robust
+                  integrations</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Live
+                  stream</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+            </ul>
+            <a class="button is-black" href="/" style="width: 100%">
+              <span class="create">Create an account</span>
+              <span class="arrow hidden">
+                <svg class="h-4 sm:h-[32px]" width="33" height="32" viewBox="0 0 33 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.9756 24.2615L16.2685 24.9686L17.6827 26.3828L18.3898 25.6757L26.6741 17.3914C27.0647 17.0009 27.0647 16.3677 26.6741 15.9772L18.3898 7.69285L17.6827 6.98574L16.2685 8.39996L16.9756 9.10707L23.5524 15.6839L5.63454 15.6839L5.63454 17.6839L23.5532 17.6839L16.9756 24.2615Z"
+                    fill="#fff" style="fill: #ffffff; fill: #fff; fill-opacity: 1" />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- slider money -->
-    <div class="w-full">
-      <div class="imba-container">
-        <div class="relative">
-          <div
-            class="ml:h-[580px] ml:rounded-[48px] relative h-[220px] w-full overflow-hidden rounded-[30px] bg-main sm:h-[350px] md:h-[580px] xl:h-[920px]"
-          >
-            <div
-              class="swiper mySwiper z-0 mt-[20px] w-full overflow-x-hidden sm:mt-[50px] md:mt-[70px]"
-            >
-              <div class="swiper-wrapper">
-                <img class="swiper-slide" src="./img/slider-money/tbrender002.png" alt="" />
-                <img class="swiper-slide" src="./img/slider-money/tbrender002.png" alt="" />
-              </div>
-            </div>
-            <img
-              class="absolute bottom-[-60px] left-[50%] h-[280px] w-[375px] translate-x-[-50%] sm:h-[350px] sm:w-[400px] md:h-auto md:w-auto"
-              src="./img/img-money.png"
-              alt=""
-            />
+        <div class="mt-[16px] md:hidden">
+          <div class="w-full rounded-[24px] bg-white2 p-6 text-center" x-show="item === 1">
+            <h3 class="mb-4 text-center font-AProBo text-[22px] text-black">Personal Account</h3>
+            <ul>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Bandwidth &
+                  storage is included</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>We’ll get you
+                  onboarded</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Robust
+                  integrations</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Live
+                  stream</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+            </ul>
+            <a class="button is-black" href="/" style="width: 100%">
+              <span class="create">Create an account</span>
+              <span class="arrow hidden">
+                <svg class="h-4 sm:h-[32px]" width="33" height="32" viewBox="0 0 33 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.9756 24.2615L16.2685 24.9686L17.6827 26.3828L18.3898 25.6757L26.6741 17.3914C27.0647 17.0009 27.0647 16.3677 26.6741 15.9772L18.3898 7.69285L17.6827 6.98574L16.2685 8.39996L16.9756 9.10707L23.5524 15.6839L5.63454 15.6839L5.63454 17.6839L23.5532 17.6839L16.9756 24.2615Z"
+                    fill="#fff" style="fill: #ffffff; fill: #fff; fill-opacity: 1" />
+                </svg>
+              </span>
+            </a>
           </div>
-
-          <div
-            class="block-card-money plan mx-auto mt-5 flex grid-cols-2 grid-rows-2 flex-col items-center justify-around gap-5 md:grid xl:absolute xl:bottom-0 xl:left-[50%] xl:mt-0 xl:flex xl:translate-x-[-50%] xl:flex-row"
-          >
-            <!-- items -->
-            <div
-              class="h-auto w-full rounded-[30px] border-[1px] border-bgdark bg-white2 p-[22px] md:h-[340px] md:p-10 lg:h-[300px] xl:h-[427px] xl:w-[330px]"
-            >
-              <span
-                class="relative flex h-8 w-8 items-center justify-center text-[20px] text-black"
-              >
-                1
-                <svg
-                  class="absolute left-0 top-0 h-full w-full"
-                  width="31"
-                  height="32"
-                  viewBox="0 0 31 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M30.5 16C30.5 24.5755 23.7694 31.5 15.5 31.5C7.23057 31.5 0.5 24.5755 0.5 16C0.5 7.4245 7.23057 0.5 15.5 0.5C23.7694 0.5 30.5 7.4245 30.5 16Z"
-                    stroke="black"
-                    style="stroke: black; stroke-opacity: 1"
-                  />
+          <div class="w-full rounded-[24px] bg-main p-6 text-center" x-show="item === 2">
+            <h3 class="mb-4 text-center font-AProBo text-[22px] text-black">Corporate Account</h3>
+            <ul>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Bandwidth &
+                  storage is included</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>We’ll get you
+                  onboarded</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Robust
+                  integrations</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Live
+                  stream</span>
+              </li>
+              <li
+                class="ml:text-[16px]] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+              <li
+                class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]">
+                <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span><span>Sell on your
+                  own terms</span>
+              </li>
+            </ul>
+            <a class="button is-black" href="/" style="width: 100%">
+              <span class="create">Create an account</span>
+              <span class="arrow hidden">
+                <svg class="h-4 sm:h-[32px]" width="33" height="32" viewBox="0 0 33 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.9756 24.2615L16.2685 24.9686L17.6827 26.3828L18.3898 25.6757L26.6741 17.3914C27.0647 17.0009 27.0647 16.3677 26.6741 15.9772L18.3898 7.69285L17.6827 6.98574L16.2685 8.39996L16.9756 9.10707L23.5524 15.6839L5.63454 15.6839L5.63454 17.6839L23.5532 17.6839L16.9756 24.2615Z"
+                    fill="#fff" style="fill: #ffffff; fill: #fff; fill-opacity: 1" />
                 </svg>
               </span>
-              <h2
-                class="mb-[14px] mt-5 h-auto font-AProBo text-[22px] uppercase leading-none text-black2 md:mb-4 md:text-[30px] xl:h-[120px]"
-              >
-                Send <br class="hidden md:inline" />
-                money.
-              </h2>
-              <p class="text-[16px] text-black2 opacity-[0.6] md:text-[20px]">
-                Transfer money between banks or from your account.
-              </p>
-            </div>
-            <!-- items -->
-            <div
-              class="h-auto w-full rounded-[30px] border-[1px] border-bgdark bg-white2 p-[22px] md:h-[340px] md:p-10 lg:h-[300px] xl:h-[427px] xl:w-[330px]"
-            >
-              <span
-                class="relative flex h-8 w-8 items-center justify-center text-[20px] text-black"
-              >
-                2
-                <svg
-                  class="absolute left-0 top-0 h-full w-full"
-                  width="31"
-                  height="32"
-                  viewBox="0 0 31 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M30.5 16C30.5 24.5755 23.7694 31.5 15.5 31.5C7.23057 31.5 0.5 24.5755 0.5 16C0.5 7.4245 7.23057 0.5 15.5 0.5C23.7694 0.5 30.5 7.4245 30.5 16Z"
-                    stroke="black"
-                    style="stroke: black; stroke-opacity: 1"
-                  />
-                </svg>
-              </span>
-              <h2
-                class="mb-[14px] mt-5 h-auto font-AProBo text-[22px] uppercase leading-none text-black2 md:mb-4 md:text-[30px] xl:h-[120px]"
-              >
-                Use debit <br class="hidden md:inline" />
-                Wise card.
-              </h2>
-              <p class="text-[16px] text-black2 opacity-[0.6] md:text-[20px]">
-                Get a new card and use it to pay for goods and services abroad, as well as for
-                cashing out money at an ATM.
-              </p>
-            </div>
-            <!-- items -->
-            <div
-              class="h-auto w-full rounded-[30px] border-[1px] border-bgdark bg-white2 p-[22px] md:h-[340px] md:p-10 lg:h-[300px] xl:h-[427px] xl:w-[330px]"
-            >
-              <span
-                class="relative flex h-8 w-8 items-center justify-center text-[20px] text-black"
-              >
-                3
-                <svg
-                  class="absolute left-0 top-0 h-full w-full"
-                  width="31"
-                  height="32"
-                  viewBox="0 0 31 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M30.5 16C30.5 24.5755 23.7694 31.5 15.5 31.5C7.23057 31.5 0.5 24.5755 0.5 16C0.5 7.4245 7.23057 0.5 15.5 0.5C23.7694 0.5 30.5 7.4245 30.5 16Z"
-                    stroke="black"
-                    style="stroke: black; stroke-opacity: 1"
-                  />
-                </svg>
-              </span>
-              <h2
-                class="mb-[14px] mt-5 h-auto font-AProBo text-[22px] uppercase leading-none text-black2 md:mb-4 md:text-[30px] xl:h-[120px]"
-              >
-                Receive <br class="hidden xl:inline" />
-                money and <br />
-                replenish <br class="hidden xl:inline" />
-                check.
-              </h2>
-              <p class="text-[16px] text-black2 opacity-[0.6] md:text-[20px]">
-                Receive money or add it to your account.
-              </p>
-            </div>
-            <!-- items -->
-            <div
-              class="h-auto w-full rounded-[30px] border-[1px] border-bgdark bg-white2 p-[22px] md:h-[340px] md:p-10 lg:h-[300px] xl:h-[427px] xl:w-[330px]"
-            >
-              <span
-                class="relative flex h-8 w-8 items-center justify-center text-[20px] text-black"
-              >
-                4
-                <svg
-                  class="absolute left-0 top-0 h-full w-full"
-                  width="31"
-                  height="32"
-                  viewBox="0 0 31 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M30.5 16C30.5 24.5755 23.7694 31.5 15.5 31.5C7.23057 31.5 0.5 24.5755 0.5 16C0.5 7.4245 7.23057 0.5 15.5 0.5C23.7694 0.5 30.5 7.4245 30.5 16Z"
-                    stroke="black"
-                    style="stroke: black; stroke-opacity: 1"
-                  />
-                </svg>
-              </span>
-              <h2
-                class="mb-[14px] mt-5 h-auto font-AProBo text-[22px] uppercase leading-none text-black2 md:mb-4 md:text-[30px] xl:h-[120px]"
-              >
-                Store <br class="hidden xl:inline" />
-                money for <br class="ml:inline hidden" />
-                your <br class="inline sm:hidden" />
-                account.
-              </h2>
-              <p class="text-[16px] text-black2 opacity-[0.6] md:text-[20px]">
-                Store funds in 40+ currencies in your Wise account.
-              </p>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <!-- plan  -->
+  </div>
+  <!-- advantages -->
+  <div class="relative w-full">
+    <span
+      class="absolute bottom-0 right-[0px] -z-10 block h-[210px] w-[210px] rounded-full bg-main blur-[160px] md:bottom-[50px] md:blur-[150px]"></span>
+    <img class="ml:h-auto ml:w-auto absolute bottom-[-60px] right-0 h-[300px] w-[300px] md:h-[500px] md:w-[500px]"
+      src="./img/mask-line.png" alt="" />
+    <div class="imba-container relative">
 
-    <div class="mt-[60px]" x-data="tabs()">
-      <div class="imba-container plan">
+      <div class="mb-[60px] pt-[60px] sm:pb-[60px] sm:pt-[100px] lg:pt-[100px] xl:pt-[160px]">
+        <h2
+          class="text-center font-AProBo text-[36px] uppercase tracking-[-0.02em] sm:text-left sm:text-[50px] md:text-[76px]">
+          Advantages<span class="hidden sm:inline">.</span>
+        </h2>
         <div
-          class="ml:py-[120px] ml:px-0 ml:rounded-[35px] h-auto w-full rounded-[25px] bg-white10 px-4 py-[60px] backdrop-blur-[80px]"
-        >
-          <h2
-            class="text-center font-AProBo text-[36px] uppercase tracking-[-0.02em] sm:text-[50px] lg:text-[76px]"
-          >
-            Plan comparison<span class="hidden sm:inline">.</span>
-          </h2>
-          <div class="flex h-[30px] w-full items-center rounded-full bg-white10 md:hidden">
-            <span
-              class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-white"
-              @click="item = 1"
-              :class="{'text-white2' : item == 1, ' text-grey  bg-transparent': item != 1} "
-              >Personal Account</span
-            >
-            <span
-              class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#4e4e50] text-center text-[14px] hover:text-main"
-              @click="item = 2"
-              :class="{'text-[#D7FF00]' : item == 2, ' text-grey bg-transparent': item != 2} "
-              >Corporate Account</span
-            >
-          </div>
-          <div class="mt-[60px] hidden justify-center gap-6 md:flex">
-            <div class="w-[400px] rounded-[24px] bg-white2 p-6 text-center lg:w-[473px] lg:p-10">
-              <h3 class="mb-6 text-center font-AProBo text-[30px] text-black">Personal Account</h3>
-              <ul>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Bandwidth & storage is included</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>We’ll get you onboarded</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Robust integrations</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Live stream</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-              </ul>
-              <a class="button is-black" href="/" style="width: 100%">
-                <span class="create">Create an account</span>
-                <span class="arrow hidden">
-                  <svg
-                    class="h-4 sm:h-[32px]"
-                    width="33"
-                    height="32"
-                    viewBox="0 0 33 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M16.9756 24.2615L16.2685 24.9686L17.6827 26.3828L18.3898 25.6757L26.6741 17.3914C27.0647 17.0009 27.0647 16.3677 26.6741 15.9772L18.3898 7.69285L17.6827 6.98574L16.2685 8.39996L16.9756 9.10707L23.5524 15.6839L5.63454 15.6839L5.63454 17.6839L23.5532 17.6839L16.9756 24.2615Z"
-                      fill="#fff"
-                      style="fill: #ffffff; fill: #fff; fill-opacity: 1"
-                    />
-                  </svg>
-                </span>
-              </a>
-            </div>
-            <div class="w-[400px] rounded-[24px] bg-main p-6 text-center lg:w-[473px] lg:p-10">
-              <h3 class="mb-6 text-center font-AProBo text-[30px] text-black">Personal Account</h3>
-              <ul>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Bandwidth & storage is included</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>We’ll get you onboarded</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Robust integrations</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Live stream</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[60px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-              </ul>
-              <a class="button is-black" href="/" style="width: 100%">
-                <span class="create">Create an account</span>
-                <span class="arrow hidden">
-                  <svg
-                    class="h-4 sm:h-[32px]"
-                    width="33"
-                    height="32"
-                    viewBox="0 0 33 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M16.9756 24.2615L16.2685 24.9686L17.6827 26.3828L18.3898 25.6757L26.6741 17.3914C27.0647 17.0009 27.0647 16.3677 26.6741 15.9772L18.3898 7.69285L17.6827 6.98574L16.2685 8.39996L16.9756 9.10707L23.5524 15.6839L5.63454 15.6839L5.63454 17.6839L23.5532 17.6839L16.9756 24.2615Z"
-                      fill="#fff"
-                      style="fill: #ffffff; fill: #fff; fill-opacity: 1"
-                    />
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="mt-[16px] md:hidden">
-            <div class="w-full rounded-[24px] bg-white2 p-6 text-center" x-show="item === 1">
-              <h3 class="mb-4 text-center font-AProBo text-[22px] text-black">Personal Account</h3>
-              <ul>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Bandwidth & storage is included</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>We’ll get you onboarded</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Robust integrations</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Live stream</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-              </ul>
-              <a class="button is-black" href="/" style="width: 100%">
-                <span class="create">Create an account</span>
-                <span class="arrow hidden">
-                  <svg
-                    class="h-4 sm:h-[32px]"
-                    width="33"
-                    height="32"
-                    viewBox="0 0 33 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M16.9756 24.2615L16.2685 24.9686L17.6827 26.3828L18.3898 25.6757L26.6741 17.3914C27.0647 17.0009 27.0647 16.3677 26.6741 15.9772L18.3898 7.69285L17.6827 6.98574L16.2685 8.39996L16.9756 9.10707L23.5524 15.6839L5.63454 15.6839L5.63454 17.6839L23.5532 17.6839L16.9756 24.2615Z"
-                      fill="#fff"
-                      style="fill: #ffffff; fill: #fff; fill-opacity: 1"
-                    />
-                  </svg>
-                </span>
-              </a>
-            </div>
-            <div class="w-full rounded-[24px] bg-main p-6 text-center" x-show="item === 2">
-              <h3 class="mb-4 text-center font-AProBo text-[22px] text-black">Corporate Account</h3>
-              <ul>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Bandwidth & storage is included</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>We’ll get you onboarded</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Robust integrations</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Live stream</span>
-                </li>
-                <li
-                  class="ml:text-[16px]] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-                <li
-                  class="ml:text-[16px] mb-[10px] inline-flex h-[54px] w-full items-center rounded-full bg-[#222222]/[0.06] px-4 text-[14px] text-black2 opacity-[0.12]"
-                >
-                  <span class="ml:w-[32px] mr-2 w-[22px]"><img src="./img/li/ok.svg" alt="" /></span
-                  ><span>Sell on your own terms</span>
-                </li>
-              </ul>
-              <a class="button is-black" href="/" style="width: 100%">
-                <span class="create">Create an account</span>
-                <span class="arrow hidden">
-                  <svg
-                    class="h-4 sm:h-[32px]"
-                    width="33"
-                    height="32"
-                    viewBox="0 0 33 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M16.9756 24.2615L16.2685 24.9686L17.6827 26.3828L18.3898 25.6757L26.6741 17.3914C27.0647 17.0009 27.0647 16.3677 26.6741 15.9772L18.3898 7.69285L17.6827 6.98574L16.2685 8.39996L16.9756 9.10707L23.5524 15.6839L5.63454 15.6839L5.63454 17.6839L23.5532 17.6839L16.9756 24.2615Z"
-                      fill="#fff"
-                      style="fill: #ffffff; fill: #fff; fill-opacity: 1"
-                    />
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- advantages -->
-    <div class="relative w-full">
-      <span
-        class="absolute bottom-0 right-[0px] -z-10 block h-[210px] w-[210px] rounded-full bg-main blur-[160px] md:bottom-[50px] md:blur-[150px]"
-      ></span>
-      <img
-        class="ml:h-auto ml:w-auto absolute bottom-[-60px] right-0 h-[300px] w-[300px] md:h-[500px] md:w-[500px]"
-        src="./img/mask-line.png"
-        alt=""
-      />
-      <div class="imba-container relative">
-        <span
-          class="absolute top-[0px] block h-[180px] w-[180px] rounded-full bg-main blur-[140px] md:left-[300px]"
-        ></span>
-
-        <div class="mb-[60px] pt-[60px] sm:pb-[60px] sm:pt-[100px] lg:pt-[100px] xl:pt-[160px]">
-          <h2
-            class="text-center font-AProBo text-[36px] uppercase tracking-[-0.02em] sm:text-left sm:text-[50px] md:text-[76px]"
-          >
-            Advantages<span class="hidden sm:inline">.</span>
-          </h2>
+          class="mb-[60px] mt-[22px] grid grid-cols-2 grid-rows-2 gap-4 sm:mb-[90px] sm:mt-[40px] md:grid-cols-4 md:grid-rows-1 lg:mb-[200px] lg:gap-5">
           <div
-            class="mb-[60px] mt-[22px] grid grid-cols-2 grid-rows-2 gap-4 sm:mb-[90px] sm:mt-[40px] md:grid-cols-4 md:grid-rows-1 lg:mb-[200px] lg:gap-5"
-          >
-            <div
-              class="flex flex-col items-center justify-center gap-2 rounded-[30px] bg-[#161617] py-8 sm:justify-start sm:p-5 md:items-start md:gap-10 md:bg-[#2D3033]/[0.5] md:backdrop-blur-[70px] lg:p-10"
-            >
-              <img class="h-[50px] lg:h-[60px] xl:h-[87px]" src="./img/adva/Frame481.svg" alt="" />
-              <span
-                class="lg:font-AProB text-center font-AProL text-[18px] leading-[110%] sm:text-[16px] md:text-left md:font-AProR lg:text-[20px] xl:text-[30px]"
-              >
-                Two-factor <br />authentication.
-              </span>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center gap-2 rounded-[30px] bg-[#161617] py-8 sm:justify-start sm:p-5 md:items-start md:gap-10 md:bg-[#2D3033]/[0.5] md:backdrop-blur-[70px] lg:p-10"
-            >
-              <img class="h-[50px] lg:h-[60px] xl:h-[87px]" src="./img/adva/Frame482.svg" alt="" />
-              <span
-                class="lg:font-AProB text-center font-AProL text-[18px] leading-[110%] sm:text-[16px] md:text-left md:font-AProR lg:text-[20px] xl:text-[30px]"
-              >
-                Team of <br />
-                professionals.
-              </span>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center gap-2 rounded-[30px] bg-[#161617] py-8 sm:justify-start sm:p-5 md:items-start md:gap-10 md:bg-[#2D3033]/[0.5] md:backdrop-blur-[70px] lg:p-10"
-            >
-              <img class="h-[50px] lg:h-[60px] xl:h-[87px]" src="./img/adva/Frame483.svg" alt="" />
-              <span
-                class="lg:font-AProB text-center font-AProL text-[18px] leading-[110%] sm:text-[16px] md:text-left md:font-AProR lg:text-[20px] xl:text-[30px]"
-              >
-                Secure storage <br />
-                of your funds.
-              </span>
-            </div>
-            <div
-              class="flex flex-col items-center justify-center gap-2 rounded-[30px] bg-[#161617] py-8 sm:justify-start sm:p-5 md:items-start md:gap-10 md:bg-[#2D3033]/[0.5] md:backdrop-blur-[70px] lg:p-10"
-            >
-              <img class="h-[50px] lg:h-[60px] xl:h-[87px]" src="./img/adva/Frame484.svg" alt="" />
-              <span
-                class="lg:font-AProB text-center font-AProL text-[18px] leading-[110%] sm:text-[16px] md:text-left md:font-AProR lg:text-[20px] xl:text-[30px]"
-              >
-                Low fees aiming <br />
-                to go even lower.
-              </span>
-            </div>
+            class="flex flex-col items-center justify-center gap-2 rounded-[30px] bg-[#161617] py-8 sm:justify-start sm:p-5 md:items-start md:gap-10 md:bg-[#2D3033]/[0.5] md:backdrop-blur-[70px] lg:p-10">
+            <img class="h-[50px] lg:h-[60px] xl:h-[87px]" src="./img/adva/Frame481.svg" alt="" />
+            <span
+              class="lg:font-AProB text-center font-AProL text-[18px] leading-[110%] sm:text-[16px] md:text-left md:font-AProR lg:text-[20px] xl:text-[30px]">
+              Two-factor <br />authentication.
+            </span>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- footer -->
-    <div
-      class="mx-auto mb-3 w-[344px] rounded-[40px] bg-[#191c1f] sm:mb-0 sm:w-full sm:rounded-none"
-    >
-      <div class="imba-container">
-        <div class="mx-auto max-w-[966px]">
           <div
-            class="flex flex-col items-center justify-between gap-4 border-b-[1px] border-[#fff]/[0.24] pb-6 pt-12 sm:flex-row sm:items-start md:items-start"
-          >
-            <a
-              class="cursor-pointer text-left font-AProBo text-[28px] leading-none text-white2 hover:text-main"
-              >ImbaPay</a
-            >
-            <div
-              class="flex w-full flex-col items-center gap-4 border-b-[1px] border-[#fff]/[0.24] pb-4 sm:w-auto sm:items-start sm:border-none sm:pb-0"
-            >
-              <span class="font-SFProR text-[15px] text-white2">Information</span>
-              <ul class="text-center font-SFProR text-[15px] text-[#86868b] sm:text-left">
-                <li class="mb-2"><a class="hover:text-main" href="/">Company and our team</a></li>
-                <li class="mb-2"><a class="hover:text-main" href="/">Press about us</a></li>
-                <li class="mb-2"><a class="hover:text-main" href="/">Vacancies</a></li>
-                <li class="mb-2"><a class="hover:text-main" href="/">Service statu</a>s</li>
-                <li class=""><a class="hover:text-main" href="/">Investor relations</a></li>
-                <li class="mb-2">
-                  <a class="hover:text-main" href="/">Roadmap of our mission</a>
-                </li>
-                <li class="mb-2">
-                  <a class="hover:text-main" href="/">Partnerships and collaboration</a>
-                </li>
-                <li class="mb-2">
-                  <a class="hover:text-main" href="/">Customer support center</a>
-                </li>
-                <li class=""><a class="hover:text-main" href="/">Special features</a></li>
-              </ul>
-            </div>
-            <div
-              class="flex w-full flex-col items-center gap-4 border-b-[1px] border-[#fff]/[0.24] pb-4 sm:w-auto sm:items-start sm:border-none sm:pb-0"
-            >
-              <span class="font-SFProR text-[15px] text-white2">Services</span>
-              <ul class="text-center font-SFProR text-[15px] text-[#86868b] sm:text-left">
-                <li class="mb-2">
-                  <a class="hover:text-main" href="/">International transfers</a>
-                </li>
-                <li class="mb-2"><a class="hover:text-main" href="/">Account</a></li>
-                <li class="mb-2">
-                  <a class="hover:text-main" href="/">International debit card</a>
-                </li>
-                <li class="mb-2"><a class="hover:text-main" href="/">Large sum transfers</a></li>
-                <li class="mb-2"><a class="hover:text-main" href="/">Receiving payments</a></li>
-                <li class="mb-2"><a class="hover:text-main" href="/">Platform</a></li>
-                <li class="mb-2"><a class="hover:text-main" href="/">Business debit card</a></li>
-                <li class=""><a class="hover:text-main" href="/">Payment batches</a></li>
-              </ul>
-            </div>
-            <div
-              class="flex w-[200px] flex-col items-center justify-center gap-4 sm:items-start sm:justify-start"
-            >
-              <span class="font-SFProR text-[15px] text-white2">Follow us</span>
-              <div class="flex gap-4">
-                <a href="/" class="fill">
-                  <svg
-                    width="23"
-                    height="22"
-                    viewBox="0 0 23 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      class="fill-[#86868B]"
-                      d="M11.5 1.98795C14.4157 1.98795 14.8133 1.98795 16.006 1.98795C17.0663 1.98795 17.5964 2.25301 17.994 2.38554C18.5241 2.6506 18.9217 2.78313 19.3193 3.18072C19.7169 3.57831 19.9819 3.9759 20.1145 4.50603C20.247 4.90362 20.3795 5.43374 20.512 6.49398C20.512 7.68675 20.512 7.95181 20.512 11C20.512 14.0482 20.512 14.3133 20.512 15.506C20.512 16.5663 20.247 17.0964 20.1145 17.494C19.8494 18.0241 19.7169 18.4217 19.3193 18.8193C18.9217 19.2169 18.5241 19.4819 17.994 19.6145C17.5964 19.747 17.0663 19.8795 16.006 20.012C14.8133 20.012 14.5482 20.012 11.5 20.012C8.45181 20.012 8.18675 20.012 6.99398 20.012C5.93374 20.012 5.40362 19.747 5.00603 19.6145C4.4759 19.3494 4.07831 19.2169 3.68072 18.8193C3.28313 18.4217 3.01807 18.0241 2.88554 17.494C2.75301 17.0964 2.62048 16.5663 2.48795 15.506C2.48795 14.3133 2.48795 14.0482 2.48795 11C2.48795 7.95181 2.48795 7.68675 2.48795 6.49398C2.48795 5.43374 2.75301 4.90362 2.88554 4.50603C3.1506 3.9759 3.28313 3.57831 3.68072 3.18072C4.07831 2.78313 4.4759 2.51807 5.00603 2.38554C5.40362 2.25301 5.93374 2.12048 6.99398 1.98795C8.18675 1.98795 8.58434 1.98795 11.5 1.98795ZM11.5 0C8.45181 0 8.18675 0 6.99398 0C5.80121 0 5.00603 0.265061 4.34337 0.530121C3.68072 0.795182 3.01807 1.19277 2.35542 1.85542C1.69277 2.51807 1.42771 3.04819 1.03012 3.84337C0.765061 4.50603 0.63253 5.30121 0.5 6.49398C0.5 7.68675 0.5 8.08434 0.5 11C0.5 14.0482 0.5 14.3133 0.5 15.506C0.5 16.6988 0.765061 17.494 1.03012 18.1566C1.29518 18.8193 1.69277 19.4819 2.35542 20.1446C3.01807 20.8072 3.54819 21.0723 4.34337 21.4699C5.00603 21.7349 5.80121 21.8675 6.99398 22C8.18675 22 8.58434 22 11.5 22C14.4157 22 14.8133 22 16.006 22C17.1988 22 17.994 21.7349 18.6566 21.4699C19.3193 21.2048 19.9819 20.8072 20.6446 20.1446C21.3072 19.4819 21.5723 18.9518 21.9699 18.1566C22.2349 17.494 22.3675 16.6988 22.5 15.506C22.5 14.3133 22.5 13.9157 22.5 11C22.5 8.08434 22.5 7.68675 22.5 6.49398C22.5 5.30121 22.2349 4.50603 21.9699 3.84337C21.7048 3.18072 21.3072 2.51807 20.6446 1.85542C19.9819 1.19277 19.4518 0.927712 18.6566 0.530121C17.994 0.265061 17.1988 0.13253 16.006 0C14.8133 0 14.5482 0 11.5 0Z"
-                      style="fill-opacity: 1"
-                    />
-                    <path
-                      class="fill-[#86868B]"
-                      d="M11.5 5.30121C8.31928 5.30121 5.80121 7.81928 5.80121 11C5.80121 14.1807 8.31928 16.6988 11.5 16.6988C14.6807 16.6988 17.1988 14.1807 17.1988 11C17.1988 7.81928 14.6807 5.30121 11.5 5.30121ZM11.5 14.7108C9.51205 14.7108 7.78916 13.1205 7.78916 11C7.78916 9.01205 9.37952 7.28916 11.5 7.28916C13.488 7.28916 15.2108 8.87952 15.2108 11C15.2108 12.988 13.488 14.7108 11.5 14.7108Z"
-                      style="fill-opacity: 1"
-                    />
-                    <path
-                      class="fill-[#86868B]"
-                      d="M17.3313 6.49398C18.0633 6.49398 18.6566 5.90062 18.6566 5.16868C18.6566 4.43673 18.0633 3.84337 17.3313 3.84337C16.5994 3.84337 16.006 4.43673 16.006 5.16868C16.006 5.90062 16.5994 6.49398 17.3313 6.49398Z"
-                      style="fill-opacity: 1"
-                    />
-                  </svg>
-                </a>
-                <a href="/" class="fill">
-                  <svg
-                    width="12"
-                    height="22"
-                    viewBox="0 0 12 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7.82416 11.8272H11.3845L11.9435 8.18835H7.82344V6.19954C7.82344 4.6879 8.31437 3.34746 9.71983 3.34746H11.9783V0.171926C11.5815 0.118017 10.7422 0 9.15649 0C5.84523 0 3.90394 1.75933 3.90394 5.76754V8.18835H0.5V11.8272H3.90394V21.8288C4.57807 21.9308 5.26089 22 5.9618 22C6.59538 22 7.21376 21.9417 7.82416 21.8587V11.8272Z"
-                      fill="#86868B"
-                      style="fill-opacity: 1"
-                    />
-                  </svg>
-                </a>
-                <a href="/" class="fill">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.5253 0.522178C12.8795 -0.174059 9.09344 -0.174059 5.44764 0.522178C3.83507 0.870297 1.80184 2.81976 1.45128 4.35149C0.820276 7.34531 0.820276 10.4088 1.45128 13.4026C1.87195 14.9343 3.90518 16.8838 5.44764 17.2319C5.51775 17.2319 5.58786 17.3015 5.58786 17.3711V21.7574C5.58786 21.9663 5.86831 22.1055 6.00853 21.8967L8.11188 19.7383C8.11188 19.7383 9.79455 17.9977 10.075 17.7193C10.075 17.7193 10.1451 17.6496 10.2152 17.6496C12.3186 17.7193 14.492 17.5104 16.5954 17.1623C18.2079 16.8141 20.2412 14.8647 20.5917 13.333C21.2227 10.3391 21.2227 7.27568 20.5917 4.28186C20.1711 2.81976 18.1378 0.870297 16.5253 0.522178ZM16.5954 13.6115C16.2448 14.3077 15.8241 14.8647 15.123 15.2128C14.9127 15.2824 14.7024 15.352 14.492 15.4217C14.2116 15.352 14.0012 15.2824 13.7909 15.2128C11.5473 14.3077 9.444 13.0545 7.76132 11.2442C6.84987 10.1999 6.07864 9.01628 5.44764 7.76305C5.16719 7.13644 4.88675 6.57945 4.67641 5.95283C4.46608 5.39584 4.81663 4.83885 5.16719 4.42111C5.51775 4.00337 5.93842 3.72487 6.4292 3.516C6.77976 3.30713 7.13032 3.44638 7.41076 3.72487C7.97165 4.42111 8.53255 5.11735 8.95321 5.88321C9.23366 6.37057 9.16355 6.92757 8.67277 7.27568C8.53254 7.34531 8.46243 7.41493 8.32221 7.55418C8.2521 7.6238 8.11187 7.69343 8.04176 7.83267C7.90154 8.04154 7.90154 8.25042 7.97165 8.45929C8.53254 10.0606 9.58422 11.3139 11.1968 12.0101C11.4772 12.1493 11.6876 12.219 12.0381 12.219C12.5289 12.1494 12.7392 11.5924 13.0898 11.3139C13.4404 11.0354 13.861 11.0354 14.2817 11.2442C14.6322 11.4531 14.9828 11.7316 15.4035 12.0101C15.754 12.2886 16.1046 12.4975 16.4551 12.776C16.6655 12.9152 16.7356 13.2633 16.5954 13.6115ZM13.6507 8.38967C13.5105 8.38967 13.5806 8.38967 13.6507 8.38967C13.3702 8.38967 13.3001 8.25042 13.23 8.04155C13.23 7.9023 13.23 7.69343 13.1599 7.55418C13.0898 7.27569 12.9496 6.99719 12.6691 6.78832C12.5289 6.71869 12.3887 6.64907 12.2485 6.57945C12.0381 6.50982 11.8979 6.50982 11.6876 6.50982C11.4772 6.4402 11.4071 6.30095 11.4071 6.09208C11.4071 5.95283 11.6175 5.81359 11.7577 5.81359C12.8795 5.88321 13.7208 6.50982 13.861 7.83267C13.861 7.9023 13.861 8.04155 13.861 8.11117C13.861 8.25042 13.7909 8.38967 13.6507 8.38967ZM12.9496 5.32622C12.599 5.18697 12.2485 5.04772 11.8278 4.9781C11.6876 4.9781 11.4772 4.90848 11.337 4.90848C11.1267 4.90848 10.9865 4.76923 11.0566 4.56036C11.0566 4.35149 11.1968 4.21224 11.4071 4.28186C12.1082 4.35149 12.7392 4.49073 13.3702 4.76923C14.6323 5.39584 15.3334 6.4402 15.5437 7.83267C15.5437 7.9023 15.5437 7.97192 15.5437 8.04155C15.5437 8.18079 15.5437 8.32004 15.5437 8.52891C15.5437 8.59854 15.5437 8.66816 15.5437 8.73779C15.4736 9.01628 14.9828 9.0859 14.9127 8.73779C14.9127 8.66816 14.8426 8.52891 14.8426 8.45929C14.8426 7.83267 14.7024 7.20606 14.4219 6.64907C14.0012 6.02246 13.5105 5.60471 12.9496 5.32622ZM16.7356 9.50365C16.5253 9.50365 16.385 9.29478 16.385 9.0859C16.385 8.66816 16.3149 8.25042 16.2448 7.83267C15.9644 5.60471 14.1415 3.7945 11.968 3.44638C11.6175 3.37675 11.2669 3.37675 10.9865 3.30713C10.7761 3.30713 10.4957 3.30713 10.4256 3.02863C10.3554 2.81976 10.5658 2.61089 10.7761 2.61089C10.8462 2.61089 10.9163 2.61089 10.9163 2.61089C11.0566 2.61089 13.7909 2.68052 10.9163 2.61089C13.861 2.68052 16.3149 4.62998 16.8057 7.55418C16.8758 8.04155 16.9459 8.52891 16.9459 9.0859C17.0862 9.29478 16.9459 9.50365 16.7356 9.50365Z"
-                      fill="#86868B"
-                      style="fill-opacity: 1"
-                    />
-                  </svg>
-                </a>
-                <a href="/" class="fill">
-                  <svg
-                    width="22"
-                    height="20"
-                    viewBox="0 0 22 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21.3007 1.17308L17.9417 18.709C17.9417 18.709 17.4717 19.9248 16.1807 19.3417L8.43054 13.1882L8.3946 13.17C9.44147 12.1966 17.5593 4.63827 17.9141 4.29566C18.4633 3.76505 18.1223 3.44917 17.4846 3.84999L5.49361 11.7357L0.867496 10.1238C0.867496 10.1238 0.139482 9.85563 0.0694452 9.27253C-0.00151309 8.68848 0.891456 8.37259 0.891456 8.37259L19.7507 0.711177C19.7507 0.711177 21.3007 0.00592172 21.3007 1.17308Z"
-                      fill="#86868B"
-                      style="fill-opacity: 1"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
+            class="flex flex-col items-center justify-center gap-2 rounded-[30px] bg-[#161617] py-8 sm:justify-start sm:p-5 md:items-start md:gap-10 md:bg-[#2D3033]/[0.5] md:backdrop-blur-[70px] lg:p-10">
+            <img class="h-[50px] lg:h-[60px] xl:h-[87px]" src="./img/adva/Frame482.svg" alt="" />
+            <span
+              class="lg:font-AProB text-center font-AProL text-[18px] leading-[110%] sm:text-[16px] md:text-left md:font-AProR lg:text-[20px] xl:text-[30px]">
+              Team of <br />
+              professionals.
+            </span>
           </div>
-          <div class="mt-6 pb-6 text-center text-[15px] text-[#86868b]">
-            ImbaPay 2024 All rights reserved
+          <div
+            class="flex flex-col items-center justify-center gap-2 rounded-[30px] bg-[#161617] py-8 sm:justify-start sm:p-5 md:items-start md:gap-10 md:bg-[#2D3033]/[0.5] md:backdrop-blur-[70px] lg:p-10">
+            <img class="h-[50px] lg:h-[60px] xl:h-[87px]" src="./img/adva/Frame483.svg" alt="" />
+            <span
+              class="lg:font-AProB text-center font-AProL text-[18px] leading-[110%] sm:text-[16px] md:text-left md:font-AProR lg:text-[20px] xl:text-[30px]">
+              Secure storage <br />
+              of your funds.
+            </span>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center gap-2 rounded-[30px] bg-[#161617] py-8 sm:justify-start sm:p-5 md:items-start md:gap-10 md:bg-[#2D3033]/[0.5] md:backdrop-blur-[70px] lg:p-10">
+            <img class="h-[50px] lg:h-[60px] xl:h-[87px]" src="./img/adva/Frame484.svg" alt="" />
+            <span
+              class="lg:font-AProB text-center font-AProL text-[18px] leading-[110%] sm:text-[16px] md:text-left md:font-AProR lg:text-[20px] xl:text-[30px]">
+              Low fees aiming <br />
+              to go even lower.
+            </span>
           </div>
         </div>
       </div>
     </div>
-    <script>
-      var swiper = new Swiper('.mySwiper', {
-        slidesPerView: 'auto',
-        loop: true,
-        speed: 30000,
-        spaceBetween: 0,
-        preventInteractionOnTransition: true,
-        autoplay: {
-          enabled: true,
-          delay: -1
-        }
-      })
-    </script>
-    <script>
-      function tabs() {
-        return {
-          item: 1
-        }
+  </div>
+
+  <!-- footer -->
+  <div class="mx-auto mb-3 w-[344px] rounded-[40px] bg-[#191c1f] sm:mb-0 sm:w-full sm:rounded-none">
+    <div class="imba-container">
+      <div class="mx-auto max-w-[966px]">
+        <div
+          class="flex flex-col items-center justify-between gap-4 border-b-[1px] border-[#fff]/[0.24] pb-6 pt-12 sm:flex-row sm:items-start md:items-start">
+          <a
+            class="cursor-pointer text-left font-AProBo text-[28px] leading-none text-white2 hover:text-main">ImbaPay</a>
+          <div
+            class="flex w-full flex-col items-center gap-4 border-b-[1px] border-[#fff]/[0.24] pb-4 sm:w-auto sm:items-start sm:border-none sm:pb-0">
+            <span class="font-SFProR text-[15px] text-white2">Information</span>
+            <ul class="text-center font-SFProR text-[15px] text-[#86868b] sm:text-left">
+              <li class="mb-2"><a class="hover:text-main" href="/">Company and our team</a></li>
+              <li class="mb-2"><a class="hover:text-main" href="/">Press about us</a></li>
+              <li class="mb-2"><a class="hover:text-main" href="/">Vacancies</a></li>
+              <li class="mb-2"><a class="hover:text-main" href="/">Service statu</a>s</li>
+              <li class=""><a class="hover:text-main" href="/">Investor relations</a></li>
+              <li class="mb-2">
+                <a class="hover:text-main" href="/">Roadmap of our mission</a>
+              </li>
+              <li class="mb-2">
+                <a class="hover:text-main" href="/">Partnerships and collaboration</a>
+              </li>
+              <li class="mb-2">
+                <a class="hover:text-main" href="/">Customer support center</a>
+              </li>
+              <li class=""><a class="hover:text-main" href="/">Special features</a></li>
+            </ul>
+          </div>
+          <div
+            class="flex w-full flex-col items-center gap-4 border-b-[1px] border-[#fff]/[0.24] pb-4 sm:w-auto sm:items-start sm:border-none sm:pb-0">
+            <span class="font-SFProR text-[15px] text-white2">Services</span>
+            <ul class="text-center font-SFProR text-[15px] text-[#86868b] sm:text-left">
+              <li class="mb-2">
+                <a class="hover:text-main" href="/">International transfers</a>
+              </li>
+              <li class="mb-2"><a class="hover:text-main" href="/">Account</a></li>
+              <li class="mb-2">
+                <a class="hover:text-main" href="/">International debit card</a>
+              </li>
+              <li class="mb-2"><a class="hover:text-main" href="/">Large sum transfers</a></li>
+              <li class="mb-2"><a class="hover:text-main" href="/">Receiving payments</a></li>
+              <li class="mb-2"><a class="hover:text-main" href="/">Platform</a></li>
+              <li class="mb-2"><a class="hover:text-main" href="/">Business debit card</a></li>
+              <li class=""><a class="hover:text-main" href="/">Payment batches</a></li>
+            </ul>
+          </div>
+          <div class="flex w-[200px] flex-col items-center justify-center gap-4 sm:items-start sm:justify-start">
+            <span class="font-SFProR text-[15px] text-white2">Follow us</span>
+            <div class="flex gap-4">
+              <a href="/" class="fill">
+                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="fill-[#86868B]"
+                    d="M11.5 1.98795C14.4157 1.98795 14.8133 1.98795 16.006 1.98795C17.0663 1.98795 17.5964 2.25301 17.994 2.38554C18.5241 2.6506 18.9217 2.78313 19.3193 3.18072C19.7169 3.57831 19.9819 3.9759 20.1145 4.50603C20.247 4.90362 20.3795 5.43374 20.512 6.49398C20.512 7.68675 20.512 7.95181 20.512 11C20.512 14.0482 20.512 14.3133 20.512 15.506C20.512 16.5663 20.247 17.0964 20.1145 17.494C19.8494 18.0241 19.7169 18.4217 19.3193 18.8193C18.9217 19.2169 18.5241 19.4819 17.994 19.6145C17.5964 19.747 17.0663 19.8795 16.006 20.012C14.8133 20.012 14.5482 20.012 11.5 20.012C8.45181 20.012 8.18675 20.012 6.99398 20.012C5.93374 20.012 5.40362 19.747 5.00603 19.6145C4.4759 19.3494 4.07831 19.2169 3.68072 18.8193C3.28313 18.4217 3.01807 18.0241 2.88554 17.494C2.75301 17.0964 2.62048 16.5663 2.48795 15.506C2.48795 14.3133 2.48795 14.0482 2.48795 11C2.48795 7.95181 2.48795 7.68675 2.48795 6.49398C2.48795 5.43374 2.75301 4.90362 2.88554 4.50603C3.1506 3.9759 3.28313 3.57831 3.68072 3.18072C4.07831 2.78313 4.4759 2.51807 5.00603 2.38554C5.40362 2.25301 5.93374 2.12048 6.99398 1.98795C8.18675 1.98795 8.58434 1.98795 11.5 1.98795ZM11.5 0C8.45181 0 8.18675 0 6.99398 0C5.80121 0 5.00603 0.265061 4.34337 0.530121C3.68072 0.795182 3.01807 1.19277 2.35542 1.85542C1.69277 2.51807 1.42771 3.04819 1.03012 3.84337C0.765061 4.50603 0.63253 5.30121 0.5 6.49398C0.5 7.68675 0.5 8.08434 0.5 11C0.5 14.0482 0.5 14.3133 0.5 15.506C0.5 16.6988 0.765061 17.494 1.03012 18.1566C1.29518 18.8193 1.69277 19.4819 2.35542 20.1446C3.01807 20.8072 3.54819 21.0723 4.34337 21.4699C5.00603 21.7349 5.80121 21.8675 6.99398 22C8.18675 22 8.58434 22 11.5 22C14.4157 22 14.8133 22 16.006 22C17.1988 22 17.994 21.7349 18.6566 21.4699C19.3193 21.2048 19.9819 20.8072 20.6446 20.1446C21.3072 19.4819 21.5723 18.9518 21.9699 18.1566C22.2349 17.494 22.3675 16.6988 22.5 15.506C22.5 14.3133 22.5 13.9157 22.5 11C22.5 8.08434 22.5 7.68675 22.5 6.49398C22.5 5.30121 22.2349 4.50603 21.9699 3.84337C21.7048 3.18072 21.3072 2.51807 20.6446 1.85542C19.9819 1.19277 19.4518 0.927712 18.6566 0.530121C17.994 0.265061 17.1988 0.13253 16.006 0C14.8133 0 14.5482 0 11.5 0Z"
+                    style="fill-opacity: 1" />
+                  <path class="fill-[#86868B]"
+                    d="M11.5 5.30121C8.31928 5.30121 5.80121 7.81928 5.80121 11C5.80121 14.1807 8.31928 16.6988 11.5 16.6988C14.6807 16.6988 17.1988 14.1807 17.1988 11C17.1988 7.81928 14.6807 5.30121 11.5 5.30121ZM11.5 14.7108C9.51205 14.7108 7.78916 13.1205 7.78916 11C7.78916 9.01205 9.37952 7.28916 11.5 7.28916C13.488 7.28916 15.2108 8.87952 15.2108 11C15.2108 12.988 13.488 14.7108 11.5 14.7108Z"
+                    style="fill-opacity: 1" />
+                  <path class="fill-[#86868B]"
+                    d="M17.3313 6.49398C18.0633 6.49398 18.6566 5.90062 18.6566 5.16868C18.6566 4.43673 18.0633 3.84337 17.3313 3.84337C16.5994 3.84337 16.006 4.43673 16.006 5.16868C16.006 5.90062 16.5994 6.49398 17.3313 6.49398Z"
+                    style="fill-opacity: 1" />
+                </svg>
+              </a>
+              <a href="/" class="fill">
+                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.82416 11.8272H11.3845L11.9435 8.18835H7.82344V6.19954C7.82344 4.6879 8.31437 3.34746 9.71983 3.34746H11.9783V0.171926C11.5815 0.118017 10.7422 0 9.15649 0C5.84523 0 3.90394 1.75933 3.90394 5.76754V8.18835H0.5V11.8272H3.90394V21.8288C4.57807 21.9308 5.26089 22 5.9618 22C6.59538 22 7.21376 21.9417 7.82416 21.8587V11.8272Z"
+                    fill="#86868B" style="fill-opacity: 1" />
+                </svg>
+              </a>
+              <a href="/" class="fill">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5253 0.522178C12.8795 -0.174059 9.09344 -0.174059 5.44764 0.522178C3.83507 0.870297 1.80184 2.81976 1.45128 4.35149C0.820276 7.34531 0.820276 10.4088 1.45128 13.4026C1.87195 14.9343 3.90518 16.8838 5.44764 17.2319C5.51775 17.2319 5.58786 17.3015 5.58786 17.3711V21.7574C5.58786 21.9663 5.86831 22.1055 6.00853 21.8967L8.11188 19.7383C8.11188 19.7383 9.79455 17.9977 10.075 17.7193C10.075 17.7193 10.1451 17.6496 10.2152 17.6496C12.3186 17.7193 14.492 17.5104 16.5954 17.1623C18.2079 16.8141 20.2412 14.8647 20.5917 13.333C21.2227 10.3391 21.2227 7.27568 20.5917 4.28186C20.1711 2.81976 18.1378 0.870297 16.5253 0.522178ZM16.5954 13.6115C16.2448 14.3077 15.8241 14.8647 15.123 15.2128C14.9127 15.2824 14.7024 15.352 14.492 15.4217C14.2116 15.352 14.0012 15.2824 13.7909 15.2128C11.5473 14.3077 9.444 13.0545 7.76132 11.2442C6.84987 10.1999 6.07864 9.01628 5.44764 7.76305C5.16719 7.13644 4.88675 6.57945 4.67641 5.95283C4.46608 5.39584 4.81663 4.83885 5.16719 4.42111C5.51775 4.00337 5.93842 3.72487 6.4292 3.516C6.77976 3.30713 7.13032 3.44638 7.41076 3.72487C7.97165 4.42111 8.53255 5.11735 8.95321 5.88321C9.23366 6.37057 9.16355 6.92757 8.67277 7.27568C8.53254 7.34531 8.46243 7.41493 8.32221 7.55418C8.2521 7.6238 8.11187 7.69343 8.04176 7.83267C7.90154 8.04154 7.90154 8.25042 7.97165 8.45929C8.53254 10.0606 9.58422 11.3139 11.1968 12.0101C11.4772 12.1493 11.6876 12.219 12.0381 12.219C12.5289 12.1494 12.7392 11.5924 13.0898 11.3139C13.4404 11.0354 13.861 11.0354 14.2817 11.2442C14.6322 11.4531 14.9828 11.7316 15.4035 12.0101C15.754 12.2886 16.1046 12.4975 16.4551 12.776C16.6655 12.9152 16.7356 13.2633 16.5954 13.6115ZM13.6507 8.38967C13.5105 8.38967 13.5806 8.38967 13.6507 8.38967C13.3702 8.38967 13.3001 8.25042 13.23 8.04155C13.23 7.9023 13.23 7.69343 13.1599 7.55418C13.0898 7.27569 12.9496 6.99719 12.6691 6.78832C12.5289 6.71869 12.3887 6.64907 12.2485 6.57945C12.0381 6.50982 11.8979 6.50982 11.6876 6.50982C11.4772 6.4402 11.4071 6.30095 11.4071 6.09208C11.4071 5.95283 11.6175 5.81359 11.7577 5.81359C12.8795 5.88321 13.7208 6.50982 13.861 7.83267C13.861 7.9023 13.861 8.04155 13.861 8.11117C13.861 8.25042 13.7909 8.38967 13.6507 8.38967ZM12.9496 5.32622C12.599 5.18697 12.2485 5.04772 11.8278 4.9781C11.6876 4.9781 11.4772 4.90848 11.337 4.90848C11.1267 4.90848 10.9865 4.76923 11.0566 4.56036C11.0566 4.35149 11.1968 4.21224 11.4071 4.28186C12.1082 4.35149 12.7392 4.49073 13.3702 4.76923C14.6323 5.39584 15.3334 6.4402 15.5437 7.83267C15.5437 7.9023 15.5437 7.97192 15.5437 8.04155C15.5437 8.18079 15.5437 8.32004 15.5437 8.52891C15.5437 8.59854 15.5437 8.66816 15.5437 8.73779C15.4736 9.01628 14.9828 9.0859 14.9127 8.73779C14.9127 8.66816 14.8426 8.52891 14.8426 8.45929C14.8426 7.83267 14.7024 7.20606 14.4219 6.64907C14.0012 6.02246 13.5105 5.60471 12.9496 5.32622ZM16.7356 9.50365C16.5253 9.50365 16.385 9.29478 16.385 9.0859C16.385 8.66816 16.3149 8.25042 16.2448 7.83267C15.9644 5.60471 14.1415 3.7945 11.968 3.44638C11.6175 3.37675 11.2669 3.37675 10.9865 3.30713C10.7761 3.30713 10.4957 3.30713 10.4256 3.02863C10.3554 2.81976 10.5658 2.61089 10.7761 2.61089C10.8462 2.61089 10.9163 2.61089 10.9163 2.61089C11.0566 2.61089 13.7909 2.68052 10.9163 2.61089C13.861 2.68052 16.3149 4.62998 16.8057 7.55418C16.8758 8.04155 16.9459 8.52891 16.9459 9.0859C17.0862 9.29478 16.9459 9.50365 16.7356 9.50365Z"
+                    fill="#86868B" style="fill-opacity: 1" />
+                </svg>
+              </a>
+              <a href="/" class="fill">
+                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.3007 1.17308L17.9417 18.709C17.9417 18.709 17.4717 19.9248 16.1807 19.3417L8.43054 13.1882L8.3946 13.17C9.44147 12.1966 17.5593 4.63827 17.9141 4.29566C18.4633 3.76505 18.1223 3.44917 17.4846 3.84999L5.49361 11.7357L0.867496 10.1238C0.867496 10.1238 0.139482 9.85563 0.0694452 9.27253C-0.00151309 8.68848 0.891456 8.37259 0.891456 8.37259L19.7507 0.711177C19.7507 0.711177 21.3007 0.00592172 21.3007 1.17308Z"
+                    fill="#86868B" style="fill-opacity: 1" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 pb-6 text-center text-[15px] text-[#86868b]">
+          ImbaPay 2024 All rights reserved
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- lang mobile NO POP-UP-->
+  <div class="bg-lang fixed hidden  bottom-0 left-0 right-0 top-0 z-[20]  bg-[#060605]/[0.9] ml:hidden">
+
+
+    <div class="swipe-down  absolute   w-[99%] rounded-[35px] bg-white2 ml:hidden">
+      <div class="mx-auto mt-2 close-lang block h-[3px] w-[40px] rounded-full bg-grey" data-swipe-threshold="20"
+        data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"></div>
+      <div class="w-[375px] cursor-pointer rounded-[16px] p-6">
+        <a href="/"
+          class="lang is-active flex h-[48px] items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+          <span class="flex h-8 w-8 items-center justify-center rounded-full bg-main">
+            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+ 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
+            </svg>
+          </span>
+          <span class="text-[14px] text-black"> English (EN) </span>
+        </a>
+        <a href="/"
+          class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+          <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
+            <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+ 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
+            </svg>
+          </span>
+          <span class="w-8"></span>
+          <span class="text-[14px] text-black"> Украї́нська мо́ва </span>
+        </a>
+        <a href="/"
+          class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+          <span class=" hidden h-8 w-8 items-center justify-center rounded-full  bg-main">
+            <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+ 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
+            </svg>
+          </span>
+          <span class="w-8"></span>
+          <span class="text-[14px] text-black"> Русский </span>
+        </a>
+        <a href="/"
+          class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+          <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
+            <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+ 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
+            </svg>
+          </span>
+          <span class="w-8"></span>
+          <span class="text-[14px] text-black"> Deutsch </span>
+        </a>
+        <a href="/"
+          class="lang flex h-[48px] cursor-pointer items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
+          <span class=" hidden h-8 w-8 items-center justify-center rounded-full bg-main">
+            <svg class="" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 
+ 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z" fill="black" />
+            </svg>
+          </span>
+          <span class="w-8"></span>
+          <span class="text-[14px] text-black"> Polski </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- cursor -->
+  <div class="cursor2"></div>
+  <div class="cursor"></div>
+  <script src="../cursor.js"></script>
+  <!-- lang -->
+  <script src="../swiped-events.min.js"></script>
+  <script src="../open_lang.js"></script>
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      slidesPerView: 'auto',
+      loop: true,
+      speed: 30000,
+      spaceBetween: 0,
+      preventInteractionOnTransition: true,
+      autoplay: {
+        enabled: true,
+        delay: -1
       }
-    </script>
-  </body>
+    })
+  </script>
+  <script>
+    function tabs() {
+      return {
+        item: 1
+      }
+    }
+  </script>
+</body>
+
 </html>
