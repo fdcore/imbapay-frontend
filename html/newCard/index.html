@@ -681,7 +681,7 @@
                </div>
                <!-- content  -->
                <div class="w-full relative element_random">
-                  <div id="circle" class="element absolute w-0 h-0 rounded-full shadow-[0_0_150px_35px_#d7ff00]">
+                  <div id="circle" class="element absolute w-0 h-0 rounded-full z-50 shadow-[0_0_150px_35px_#d7ff00]">
                   </div>
                   <div class="h-full w-full absolute hidden -z-10 backdrop-blur-[15px]"></div>
                   <div class=" ml:bg-transparent   px-4 pt-[22px]  ml:p-0">
@@ -1228,11 +1228,11 @@
                                  type="text" placeholder="Search Transactions" />
                            </div>
                         </div>
-                        <div class="rounded-[25px] ml:overflow-hidden">
+                        <div class="rounded-[25px] h-[450px]  scroll-none overflow-y-scroll">
                            <ul class="w-full">
-                              <li
-                                 class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2">
-                                 <div
+                              <li class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2"
+                                 x-data="{open:false}">
+                                 <div @click="open = ! open"
                                     class="flex w-full items-center justify-between rounded-[35px] bg-bg3 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
                                     <span class="leading-snug">April 2024</span>
                                     <span>
@@ -1244,7 +1244,7 @@
                                        </svg>
                                     </span>
                                  </div>
-                                 <ul class="my-4 px-6">
+                                 <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
                                     <li class="rounded-[25px] py-2">
                                        <div class="flex items-center justify-between">
                                           <div class="flex items-center">
@@ -1331,9 +1331,9 @@
                                     </li>
                                  </ul>
                               </li>
-                              <li
-                                 class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2">
-                                 <div
+                              <li class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2"
+                                 x-data="{open:false}">
+                                 <div @click="open = ! open"
                                     class="flex w-full items-center justify-between rounded-[35px] bg-bg3 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
                                     <span class="leading-snug">April 2024</span>
                                     <span>
@@ -1345,7 +1345,7 @@
                                        </svg>
                                     </span>
                                  </div>
-                                 <ul class="my-4 px-6 hidden">
+                                 <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
                                     <li class="rounded-[25px] py-2">
                                        <div class="flex items-center justify-between">
                                           <div class="flex items-center">
@@ -1432,9 +1432,9 @@
                                     </li>
                                  </ul>
                               </li>
-                              <li
-                                 class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2">
-                                 <div
+                              <li class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2"
+                                 x-data="{open:false}">
+                                 <div @click="open = ! open"
                                     class="flex w-full items-center justify-between rounded-[35px] bg-bg3 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
                                     <span class="leading-snug">April 2024</span>
                                     <span>
@@ -1446,7 +1446,7 @@
                                        </svg>
                                     </span>
                                  </div>
-                                 <ul class="my-4 px-6 hidden">
+                                 <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
                                     <li class="rounded-[25px] py-2">
                                        <div class="flex items-center justify-between">
                                           <div class="flex items-center">
@@ -1533,6 +1533,310 @@
                                     </li>
                                  </ul>
                               </li>
+                              <li class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2"
+                                 x-data="{open:false}">
+                                 <div @click="open = ! open"
+                                    class="flex w-full items-center justify-between rounded-[35px] bg-bg3 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                                    <span class="leading-snug">April 2024</span>
+                                    <span>
+                                       <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                                             fill="white" style="fill: white; fill-opacity: 1" />
+                                       </svg>
+                                    </span>
+                                 </div>
+                                 <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="text-right font-AProM text-[16px] text-white2">
+                                                25 822.80 UAH
+                                             </span>
+                                             <span class="text-[14px] text-grey">662,89 USD</span>
+                                             <span class="text-[14px] text-grey">Payment note</span>
+                                          </div>
+                                       </div>
+
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2"
+                                 x-data="{open:false}">
+                                 <div @click="open = ! open"
+                                    class="flex w-full items-center justify-between rounded-[35px] bg-bg3 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                                    <span class="leading-snug">April 2024</span>
+                                    <span>
+                                       <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                                             fill="white" style="fill: white; fill-opacity: 1" />
+                                       </svg>
+                                    </span>
+                                 </div>
+                                 <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="text-right font-AProM text-[16px] text-white2">
+                                                25 822.80 UAH
+                                             </span>
+                                             <span class="text-[14px] text-grey">662,89 USD</span>
+                                             <span class="text-[14px] text-grey">Payment note</span>
+                                          </div>
+                                       </div>
+
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2"
+                                 x-data="{open:false}">
+                                 <div @click="open = ! open"
+                                    class="flex w-full items-center justify-between rounded-[35px] bg-bg3 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                                    <span class="leading-snug">April 2024</span>
+                                    <span>
+                                       <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                                             fill="white" style="fill: white; fill-opacity: 1" />
+                                       </svg>
+                                    </span>
+                                 </div>
+                                 <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="text-right font-AProM text-[16px] text-white2">
+                                                25 822.80 UAH
+                                             </span>
+                                             <span class="text-[14px] text-grey">662,89 USD</span>
+                                             <span class="text-[14px] text-grey">Payment note</span>
+                                          </div>
+                                       </div>
+
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                    <li class="rounded-[25px] py-2">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M10.5681 5.81223L11.0454 6.28952L12 5.33493L11.5227 4.85763L6.86277 0.197703C6.59917 -0.0659012 6.17178 -0.0659012 5.90818 0.197703L1.24825 4.85763L0.770953 5.33493L1.72555 6.28952L2.20284 5.81223L5.71116 2.3039L5.71117 12.1124L7.06117 12.1124L7.06116 2.30528L10.5681 5.81223Z"
+                                                      fill="white" style="fill: white; fill-opacity: 1" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="font-AProM text-[16px] text-white2">Liam
+                                                   Johnson</span>
+                                                <span class="text-[14px] text-grey">03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="font-AProM text-[16px] text-white2"> +845 USD </span>
+                                             <span class="text-[14px] text-grey"></span>
+                                          </div>
+                                       </div>
+                                       <div class="mt-2 hidden w-[290px] text-[14px] text-grey">
+                                          Welcome to your trusted partner in the realm of international financial
+                                          transactions.
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </li>
+
 
                            </ul>
                         </div>
@@ -1751,11 +2055,10 @@
          class="fixed   top-0 bottom-0 left-0 right-0 z-10 bg-[rgba(68,68,68,0.9)] sm:bg-black/[0.9] backdrop-blur-[5px] ">
       </div>
 
-      <div
-         class="absolute  z-20 modal sm:bottom-auto sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]  w-full sm:w-[540px] rounded-t-[35px] sm:rounded-[35px]  bg-white2 sm:bg-white10"
+      <div data-swipe-threshold="20" data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"
+         class="absolute  z-20 modal sm:bottom-auto sm:top-[50%] sm:left-[50%] mobile-close sm:translate-x-[-50%] sm:translate-y-[-50%]  w-full sm:w-[540px] rounded-t-[35px] sm:rounded-[35px]  bg-white2 sm:bg-white10"
          x-data="tabs()">
-         <div class="sm:hidden w-[50px] h-1 bg-bgdark mb-4 mt-2 mx-auto mobile-close" data-swipe-threshold="20"
-            data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"></div>
+         <div class="sm:hidden w-[50px] h-1 bg-bgdark mb-4 mt-2 mx-auto "></div>
          <!-- item -->
          <div class="hidden">
             <div class="flex justify-between items-center font-AProM text-[22px]  px-6 pt-6">

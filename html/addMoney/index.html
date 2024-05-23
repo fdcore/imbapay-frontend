@@ -1208,7 +1208,7 @@
                                     type="text" placeholder="Search Transactions" />
                               </div>
                            </div>
-                           <div class="rounded-[25px] h-[500px] scroll-none overflow-y-scroll">
+                           <div class="rounded-[25px] h-[500px]  scroll-none overflow-y-scroll">
                               <ul class="w-full">
                                  <li class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-bg2"
                                     x-data="{open:false}">
@@ -1928,7 +1928,7 @@
                         <div class="absolute -z-10 w-full h-full backdrop-blur-[15px]">
 
                         </div>
-                        <div class="h-full md:bg-white10 md:rounded-[35px] px-3 pb-6 md:p-6 ">
+                        <div class="h-full md:bg-white10 md:rounded-[35px] px-3 pb-6 md:p-6 " x-data="{open: false}">
                            <h3 class="w-full font-AProM text-[22px] text-white2">
                               Instructions and recommendations
                            </h3>
@@ -1954,10 +1954,11 @@
                               your finances on the go. Whether you are at home, in the office, or traveling, our
                               platform
                               is available 24/7, allowing you to perform transactions whenever necessary.<br /><br />
-                              <span class="inline-block cursor-pointer xl:hidden text-main">more ...</span>
+                              <span class="inline-block cursor-pointer xl:hidden text-main" @click="open = ! open"
+                                 x-show="!open">more ...</span>
                            </p>
 
-                           <p class="hidden xl:inline-block text-[16px] text-grey leading-snug">
+                           <p class=" xl:inline-block text-[16px] text-grey leading-snug" x-show="open">
                               We understand that fees can be a concern, which is why we strive to keep our costs
                               competitive. Our transparent pricing structure ensures that you know exactly what you are
                               paying for, with no hidden fees. We believe in fairness and clarity in all our financial
