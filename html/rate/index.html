@@ -21,7 +21,7 @@
   <link href="../style.css" rel="stylesheet" />
 </head>
 
-<body class="" x-data="{open: false}">
+<body class="" x-data="{open: false}" :class="open ? 'overflow-hidden': 'overflow-auto'">
   <div class="border-b-[1px] border-white15 pb-6 pt-3 md:hidden" x-show="!open ">
     <div class="imba-container menu-mobile md:hidden">
       <div class="flex items-center justify-between">

@@ -734,11 +734,10 @@
                         <div class="flex flex-col w-full">
                            <label class="text-[14px] text-grey" for="">Phone</label>
 
-                           <div class="relative" x-data="{open:false}">
-                              <input
-                                 class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[56px] mt-1 rounded-[20px] pr-5 pl-[140px] text-[22px] text-white2 border-[2px] border-white/[0.3]"
-                                 type="number" id="amount" placeholder=" ">
-                              <div class="absolute top-[20px] md:top-[25px]  left-5 flex items-center gap-1"
+                           <div class="relative flex gap-1 ml:gap-0 h-[56px] bg-transparent" x-data="{open:false}">
+
+                              <div
+                                 class="ml:absolute top-[20px] md:top-[25px] ml:border-none rounded-[15px] ml:p-0 px-2 border-[1px] border-[rgba(255,255,255,0.3)]  left-5 flex items-center gap-1"
                                  @click="open = ! open">
 
                                  <span class="text-[16px] font-AProR text-grey leading-none ">+381</span>
@@ -752,8 +751,11 @@
                                  </span>
 
                               </div>
+                              <input
+                                 class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[56px] ml:mt-1 rounded-[20px] pr-5 pl-5 ml:pl-[80px] text-[22px] text-white2 border-[2px] border-white/[0.3]"
+                                 type="number" id="amount" placeholder=" ">
                               <!-- select currencies -->
-                              <div class="bg-white2 p-2  rounded-[15px] w-[80px]  absolute z-10 top-[85px]"
+                              <div class="bg-white2 p-2  rounded-[15px] w-[80px]  absolute z-10 top-[70px]"
                                  x-show="open" @click.outside="open = false">
                                  <span
                                     class="text-[16px] text-grey mb-2 hover:bg-[#fff29c] inline-block hover:rounded-[5px] w-full">+382</span>
