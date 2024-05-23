@@ -1,0 +1,31 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_230_12831)">
+<mask id="mask0_230_12831" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+<path d="M64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64C49.6731 64 64 49.6731 64 32Z" fill="white" style="fill:white;fill-opacity:1;"/>
+</mask>
+<g mask="url(#mask0_230_12831)">
+<path d="M64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64C49.6731 64 64 49.6731 64 32Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<mask id="mask1_230_12831" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+<path d="M32 64C49.6731 64 64 49.6731 64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64Z" fill="#C4C4C4" style="fill:#C4C4C4;fill:color(display-p3 0.7686 0.7686 0.7686);fill-opacity:1;"/>
+</mask>
+<g mask="url(#mask1_230_12831)">
+<path d="M0 0H64V64H0V0Z" fill="#F0263C" style="fill:#F0263C;fill:color(display-p3 0.9412 0.1490 0.2353);fill-opacity:1;"/>
+<path d="M-6 -6V38H48V-6H-6Z" fill="#231D9A" style="fill:#231D9A;fill:color(display-p3 0.1373 0.1137 0.6039);fill-opacity:1;"/>
+<path d="M25 26C28.3137 26 31 23.3137 31 20C31 16.6863 28.3137 14 25 14C21.6863 14 19 16.6863 19 20C19 23.3137 21.6863 26 25 26Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M25.0003 8L27.0788 14.9H22.9219L25.0003 8Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M25.0008 31.9996L22.9224 25.0996H27.0793L25.0008 31.9996Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M33.4854 11.5146L30.0761 17.8633L27.1367 14.924L33.4854 11.5146Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M16.5146 28.4854L19.9239 22.1367L22.8633 25.076L16.5146 28.4854Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M37.0001 20.0003L30.1001 22.0788V17.9219L37.0001 20.0003Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M13 19.9994L19.9 17.9209V22.0778L13 19.9994Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M33.4854 28.4854L27.1367 25.0761L30.076 22.1367L33.4854 28.4854Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M16.5146 11.5146L22.8633 14.9239L19.924 17.8633L16.5146 11.5146Z" fill="white" style="fill:white;fill-opacity:1;"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_230_12831">
+<rect width="64" height="64" rx="32" fill="white" style="fill:white;fill-opacity:1;"/>
+</clipPath>
+</defs>
+</svg>

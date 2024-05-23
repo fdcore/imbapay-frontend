@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_230_12585)">
+<mask id="mask0_230_12585" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+<path d="M64 0H0V64H64V0Z" fill="white" style="fill:white;fill-opacity:1;"/>
+</mask>
+<g mask="url(#mask0_230_12585)">
+<path d="M62.2001 21.3333C57.8001 8.93333 45.9335 0 32.0001 0C25.0668 0 18.6668 2.2 13.4668 5.93333L28.8668 21.3333H62.2001Z" fill="#F0263C" style="fill:#F0263C;fill:color(display-p3 0.9412 0.1490 0.2353);fill-opacity:1;"/>
+<path d="M1.2 23.3994C0.4 26.1327 0 28.9994 0 31.9994C0 34.9994 0.4 37.8661 1.2 40.5994L9.8 31.9994L1.2 23.3994Z" fill="black" style="fill:black;fill-opacity:1;"/>
+<path d="M13.4668 58.066C18.6668 61.7993 25.0668 63.9993 32.0001 63.9993C45.9335 63.9993 57.8001 55.066 62.2001 42.666H28.8668L13.4668 58.066Z" fill="#231D9A" style="fill:#231D9A;fill:color(display-p3 0.1373 0.1137 0.6039);fill-opacity:1;"/>
+<path d="M9.39993 9.39941C6.93327 11.8661 4.8666 14.7994 3.2666 17.9327L17.3333 31.9994L3.2666 46.0661C4.79993 49.2661 6.8666 52.1327 9.39993 54.5994L26.6666 37.3327H63.5333C63.7999 35.5994 63.9999 33.7994 63.9999 31.9994C63.9999 30.1994 63.8666 28.3994 63.5333 26.6661H26.6666L9.39993 9.39941Z" fill="#005B13" style="fill:#005B13;fill:color(display-p3 0.0000 0.3569 0.0745);fill-opacity:1;"/>
+<path d="M9.40039 9.40026L26.6671 26.6669H63.5337C63.2004 24.8003 62.7337 23.0669 62.1337 21.3336H28.8671L13.4671 5.93359C12.0004 6.93359 10.6671 8.13359 9.40039 9.40026Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M26.6671 37.334L9.40039 54.6007C10.6671 55.8673 12.0671 57.0007 13.4671 58.0673L28.8671 42.6673H62.1337C62.7337 40.934 63.2004 39.2007 63.5337 37.334H26.6671Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M17.3326 32.0003L3.26589 17.9336C2.39922 19.6669 1.73255 21.5336 1.19922 23.4003L9.79922 32.0003L1.19922 40.6003C1.73255 42.4669 2.39922 44.3336 3.26589 46.0669L17.3326 32.0003Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_230_12585">
+<rect width="64" height="64" rx="32" fill="white" style="fill:white;fill-opacity:1;"/>
+</clipPath>
+</defs>
+</svg>

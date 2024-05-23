@@ -58,9 +58,9 @@
    <div class="bg-lang fixed hidden  bottom-0 left-0 right-0 top-0 z-[20]  bg-[#060605]/[0.9] ml:hidden">
 
 
-      <div class="swipe-down  absolute   w-[99%] rounded-[35px] bg-white2 ml:hidden">
-         <div class="mx-auto mt-2 close-lang block h-[3px] w-[40px] rounded-full bg-grey" data-swipe-threshold="20"
-            data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"></div>
+      <div class="swipe-down  absolute close-lang   w-[99%] rounded-[35px] bg-white2 ml:hidden"
+         data-swipe-threshold="20" data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false">
+         <div class="mx-auto mt-2 block h-[3px] w-[40px] rounded-full bg-grey"></div>
          <div class="w-[375px] cursor-pointer rounded-[16px] p-6">
             <a href="/"
                class="lang is-active flex h-[48px] items-center justify-start gap-2 hover:rounded-lg hover:bg-white">
@@ -746,7 +746,9 @@
                   </ul>
                </div>
                <!-- content  -->
-               <div class="w-full relative ">
+               <div class="w-full relative element_random">
+                  <div id="circle" class="element absolute w-0 h-0 rounded-full shadow-[0_0_150px_35px_#d7ff00]">
+                  </div>
                   <div class="h-full w-full absolute hidden -z-10 backdrop-blur-[15px]"></div>
                   <div class=" ml:bg-transparent   px-4 pt-[22px]  ml:p-0">
                      <div class="mb-[22px] flex w-full items-center justify-between gap-2 ml:hidden">
@@ -1060,6 +1062,7 @@
    <script src="../cursor.js">
 
    </script>
+   <script src="../circle.js"></script>
 
    <script>
       function toggleShow() {

@@ -1,0 +1,24 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_230_12369)">
+<mask id="mask0_230_12369" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+<path d="M64 0H0V64H64V0Z" fill="white" style="fill:white;fill-opacity:1;"/>
+</mask>
+<g mask="url(#mask0_230_12369)">
+<path d="M1.80078 21.3337H62.1341C60.7341 17.3337 58.5341 13.7337 55.8008 10.667H8.13411C5.40078 13.7337 3.26745 17.3337 1.80078 21.3337Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M8.13379 10.6667H55.8005C50.0005 4.13333 41.4671 0 32.0005 0C22.5338 0 14.0005 4.13333 8.13379 10.6667Z" fill="black" style="fill:black;fill-opacity:1;"/>
+<path d="M0 31.9996H64C64 28.2663 63.3333 24.6663 62.2 21.333H1.8C0.666667 24.6663 0 28.2663 0 31.9996Z" fill="#F0263C" style="fill:#F0263C;fill:color(display-p3 0.9412 0.1490 0.2353);fill-opacity:1;"/>
+<path d="M8.13411 53.3337H55.8008C58.5341 50.267 60.7341 46.667 62.1341 42.667H1.80078C3.26745 46.667 5.40078 50.267 8.13411 53.3337Z" fill="#FFD400" style="fill:#FFD400;fill:color(display-p3 1.0000 0.8314 0.0000);fill-opacity:1;"/>
+<path d="M1.8 42.6667H62.1333C63.3333 39.3333 64 35.7333 64 32H0C0 35.7333 0.666667 39.3333 1.8 42.6667Z" fill="black" style="fill:black;fill-opacity:1;"/>
+<path d="M55.8671 53.333H8.13379C14.0005 59.8663 22.5338 63.9996 32.0005 63.9996C41.4671 63.9996 50.0005 59.8663 55.8671 53.333Z" fill="#F0263C" style="fill:#F0263C;fill:color(display-p3 0.9412 0.1490 0.2353);fill-opacity:1;"/>
+<path d="M32.0003 41.3327C37.155 41.3327 41.3337 37.154 41.3337 31.9993C41.3337 26.8447 37.155 22.666 32.0003 22.666C26.8457 22.666 22.667 26.8447 22.667 31.9993C22.667 37.154 26.8457 41.3327 32.0003 41.3327Z" fill="white" style="fill:white;fill-opacity:1;"/>
+<path d="M28.0003 26.6666L29.3337 25.3333L30.667 24H32.0003V26.6666L30.667 29.3333L34.667 30.6666L37.3337 33.3333V36V37.3333H36.0003L34.667 36H33.3337V38.6666L34.667 40H30.667L32.0003 38.6666V36H29.3337V37.3333H26.667L28.0003 36L29.3337 34.6666H32.0003L28.0003 32V29.3333L30.667 26.6666H28.0003Z" fill="black" style="fill:black;fill-opacity:1;"/>
+<path d="M30.667 30.666L33.3337 33.3327L34.667 34.666V35.9993L36.0003 37.3327H37.3337V33.3327L34.667 30.666H30.667Z" fill="#F0263C" style="fill:#F0263C;fill:color(display-p3 0.9412 0.1490 0.2353);fill-opacity:1;"/>
+<path d="M34.667 33.3327H33.3337L30.667 30.666H33.3337L36.0003 33.3327H34.667Z" fill="white" style="fill:white;fill-opacity:1;"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_230_12369">
+<rect width="64" height="64" rx="32" fill="white" style="fill:white;fill-opacity:1;"/>
+</clipPath>
+</defs>
+</svg>
