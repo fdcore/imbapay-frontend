@@ -265,7 +265,7 @@
             <li class="relative mb-2 w-full rounded-[15px] bg-white10 p-4 py-4">
               <div class="absolute inset-0 bg-cover backdrop-blur-[10px]"></div>
               <a class="menu-profile group relative z-10 flex items-center justify-between font-AProR text-grey hover:text-main transition-all duration-300"
-                href="/">
+                href="../support/index.html">
                 <div class="flex items-center gap-2">
                   <span
                     class="spanicon flex h-[54px] w-[54px] items-center justify-center rounded-full bg-bg3 group-hover:bg-main">
@@ -321,159 +321,9 @@
     </div>
   </div>
   </div>
-  <script>
-    var swiper = new Swiper('.mySwiperCard', {
-      enabled: true,
-      // slidesPerView: 1,
-      slidesPerView: 'auto',
-      spaceBetween: 30
-    })
-  </script>
-  <script>
-    const card = document.querySelectorAll('.card')
-    const widthCard = document.querySelector('.widthcardBlock').offsetWidth
-    const cardWidth = document.querySelector('.card').offsetWidth
-    let mr = Math.round((-1 * (card.length * cardWidth - widthCard)) / (card.length - 1))
-    card.forEach((item) => {
-      item.style.marginRight = mr + 'px'
-      item.addEventListener('mousemove', rotate)
-      item.addEventListener('mouseout', stopRotate)
-    })
 
-    // animate
-    function rotate(event) {
-      const itemCard = this.querySelector('.item-card')
-      const halfHeight = itemCard.offsetHeight / 2
-      const halfWidth = itemCard.offsetWidth / 2
-      itemCard.style.transform = `rotateX(${-(event.offsetY - halfHeight) / 10}deg) rotateY(${(event.offsetX - halfWidth) / 10}deg)`
-    }
 
-    function stopRotate(event) {
-      const itemCard = this.querySelector('.item-card')
-      itemCard.style.transform = 'rotate(0)'
-    }
-    // animate mobile card
-    const swiperSlide = document.querySelectorAll('.swiper-slide')
-    function rotateMob(event) {
-      const itemCard = this.querySelector('.item-card-mobile')
-      const halfHeight = itemCard.offsetHeight / 2
-      const halfWidth = itemCard.offsetWidth / 2
-      itemCard.style.transform = `rotateX(${-(event.offsetY - halfHeight) / 10}deg) rotateY(${(event.offsetX - halfWidth) / 10}deg)`
-    }
-    function stopRotateMob(event) {
-      const itemCard = this.querySelector('.item-card-mobile')
-      itemCard.style.transform = 'rotate(0)'
-    }
-    swiperSlide.forEach((item) => {
-      item.addEventListener('mousemove', rotateMob)
-      item.addEventListener('mouseout', stopRotateMob)
-    })
-  </script>
-  <script>
-    function formatNumberWithDot(value) {
-      return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
-    }
-    var ctx = document.getElementById('myChart').getContext('2d')
 
-    // Создание градиента
-    var gradient = ctx.createLinearGradient(0, 0, 0, 400)
-    gradient.addColorStop(0, 'rgba(215, 255, 0,0.3)')
-    gradient.addColorStop(1, 'rgb(0,0,0,00)')
-
-    var myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', ''],
-        datasets: [
-          {
-            data: [5, 20, 30, 5, 15, 60, 55.5, 25, 70, 20, 55, 36, 33.3, 77],
-            fill: true,
-            borderColor: '#434F02',
-            backgroundColor: gradient,
-            tension: 0.3,
-            hitRadius: 10,
-            beginAtZero: true,
-            pointBackgroundColor: 'rgba(215,255,0,0.5)',
-            pointBorderColor: 'transparent', // Цвет границы точек
-            pointBorderWidth: 2, // Ширина границы точек
-            pointRadius: 1, // Радиус точек
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: 'rgba(215,255,0,1)',
-            pointHoverBorderWidth: 10,
-            pointHoverBorderColor: 'rgba(215,255,0,0.3)' // Радиус точек при наведении
-          }
-        ]
-      },
-      options: {
-        maintainAspectRatio: false,
-        responsive: true,
-        scales: {
-          x: {
-            display: false
-          },
-          y: {
-            display: false,
-            suggestedMax: 100 // Задать максимальное значение на оси Y
-          }
-        },
-        plugins: {
-          legend: {
-            display: false
-          },
-          tooltip: {
-            enabled: true,
-            backgroundColor: 'rgb(215, 255, 0,1)',
-            pointStyle: 'circle',
-            cornerRadius: 5,
-            bodyColor: 'black',
-            bodyFont: 'ABl',
-            titleFont: 'ABl',
-            bodySize: 20,
-            displayColors: false,
-            xAlign: 'center',
-            yAlign: 'bottom',
-            titleSize: 20,
-            caretSize: 5,
-            caretPadding: 12,
-            cornerRadius: 15,
-            padding: {
-              left: 15,
-              right: 15,
-              top: 5,
-              bottom: 5
-            }
-          }
-        }
-      }
-    })
-  </script>
-  <script>
-    const swipeHide = document.querySelector('.swipe-hide')
-
-    let isSwiping = false
-    let touchStartX = 0
-    let touchEndX = 0
-
-    swipeHide.addEventListener('touchstart', (e) => {
-      isSwiping = true
-      touchStartX = e.touches[0].clientX
-    })
-
-    swipeHide.addEventListener('touchmove', (e) => {
-      if (!isSwiping) {
-        return
-      }
-      touchEndX = e.touches[0].clientX
-    })
-
-    swipeHide.addEventListener('touchend', () => {
-      if (touchEndX < touchStartX) {
-        swipeHide.classList.add('hide') // Добавляем класс hide при свайпе вниз
-        document.querySelector('.bg-lang').classList.add('hide-bg')
-      }
-      isSwiping = false
-    })
-  </script>
 </body>
 
 </html>

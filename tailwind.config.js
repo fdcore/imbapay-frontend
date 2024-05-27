@@ -63,7 +63,7 @@ module.exports = {
       '2xs': [
         '0.625rem',
         {
-          lineHeight: '24px'
+          lineHeight: '14px'
         }
       ], // 10px
       xs: [

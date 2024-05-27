@@ -1,0 +1,419 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
+  <title>Регистрация</title>
+  <link href="../style.css" rel="stylesheet" />
+</head>
+
+<body x-data="form()">
+  <img class="hidden ml:block fixed bottom-0 left-[50%] -z-10 translate-x-[-50%]"
+    src="../img/registration/Frame47440.png" alt="">
+
+  <div
+    class="absolute hidden ml:block top-0 pointer-events-none left-0 w-full h-full z-50 bg-gradient-to-tr from-transparent from-30%  via-[rgba(215,225,0,0.05)] via-50% to-transparent to-80%">
+  </div>
+  <div class="fixed bottom-0 right-0 w-full h-full opacity-30 -z-10 bg-main">
+    <img class="fixed bottom-0 right-0 w-full h-full mix-blend-luminosity  -z-10"
+      src="../img/registration/abstract-blue-background-web-design-templates-product-studio-with-smooth-gradient-color 1.png"
+      alt="">
+  </div>
+  <!-- header -->
+  <div class="relative w-full mb-[22px] ml:mb-0">
+    <div class="header w-full ml:bg-[#161617]">
+      <div class="imba-container menu-desktop hidden h-[80px] items-center justify-between md:flex">
+        <span class="text-[28px]">imbapay.</span>
+        <a href="/"
+          class="inline-flex h-[44px] w-[44px] cursor-pointer items-center justify-center rounded-full bg-transparent hover:bg-bg3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.414 12L20 5.414L18.586 4L12 10.586L5.414 4L4 5.414L10.586 12L4 18.586L5.414 20L12 13.414L18.586 20L20 18.586L13.414 12Z"
+              fill="white" style="fill: white; fill-opacity: 1" />
+          </svg>
+        </a>
+      </div>
+      <div class="imba-container flex h-[80px] items-center justify-between pt-4 md:hidden">
+        <a href="../home_page/index.html"
+          class="inline-flex h-[44px] w-[44px] cursor-pointer items-center justify-center rounded-full bg-bg3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6.25896 18.4498L6.40038 18.5912L6.5418 18.4498L12.0004 12.9912L17.459 18.4498L17.6004 18.5912L17.7418 18.4498L18.4498 17.7418L18.5912 17.6004L18.4498 17.459L12.9912 12.0004L18.4498 6.5418L18.5912 6.40038L18.4498 6.25896L17.7418 5.55096L17.6004 5.40954L17.459 5.55096L12.0004 11.0095L6.5418 5.55096L6.40038 5.40954L6.25896 5.55096L5.55096 6.25896L5.40954 6.40038L5.55096 6.5418L11.0095 12.0004L5.55096 17.459L5.40954 17.6004L5.55096 17.7418L6.25896 18.4498Z"
+              fill="white" stroke="white" style="fill:white;fill-opacity:1;stroke:white;stroke-opacity:1;"
+              stroke-width="0.4" />
+          </svg>
+        </a>
+        <span class="ml:hidden border-[1px] h-6 rounded-[12px] border-grey px-3 flex items-center  text-xs text-grey">
+          <span class="text-white2 text-sm uppercase">4</span>&nbsp; /12</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative w-full from-[#000000] from-10% via-[#8f8f8f]/[0.15] to-[#000000] to-80% ml:bg-gradient-to-tr">
+    <div class="imba-container relative" style="height: calc(100vh - 80px)">
+
+
+      <div class="flex  w-full  h-full items-center justify-center ">
+        <!-- registr desktop-->
+        <div
+          class="hidden md:block h-[688px]   relative w-full rounded-[35px] bg-transparent pb-6 md:w-[590px] ml:bg-white10 ">
+          <div class="backdrop-blur-[180px] w-full h-full absolute top-0 left-0 -z-10"></div>
+          <div class="flex justify-between mb-7 mt-6  border-[#E8EBE6]/[0.2] ml:border-b-[1px] pb-6 px-6">
+            <div class="flex flex-col justify-between mb-2">
+              <h3 class=" text-[30px]  text-white2 ml:text-[22px]">
+                What kind of account whould
+                you like to open today?
+              </h3>
+              <div class="text-grey">You can add another account later on, too.</div>
+            </div>
+
+            <span class="border-[1px] w-16 h-6 rounded-[12px] border-grey px-3 flex items-center  text-xs text-grey">
+              <span class="text-white2 text-sm uppercase">4</span>&nbsp; /12</span>
+          </div>
+          <div class="flex flex-col justify-between ">
+            <div class="px-6 flex flex-col gap-2">
+              <div class="rounded-[20px] relative bg-white10 p-4 w-full flex justify-between items-center">
+                <div class="absolute backdrop-blur-[30px] h-full w-full -z-10 top-0 left-0"></div>
+                <div class="flex justify-between gap-2 items-center">
+                  <span
+                    class="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-white10 group-hover:bg-main">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.99471 12.6909H4.98047V14.1952H9.99471V12.6909Z" fill="white" stroke="white"
+                        style="fill:white;fill-opacity:1;stroke:white;stroke-opacity:1;" stroke-width="0.225" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.22266 3.6665H20.7782V18.2078H1.22266V3.6665ZM2.72693 5.17078V8.68075H19.2739V5.17078H2.72693ZM2.72693 16.7035V10.185H19.2739V16.7035H2.72693Z"
+                        fill="white" stroke="white" style="fill:white;fill-opacity:1;stroke:white;stroke-opacity:1;"
+                        stroke-width="0.225" />
+                    </svg>
+                  </span>
+                  <div class="flex flex-col w-[400px] gap-1">
+                    <div class="leading-none">
+                      Send money abroad
+                    </div>
+                    <p class="text-[14px] text-grey ">
+                      Make faster, cheaper money transfer.
+                    </p>
+                  </div>
+                </div>
+                <div class="w-4">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0865 7.986C11.1406 8.03761 11.1837 8.09968 11.2132 8.16843C11.2426 8.23719 11.2578 8.3112 11.2578 8.386C11.2578 8.4608 11.2426 8.53481 11.2132 8.60357C11.1837 8.67232 11.1406 8.73439 11.0865 8.786L5.37251 14.5L4.57251 13.7L9.88651 8.386L4.57251 3.07133L5.37251 2.27133L11.0865 7.986Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </div>
+              </div>
+              <div class="rounded-[20px] relative bg-white10 p-4 w-full flex justify-between items-center">
+                <div class="absolute backdrop-blur-[30px] h-full w-full -z-10 top-0 left-0"></div>
+                <div class="flex justify-between gap-2 items-center">
+                  <span
+                    class="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-white10 group-hover:bg-main">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.5 16.5H22.5V18H1.5V16.5ZM1.5 19.5H22.5V21H1.5V19.5ZM18 7.5C17.7033 7.5 17.4133 7.58798 17.1666 7.7528C16.92 7.91762 16.7277 8.15189 16.6142 8.42598C16.5006 8.70007 16.4709 9.00167 16.5288 9.29264C16.5867 9.58361 16.7296 9.85088 16.9393 10.0607C17.1491 10.2704 17.4164 10.4133 17.7074 10.4712C17.9983 10.5291 18.2999 10.4994 18.574 10.3858C18.8481 10.2723 19.0824 10.08 19.2472 9.83336C19.412 9.58668 19.5 9.29667 19.5 9C19.5 8.60218 19.342 8.22065 19.0607 7.93934C18.7794 7.65804 18.3978 7.5 18 7.5ZM12 12C11.4067 12 10.8266 11.8241 10.3333 11.4944C9.83994 11.1648 9.45542 10.6962 9.22836 10.1481C9.0013 9.59987 8.94189 8.99667 9.05764 8.41473C9.1734 7.83279 9.45912 7.29824 9.87868 6.87868C10.2982 6.45912 10.8328 6.1734 11.4147 6.05765C11.9967 5.94189 12.5999 6.0013 13.1481 6.22836C13.6962 6.45543 14.1648 6.83994 14.4944 7.33329C14.8241 7.82664 15 8.40666 15 9C14.999 9.79535 14.6826 10.5578 14.1202 11.1202C13.5578 11.6826 12.7953 11.999 12 12ZM12 7.5C11.7033 7.5 11.4133 7.58798 11.1666 7.7528C10.92 7.91762 10.7277 8.15189 10.6142 8.42598C10.5006 8.70007 10.4709 9.00167 10.5288 9.29264C10.5867 9.58361 10.7296 9.85088 10.9393 10.0607C11.1491 10.2704 11.4164 10.4133 11.7074 10.4712C11.9983 10.5291 12.2999 10.4994 12.574 10.3858C12.8481 10.2723 13.0824 10.08 13.2472 9.83336C13.412 9.58668 13.5 9.29667 13.5 9C13.5 8.60218 13.342 8.22065 13.0607 7.93934C12.7794 7.65804 12.3978 7.5 12 7.5ZM6 7.5C5.70333 7.5 5.41332 7.58798 5.16664 7.7528C4.91997 7.91762 4.72771 8.15189 4.61418 8.42598C4.50065 8.70007 4.47094 9.00167 4.52882 9.29264C4.5867 9.58361 4.72956 9.85088 4.93934 10.0607C5.14912 10.2704 5.41639 10.4133 5.70736 10.4712C5.99834 10.5291 6.29994 10.4994 6.57403 10.3858C6.84811 10.2723 7.08238 10.08 7.2472 9.83336C7.41203 9.58668 7.5 9.29667 7.5 9C7.5 8.60218 7.34196 8.22065 7.06066 7.93934C6.77936 7.65804 6.39782 7.5 6 7.5Z"
+                        fill="white" style="fill:white;fill-opacity:1;" />
+                      <path
+                        d="M21 15H3C2.60248 14.999 2.22152 14.8407 1.94043 14.5596C1.65934 14.2785 1.50099 13.8975 1.5 13.5V4.5C1.50099 4.10248 1.65934 3.72152 1.94043 3.44043C2.22152 3.15934 2.60248 3.00099 3 3H21C21.3975 3.00099 21.7785 3.15934 22.0596 3.44043C22.3407 3.72152 22.499 4.10248 22.5 4.5V13.5C22.4994 13.8976 22.3412 14.2788 22.06 14.56C21.7788 14.8412 21.3976 14.9994 21 15ZM21 4.5H3V13.5H21V4.5Z"
+                        fill="white" style="fill:white;fill-opacity:1;" />
+                    </svg>
+                  </span>
+                  <div class="flex flex-col w-[400px] gap-1">
+                    <div class="leading-none">
+                      Order a card to spend abroad
+                    </div>
+                    <p class="text-[14px] text-grey ">
+                      Spend in multiple currencies.
+                    </p>
+                  </div>
+                </div>
+                <div class="w-4">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0865 7.986C11.1406 8.03761 11.1837 8.09968 11.2132 8.16843C11.2426 8.23719 11.2578 8.3112 11.2578 8.386C11.2578 8.4608 11.2426 8.53481 11.2132 8.60357C11.1837 8.67232 11.1406 8.73439 11.0865 8.786L5.37251 14.5L4.57251 13.7L9.88651 8.386L4.57251 3.07133L5.37251 2.27133L11.0865 7.986Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </div>
+              </div>
+              <div class="rounded-[20px] relative bg-white10 p-4 w-full flex justify-between items-center">
+                <div class="absolute backdrop-blur-[30px] h-full w-full -z-10 top-0 left-0"></div>
+                <div class="flex justify-between gap-2 items-center">
+                  <span
+                    class="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-white10 group-hover:bg-main">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.83301 18.3335H20.1663V20.1668H1.83301V18.3335ZM3.66634 11.0002H5.49967V17.4168H3.66634V11.0002ZM8.24967 11.0002H10.083V17.4168H8.24967V11.0002ZM11.9163 11.0002H13.7497V17.4168H11.9163V11.0002ZM16.4997 11.0002H18.333V17.4168H16.4997V11.0002ZM1.83301 6.41683L10.9997 1.8335L20.1663 6.41683V10.0835H1.83301V6.41683ZM3.66634 7.54983V8.25016H18.333V7.54983L10.9997 3.88316L3.66634 7.54983ZM10.9997 7.3335C10.7566 7.3335 10.5234 7.23692 10.3515 7.06501C10.1796 6.8931 10.083 6.65994 10.083 6.41683C10.083 6.17371 10.1796 5.94056 10.3515 5.76865C10.5234 5.59674 10.7566 5.50016 10.9997 5.50016C11.2428 5.50016 11.4759 5.59674 11.6479 5.76865C11.8198 5.94056 11.9163 6.17371 11.9163 6.41683C11.9163 6.65994 11.8198 6.8931 11.6479 7.06501C11.4759 7.23692 11.2428 7.3335 10.9997 7.3335Z"
+                        fill="white" style="fill:white;fill-opacity:1;" />
+                    </svg>
+                  </span>
+                  <div class="flex flex-col w-[400px] gap-1">
+                    <div class="leading-none">
+                      Get local account details
+                    </div>
+                    <p class="text-[14px] text-grey ">
+                      Receive payments or income.
+                    </p>
+                  </div>
+                </div>
+                <div class="w-4">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0865 7.986C11.1406 8.03761 11.1837 8.09968 11.2132 8.16843C11.2426 8.23719 11.2578 8.3112 11.2578 8.386C11.2578 8.4608 11.2426 8.53481 11.2132 8.60357C11.1837 8.67232 11.1406 8.73439 11.0865 8.786L5.37251 14.5L4.57251 13.7L9.88651 8.386L4.57251 3.07133L5.37251 2.27133L11.0865 7.986Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </div>
+              </div>
+              <div class="rounded-[20px] relative bg-white10 p-4 w-full flex justify-between items-center">
+                <div class="absolute backdrop-blur-[30px] h-full w-full -z-10 top-0 left-0"></div>
+                <div class="flex justify-between gap-2 items-center">
+                  <span
+                    class="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-white10 group-hover:bg-main">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.32 5.36H3.52C3.29722 5.36 3.08356 5.2715 2.92603 5.11397C2.7685 4.95644 2.68 4.74278 2.68 4.52C2.68 4.29722 2.7685 4.08356 2.92603 3.92603C3.08356 3.7685 3.29722 3.68 3.52 3.68H17.8C18.0228 3.68 18.2364 3.5915 18.394 3.43397C18.5515 3.27644 18.64 3.06278 18.64 2.84C18.64 2.61722 18.5515 2.40356 18.394 2.24603C18.2364 2.0885 18.0228 2 17.8 2H3.52C2.85165 2 2.21068 2.2655 1.73809 2.73809C1.2655 3.21068 1 3.85165 1 4.52V17.96C1 18.6283 1.2655 19.2693 1.73809 19.7419C2.21068 20.2145 2.85165 20.48 3.52 20.48H20.32C20.7656 20.48 21.1929 20.303 21.5079 19.9879C21.823 19.6729 22 19.2456 22 18.8V7.04C22 6.59444 21.823 6.16712 21.5079 5.85206C21.1929 5.537 20.7656 5.36 20.32 5.36ZM20.32 18.8H3.52C3.29722 18.8 3.08356 18.7115 2.92603 18.554C2.7685 18.3964 2.68 18.1828 2.68 17.96V6.89615C2.94972 6.99176 3.23384 7.04042 3.52 7.04H20.32V18.8ZM15.28 12.5C15.28 12.2508 15.3539 12.0072 15.4923 11.8C15.6308 11.5928 15.8276 11.4313 16.0578 11.3359C16.2881 11.2405 16.5414 11.2156 16.7858 11.2642C17.0302 11.3128 17.2547 11.4328 17.431 11.609C17.6072 11.7853 17.7272 12.0098 17.7758 12.2542C17.8244 12.4986 17.7995 12.7519 17.7041 12.9822C17.6087 13.2124 17.4472 13.4092 17.24 13.5477C17.0328 13.6861 16.7892 13.76 16.54 13.76C16.2058 13.76 15.8853 13.6273 15.649 13.391C15.4128 13.1547 15.28 12.8342 15.28 12.5Z"
+                        fill="white" style="fill:white;fill-opacity:1;" />
+                    </svg>
+                  </span>
+                  <div class="flex flex-col w-[400px] gap-1">
+                    <div class="leading-none">
+                      Hold many currencies in one place
+                    </div>
+                    <p class="text-[14px] text-grey ">
+                      Open a balance in 50+ currencies,
+                    </p>
+                  </div>
+                </div>
+                <div class="w-4">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0865 7.986C11.1406 8.03761 11.1837 8.09968 11.2132 8.16843C11.2426 8.23719 11.2578 8.3112 11.2578 8.386C11.2578 8.4608 11.2426 8.53481 11.2132 8.60357C11.1837 8.67232 11.1406 8.73439 11.0865 8.786L5.37251 14.5L4.57251 13.7L9.88651 8.386L4.57251 3.07133L5.37251 2.27133L11.0865 7.986Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute bottom-6 text-main w-full text-sm flex justify-center">Decide later</div>
+          </div>
+        </div>
+        <!-- register mobile -->
+        <div class=" md:hidden w-full flex flex-col justify-between  h-full">
+          <div class="">
+            <h2 class="text-[30px] leading-snug text-white2 mb-[22px]">What kind of account whould
+              you like to open today?</h2>
+            <div class="text-grey">You can add another account later on, too.</div>
+            <div class="flex flex-col mt-6 gap-4">
+
+              <div class="rounded-[20px] relative bg-white10 p-4 w-full flex justify-between items-center">
+                <div class="absolute backdrop-blur-[30px] h-full w-full -z-10 top-0 left-0"></div>
+                <div class="flex justify-between gap-2 items-center">
+                  <span
+                    class="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10 group-hover:bg-main">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.99471 12.6909H4.98047V14.1952H9.99471V12.6909Z" fill="white" stroke="white"
+                        style="fill:white;fill-opacity:1;stroke:white;stroke-opacity:1;" stroke-width="0.225" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.22266 3.6665H20.7782V18.2078H1.22266V3.6665ZM2.72693 5.17078V8.68075H19.2739V5.17078H2.72693ZM2.72693 16.7035V10.185H19.2739V16.7035H2.72693Z"
+                        fill="white" stroke="white" style="fill:white;fill-opacity:1;stroke:white;stroke-opacity:1;"
+                        stroke-width="0.225" />
+                    </svg>
+                  </span>
+                  <div class="flex flex-col w-[235px] gap-1">
+                    <div class="leading-none">
+                      Send money abroad
+                    </div>
+                    <p class="text-[14px] text-grey ">
+                      Make faster, cheaper money transfer.
+                    </p>
+                  </div>
+                </div>
+                <div class="w-4">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0865 7.986C11.1406 8.03761 11.1837 8.09968 11.2132 8.16843C11.2426 8.23719 11.2578 8.3112 11.2578 8.386C11.2578 8.4608 11.2426 8.53481 11.2132 8.60357C11.1837 8.67232 11.1406 8.73439 11.0865 8.786L5.37251 14.5L4.57251 13.7L9.88651 8.386L4.57251 3.07133L5.37251 2.27133L11.0865 7.986Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </div>
+              </div>
+              <div class="rounded-[20px] relative bg-white10 p-4 w-full flex justify-between items-center">
+                <div class="absolute backdrop-blur-[30px] h-full w-full -z-10 top-0 left-0"></div>
+                <div class="flex justify-between gap-2 items-center">
+                  <span
+                    class="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10 group-hover:bg-main">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.5 16.5H22.5V18H1.5V16.5ZM1.5 19.5H22.5V21H1.5V19.5ZM18 7.5C17.7033 7.5 17.4133 7.58798 17.1666 7.7528C16.92 7.91762 16.7277 8.15189 16.6142 8.42598C16.5006 8.70007 16.4709 9.00167 16.5288 9.29264C16.5867 9.58361 16.7296 9.85088 16.9393 10.0607C17.1491 10.2704 17.4164 10.4133 17.7074 10.4712C17.9983 10.5291 18.2999 10.4994 18.574 10.3858C18.8481 10.2723 19.0824 10.08 19.2472 9.83336C19.412 9.58668 19.5 9.29667 19.5 9C19.5 8.60218 19.342 8.22065 19.0607 7.93934C18.7794 7.65804 18.3978 7.5 18 7.5ZM12 12C11.4067 12 10.8266 11.8241 10.3333 11.4944C9.83994 11.1648 9.45542 10.6962 9.22836 10.1481C9.0013 9.59987 8.94189 8.99667 9.05764 8.41473C9.1734 7.83279 9.45912 7.29824 9.87868 6.87868C10.2982 6.45912 10.8328 6.1734 11.4147 6.05765C11.9967 5.94189 12.5999 6.0013 13.1481 6.22836C13.6962 6.45543 14.1648 6.83994 14.4944 7.33329C14.8241 7.82664 15 8.40666 15 9C14.999 9.79535 14.6826 10.5578 14.1202 11.1202C13.5578 11.6826 12.7953 11.999 12 12ZM12 7.5C11.7033 7.5 11.4133 7.58798 11.1666 7.7528C10.92 7.91762 10.7277 8.15189 10.6142 8.42598C10.5006 8.70007 10.4709 9.00167 10.5288 9.29264C10.5867 9.58361 10.7296 9.85088 10.9393 10.0607C11.1491 10.2704 11.4164 10.4133 11.7074 10.4712C11.9983 10.5291 12.2999 10.4994 12.574 10.3858C12.8481 10.2723 13.0824 10.08 13.2472 9.83336C13.412 9.58668 13.5 9.29667 13.5 9C13.5 8.60218 13.342 8.22065 13.0607 7.93934C12.7794 7.65804 12.3978 7.5 12 7.5ZM6 7.5C5.70333 7.5 5.41332 7.58798 5.16664 7.7528C4.91997 7.91762 4.72771 8.15189 4.61418 8.42598C4.50065 8.70007 4.47094 9.00167 4.52882 9.29264C4.5867 9.58361 4.72956 9.85088 4.93934 10.0607C5.14912 10.2704 5.41639 10.4133 5.70736 10.4712C5.99834 10.5291 6.29994 10.4994 6.57403 10.3858C6.84811 10.2723 7.08238 10.08 7.2472 9.83336C7.41203 9.58668 7.5 9.29667 7.5 9C7.5 8.60218 7.34196 8.22065 7.06066 7.93934C6.77936 7.65804 6.39782 7.5 6 7.5Z"
+                        fill="white" style="fill:white;fill-opacity:1;" />
+                      <path
+                        d="M21 15H3C2.60248 14.999 2.22152 14.8407 1.94043 14.5596C1.65934 14.2785 1.50099 13.8975 1.5 13.5V4.5C1.50099 4.10248 1.65934 3.72152 1.94043 3.44043C2.22152 3.15934 2.60248 3.00099 3 3H21C21.3975 3.00099 21.7785 3.15934 22.0596 3.44043C22.3407 3.72152 22.499 4.10248 22.5 4.5V13.5C22.4994 13.8976 22.3412 14.2788 22.06 14.56C21.7788 14.8412 21.3976 14.9994 21 15ZM21 4.5H3V13.5H21V4.5Z"
+                        fill="white" style="fill:white;fill-opacity:1;" />
+                    </svg>
+                  </span>
+                  <div class="flex flex-col w-[235px] gap-1">
+                    <div class="leading-none">
+                      Order a card to spend abroad
+                    </div>
+                    <p class="text-[14px] text-grey ">
+                      Spend in multiple currencies.
+                    </p>
+                  </div>
+                </div>
+                <div class="w-4">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0865 7.986C11.1406 8.03761 11.1837 8.09968 11.2132 8.16843C11.2426 8.23719 11.2578 8.3112 11.2578 8.386C11.2578 8.4608 11.2426 8.53481 11.2132 8.60357C11.1837 8.67232 11.1406 8.73439 11.0865 8.786L5.37251 14.5L4.57251 13.7L9.88651 8.386L4.57251 3.07133L5.37251 2.27133L11.0865 7.986Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </div>
+              </div>
+              <div class="rounded-[20px] relative bg-white10 p-4 w-full flex justify-between items-center">
+                <div class="absolute backdrop-blur-[30px] h-full w-full -z-10 top-0 left-0"></div>
+                <div class="flex justify-between gap-2 items-center">
+                  <span
+                    class="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10 group-hover:bg-main">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.83301 18.3335H20.1663V20.1668H1.83301V18.3335ZM3.66634 11.0002H5.49967V17.4168H3.66634V11.0002ZM8.24967 11.0002H10.083V17.4168H8.24967V11.0002ZM11.9163 11.0002H13.7497V17.4168H11.9163V11.0002ZM16.4997 11.0002H18.333V17.4168H16.4997V11.0002ZM1.83301 6.41683L10.9997 1.8335L20.1663 6.41683V10.0835H1.83301V6.41683ZM3.66634 7.54983V8.25016H18.333V7.54983L10.9997 3.88316L3.66634 7.54983ZM10.9997 7.3335C10.7566 7.3335 10.5234 7.23692 10.3515 7.06501C10.1796 6.8931 10.083 6.65994 10.083 6.41683C10.083 6.17371 10.1796 5.94056 10.3515 5.76865C10.5234 5.59674 10.7566 5.50016 10.9997 5.50016C11.2428 5.50016 11.4759 5.59674 11.6479 5.76865C11.8198 5.94056 11.9163 6.17371 11.9163 6.41683C11.9163 6.65994 11.8198 6.8931 11.6479 7.06501C11.4759 7.23692 11.2428 7.3335 10.9997 7.3335Z"
+                        fill="white" style="fill:white;fill-opacity:1;" />
+                    </svg>
+                  </span>
+                  <div class="flex flex-col w-[235px] gap-1">
+                    <div class="leading-none">
+                      Get local account details
+                    </div>
+                    <p class="text-[14px] text-grey ">
+                      Receive payments or income.
+                    </p>
+                  </div>
+                </div>
+                <div class="w-4">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0865 7.986C11.1406 8.03761 11.1837 8.09968 11.2132 8.16843C11.2426 8.23719 11.2578 8.3112 11.2578 8.386C11.2578 8.4608 11.2426 8.53481 11.2132 8.60357C11.1837 8.67232 11.1406 8.73439 11.0865 8.786L5.37251 14.5L4.57251 13.7L9.88651 8.386L4.57251 3.07133L5.37251 2.27133L11.0865 7.986Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </div>
+              </div>
+              <div class="rounded-[20px] relative bg-white10 p-4 w-full flex justify-between items-center">
+                <div class="absolute backdrop-blur-[30px] h-full w-full -z-10 top-0 left-0"></div>
+                <div class="flex justify-between gap-2 items-center">
+                  <span
+                    class="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10 group-hover:bg-main">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.32 5.36H3.52C3.29722 5.36 3.08356 5.2715 2.92603 5.11397C2.7685 4.95644 2.68 4.74278 2.68 4.52C2.68 4.29722 2.7685 4.08356 2.92603 3.92603C3.08356 3.7685 3.29722 3.68 3.52 3.68H17.8C18.0228 3.68 18.2364 3.5915 18.394 3.43397C18.5515 3.27644 18.64 3.06278 18.64 2.84C18.64 2.61722 18.5515 2.40356 18.394 2.24603C18.2364 2.0885 18.0228 2 17.8 2H3.52C2.85165 2 2.21068 2.2655 1.73809 2.73809C1.2655 3.21068 1 3.85165 1 4.52V17.96C1 18.6283 1.2655 19.2693 1.73809 19.7419C2.21068 20.2145 2.85165 20.48 3.52 20.48H20.32C20.7656 20.48 21.1929 20.303 21.5079 19.9879C21.823 19.6729 22 19.2456 22 18.8V7.04C22 6.59444 21.823 6.16712 21.5079 5.85206C21.1929 5.537 20.7656 5.36 20.32 5.36ZM20.32 18.8H3.52C3.29722 18.8 3.08356 18.7115 2.92603 18.554C2.7685 18.3964 2.68 18.1828 2.68 17.96V6.89615C2.94972 6.99176 3.23384 7.04042 3.52 7.04H20.32V18.8ZM15.28 12.5C15.28 12.2508 15.3539 12.0072 15.4923 11.8C15.6308 11.5928 15.8276 11.4313 16.0578 11.3359C16.2881 11.2405 16.5414 11.2156 16.7858 11.2642C17.0302 11.3128 17.2547 11.4328 17.431 11.609C17.6072 11.7853 17.7272 12.0098 17.7758 12.2542C17.8244 12.4986 17.7995 12.7519 17.7041 12.9822C17.6087 13.2124 17.4472 13.4092 17.24 13.5477C17.0328 13.6861 16.7892 13.76 16.54 13.76C16.2058 13.76 15.8853 13.6273 15.649 13.391C15.4128 13.1547 15.28 12.8342 15.28 12.5Z"
+                        fill="white" style="fill:white;fill-opacity:1;" />
+                    </svg>
+                  </span>
+                  <div class="flex flex-col w-[235px] gap-1">
+                    <div class="leading-none">
+                      Hold many currencies in one place
+                    </div>
+                    <p class="text-[14px] text-grey ">
+                      Open a balance in 50+ currencies,
+                    </p>
+                  </div>
+                </div>
+                <div class="w-4">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.0865 7.986C11.1406 8.03761 11.1837 8.09968 11.2132 8.16843C11.2426 8.23719 11.2578 8.3112 11.2578 8.386C11.2578 8.4608 11.2426 8.53481 11.2132 8.60357C11.1837 8.67232 11.1406 8.73439 11.0865 8.786L5.37251 14.5L4.57251 13.7L9.88651 8.386L4.57251 3.07133L5.37251 2.27133L11.0865 7.986Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="absolute bottom-6 text-main w-full text-sm flex justify-center">Decide later</div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed hidden w-full h-full top-0 left-0 bottom-0 right-0 bg-[rgba(68,68,68,0.9)]">
+    <div class="w-full h-full absolute top-0 bottom-0 left-0 right-0 backdrop-blur-[10px]"></div>
+    <span class="absolute top-[50%] left-[50%] translate-x-[-50%]  ">
+      <svg class="animate-spin" width="75" height="76" viewBox="0 0 75 76" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M41.6775 75.2712C40.6889 75.3806 39.6973 75.0928 38.9209 74.4711C38.1445 73.8494 37.6469 72.9448 37.5375 71.9562C37.4281 70.9676 37.7159 69.976 38.3376 69.1996C38.9593 68.4232 39.8639 67.9256 40.8525 67.8162C48.4588 66.9449 55.4444 63.1988 60.3788 57.3449C65.3131 51.4911 67.8231 43.9724 67.3946 36.3283C66.9662 28.6842 63.6318 21.4931 58.0741 16.2273C52.5165 10.9615 45.1561 8.01953 37.5 8.00368L37.5 0.503682C58.2113 0.503684 75 17.2887 75 38.0037C75 57.1512 60.57 73.1712 41.6775 75.2674L41.6775 75.2712Z"
+          fill="url(#paint0_linear_793_31853)" />
+        <path
+          d="M21.2925 67.8502C20.7235 68.6655 19.8539 69.2216 18.8751 69.3959C17.8962 69.5703 16.8881 69.3489 16.0725 68.7802C11.1078 65.3281 7.05278 60.7253 4.25387 55.3652C1.45497 50.0051 -0.00456779 44.047 2.74979e-06 38.0002C4.56042e-06 17.2889 16.7888 0.500174 37.5 0.500175L37.5 8.00018C31.1118 7.99927 24.8901 10.0376 19.7408 13.8183C14.5915 17.599 10.7835 22.9248 8.87132 29.02C6.95909 35.1153 7.04248 41.6619 9.10933 47.7065C11.1762 53.7511 15.1186 58.9781 20.3625 62.6264C20.7668 62.9082 21.1115 63.2669 21.3771 63.682C21.6426 64.0971 21.8238 64.5604 21.9101 65.0456C21.9965 65.5307 21.9864 66.0281 21.8804 66.5093C21.7744 66.9906 21.5747 67.4462 21.2925 67.8502Z"
+          fill="url(#paint1_linear_793_31853)" />
+        <defs>
+          <linearGradient id="paint0_linear_793_31853" x1="56.25" y1="75.2939" x2="37.5" y2="6.8002"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#D7FF00"
+              style="stop-color:#D7FF00;stop-color:color(display-p3 0.8431 1.0000 0.0000);stop-opacity:1;" />
+            <stop offset="1" stop-color="#D7FF00" stop-opacity="0.6"
+              style="stop-color:#D7FF00;stop-color:color(display-p3 0.8431 1.0000 0.0000);stop-opacity:0.6;" />
+          </linearGradient>
+          <linearGradient id="paint1_linear_793_31853" x1="36" y1="73.0002" x2="37.5" y2="7.70039"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#D7FF00" stop-opacity="0" style="stop-color:none;stop-opacity:0;" />
+            <stop offset="1" stop-color="#D7FF00" stop-opacity="0.6"
+              style="stop-color:#D7FF00;stop-color:color(display-p3 0.8431 1.0000 0.0000);stop-opacity:0.6;" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </span>
+  </div>
+  <!-- preloader -->
+  <div class="fixed hidden w-full h-full top-0 left-0 bottom-0 right-0 bg-[rgba(68,68,68,0.9)]">
+    <div class="w-full h-full absolute top-0 bottom-0 left-0 right-0 backdrop-blur-[10px]"></div>
+    <span class="absolute top-[50%] left-[50%] translate-x-[-50%]  ">
+      <svg class="animate-spin" width="75" height="76" viewBox="0 0 75 76" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M41.6775 75.2712C40.6889 75.3806 39.6973 75.0928 38.9209 74.4711C38.1445 73.8494 37.6469 72.9448 37.5375 71.9562C37.4281 70.9676 37.7159 69.976 38.3376 69.1996C38.9593 68.4232 39.8639 67.9256 40.8525 67.8162C48.4588 66.9449 55.4444 63.1988 60.3788 57.3449C65.3131 51.4911 67.8231 43.9724 67.3946 36.3283C66.9662 28.6842 63.6318 21.4931 58.0741 16.2273C52.5165 10.9615 45.1561 8.01953 37.5 8.00368L37.5 0.503682C58.2113 0.503684 75 17.2887 75 38.0037C75 57.1512 60.57 73.1712 41.6775 75.2674L41.6775 75.2712Z"
+          fill="url(#paint0_linear_793_31853)" style="" />
+        <path
+          d="M21.2925 67.8502C20.7235 68.6655 19.8539 69.2216 18.8751 69.3959C17.8962 69.5703 16.8881 69.3489 16.0725 68.7802C11.1078 65.3281 7.05278 60.7253 4.25387 55.3652C1.45497 50.0051 -0.00456779 44.047 2.74979e-06 38.0002C4.56042e-06 17.2889 16.7888 0.500174 37.5 0.500175L37.5 8.00018C31.1118 7.99927 24.8901 10.0376 19.7408 13.8183C14.5915 17.599 10.7835 22.9248 8.87132 29.02C6.95909 35.1153 7.04248 41.6619 9.10933 47.7065C11.1762 53.7511 15.1186 58.9781 20.3625 62.6264C20.7668 62.9082 21.1115 63.2669 21.3771 63.682C21.6426 64.0971 21.8238 64.5604 21.9101 65.0456C21.9965 65.5307 21.9864 66.0281 21.8804 66.5093C21.7744 66.9906 21.5747 67.4462 21.2925 67.8502Z"
+          fill="url(#paint1_linear_793_31853)" style="" />
+        <defs>
+          <linearGradient id="paint0_linear_793_31853" x1="56.25" y1="75.2939" x2="37.5" y2="6.8002"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#D7FF00"
+              style="stop-color:#D7FF00;stop-color:color(display-p3 0.8431 1.0000 0.0000);stop-opacity:1;" />
+            <stop offset="1" stop-color="#D7FF00" stop-opacity="0.6"
+              style="stop-color:#D7FF00;stop-color:color(display-p3 0.8431 1.0000 0.0000);stop-opacity:0.6;" />
+          </linearGradient>
+          <linearGradient id="paint1_linear_793_31853" x1="36" y1="73.0002" x2="37.5" y2="7.70039"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#D7FF00" stop-opacity="0" style="stop-color:none;stop-opacity:0;" />
+            <stop offset="1" stop-color="#D7FF00" stop-opacity="0.6"
+              style="stop-color:#D7FF00;stop-color:color(display-p3 0.8431 1.0000 0.0000);stop-opacity:0.6;" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </span>
+  </div>
+  <!-- cursor -->
+  <div class="cursor2"></div>
+  <script src="../cursor.js"></script>
+  <script>
+    function form() {
+      return {
+        openPass: true
+      }
+    }
+  </script>
+  <script>
+
+  </script>
+</body>
+
+</html>

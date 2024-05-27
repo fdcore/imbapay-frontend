@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
+  <title>Регистрация</title>
+  <link href="../style.css" rel="stylesheet" />
+</head>
+
+<body x-data="form()" class="overflow-hidden">
+  <img class="hidden ml:block fixed bottom-0 left-[50%] -z-10 translate-x-[-50%]" src="../img/registration/mask.png"
+    alt="">
+
+  <div
+    class="absolute hidden ml:block top-0 pointer-events-none left-0 w-full h-full z-50 bg-gradient-to-tr from-transparent from-30%  via-[rgba(215,225,0,0.05)] via-50% to-transparent to-80%">
+  </div>
+  <div class="fixed bottom-0 right-0 w-full h-full opacity-30 -z-10 bg-main">
+    <img class="fixed bottom-0 right-0 w-full h-full mix-blend-luminosity  -z-10"
+      src="../img/registration/abstract-blue-background-web-design-templates-product-studio-with-smooth-gradient-color 1.png"
+      alt="">
+  </div>
+  <!-- header -->
+  <div class="relative w-full mb-[22px] ml:mb-0">
+    <div class="header w-full ml:bg-[#161617]">
+      <div class="imba-container menu-desktop hidden h-[80px] items-center justify-between md:flex">
+        <span class="text-[28px]">imbapay.</span>
+        <a href="/"
+          class="inline-flex h-[44px] w-[44px] cursor-pointer items-center justify-center rounded-full bg-transparent hover:bg-bg3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.414 12L20 5.414L18.586 4L12 10.586L5.414 4L4 5.414L10.586 12L4 18.586L5.414 20L12 13.414L18.586 20L20 18.586L13.414 12Z"
+              fill="white" style="fill: white; fill-opacity: 1" />
+          </svg>
+        </a>
+      </div>
+      <div class="imba-container flex h-[80px] items-center justify-between pt-4 md:hidden">
+        <a href="../home_page/index.html"
+          class="inline-flex h-[44px] w-[44px] cursor-pointer items-center justify-center rounded-full bg-bg3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6.25896 18.4498L6.40038 18.5912L6.5418 18.4498L12.0004 12.9912L17.459 18.4498L17.6004 18.5912L17.7418 18.4498L18.4498 17.7418L18.5912 17.6004L18.4498 17.459L12.9912 12.0004L18.4498 6.5418L18.5912 6.40038L18.4498 6.25896L17.7418 5.55096L17.6004 5.40954L17.459 5.55096L12.0004 11.0095L6.5418 5.55096L6.40038 5.40954L6.25896 5.55096L5.55096 6.25896L5.40954 6.40038L5.55096 6.5418L11.0095 12.0004L5.55096 17.459L5.40954 17.6004L5.55096 17.7418L6.25896 18.4498Z"
+              fill="white" stroke="white" style="fill:white;fill-opacity:1;stroke:white;stroke-opacity:1;"
+              stroke-width="0.4" />
+          </svg>
+        </a>
+        <span class="ml:hidden border-[1px] h-6 rounded-[12px] border-grey px-3 flex items-center  text-xs text-grey">
+          <span class="text-white2 text-sm uppercase">1 </span>&nbsp; /12</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative w-full from-[#000000] from-10% via-[#8f8f8f]/[0.15] to-[#000000] to-80% ml:bg-gradient-to-tr">
+    <div class="imba-container relative" style="height: calc(100vh - 80px)">
+
+      <img class="absolute left-0 top-0 hidden xl:block" src="../img/registration/bg.png" alt="image_bg"
+        style="height: calc(100vh - 80px)" />
+      <div class="flex h-full w-full items-center justify-center xl:justify-end">
+        <!-- registr desktop-->
+        <div class="block  relative w-full rounded-[35px] bg-transparent pb-[70px] md:w-[590px] ml:bg-white10 ">
+          <div class="backdrop-blur-[30px] w-full h-full absolute top-0 left-0 -z-10"></div>
+          <div class="flex mb-7 mt-6 justify-between border-[#E8EBE6]/[0.2] ml:border-b-[1px] pb-6 px-6">
+            <h3 class="  font-AProM text-[30px] text-white2 md:text-center  ml:text-[22px]">
+              Create an Imbapay profile
+            </h3>
+            <span class="border-[1px] h-6 rounded-[12px] border-grey px-3 flex items-center  text-xs text-grey">
+              <span class="text-white2 text-sm uppercase">1 </span>&nbsp; /12</span>
+          </div>
+          <div class="h-full md:px-6">
+            <form class="form-registration flex w-full flex-col items-start gap-6 mt-[70px]" action="">
+              <div class="email  flex w-full flex-col text-[14px] text-grey gap-1">
+                <label for="adress3">
+                  Please enter your email address to begin
+                </label>
+                <input class="rounded-[20px] bg-transparent px-4 py-3 text-[16px]" type="email" id="adress3"
+                  placeholder="example@gmail.com" />
+              </div>
+              <div class="mb-4 text-[14px] text-grey">
+                By clicking “Continue,” you agree to our
+                <a class="border-white2 text-white2 hover:text-main ml:border-b-[1px]" href="/">Terms of Use</a>
+                and
+                <a class="border-white2 text-white2 hover:text-main ml:border-b-[1px]" href="/">Privacy Policy</a>
+              </div>
+              <div class="mb-4 "><span>ТУТ БУДЕТ CAPCHA</span></div>
+              <a class="button is-gray is-yellow" href="/">
+                <span>Continue</span>
+              </a>
+            </form>
+            <!-- social -->
+            <div class="mt-4 border-[#E8EBE6]/[0.2] pt-6 ml:border-t-[1px] flex flex-col items-start">
+              <div class="text-center text-[14px] text-grey">Or sign in using</div>
+              <div class="mt-2 flex w-full justify-between ml:justify-center gap-3">
+                <a class="inline-flex w-[100px] ml:w-[175px] items-center justify-center gap-2 rounded-[100px] border border-white10 px-6 py-3 text-white2"
+                  href="/">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M6.38121 9.29718L2.63409 7.13379C1.91006 8.59694 1.50004 10.2471 1.5 12.0014C1.5 13.7315 1.91444 15.3845 2.64961 16.8606L6.38095 14.7063C6.01292 13.8776 5.80439 12.9636 5.80443 12.0014C5.80447 11.0393 6.01313 10.1256 6.38121 9.29718Z"
+                      fill="white" style="fill: white; fill-opacity: 1" />
+                    <path
+                      d="M19.7162 3.69711C17.783 2.01554 15.2568 0.998155 12.493 1C8.7116 1.00254 5.33652 2.93299 3.35352 5.89097L7.10368 8.0562C8.3232 6.39268 10.2851 5.30439 12.5007 5.30443C14.1158 5.30448 15.5963 5.88181 16.7527 6.83849C17.0358 7.07263 17.4496 7.05119 17.7093 6.79144L19.7517 4.74905C20.0462 4.45454 20.0305 3.9704 19.7162 3.69711Z"
+                      fill="white" style="fill: white; fill-opacity: 1" />
+                    <path
+                      d="M23.4251 10.7282C23.3823 10.364 23.0761 10.0884 22.7095 10.0884L13.6959 10.0879C13.2998 10.0879 12.9785 10.4091 12.9785 10.8053V13.6725C12.9785 14.0687 13.2997 14.39 13.6959 14.39H18.7469C18.2817 15.6008 17.4736 16.6417 16.4448 17.3984L18.5902 21.1143C20.7497 19.6509 22.3916 17.4384 23.1148 14.8265C23.5079 13.4064 23.5787 12.0332 23.4251 10.7282Z"
+                      fill="white" style="fill: white; fill-opacity: 1" />
+                    <path
+                      d="M15.2048 18.1158C14.3774 18.4844 13.4641 18.6935 12.5009 18.6936C10.2828 18.6936 8.32198 17.6053 7.10332 15.9424L3.36914 18.0983C5.33551 21.0272 8.67278 22.9979 12.5008 22.9979C14.2312 22.9979 15.8783 22.5749 17.3516 21.8341L15.2048 18.1158Z"
+                      fill="white" style="fill: white; fill-opacity: 1" />
+                  </svg>
+                  <span class="hidden md:inline-block"> Google </span>
+                </a>
+                <a class="inline-flex w-[100px] ml:w-[175px] items-center justify-center gap-2 rounded-[100px] border border-white10 px-6 py-3 text-white2"
+                  href="/">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18.4631 12.6902C18.4354 9.90337 20.7356 8.56677 20.8384 8.49929C19.5457 6.60908 17.5317 6.34972 16.8148 6.3202C15.1022 6.14626 13.4713 7.32903 12.6025 7.32903C11.7354 7.32903 10.393 6.34569 8.97279 6.37074C7.10452 6.39846 5.38246 7.45736 4.42104 9.12975C2.48077 12.4957 3.92468 17.4839 5.81532 20.2156C6.73962 21.5509 7.8419 23.0534 9.28805 22.9983C10.6819 22.9433 11.2077 22.0969 12.8927 22.0969C14.5777 22.0969 15.0508 22.9983 16.5251 22.9702C18.0239 22.9429 18.9742 21.6094 19.8909 20.2689C20.9521 18.7176 21.389 17.2156 21.4149 17.1395C21.3822 17.1244 18.493 16.0176 18.4631 12.6902Z"
+                      fill="white" style="fill: white; fill-opacity: 1" />
+                    <path
+                      d="M15.6931 4.51252C16.46 3.58152 16.9796 2.28785 16.8383 1C15.7315 1.04472 14.3918 1.73559 13.5972 2.66571C12.8853 3.49119 12.2628 4.80542 12.4297 6.07002C13.6643 6.16571 14.9235 5.44174 15.6931 4.51252Z"
+                      fill="white" style="fill: white; fill-opacity: 1" />
+                  </svg>
+                  <span class="hidden md:inline-block">Facebook</span>
+                </a>
+                <a class="inline-flex w-[100px] ml:w-[175px] items-center justify-center gap-2 rounded-[100px] border border-white10 px-6 py-3 text-white2"
+                  href="/">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_437_71135)">
+                      <path
+                        d="M23.248 0H1.98502C1.25602 0 0.666016 0.591 0.666016 1.319V22.582C0.666016 23.311 1.25602 23.901 1.98502 23.901H13.432V14.645H10.317V11.038H13.432V8.378C13.432 5.291 15.318 3.61 18.071 3.61C19.39 3.61 20.524 3.708 20.854 3.752V6.978L18.944 6.979C17.446 6.979 17.156 7.691 17.156 8.735V11.038H20.728L20.263 14.645H17.156V23.901H23.247C23.976 23.901 24.566 23.31 24.566 22.582V1.319C24.566 0.59 23.975 0 23.247 0"
+                        fill="white" style="fill: white; fill-opacity: 1" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_437_71135">
+                        <rect width="24" height="24" fill="white" style="fill: white; fill-opacity: 1"
+                          transform="translate(0.666016)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="hidden md:inline-block">Facebook</span>
+                </a>
+              </div>
+              <div class=" mt-6  text-center text-[16px] text-grey md:static md:translate-x-0 md:text-white2">
+                Already have an account?
+                <a class="border-b-[1px] border-main font-AProM text-main" href="/">Sign in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- register mobile -->
+        <div class=" w-full flex flex-col justify-between  h-full">
+          <div class="">
+            <h2 class="text-[30px] leading-snug text-white2 mb-[22px]">Enter your email address</h2>
+
+            <div class="flex flex-col">
+              <label class="text-sm text-grey" for="adress">
+                Your email
+              </label>
+              <input class="bg-white10 px-4 py-3 rounded-[15px] border-[1px] border-white/[0.3]" type="email"
+                placeholder="">
+            </div>
+          </div>
+          <div class="border-t-[1px] border-white10 py-6 mb-6 w-full">
+            <button class="button is-gray is-yellow">
+              Continue
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed hidden w-full h-full top-0 left-0 bottom-0 right-0 bg-[rgba(68,68,68,0.9)]">
+    <div class="w-full h-full absolute top-0 bottom-0 left-0 right-0 backdrop-blur-[10px]"></div>
+    <span class="absolute top-[50%] left-[50%] translate-x-[-50%]  ">
+      <svg class="animate-spin" width="75" height="76" viewBox="0 0 75 76" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M41.6775 75.2712C40.6889 75.3806 39.6973 75.0928 38.9209 74.4711C38.1445 73.8494 37.6469 72.9448 37.5375 71.9562C37.4281 70.9676 37.7159 69.976 38.3376 69.1996C38.9593 68.4232 39.8639 67.9256 40.8525 67.8162C48.4588 66.9449 55.4444 63.1988 60.3788 57.3449C65.3131 51.4911 67.8231 43.9724 67.3946 36.3283C66.9662 28.6842 63.6318 21.4931 58.0741 16.2273C52.5165 10.9615 45.1561 8.01953 37.5 8.00368L37.5 0.503682C58.2113 0.503684 75 17.2887 75 38.0037C75 57.1512 60.57 73.1712 41.6775 75.2674L41.6775 75.2712Z"
+          fill="url(#paint0_linear_793_31853)" style="" />
+        <path
+          d="M21.2925 67.8502C20.7235 68.6655 19.8539 69.2216 18.8751 69.3959C17.8962 69.5703 16.8881 69.3489 16.0725 68.7802C11.1078 65.3281 7.05278 60.7253 4.25387 55.3652C1.45497 50.0051 -0.00456779 44.047 2.74979e-06 38.0002C4.56042e-06 17.2889 16.7888 0.500174 37.5 0.500175L37.5 8.00018C31.1118 7.99927 24.8901 10.0376 19.7408 13.8183C14.5915 17.599 10.7835 22.9248 8.87132 29.02C6.95909 35.1153 7.04248 41.6619 9.10933 47.7065C11.1762 53.7511 15.1186 58.9781 20.3625 62.6264C20.7668 62.9082 21.1115 63.2669 21.3771 63.682C21.6426 64.0971 21.8238 64.5604 21.9101 65.0456C21.9965 65.5307 21.9864 66.0281 21.8804 66.5093C21.7744 66.9906 21.5747 67.4462 21.2925 67.8502Z"
+          fill="url(#paint1_linear_793_31853)" style="" />
+        <defs>
+          <linearGradient id="paint0_linear_793_31853" x1="56.25" y1="75.2939" x2="37.5" y2="6.8002"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#D7FF00"
+              style="stop-color:#D7FF00;stop-color:color(display-p3 0.8431 1.0000 0.0000);stop-opacity:1;" />
+            <stop offset="1" stop-color="#D7FF00" stop-opacity="0.6"
+              style="stop-color:#D7FF00;stop-color:color(display-p3 0.8431 1.0000 0.0000);stop-opacity:0.6;" />
+          </linearGradient>
+          <linearGradient id="paint1_linear_793_31853" x1="36" y1="73.0002" x2="37.5" y2="7.70039"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#D7FF00" stop-opacity="0" style="stop-color:none;stop-opacity:0;" />
+            <stop offset="1" stop-color="#D7FF00" stop-opacity="0.6"
+              style="stop-color:#D7FF00;stop-color:color(display-p3 0.8431 1.0000 0.0000);stop-opacity:0.6;" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </span>
+  </div>
+
+  <!-- cursor -->
+  <div class="cursor2"></div>
+  <script src="../cursor.js"></script>
+  <script>
+    function form() {
+      return {
+        openPass: true
+      }
+    }
+  </script>
+</body>
+
+</html>

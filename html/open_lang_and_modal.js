@@ -1,13 +1,5 @@
 
 
-   const openLang = document.querySelector('.open-lang');
-   const bgLang = document.querySelector('.bg-lang');
-   const swipeDown = document.querySelector('.swipe-down');
-   const closeLang = document.querySelector('.close-lang');
-
-
-
-
    const mobileClose = document.querySelector('.mobile-close');
    const openBtn = document.querySelectorAll('.open-btn');
    const modal = document.querySelector('.modals');
@@ -51,29 +43,4 @@
 
    mobileClose.addEventListener('swiped-down', function (e) {
       closeModal();
-   });
-
-   // block lang
-
-
-   const closeModalLang = () => {
-      swipeDown.classList.remove('visible');
-      setTimeout(() => {
-         bgLang.classList.remove('is-open');
-         enableScroll();
-      }, 400);
-
-   }
-
-   openLang.addEventListener('click', (e) => {
-
-      e.preventDefault();
-      bgLang.classList.add('is-open');
-      disableScroll();
-      setTimeout(() => {
-         swipeDown.classList.add('visible');
-      }, 300);
-   });
-   closeLang.addEventListener('swiped-down', function (e) {
-      closeModalLang();
    });

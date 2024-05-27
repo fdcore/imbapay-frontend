@@ -44,3 +44,17 @@
 .button.is-black:hover .arrow {
   display: inline;
 }
+
+
+.button.is-gray {
+  @apply inline-flex w-full cursor-pointer select-none items-center justify-center bg-[#777] py-3  transition-colors duration-300  leading-none text-stroke50 h-[54px]
+     hover:bg-[#272727] ;
+}
+.button.is-yellow {
+  @apply inline-flex w-full cursor-pointer select-none items-center justify-center bg-main py-3 transition-colors duration-300 leading-none text-black h-[54px]
+     hover:bg-[#272727] hover:text-white;
+}
+.button.is-border {
+  @apply inline-flex w-full cursor-pointer select-none items-center justify-center bg-transparent border-[1px]  transition-colors duration-300  border-main py-3  leading-none text-main h-[54px]
+     hover:bg-[#272727] ;
+}
