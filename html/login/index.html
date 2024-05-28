@@ -54,8 +54,7 @@
               stroke-width="0.4" />
           </svg>
         </a>
-        <span class="ml:hidden border-[1px] h-6 rounded-[12px] border-grey px-3 flex items-center  text-xs text-grey">
-          <span class="text-white2 text-sm uppercase">1 </span>&nbsp; /12</span>
+
       </div>
     </div>
   </div>
@@ -67,14 +66,13 @@
         style="height: calc(100vh - 80px)" />
       <div class="flex h-full w-full items-center justify-center xl:justify-end">
         <!-- registr desktop-->
-        <div class="block  relative w-full rounded-[35px] bg-transparent pb-[70px] md:w-[590px] ml:bg-white10 ">
+        <div class="relative w-full rounded-[35px] bg-transparent pb-[70px] md:w-[590px] ml:bg-white10 ">
           <div class="backdrop-blur-[30px] w-full h-full absolute top-0 left-0 -z-10"></div>
-          <div class="flex mb-7 mt-6 justify-between border-[#E8EBE6]/[0.2] ml:border-b-[1px] pb-6 px-6">
+          <div class="flex mb-7 mt-6 justify-between border-[#E8EBE6]/[0.2] ml:border-b-[1px] md:pb-6 md:px-6">
             <h3 class="  font-AProM text-[30px] text-white2 md:text-center  ml:text-[22px]">
-              Create an Imbapay profile
+              Login
             </h3>
-            <span class="border-[1px] h-6 rounded-[12px] border-grey px-3 flex items-center  text-xs text-grey">
-              <span class="text-white2 text-sm uppercase">1 </span>&nbsp; /12</span>
+
           </div>
           <div class="h-full md:px-6">
             <form class="form-registration flex w-full flex-col items-start gap-6 mt-[70px]" action="">
@@ -85,22 +83,49 @@
                 <input class="rounded-[20px] bg-transparent px-4 py-3 text-[16px]" type="email" id="adress3"
                   placeholder="example@gmail.com" />
               </div>
-              <div class="mb-4 text-[14px] text-grey">
-                By clicking “Continue,” you agree to our
-                <a class="border-white2 text-white2 hover:text-main ml:border-b-[1px]" href="/">Terms of Use</a>
-                and
-                <a class="border-white2 text-white2 hover:text-main ml:border-b-[1px]" href="/">Privacy Policy</a>
+              <div class="relative w-full" x-data="{open:false}">
+                <label for="password" class="text-[14px] text-grey ">Choose a password</label>
+                <div class="w-full relative mt-2">
+                  <input class="rounded-[20px] bg-transparent w-full px-4 py-3 text-[16px]" type="password"
+                    id="password" x-bind:type="open ? 'text' : 'password' " placeholder="" />
+                  <div class="absolute right-5 top-[50%] translate-y-[-50%]">
+                    <svg @click="open = ! open; " x-show="open" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      x-transition xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.71392 8.8584L2.18926 9.17573L2.19192 9.17173C2.21895 9.13139 2.24742 9.09204 2.27726 9.05373C2.34059 8.96973 2.43726 8.84573 2.56659 8.69573C2.91445 8.293 3.2985 7.92301 3.71392 7.5904C4.72126 6.7844 6.17059 6.00107 7.99992 6.00107C9.82926 6.00107 11.2786 6.7844 12.2859 7.5904C12.7011 7.92304 13.0849 8.29303 13.4326 8.69573C13.5646 8.84883 13.6898 9.00765 13.8079 9.17173L13.8106 9.17573L14.2859 8.8584C14.7613 8.54173 14.7613 8.54106 14.7606 8.54106L14.7599 8.53973L14.7573 8.53573L14.7506 8.52573C14.7143 8.47223 14.6765 8.41977 14.6373 8.3684C14.5593 8.26507 14.4466 8.12173 14.2993 7.94973C13.9052 7.4935 13.47 7.0744 12.9993 6.69773C11.8653 5.78973 10.1713 4.8584 7.99992 4.8584C5.82926 4.8584 4.13526 5.78973 2.99992 6.6984C2.52946 7.0749 2.09453 7.49377 1.70059 7.94973C1.5415 8.1348 1.3909 8.327 1.24926 8.52573L1.24259 8.53573L1.23992 8.53906V8.5404L1.23926 8.54106L1.71392 8.8584ZM7.99992 10.5724C8.22501 10.5724 8.44789 10.5281 8.65584 10.4419C8.8638 10.3558 9.05275 10.2295 9.21191 10.0704C9.37107 9.91122 9.49732 9.72227 9.58345 9.51432C9.66959 9.30637 9.71392 9.08348 9.71392 8.8584C9.71392 8.63331 9.66959 8.41043 9.58345 8.20248C9.49732 7.99453 9.37107 7.80558 9.21191 7.64642C9.05275 7.48726 8.8638 7.36101 8.65584 7.27487C8.44789 7.18873 8.22501 7.1444 7.99992 7.1444C7.54526 7.1444 7.10921 7.32502 6.78771 7.64652C6.46621 7.96802 6.28559 8.40406 6.28559 8.85873C6.28559 9.3134 6.46621 9.74945 6.78771 10.0709C7.10921 10.3924 7.54526 10.5731 7.99992 10.5731V10.5724Z"
+                        fill="#9B9B9B"
+                        style="fill:#9B9B9B;fill:color(display-p3 0.6078 0.6078 0.6078);fill-opacity:1;" />
+                    </svg>
+
+                    <svg @click="open = ! open" x-show="!open" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      x-transition xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M14.7426 6.486L13.7139 6C13.2155 7.11418 12.4055 8.0604 11.3815 8.72459C10.3574 9.38879 9.16314 9.74258 7.94258 9.74333C6.72201 9.74258 5.52772 9.38879 4.5037 8.72459C3.47967 8.0604 2.66963 7.11418 2.17124 6L1.14258 6.486C1.532 7.32375 2.0639 8.08753 2.71458 8.74333L1.62791 10.0573L2.51458 10.8L3.59991 9.48667C3.99991 9.77267 4.42858 10.0293 4.85724 10.2293L4.28591 11.8293L5.37125 12.2293L5.94258 10.6293C6.40663 10.7726 6.88636 10.859 7.37125 10.8867V12.6H8.51391V10.8867C8.9988 10.859 9.47853 10.7726 9.94258 10.6293L10.5139 12.2293L11.6006 11.8293L11.0286 10.2293C11.4859 10.0293 11.8859 9.77267 12.2859 9.48667L13.3712 10.8007L14.2572 10.058L13.1712 8.744C13.8286 8.08667 14.3712 7.34333 14.7426 6.486Z"
+                        fill="#9B9B9B"
+                        style="fill:#9B9B9B;fill:color(display-p3 0.6078 0.6078 0.6078);fill-opacity:1;" />
+                    </svg>
+
+                  </div>
+                </div>
+
+
+                <div class="w-full text-right">
+                  <a href="/" class="text-[14px] text-main pb-1 mt-2 inline-block ">
+                    Forgot password?
+                  </a>
+                </div>
               </div>
+
               <div class="mb-4 "><span>ТУТ БУДЕТ CAPCHA</span></div>
               <a class="button is-gray is-yellow" href="/">
                 <span>Continue</span>
               </a>
             </form>
             <!-- social -->
-            <div class="mt-4 border-[#E8EBE6]/[0.2] pt-6 ml:border-t-[1px] flex flex-col items-start">
+            <div class="mt-4 border-[#E8EBE6]/[0.2] pt-6 ml:border-t-[1px] flex flex-col text-center md:items-start">
               <div class="text-center text-[14px] text-grey">Or sign in using</div>
               <div class="mt-2 flex w-full justify-between ml:justify-center gap-3">
-                <a class="inline-flex w-[100px] ml:w-[175px] items-center justify-center gap-2 rounded-[100px] border border-white10 px-6 py-3 text-white2"
+                <a class="inline-flex w-[100px] ml:w-[175px] bg-white10 md:bg-transparent items-center justify-center gap-2 rounded-[100px] border border-white10 px-6 py-3 text-white2"
                   href="/">
                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -118,7 +143,7 @@
                   </svg>
                   <span class="hidden md:inline-block"> Google </span>
                 </a>
-                <a class="inline-flex w-[100px] ml:w-[175px] items-center justify-center gap-2 rounded-[100px] border border-white10 px-6 py-3 text-white2"
+                <a class="inline-flex w-[100px] bg-white10 md:bg-transparent  ml:w-[175px] items-center justify-center gap-2 rounded-[100px] border border-white10 px-6 py-3 text-white2"
                   href="/">
                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -130,7 +155,7 @@
                   </svg>
                   <span class="hidden md:inline-block">Facebook</span>
                 </a>
-                <a class="inline-flex w-[100px] ml:w-[175px] items-center justify-center gap-2 rounded-[100px] border border-white10 px-6 py-3 text-white2"
+                <a class="inline-flex w-[100px] bg-white10 md:bg-transparent  ml:w-[175px] items-center justify-center gap-2 rounded-[100px] border border-white10 px-6 py-3 text-white2"
                   href="/">
                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_437_71135)">
@@ -155,26 +180,7 @@
             </div>
           </div>
         </div>
-        <!-- register mobile -->
-        <div class=" w-full flex flex-col justify-between  h-full">
-          <div class="">
-            <h2 class="text-[30px] leading-snug text-white2 mb-[22px]">Enter your email address</h2>
 
-            <div class="flex flex-col">
-              <label class="text-sm text-grey" for="adress">
-                Your email
-              </label>
-              <input class="bg-white10 px-4 py-3 rounded-[15px] border-[1px] border-white/[0.3]" type="email"
-                placeholder="">
-            </div>
-          </div>
-          <div class="border-t-[1px] border-white10 py-6 mb-6 w-full">
-            <button class="button is-gray is-yellow">
-              Continue
-            </button>
-          </div>
-
-        </div>
       </div>
     </div>
   </div>
