@@ -27,8 +27,7 @@ input[type="checkbox"] {
  }
 
  
- .settings:checked + .settings:after {
-   left: calc(100% - 4px);
+ .switch:checked + .settings::after {
    transform: translateX(100%);
    background-color: black;
  }
@@ -37,7 +36,7 @@ input[type="checkbox"] {
    background-color: #D7FF00;
  }
  
- .settings:active:after {
+ .settings:active::after {
    width: 25px;
  }
 
@@ -64,7 +63,7 @@ input[type="checkbox"] {
   }
  
   
-  .settings:checked + .settings:after {
+  .switch:checked + .settings:after {
     left: calc(100% - 4px);
     transform: translateX(-100%);
     background-color: black;

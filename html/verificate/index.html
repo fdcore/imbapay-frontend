@@ -723,37 +723,32 @@
                               <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
                                  <div class="flex flex-col w-full">
                                     <label class="text-[14px] text-grey " for="">Company Name</label>
-                                    <input
-                                       class="rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
+                                    <input class="rounded-[20px] px-5  mt-1  h-[56px] bg-transparent" type="text"
+                                       name="" id="">
                                  </div>
                                  <div class="flex flex-col w-full">
                                     <label class="text-[14px] text-grey" for="">Exact Address</label>
-                                    <input
-                                       class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
+                                    <input class="rounded-[20px] px-5   mt-1  h-[56px] bg-transparent" type="text"
+                                       name="" id="">
                                  </div>
                               </div>
                               <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
                                  <div class="flex flex-col w-full">
                                     <label class="text-[14px] text-grey" for="">City</label>
-                                    <input
-                                       class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
+                                    <input class="rounded-[20px] px-5   mt-1  h-[56px] bg-transparent" type="text"
+                                       name="" id="">
                                  </div>
                                  <div class="flex flex-col w-full">
                                     <label class="text-[14px] text-grey" for="">State</label>
-                                    <input
-                                       class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
+                                    <input class="rounded-[20px] px-5   mt-1  h-[56px] bg-transparent" type="text"
+                                       name="" id="">
                                  </div>
                               </div>
                               <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
                                  <div class="flex flex-col w-full">
                                     <label class="text-[14px] text-grey" for="">ZIP Code</label>
-                                    <input
-                                       class="rounded-[20px] px-5  border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent"
-                                       type="text" name="" id="">
+                                    <input class="rounded-[20px] px-5   mt-1  h-[56px] bg-transparent" type="text"
+                                       name="" id="">
                                  </div>
                                  <div class="flex flex-col w-full">
                                     <label class="text-[14px] text-grey" for="">Phone</label>
@@ -777,7 +772,7 @@
 
                                        </div>
                                        <input
-                                          class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[56px] ml:mt-1 rounded-[20px] pr-5 pl-5 ml:pl-[80px] text-[22px] text-white2 border-[2px] border-white/[0.3]"
+                                          class="bg-transparent placeholder:text-[16px] placeholder:text-white2 placeholder:font-AProM font-AProBo w-full h-[56px] ml:mt-1 rounded-[20px] pr-5 pl-5 ml:pl-[80px] text-[22px] text-white2 "
                                           type="number" id="amount" placeholder=" ">
                                        <!-- select currencies -->
                                        <div class="bg-white2 p-2  rounded-[15px] w-[80px]  absolute z-10 top-[70px]"
@@ -817,33 +812,33 @@
                         </div>
                         <form action="">
 
-                           <div class="flex flex-col gap-4">
+                           <div class="flex flex-col gap-4" x-data="{card: 1}">
 
                               <div class="grid grid-cols-1 ml:grid-cols-2 w-full gap-4 justify-between">
 
-                                 <div
-                                    class="custom-radio flex justify-start items-center w-full rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent">
+                                 <div :class="card ===1 ? 'bg-[#d7ff00]/[0.1]':'bg-transparent'"
+                                    class="custom-radio flex justify-start items-center w-full rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] ">
                                     <input type="radio" id="radio1" name="custom_radio" checked>
-                                    <label for="radio1"></label>
+                                    <label for="radio1" @click="card = 1"></label>
                                     <span class="text-white2 ml-2">Email Address</span>
                                  </div>
 
-                                 <div
-                                    class="custom-radio flex justify-start items-center w-full rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent ">
+                                 <div :class="card ===2 ? 'bg-[#d7ff00]/[0.1]':'bg-transparent'"
+                                    class="custom-radio flex justify-start items-center w-full rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px]">
                                     <input type="radio" id="radio2" name="custom_radio">
-                                    <label for="radio2"></label>
+                                    <label for="radio2" @click="card = 2"></label>
                                     <span class="text-white2 ml-2">Phone Call</span>
                                  </div>
-                                 <div
-                                    class="custom-radio flex justify-start items-center w-full rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent ">
+                                 <div :class="card ===3 ? 'bg-[#d7ff00]/[0.1]':'bg-transparent'"
+                                    class="custom-radio flex justify-start items-center w-full rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px]  ">
                                     <input type="radio" id="radio3" name="custom_radio">
-                                    <label for="radio3"></label>
+                                    <label for="radio3" @click="card = 3"></label>
                                     <span class="text-white2 ml-2">Text Message</span>
                                  </div>
-                                 <div
-                                    class="custom-radio flex justify-start items-center w-full rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] bg-transparent ">
+                                 <div :class="card ===4 ? 'bg-[#d7ff00]/[0.1]':'bg-transparent'"
+                                    class="custom-radio flex justify-start items-center w-full rounded-[20px] px-5 border-[1px] mt-1 border-[rgba(255,255,255,0.3)] h-[56px] ">
                                     <input type="radio" id="radio4" name="custom_radio">
-                                    <label for="radio4"></label>
+                                    <label for="radio4" @click="card = 4"></label>
                                     <span class="text-white2 ml-2">Domain Verification</span>
                                  </div>
                               </div>

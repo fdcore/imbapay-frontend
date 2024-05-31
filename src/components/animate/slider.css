@@ -20,6 +20,42 @@
 .swiper-slide-active.slide2 {
   background-color: #d7ff00;
 }
+.slide-profile {
+  background-color: rgba(255, 255, 255, 10%);
+}
+.slide-profile  span {
+  color: white;
+}
+.slide-profile  div {
+  color: white;
+}
+.slide-profile  svg {
+  fill: white;
+}
+.swiper-slide-active > .slide-profile {
+  background-color: #d7ff00;
+}
+.swiper-slide-active > .slide-profile div {
+  color: black;
+}
+.swiper-slide-active > .slide-profile span {
+  color: black;
+}
+.swiper-slide-active > .slide-profile svg{
+
+  fill: black;
+}
+
+.swiper-profile .swiper-pagination-bullet  {
+  background-color: white;
+  width: 4px;
+  height: 4px;
+}
+.swiper-profile .swiper-pagination-bullet-active {
+  width: 25px;
+  border-radius: 2px;
+  
+}
 
 .swiper-button-prev::after,
 .swiper-button-next::after {

@@ -102,3 +102,5 @@ input[type='number'] {
 
 input {outline: 2px solid rgba(255,255,255,0.3);}
 input:focus {outline: 2px solid rgb(253, 253, 253);}
+textarea {outline: 2px solid rgba(255,255,255,0.3);}
+textarea:focus {outline: 2px solid rgb(253, 253, 253);}

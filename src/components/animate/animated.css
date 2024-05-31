@@ -1,15 +1,4 @@
-.card {
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-.swiper-slide {
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-.swiper-slide.card-bank {
-  perspective: none;
-  transform-style:unset;
-}
+
 
 .item-card {
   transition: transform 0.2s;
@@ -17,5 +6,55 @@
 .item-card-mobile {
   transition: transform 0.2s;
 }
+.rotate-box {
+  
+  transition: transform 0.5s;
+}
 
+.rotating {
+  animation: spin 2s linear infinite;
+}
 
+.trans-item {
+  transition: transform 0.5s;
+}
+.trans-item > .rotating{
+  background: #fff;
+}
+.trans-item > .rotating span {
+  color: #000;
+}
+.trans-item > .rotating .round {
+  background: #D7FF00;
+}
+
+.trans-item > .rotating svg {
+  color: #000;
+}
+.trans-item span {
+  color: #fff;
+}
+.trans-item .round {
+  background: #fff;
+}
+.trans-item svg {
+  fill: #fff;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(2deg);
+  }
+  50% {
+      transform: rotate(0deg);
+  }
+  50% {
+      transform: rotate(-2deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}

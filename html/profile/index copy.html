@@ -23,12 +23,11 @@
 </head>
 <!-- class="overflow-hidden" -->
 
-<body x-data="{open: false}" :class="open? 'overflow-hidden':''">
+<body>
   <!-- block desktop ml:flex-->
   <div
-    class="fixed bottom-0 hidden  ml:hidden left-0 right-0 top-0 z-[10000]  h-[100vh] w-full items-center justify-center bg-[rgba(68,68,68,0.9)]">
-    <div
-      class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] flex w-[400px] flex-col items-center justify-center gap-6 rounded-[35px] bg-white2 py-[60px]">
+    class="fixed bottom-0 left-0 right-0 top-0 z-[10000] hidden h-[100vh] w-full items-center justify-center bg-[rgba(68,68,68,0.9)]">
+    <div class="flex w-[400px] flex-col items-center justify-center gap-6 rounded-[35px] bg-white10 py-[60px]">
       <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_437_70806)">
           <path
@@ -45,7 +44,7 @@
           </clipPath>
         </defs>
       </svg>
-      <span class="text-center font-AProM text-[22px] leading-none text-black">
+      <span class="text-center font-AProM text-[22px] leading-none text-white2">
         You need to verify your account
       </span>
       <a class="flex h-[56px] items-center justify-center rounded-full bg-main px-8 font-AProM text-[16px] text-black hover:bg-[rgb(145,233,2)]"
@@ -57,31 +56,27 @@
 
   <!-- block mobile -->
   <div
-    class="fixed bottom-0 hidden left-0 right-0 top-0 z-[10000] h-[100vh] w-full items-end justify-center bg-[#060605]/[0.9] p-1 ml:hidden">
-    <div
-      class="absolute text-center left-[50%] bottom-1 translate-x-[-50%] w-full flex-col items-center justify-end gap-6 rounded-[35px] bg-white2 p-6 pt-[70px]">
+    class="fixed bottom-0 left-0 right-0 top-0 z-[10000] hidden h-[100vh] w-full items-end justify-center bg-[#060605]/[0.9] p-1 ml:hidden">
+    <div class="relative hidden w-full flex-col items-center justify-end gap-6 rounded-[35px] bg-white2 p-6 pt-[70px]">
       <img class="absolute left-[50%] top-[-42px] w-[100px] translate-x-[-50%]" src="../img/profile/warrior.png"
         alt="" />
       <span class="text-center font-AProM text-[16px] leading-none text-black">
         You need to verify your account
       </span>
-      <a class="mt-4 flex h-[56px] w-full items-center justify-center rounded-full bg-main px-3 font-AProM text-[16px] text-black hover:bg-[rgb(145,233,2)]"
+      <a class="flex h-[56px] w-full items-center justify-center rounded-full bg-main px-3 font-AProM text-[16px] text-black hover:bg-[rgb(145,233,2)]"
         href="../profile/index.html">
         Proceed to verification
       </a>
     </div>
   </div>
   <div class="relative">
-    <div
-      class="hidden ml:block pointer-events-none  fixed top-0 left-0 w-full h-full bg-gradient-to-tr from-transparent from-30%  via-[rgba(215,225,0,0.1)] via-50% to-transparent to-80%">
-    </div>
-    <div class="ml:hidden fixed bottom-0 right-0 w-full h-full opacity-30 -z-10 bg-main">
-      <img class="fixed bottom-0 right-0 w-full h-full mix-blend-luminosity  -z-10"
-        src="../img/registration/abstract-blue-background-web-design-templates-product-studio-with-smooth-gradient-color 1.png"
-        alt="">
-    </div>
+    <img
+      class="fixed right-0 top-[-10px] -z-20 w-full -rotate-90 md:max-w-[900px] ml:bottom-0 ml:top-auto ml:h-auto ml:rotate-0"
+      src="../img/bg-right.png" alt="" />
+
+
     <!-- menu-mobile  -->
-    <div x-show="open" class="absolute left-0 top-0 bottom-0 right-0 h-full   z-50 w-full bg-black ml:hidden">
+    <div class="absolute left-0 top-0 z-10  hidden mb-[100px] w-full bg-black ml:hidden">
       <img
         class="fixed right-0 top-[-10px] w-full -rotate-90 md:max-w-[900px] ml:bottom-0 ml:top-auto ml:h-auto ml:rotate-0"
         src="../img/bg-right.png" alt="" />
@@ -397,7 +392,7 @@
               </svg>
             </a>
             <div class="flex justify-around w-full gap-2">
-              <button @click="open = false"
+              <a href="./index.html"
                 class="group flex h-[70px] w-[70px] cursor-pointer flex-col items-center justify-center rounded-full bg-transparent  text-[12px] text-white2 transition-colors duration-300 hover:bg-main hover:text-black">
                 <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -405,7 +400,7 @@
                     fill="white" class="group-hover:fill-black" />
                 </svg>
                 <span class="mt-1"> Home </span>
-              </button>
+              </a>
               <a href="./index.html"
                 class="group flex h-[70px] w-[70px] cursor-pointer flex-col items-center justify-center rounded-full bg-transparent text-[12px] text-white2 transition-colors duration-300 hover:bg-main hover:text-black">
                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -428,7 +423,7 @@
                 </svg>
                 <span class="mt-1"> Recipients </span>
               </a>
-              <button @click="open = true"
+              <a href="./index.html"
                 class="group flex h-[70px] w-[70px] cursor-pointer flex-col items-center justify-center rounded-full bg-transparent  text-[12px] text-white2 transition-colors duration-300 hover:bg-main hover:text-black">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -445,7 +440,7 @@
                     stroke="white" class="group-hover:stroke-black" stroke-width="1.6" />
                 </svg>
                 <span class="mt-1">More</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -456,11 +451,119 @@
         <div class="hidden h-full w-full items-center ml:flex">
           <a href="/html/profile/index.html" class="text-[28px]">imbapay.</a>
         </div>
+        <!-- header-mobile -->
+        <div class="flex h-[160px] w-full flex-col items-center gap-4 px-3 sm:p-0 ml:hidden">
+          <div class="w-full">
+            <div class="mb-[22px] flex w-full items-center justify-between gap-2">
+              <a href="../profile/myProfile.html" class="group flex cursor-pointer items-center">
+                <span
+                  class="spanicon-top flex h-[44px] w-[44px] items-center justify-center rounded-full bg-bg3 group-hover:bg-main">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="group-hover:fill-black"
+                      d="M11.4431 10.5105C12.0754 10.1082 12.5957 9.55237 12.9554 8.89485C13.3151 8.23733 13.5026 7.49948 13.5003 6.75C13.5003 4.275 11.4753 2.25 9.00034 2.25C6.52534 2.25 4.50034 4.275 4.50034 6.75C4.50034 8.325 5.30359 9.70725 6.55759 10.5105C4.59709 11.4427 3.21484 13.4355 3.21484 15.75H4.50034C4.50034 13.275 6.52534 11.25 9.00034 11.25C11.4753 11.25 13.5003 13.275 13.5003 15.75H14.7858C14.7858 13.4355 13.4043 11.4427 11.4431 10.5105ZM5.78584 6.75C5.78822 5.89819 6.12765 5.08195 6.72997 4.47963C7.33229 3.87731 8.14854 3.53788 9.00034 3.5355C9.85215 3.53788 10.6684 3.87731 11.2707 4.47963C11.873 5.08195 12.2125 5.89819 12.2148 6.75C12.2125 7.60181 11.873 8.41805 11.2707 9.02037C10.6684 9.62269 9.85215 9.96213 9.00034 9.9645C8.14854 9.96213 7.33229 9.62269 6.72997 9.02037C6.12765 8.41805 5.78822 7.60181 5.78584 6.75Z"
+                      fill="white" />
+                  </svg>
+                </span>
+              </a>
+              <div class="flex items-center gap-3">
+                <!-- lang -->
+                <div class="relative group">
+                  <div class="open-lang cursor-pointer">
+                    <img class="" src="../img/profile/flag/use.svg" alt="" />
+                  </div>
+                </div>
+                <!-- notification -->
+                <div class="relative group">
+                  <a href="../profile/notification.html"
+                    class="spanicon-top flex h-[54px] w-[54px] cursor-pointer transition-all duration-150 items-center justify-center rounded-full bg-bg3 hover:bg-main">
+                    <span class="bell relative">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class=" fill-white2 group-hover:fill-black transition-all duration-150"
+                          d="M15.4297 11.2502C14.2724 11.2502 14.1434 10.3502 14.1434 9.96392V6.75017C14.1434 3.92117 11.8297 1.60742 9.00069 1.60742C6.17319 1.60742 3.85794 3.92117 3.85794 6.75017V9.96392C3.85794 10.3502 3.72969 11.2502 2.57244 11.2502C2.40215 11.2508 2.23901 11.3187 2.1186 11.4391C1.99819 11.5595 1.93028 11.7226 1.92969 11.8929V13.8212C1.93028 13.9915 1.99819 14.1546 2.1186 14.275C2.23901 14.3954 2.40215 14.4633 2.57244 14.4639H7.07244C7.07382 14.975 7.2774 15.4647 7.63869 15.8261C7.99999 16.1876 8.48964 16.3913 9.00069 16.3929C9.51186 16.3915 10.0017 16.1879 10.3632 15.8264C10.7246 15.4649 10.9283 14.9751 10.9297 14.4639H15.4297C15.6 14.4633 15.7631 14.3954 15.8835 14.275C16.0039 14.1546 16.0718 13.9915 16.0724 13.8212V11.8929C16.0718 11.7226 16.0039 11.5595 15.8835 11.4391C15.7631 11.3187 15.6 11.2508 15.4297 11.2502ZM9.00069 15.1074C8.83027 15.1068 8.66702 15.0388 8.54659 14.9182C8.42615 14.7977 8.35833 14.6343 8.35794 14.4639H9.64344C9.64304 14.6343 9.57522 14.7977 9.45479 14.9182C9.33436 15.0388 9.1711 15.1068 9.00069 15.1074ZM14.7862 13.1784H3.21519V12.4712C4.53294 12.2139 5.14344 11.0889 5.14344 9.96392V6.75017C5.14344 4.62842 6.87969 2.89292 9.00069 2.89292C11.1224 2.89292 12.8579 4.62842 12.8579 6.75017V9.96392C12.8579 11.0889 13.4684 12.2139 14.7862 12.4712V13.1784Z"
+                          fill="white" />
+                      </svg>
+                    </span>
+                  </a>
 
+                </div>
+              </div>
+            </div>
+            <span class="font-AProM text-[30px] text-white2">Account</span>
+          </div>
+          <div class="flex w-full gap-2">
+            <a class="button-mobile" href="/">
+              <span>
+                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.3377 7.04184L11.0448 7.74895L12.459 6.33473L11.7519 5.62763L7.09195 0.967697C6.70142 0.577173 6.06826 0.577173 5.67773 0.967698L1.0178 5.62763L0.310698 6.33473L1.72491 7.74895L2.43202 7.04184L5.38461 4.08924L5.38461 13.1118L7.38461 13.1118L7.38461 4.08879L10.3377 7.04184Z"
+                    fill="#090A08" style="
+                        fill: #090a08;
+                        fill: color(display-p3 0.0353 0.0392 0.0314);
+                        fill-opacity: 1;
+                      " />
+                </svg>
+              </span>
+              <span class="mt-[2px] font-AProM text-[14px] text-black">Send</span>
+            </a>
+            <a class="button-mobile is-black-profile-mobile" href="/">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.85352 7V12H6.85352V7H12V5H6.85352V0H4.85352V5H0V7H4.85352Z" fill="white"
+                    style="fill: white; fill-opacity: 1" />
+                </svg>
+              </span>
+              <span class="mt-[4px] font-AProM text-[14px]">Recharge</span>
+            </a>
+            <a class="button-mobile is-black-profile-mobile" href="/">
+              <span>
+                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.41234 6.98046L1.70523 6.27336L0.291016 7.68757L0.998123 8.39468L5.63575 13.0323C6.02627 13.4228 6.65944 13.4228 7.04996 13.0323L11.6876 8.39468L12.3947 7.68757L10.9805 6.27336L10.2734 6.98047L7.34195 9.91189L7.34195 0.941935L5.34195 0.941934L5.34195 9.91008L2.41234 6.98046Z"
+                    fill="white" style="fill: white; fill-opacity: 1" />
+                </svg>
+              </span>
+              <span class="m-0 mt-[4px] font-AProM text-[14px]">Request</span>
+            </a>
+          </div>
+        </div>
         <!-- header-desktop -->
         <div class="hidden h-full w-full items-center justify-between ml:flex">
-          <div class="text-[22px]">
-            Hello, Amelia Clark 🙌
+          <div class="flex gap-2">
+            <a class="button w-auto" href="/">
+              <span>
+                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.3377 7.04184L11.0448 7.74895L12.459 6.33473L11.7519 5.62763L7.09195 0.967697C6.70142 0.577173 6.06826 0.577173 5.67773 0.967698L1.0178 5.62763L0.310698 6.33473L1.72491 7.74895L2.43202 7.04184L5.38461 4.08924L5.38461 13.1118L7.38461 13.1118L7.38461 4.08879L10.3377 7.04184Z"
+                    fill="#090A08" style="
+                        fill: #090a08;
+                        fill: color(display-p3 0.0353 0.0392 0.0314);
+                        fill-opacity: 1;
+                      " />
+                </svg>
+              </span>
+              <span class="mt-[2px] pl-2 font-AProM text-[14px] text-black">Send</span>
+            </a>
+            <a class="button is-black-profile w-auto" href="/">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.85352 7V12H6.85352V7H12V5H6.85352V0H4.85352V5H0V7H4.85352Z" fill="white"
+                    style="fill: white; fill-opacity: 1" />
+                </svg>
+              </span>
+              <span class="ml-2 mt-[4px] font-AProM text-[14px]">Recharge</span>
+            </a>
+            <a class="button is-black-profile w-auto" href="/">
+              <span>
+                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.41234 6.98046L1.70523 6.27336L0.291016 7.68757L0.998123 8.39468L5.63575 13.0323C6.02627 13.4228 6.65944 13.4228 7.04996 13.0323L11.6876 8.39468L12.3947 7.68757L10.9805 6.27336L10.2734 6.98047L7.34195 9.91189L7.34195 0.941935L5.34195 0.941934L5.34195 9.91008L2.41234 6.98046Z"
+                    fill="white" style="fill: white; fill-opacity: 1" />
+                </svg>
+              </span>
+              <span class="ml-2 mt-[4px] font-AProM text-[14px]">Request</span>
+            </a>
           </div>
           <!-- block_header_lang -->
           <div class="flex items-center gap-3">
@@ -915,340 +1018,254 @@
               </a>
             </li>
           </ul>
-
         </div>
-
 
         <!-- content  -->
         <div
-          class="grid h-auto w-full grid-cols-1 items-start gap-[22px] px-3 sm:p-0 md:gap-[10px] lg:grid-rows-[auto_160px_auto] lg:grid-cols-2">
-          <div
-            class="ml:border-[1px]  relative p-6 h-[300px] ml:h-auto border-white10 rounded-[35px] flex justify-center ml:justify-between w-full lg:col-span-2 lg:row-span-1 items-center">
-            <img class="absolute ml:hidden top-0 left-[50%] translate-x-[-50%] w-full -z-10 h-[280px]"
-              src="../img/profile/bg-top.svg" alt="">
-            <div
-              class="absolute left-[50%] translate-x-[-50%] translate-y-[-50%] top-[50%] ml:static ml:translate-x-0 ml:translate-y-0">
-              <div class="flex flex-col items-center ml:items-start w-full ">
-                <span>Total balance</span>
-                <div
-                  class="flex flex-col items-center justify-center ml:flex-row text-[36px] text-white2 ml:items-start gap-2"
-                  x-data="{isShow: true}">
-                  <div class="flex">
-                    <div class="transition-all duration-150" :class="isShow ? 'blur-[15px]' : ''">$ 25,822.</div>
-                    <span class="transition-all duration-150 text-base text-grey"
-                      :class="isShow ? 'blur-[15px]' : ''">80</span>
+          class="grid h-auto w-full grid-cols-1 items-start gap-[22px] px-3 sm:p-0 md:gap-[10px] ml:grid-rows-[160px_auto] lg:grid-cols-2">
+          <!-- cards -->
+          <div class="widthcardBlock hidden h-full w-full ml:flex lg:col-span-2">
+            <!-- card 0-->
+            <div class="card relative h-full hover:z-50">
+              <div
+                class="item-card flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#4ec2ec] p-6 backdrop-blur-[20px]">
+                <img class="absolute bottom-0 right-0" src="../img/profile/card-bg/Group.png" alt="" />
+                <div class="flex items-center gap-4">
+                  <span class="w-[54px]">
+                    <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                  </span>
+                  <div class="flex flex-col">
+                    <span class="font-AProM text-[22px] uppercase text-black">USD</span>
+                    <span class="flex text-[14px] text-black">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                          fill="black" style="fill: black; fill-opacity: 1" />
+                      </svg>
+                      <span class="">...2587 3443</span>
+                    </span>
                   </div>
-                  <span class="">
-                    <svg @click="isShow = ! isShow" x-show="isShow" width="24" height="24" viewBox="0 0 14 7"
-                      fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M0.713925 4.8584L1.18926 5.17573L1.19192 5.17173C1.21895 5.13139 1.24742 5.09204 1.27726 5.05373C1.34059 4.96973 1.43726 4.84573 1.56659 4.69573C1.91445 4.293 2.2985 3.92301 2.71392 3.5904C3.72126 2.7844 5.17059 2.00107 6.99992 2.00107C8.82926 2.00107 10.2786 2.7844 11.2859 3.5904C11.7011 3.92304 12.0849 4.29303 12.4326 4.69573C12.5646 4.84883 12.6898 5.00765 12.8079 5.17173L12.8106 5.17573L13.2859 4.8584C13.7613 4.54173 13.7613 4.54106 13.7606 4.54106L13.7599 4.53973L13.7573 4.53573L13.7506 4.52573C13.7143 4.47223 13.6765 4.41977 13.6373 4.3684C13.5593 4.26507 13.4466 4.12173 13.2993 3.94973C12.9052 3.4935 12.47 3.0744 11.9993 2.69773C10.8653 1.78973 9.17126 0.858398 6.99992 0.858398C4.82926 0.858398 3.13526 1.78973 1.99992 2.6984C1.52946 3.0749 1.09453 3.49377 0.700591 3.94973C0.541502 4.1348 0.390902 4.327 0.249258 4.52573L0.242591 4.53573L0.239925 4.53906V4.5404L0.239258 4.54106L0.713925 4.8584ZM6.99992 6.5724C7.22501 6.5724 7.44789 6.52806 7.65584 6.44193C7.8638 6.35579 8.05275 6.22954 8.21191 6.07038C8.37107 5.91122 8.49732 5.72227 8.58345 5.51432C8.66959 5.30637 8.71392 5.08348 8.71392 4.8584C8.71392 4.63331 8.66959 4.41043 8.58345 4.20248C8.49732 3.99453 8.37107 3.80558 8.21191 3.64642C8.05275 3.48726 7.8638 3.36101 7.65584 3.27487C7.44789 3.18873 7.22501 3.1444 6.99992 3.1444C6.54526 3.1444 6.10921 3.32502 5.78771 3.64652C5.46621 3.96802 5.28559 4.40406 5.28559 4.85873C5.28559 5.3134 5.46621 5.74945 5.78771 6.07095C6.10921 6.39245 6.54526 6.57307 6.99992 6.57307V6.5724Z"
-                        fill="#9B9B9B"
-                        style="fill:#9B9B9B;fill:color(display-p3 0.6078 0.6078 0.6078);fill-opacity:1;" />
-                    </svg>
+                </div>
+                <div class="font-AProBo text-[30px] text-black">267,93</div>
+              </div>
+            </div>
 
-                    <svg @click="isShow = ! isShow" x-show="!isShow" width="24" height="24" viewBox="0 0 24 24"
-                      fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M22.1139 9.729L20.5709 9C19.8233 10.6713 18.6082 12.0906 17.0722 13.0869C15.5362 14.0832 13.7447 14.6139 11.9139 14.615C10.083 14.6139 8.29158 14.0832 6.75554 13.0869C5.21951 12.0906 4.00445 10.6713 3.25687 9L1.71387 9.729C2.298 10.9856 3.09584 12.1313 4.07187 13.115L2.44187 15.086L3.77187 16.2L5.39987 14.23C5.99987 14.659 6.64287 15.044 7.28587 15.344L6.42887 17.744L8.05687 18.344L8.91387 15.944C9.60994 16.159 10.3295 16.2886 11.0569 16.33V18.9H12.7709V16.33C13.4982 16.2886 14.2178 16.1589 14.9139 15.944L15.7709 18.344L17.4009 17.744L16.5429 15.344C17.2289 15.044 17.8289 14.659 18.4289 14.23L20.0569 16.201L21.3859 15.087L19.7569 13.116C20.7429 12.13 21.5569 11.015 22.1139 9.729Z"
-                        fill="#9B9B9B"
-                        style="fill:#9B9B9B;fill:color(display-p3 0.6078 0.6078 0.6078);fill-opacity:1;" />
-                    </svg>
+            <!-- card 1-->
+            <div class="card relative h-full hover:z-50">
+              <div
+                class="item-card flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#ec4e70] p-6 backdrop-blur-[20px]">
+                <img class="absolute bottom-0 right-0" src="../img/profile/card-bg/Group.png" alt="" />
+                <div class="flex items-center gap-4">
+                  <span class="w-[54px]">
+                    <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                  </span>
+                  <div class="flex flex-col">
+                    <span class="font-AProM text-[22px] uppercase text-black">USD</span>
+                    <span class="flex text-[14px] text-black">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                          fill="black" style="fill: black; fill-opacity: 1" />
+                      </svg>
+                      <span class="">...2587 3443</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="font-AProBo text-[30px] text-black">267,93</div>
+              </div>
+            </div>
+            <!-- card 1-->
+            <div class="card relative h-full hover:z-50">
+              <div
+                class="item-card flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#6b4eec] p-6 backdrop-blur-[20px]">
+                <img class="absolute bottom-0 right-0" src="../img/profile/card-bg/Group.png" alt="" />
+                <div class="flex items-center gap-4">
+                  <span class="w-[54px]">
+                    <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                  </span>
+                  <div class="flex flex-col">
+                    <span class="font-AProM text-[22px] uppercase text-black">USD</span>
+                    <span class="flex text-[14px] text-black">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                          fill="black" style="fill: black; fill-opacity: 1" />
+                      </svg>
+                      <span class="">...2587 3443</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="font-AProBo text-[30px] text-black">267,93</div>
+              </div>
+            </div>
+            <!-- card 1-->
+            <div class="card relative h-full hover:z-50">
+              <div
+                class="item-card flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-[#4ee1ec] p-6 backdrop-blur-[20px]">
+                <img class="absolute bottom-0 right-0" src="../img/profile/card-bg/Group.png" alt="" />
+                <div class="flex items-center gap-4">
+                  <span class="w-[54px]">
+                    <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                  </span>
+                  <div class="flex flex-col">
+                    <span class="font-AProM text-[22px] uppercase text-black">USD</span>
+                    <span class="flex text-[14px] text-black">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                          fill="black" style="fill: black; fill-opacity: 1" />
+                      </svg>
+                      <span class="">...2587 3443</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="font-AProBo text-[30px] text-black">267,93</div>
+              </div>
+            </div>
 
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="hidden ml:flex  gap-2">
-              <a class="button is-yellow" href="/" style="width: auto;">
-                <span>
-                  <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M10.3377 7.04184L11.0448 7.74895L12.459 6.33473L11.7519 5.62763L7.09195 0.967697C6.70142 0.577173 6.06826 0.577173 5.67773 0.967698L1.0178 5.62763L0.310698 6.33473L1.72491 7.74895L2.43202 7.04184L5.38461 4.08924L5.38461 13.1118L7.38461 13.1118L7.38461 4.08879L10.3377 7.04184Z"
-                      fill="#090A08" style="
-                          fill: #090a08;
-                          fill: color(display-p3 0.0353 0.0392 0.0314);
-                          fill-opacity: 1;
-                        " />
-                  </svg>
-                </span>
-                <span class="mt-[2px] font-AProM text-[14px] text-black">Send</span>
-              </a>
-              <a class="button is-white10" href="/">
-                <span>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M4.85352 7V12H6.85352V7H12V5H6.85352V0H4.85352V5H0V7H4.85352Z" fill="white"
-                      style="fill: white; fill-opacity: 1" />
-                  </svg>
-                </span>
-                <span class="mt-[4px] font-AProM text-[14px]">Recharge</span>
-              </a>
-              <a class="button is-white10" href="/">
-                <span>
-                  <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M2.41234 6.98046L1.70523 6.27336L0.291016 7.68757L0.998123 8.39468L5.63575 13.0323C6.02627 13.4228 6.65944 13.4228 7.04996 13.0323L11.6876 8.39468L12.3947 7.68757L10.9805 6.27336L10.2734 6.98047L7.34195 9.91189L7.34195 0.941935L5.34195 0.941934L5.34195 9.91008L2.41234 6.98046Z"
-                      fill="white" style="fill: white; fill-opacity: 1" />
-                  </svg>
-                </span>
-                <span class="m-0 mt-[4px] font-AProM text-[14px]">Request</span>
-              </a>
-            </div>
-          </div>
-          <!-- cards slider -->
-          <div class="widthcardBlock hidden lg:row-span-1 h-full w-full ml:flex lg:col-span-2">
-            <!-- card 0-->
-            <div class="card relative h-full hover:z-50">
-              <div style="transition: 0.2s linear;"
-                class="group relative rotate-box item-card flex h-[160px] w-[310px] flex-col transition duration-500 justify-between rounded-[35px] bg-white10 hover:bg-main p-6 ">
-                <div class="absolute top-0 left-0 w-full h-full rounded-[35px] backdrop-blur-[10px] -z-10"></div>
-                <div class="inline-flex relative items-center gap-4 w-[180px] p-3 overflow-hidden rounded-full">
-                  <img class="absolute top-0 left-0 w-full h-full" src="../img/profile/card-bg/Union.svg" alt="">
-                  <span class="w-[40px]">
-                    <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
-                  </span>
-                  <div class="inline-flex flex-col ">
-                    <span
-                      class="font-AProM text-[22px] uppercase transition-colors duration-200 text-white group-hover:text-black">USD</span>
-                    <span class="flex text-[14px] text-white group-hover:text-black">
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
-                          fill="white" class=" group-hover:fill-black  transition-colors duration-200 " />
-                      </svg>
-                      <span class="text-white group-hover:text-black transition-colors duration-200 ">...2587
-                        3443</span>
-                    </span>
-                  </div>
-                </div>
-                <div class=" text-[30px] text-white group-hover:text-black transition-colors duration-200 ">267,93</div>
-              </div>
-            </div>
-            <!-- card 0-->
-            <div class="card relative h-full hover:z-50">
-              <div style="transition: 0.2s linear;"
-                class="group relative rotate-box item-card flex h-[160px] w-[310px] flex-col transition duration-500 justify-between rounded-[35px] bg-white10 hover:bg-main p-6 ">
-                <div class="absolute top-0 left-0 w-full h-full rounded-[35px] backdrop-blur-[10px] -z-10"></div>
-                <div class="inline-flex relative items-center gap-4 w-[180px] p-3 overflow-hidden rounded-full">
-                  <img class="absolute top-0 left-0 w-full h-full" src="../img/profile/card-bg/Union.svg" alt="">
-                  <span class="w-[40px]">
-                    <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
-                  </span>
-                  <div class="inline-flex flex-col ">
-                    <span
-                      class="font-AProM text-[22px] uppercase transition-colors duration-200 text-white group-hover:text-black">USD</span>
-                    <span class="flex text-[14px] text-white group-hover:text-black">
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
-                          fill="white" class=" group-hover:fill-black  transition-colors duration-200 " />
-                      </svg>
-                      <span class="text-white group-hover:text-black transition-colors duration-200 ">...2587
-                        3443</span>
-                    </span>
-                  </div>
-                </div>
-                <div class=" text-[30px] text-white group-hover:text-black transition-colors duration-200 ">267,93</div>
-              </div>
-            </div>
-            <!-- card 0-->
-            <div class="card relative h-full hover:z-50">
-              <div style="transition: 0.2s linear;"
-                class="group relative rotate-box item-card flex h-[160px] w-[310px] flex-col transition duration-500 justify-between rounded-[35px] bg-white10 hover:bg-main p-6 ">
-                <div class="absolute top-0 left-0 w-full h-full rounded-[35px] backdrop-blur-[10px] -z-10"></div>
-                <div class="inline-flex relative items-center gap-4 w-[180px] p-3 overflow-hidden rounded-full">
-                  <img class="absolute top-0 left-0 w-full h-full" src="../img/profile/card-bg/Union.svg" alt="">
-                  <span class="w-[40px]">
-                    <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
-                  </span>
-                  <div class="inline-flex flex-col ">
-                    <span
-                      class="font-AProM text-[22px] uppercase transition-colors duration-200 text-white group-hover:text-black">USD</span>
-                    <span class="flex text-[14px] text-white group-hover:text-black">
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
-                          fill="white" class=" group-hover:fill-black  transition-colors duration-200 " />
-                      </svg>
-                      <span class="text-white group-hover:text-black transition-colors duration-200 ">...2587
-                        3443</span>
-                    </span>
-                  </div>
-                </div>
-                <div class=" text-[30px] text-white group-hover:text-black transition-colors duration-200 ">267,93</div>
-              </div>
-            </div>
-            <!-- card 0-->
-            <div class="card relative h-full hover:z-50">
-              <div style="transition: 0.2s linear;"
-                class="group relative rotate-box item-card flex h-[160px] w-[310px] flex-col transition duration-500 justify-between rounded-[35px] bg-white10 hover:bg-main p-6 ">
-                <div
-                  class="absolute top-0 left-0 bottom-0 right-0 w-full h-full rounded-[35px] backdrop-blur-[10px] -z-10">
-                </div>
-                <div class="inline-flex  relative items-center gap-4 w-[180px] p-3 overflow-hidden rounded-full">
-                  <img class="absolute top-0 left-0 w-full h-full" src="../img/profile/card-bg/Union.svg" alt="">
-                  <span class="w-[40px]">
-                    <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
-                  </span>
-                  <div class="inline-flex flex-col ">
-                    <span
-                      class="font-AProM text-[22px] uppercase transition-colors duration-200 text-white group-hover:text-black">USD</span>
-                    <span class="flex text-[14px] text-white group-hover:text-black">
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
-                          fill="white" class=" group-hover:fill-black  transition-colors duration-200 " />
-                      </svg>
-                      <span class="text-white group-hover:text-black transition-colors duration-200 ">...2587
-                        3443</span>
-                    </span>
-                  </div>
-                </div>
-                <div class=" text-[30px] text-white group-hover:text-black transition-colors duration-200 ">267,93</div>
-              </div>
-            </div>
             <!-- card add -->
             <div class="card relative h-full">
               <div
-                class="rotate-box item-card flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-white10 p-6 ">
+                class="item-card flex h-[160px] w-[310px] flex-col justify-between rounded-[35px] bg-white10 p-6 backdrop-blur-[20px]">
                 <a href="/"
-                  class="group flex h-[40px] w-[40px] items-center justify-center rounded-full bg-white10 transition-colors duration-300 hover:bg-grey">
+                  class="group flex h-[54px] w-[54px] items-center justify-center rounded-full bg-white10 transition-colors duration-300 hover:bg-grey">
                   <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M17.4642 8.35713H10.3924V1.28613H9.10691V8.35713H2.03516V9.64338H9.10691V16.7144H10.3924V9.64338H17.4642V8.35713Z"
                       class="fill-white group-hover:fill-[#b3ff00]" />
                   </svg>
                 </a>
-                <div class="text-[16px] text-white2">Open <br> an account</div>
+                <div class="font-AProM text-[16px] text-white2">Open an account</div>
               </div>
             </div>
           </div>
 
-          <div
-            class="relative mb-[22px] ml:col-span-2 ml:row-span-1 h-[150px] w-[102%] sm:w-[610px] md:w-[660px] ml:hidden">
-            <div class="swiper mySwiperCard absolute h-[195px] left-0 w-full">
+          <div class="relative mb-[22px] h-[200px] w-[102%] sm:w-[610px] md:w-[660px] ml:hidden">
+            <div class="swiper mySwiperCard absolute left-0 w-full">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper h-[150px]">
+              <div class="swiper-wrapper">
                 <!-- Slides -->
+                <!-- card 0-->
+                <div class="swiper-slide h-full w-[202px]">
+                  <div
+                    class="item-card-mobile flex w-[202px] flex-col justify-between gap-[100px] rounded-[35px] bg-[#4ec2ec] p-4 backdrop-blur-[20px]">
+                    <div class="flex items-center gap-4">
+                      <span class="w-[40px]">
+                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                      </span>
+                      <div class="flex flex-col">
+                        <span class="font-AProM text-[16px] uppercase text-black">USD</span>
+                        <span class="flex text-[12px] text-black">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                              fill="black" style="fill: black; fill-opacity: 1" />
+                          </svg>
+                          <span class="">...2587 3443</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="font-AProBo text-[26px] text-black">267,93</div>
+                  </div>
+                </div>
+                <!-- card 0-->
+                <div class="swiper-slide h-full w-[202px]">
+                  <div
+                    class="item-card-mobile flex w-[202px] flex-col justify-between gap-[100px] rounded-[35px] bg-[#4ec2ec] p-4 backdrop-blur-[20px]">
+                    <div class="flex items-center gap-4">
+                      <span class="w-[40px]">
+                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                      </span>
+                      <div class="flex flex-col">
+                        <span class="font-AProM text-[16px] uppercase text-black">USD</span>
+                        <span class="flex text-[12px] text-black">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                              fill="black" style="fill: black; fill-opacity: 1" />
+                          </svg>
+                          <span class="">...2587 3443</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="font-AProBo text-[26px] text-black">267,93</div>
+                  </div>
+                </div>
+                <!-- card 0-->
+                <div class="swiper-slide h-full w-[202px]">
+                  <div
+                    class="item-card-mobile flex w-[202px] flex-col justify-between gap-[100px] rounded-[35px] bg-[#4ec2ec] p-4 backdrop-blur-[20px]">
+                    <div class="flex items-center gap-4">
+                      <span class="w-[40px]">
+                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                      </span>
+                      <div class="flex flex-col">
+                        <span class="font-AProM text-[16px] uppercase text-black">USD</span>
+                        <span class="flex text-[12px] text-black">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                              fill="black" style="fill: black; fill-opacity: 1" />
+                          </svg>
+                          <span class="">...2587 3443</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="font-AProBo text-[26px] text-black">267,93</div>
+                  </div>
+                </div>
+                <!-- card 0-->
+                <div class="swiper-slide h-full w-[202px]">
+                  <div
+                    class="item-card-mobile flex w-[202px] flex-col justify-between gap-[100px] rounded-[35px] bg-[#4ec2ec] p-4 backdrop-blur-[20px]">
+                    <div class="flex items-center gap-4">
+                      <span class="w-[40px]">
+                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
+                      </span>
+                      <div class="flex flex-col">
+                        <span class="font-AProM text-[16px] uppercase text-black">USD</span>
+                        <span class="flex text-[12px] text-black">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z"
+                              fill="black" style="fill: black; fill-opacity: 1" />
+                          </svg>
+                          <span class="">...2587 3443</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="font-AProBo text-[26px] text-black">267,93</div>
+                  </div>
+                </div>
 
-                <!-- card 0-->
-                <div class="swiper-slide  h-[150px] w-[275px]">
-                  <div
-                    class="item-card-mobile  rotate-box  h-[150px]  slide-profile flex w-[275px] flex-col justify-between gap-[40px] rounded-[35px]  p-4 backdrop-blur-[20px]">
-                    <div class="flex items-center gap-4">
-                      <span class="w-[40px]">
-                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
-                      </span>
-                      <div class="flex flex-col">
-                        <span class="font-AProM text-[16px] uppercase text-black">USD</span>
-                        <span class="flex text-[12px] text-black">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z" />
-                          </svg>
-                          <span class="">...2587 3443</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="font-AProBo text-[26px] text-black">267,93</div>
-                  </div>
-                </div>
-                <!-- card 0-->
-                <div class="swiper-slide  h-[150px] w-[275px]">
-                  <div
-                    class="item-card-mobile  rotate-box  h-[150px]  slide-profile flex w-[275px] flex-col justify-between gap-[40px] rounded-[35px]  p-4 backdrop-blur-[20px]">
-                    <div class="flex items-center gap-4">
-                      <span class="w-[40px]">
-                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
-                      </span>
-                      <div class="flex flex-col">
-                        <span class="font-AProM text-[16px] uppercase text-black">USD</span>
-                        <span class="flex text-[12px] text-black">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z" />
-                          </svg>
-                          <span class="">...2587 3443</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="font-AProBo text-[26px] text-black">267,93</div>
-                  </div>
-                </div>
-                <!-- card 0-->
-                <div class="swiper-slide  h-[150px] w-[275px]">
-                  <div
-                    class="item-card-mobile  rotate-box  h-[150px]  slide-profile flex w-[275px] flex-col justify-between gap-[40px] rounded-[35px]  p-4 backdrop-blur-[20px]">
-                    <div class="flex items-center gap-4">
-                      <span class="w-[40px]">
-                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
-                      </span>
-                      <div class="flex flex-col">
-                        <span class="font-AProM text-[16px] uppercase text-black">USD</span>
-                        <span class="flex text-[12px] text-black">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z" />
-                          </svg>
-                          <span class="">...2587 3443</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="font-AProBo text-[26px] text-black">267,93</div>
-                  </div>
-                </div>
-                <!-- card 0-->
-                <div class="swiper-slide  h-[150px] w-[275px]">
-                  <div
-                    class="item-card-mobile  rotate-box  h-[150px]  slide-profile flex w-[275px] flex-col justify-between gap-[40px] rounded-[35px]  p-4 backdrop-blur-[20px]">
-                    <div class="flex items-center gap-4">
-                      <span class="w-[40px]">
-                        <img class="w-full" src="../img/profile/flag/use.svg" alt="" />
-                      </span>
-                      <div class="flex flex-col">
-                        <span class="font-AProM text-[16px] uppercase text-black">USD</span>
-                        <span class="flex text-[12px] text-black">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M1.5 15H16.5V16.5H1.5V15ZM3 9H4.5V14.25H3V9ZM6.75 9H8.25V14.25H6.75V9ZM9.75 9H11.25V14.25H9.75V9ZM13.5 9H15V14.25H13.5V9ZM1.5 5.25L9 1.5L16.5 5.25V8.25H1.5V5.25ZM3 6.177V6.75H15V6.177L9 3.177L3 6.177ZM9 6C8.80109 6 8.61032 5.92098 8.46967 5.78033C8.32902 5.63968 8.25 5.44891 8.25 5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61032 4.57902 8.80109 4.5 9 4.5C9.19891 4.5 9.38968 4.57902 9.53033 4.71967C9.67098 4.86032 9.75 5.05109 9.75 5.25C9.75 5.44891 9.67098 5.63968 9.53033 5.78033C9.38968 5.92098 9.19891 6 9 6Z" />
-                          </svg>
-                          <span class="">...2587 3443</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="font-AProBo text-[26px] text-black">267,93</div>
-                  </div>
-                </div>
                 <!-- card add -->
-                <div class="swiper-slide  h-[150px] w-[275px]">
+                <div class="swiper-slide h-auto w-[202px]">
                   <div
-                    class="item-card-mobile h-[150px]  rotate-box slide-profile flex  w-[275px] flex-col justify-between gap-[40px] rounded-[35px]  p-4 backdrop-blur-[20px]">
+                    class="item-card-mobile flex h-full w-[202px] flex-col justify-between gap-[100px] rounded-[35px] bg-white10 p-4 backdrop-blur-[20px]">
                     <a href="/"
                       class="group flex h-[40px] w-[40px] items-center justify-center rounded-full bg-white10 transition-colors duration-300 hover:bg-grey">
                       <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
-                          d="M17.4642 8.35713H10.3924V1.28613H9.10691V8.35713H2.03516V9.64338H9.10691V16.7144H10.3924V9.64338H17.4642V8.35713Z" />
+                          d="M17.4642 8.35713H10.3924V1.28613H9.10691V8.35713H2.03516V9.64338H9.10691V16.7144H10.3924V9.64338H17.4642V8.35713Z"
+                          class="fill-white group-hover:fill-[#b3ff00]" />
                       </svg>
                     </a>
                     <div class="font-AProM text-[16px] text-white2">Open an account</div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination swiper-profile"></div>
             </div>
           </div>
           <!-- transactions block -->
-          <div
-            class="relative order-last  ml:bg-white10 w-full pb-[100px] ml:pb-0 h-full rounded-[25px] ml:rounded-[35px]">
+          <div class="relative ml:bg-white10 w-full h-full rounded-[25px] ml:rounded-[35px]">
             <div class="absolute hidden ml:block -z-10 h-full w-full backdrop-blur-[15px]"></div>
-            <div class="py-6 hidden ml:block">
-              <div class="flex items-start justify-between px-6">
-                <a href="../profile/search.html" class="w-full text-[22px] text-white2">Transactions</a>
+            <div class="p-6 hidden ml:block">
+              <div class="flex items-start justify-between">
+                <a href="../profile/search.html" class="w-full font-AProM text-[22px] text-white2">Transactions</a>
                 <div class="relative h-[56px] w-full">
                   <svg class="absolute left-[16px] top-[50%] translate-y-[-50%]" width="19" height="18"
                     viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1256,639 +1273,987 @@
                       d="M18.286 16.543L14.257 12.514C15.329 11.186 15.929 9.514 15.929 7.714C15.929 3.471 12.457 0 8.214 0C3.971 0 0.5 3.471 0.5 7.714C0.5 11.957 3.971 15.429 8.214 15.429C10.014 15.429 11.686 14.786 13.014 13.757L17.043 17.786L18.286 16.543ZM8.257 13.714C4.957 13.714 2.257 11.014 2.257 7.714C2.257 4.414 4.957 1.714 8.257 1.714C11.557 1.714 14.257 4.414 14.257 7.714C14.257 11.014 11.557 13.714 8.257 13.714Z"
                       fill="white" style="fill: white; fill-opacity: 1" />
                   </svg>
-                  <input class="h-full w-full rounded-[15px]  bg-transparent pl-[45px] text-[14px] text-grey"
+                  <input
+                    class="h-full w-full rounded-full border-[1px] border-white10 bg-transparent pl-[45px] text-[14px] text-grey"
                     type="text" placeholder="Search Transactions" />
                 </div>
               </div>
-              <div class="pl-6 rounded-[25px] h-[440px] scroll-block mt-2 overflow-x-hidden overflow-y-scroll ">
-                <ul class="w-full pr-6">
-                  <li class="mb-2 trans-item ">
-                    <div class="rotate-box rounded-full bg-white10 p-4">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                          <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" fill="black"
-                                d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z" />
-                            </svg>
-                          </span>
-                          <div class="flex flex-col">
-                            <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                            <span class="text-[12px] text-grey">03.04.2024</span>
-                          </div>
-                        </div>
-                        <div class="flex flex-col items-end justify-start">
-                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
-                            <span class="mr-2 mt-1">25 822.80 UAH
-                            </span>
-                          </span>
-                        </div>
-                      </div>
+              <div class="rounded-[25px] h-[540px] scroll-none mt-2  overflow-y-scroll ">
+                <ul class="w-full">
+                  <li x-data="{open:false}" @click="open = true"
+                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]">
+                    <div
+                      class="flex w-full items-center justify-between rounded-[35px] bg-white10 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                      <span class="leading-snug">April 2024</span>
+                      <span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                            fill="white" style="fill: white; fill-opacity: 1" />
+                        </svg>
+                      </span>
                     </div>
-                  </li>
-                  <li class="mb-2 trans-item ">
-                    <div class="rotate-box rounded-full bg-white10 p-4">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                          <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" fill="black"
-                                d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z" />
-                            </svg>
-                          </span>
-                          <div class="flex flex-col">
-                            <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                            <span class="text-[12px] text-grey">03.04.2024</span>
-                          </div>
-                        </div>
-                        <div class="flex flex-col items-end justify-start">
-                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
-                            <span class="mr-2 mt-1">25 822.80 UAH </span>
-                            <span>
-                              <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                    <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2103_11424)">
-                                  <path
-                                    d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2103_11424">
-                                    <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
-                                      transform="translate(0 0.5)" />
-                                  </clipPath>
-                                </defs>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
                               </svg>
                             </span>
-                          </span>
-                          <span class="text-[12px] text-grey">662,89 USD</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mb-2 trans-item ">
-                    <div class="rotate-box rounded-full bg-white10 p-4">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                          <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" fill="black"
-                                d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z" />
-                            </svg>
-                          </span>
-                          <div class="flex flex-col">
-                            <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                            <span class="text-[12px] text-grey">03.04.2024</span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
                           </div>
                         </div>
-                        <div class="flex flex-col items-end justify-start">
-                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
-                            <span class="mr-2 mt-1">25 822.80 UAH </span>
-                            <span>
-                              <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2103_11424)">
-                                  <path
-                                    d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2103_11424">
-                                    <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
-                                      transform="translate(0 0.5)" />
-                                  </clipPath>
-                                </defs>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
                               </svg>
                             </span>
-                          </span>
-                          <span class="text-[12px] text-grey">662,89 USD</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mb-2 trans-item ">
-                    <div class="rotate-box rounded-full bg-white10 p-4">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                          <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" fill="black"
-                                d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z" />
-                            </svg>
-                          </span>
-                          <div class="flex flex-col">
-                            <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                            <span class="text-[12px] text-grey">03.04.2024</span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
                           </div>
                         </div>
-                        <div class="flex flex-col items-end justify-start">
-                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
-                            <span class="mr-2 mt-1">25 822.80 UAH </span>
-                            <span>
-                              <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2103_11424)">
-                                  <path
-                                    d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2103_11424">
-                                    <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
-                                      transform="translate(0 0.5)" />
-                                  </clipPath>
-                                </defs>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
                               </svg>
                             </span>
-                          </span>
-                          <span class="text-[12px] text-grey">662,89 USD</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mb-2 trans-item ">
-                    <div class="rotate-box rounded-full bg-white10 p-4">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                          <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" fill="black"
-                                d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z" />
-                            </svg>
-                          </span>
-                          <div class="flex flex-col">
-                            <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                            <span class="text-[12px] text-grey">03.04.2024</span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
                           </div>
                         </div>
-                        <div class="flex flex-col items-end justify-start">
-                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
-                            <span class="mr-2 mt-1">25 822.80 UAH </span>
-                            <span>
-                              <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li x-data="{open:false}" @click="open = true"
+                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]">
+                    <div
+                      class="flex w-full items-center justify-between rounded-[35px] bg-white10 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                      <span class="leading-snug">April 2024</span>
+                      <span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                            fill="white" style="fill: white; fill-opacity: 1" />
+                        </svg>
+                      </span>
+                    </div>
+                    <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2103_11424)">
-                                  <path
-                                    d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2103_11424">
-                                    <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
-                                      transform="translate(0 0.5)" />
-                                  </clipPath>
-                                </defs>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
                               </svg>
                             </span>
-                          </span>
-                          <span class="text-[12px] text-grey">662,89 USD</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mb-2 trans-item ">
-                    <div class="rotate-box rounded-full bg-white10 p-4">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                          <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" fill="black"
-                                d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z" />
-                            </svg>
-                          </span>
-                          <div class="flex flex-col">
-                            <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                            <span class="text-[12px] text-grey">03.04.2024</span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
                           </div>
                         </div>
-                        <div class="flex flex-col items-end justify-start">
-                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
-                            <span class="mr-2 mt-1">25 822.80 UAH </span>
-                            <span>
-                              <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2103_11424)">
-                                  <path
-                                    d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2103_11424">
-                                    <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
-                                      transform="translate(0 0.5)" />
-                                  </clipPath>
-                                </defs>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
                               </svg>
                             </span>
-                          </span>
-                          <span class="text-[12px] text-grey">662,89 USD</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mb-2 trans-item ">
-                    <div class="rotate-box rounded-full bg-white10 p-4">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                          <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" fill="black"
-                                d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z" />
-                            </svg>
-                          </span>
-                          <div class="flex flex-col">
-                            <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                            <span class="text-[12px] text-grey">03.04.2024</span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
                           </div>
                         </div>
-                        <div class="flex flex-col items-end justify-start">
-                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
-                            <span class="mr-2 mt-1">25 822.80 UAH </span>
-                            <span>
-                              <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2103_11424)">
-                                  <path
-                                    d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2103_11424">
-                                    <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
-                                      transform="translate(0 0.5)" />
-                                  </clipPath>
-                                </defs>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
                               </svg>
                             </span>
-                          </span>
-                          <span class="text-[12px] text-grey">662,89 USD</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="mb-2 trans-item ">
-                    <div class="rotate-box rounded-full bg-white10 p-4">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                          <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" fill="black"
-                                d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z" />
-                            </svg>
-                          </span>
-                          <div class="flex flex-col">
-                            <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                            <span class="text-[12px] text-grey">03.04.2024</span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
                           </div>
                         </div>
-                        <div class="flex flex-col items-end justify-start">
-                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
-                            <span class="mr-2 mt-1">25 822.80 UAH </span>
-                            <span>
-                              <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li x-data="{open:false}" @click="open = true"
+                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]">
+                    <div
+                      class="flex w-full items-center justify-between rounded-[35px] bg-white10 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                      <span class="leading-snug">April 2024</span>
+                      <span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                            fill="white" style="fill: white; fill-opacity: 1" />
+                        </svg>
+                      </span>
+                    </div>
+                    <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2103_11424)">
-                                  <path
-                                    d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2103_11424">
-                                    <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
-                                      transform="translate(0 0.5)" />
-                                  </clipPath>
-                                </defs>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
                               </svg>
                             </span>
-                          </span>
-                          <span class="text-[12px] text-grey">662,89 USD</span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
                         </div>
-                      </div>
-                    </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                    </ul>
                   </li>
+                  <li x-data="{open:false}" @click="open = true"
+                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]">
+                    <div
+                      class="flex w-full items-center justify-between rounded-[35px] bg-white10 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                      <span class="leading-snug">April 2024</span>
+                      <span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                            fill="white" style="fill: white; fill-opacity: 1" />
+                        </svg>
+                      </span>
+                    </div>
+                    <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li x-data="{open:false}" @click="open = true"
+                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]">
+                    <div
+                      class="flex w-full items-center justify-between rounded-[35px] bg-white10 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                      <span class="leading-snug">April 2024</span>
+                      <span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                            fill="white" style="fill: white; fill-opacity: 1" />
+                        </svg>
+                      </span>
+                    </div>
+                    <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li x-data="{open:false}" @click="open = true"
+                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]">
+                    <div
+                      class="flex w-full items-center justify-between rounded-[35px] bg-white10 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                      <span class="leading-snug">April 2024</span>
+                      <span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                            fill="white" style="fill: white; fill-opacity: 1" />
+                        </svg>
+                      </span>
+                    </div>
+                    <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li x-data="{open:false}" @click="open = true"
+                    class="mb-2 w-full cursor-pointer rounded-[35px] border-[1px] border-[#fff]/[0.05] bg-[rgba(232,235,230,0.03)]">
+                    <div
+                      class="flex w-full items-center justify-between rounded-[35px] bg-white10 p-6 text-[18px] text-white2 hover:bg-[rgba(232,235,230,0.1)]">
+                      <span class="leading-snug">April 2024</span>
+                      <span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.31478 11.5572C8.26317 11.6113 8.20111 11.6544 8.13235 11.6839C8.06359 11.7133 7.98958 11.7285 7.91478 11.7285C7.83999 11.7285 7.76597 11.7133 7.69721 11.6839C7.62846 11.6544 7.56639 11.6113 7.51478 11.5572L1.80078 5.84322L2.60078 5.04322L7.91478 10.3572L13.2294 5.04321L14.0294 5.84322L8.31478 11.5572Z"
+                            fill="white" style="fill: white; fill-opacity: 1" />
+                        </svg>
+                      </span>
+                    </div>
+                    <ul class="my-4 px-6" x-show="open" @click.outside="open = false">
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                      <li class="rounded-[25px]  mb-2" x-data="{openItem:false}"
+                        :class="openItem ? 'border-[1px] border-[#fff]/[0.1] px-5 py-2' : ''">
+                        <div class="flex items-center justify-between" @click="openItem = ! openItem">
+                          <div class="flex items-center">
+                            <span
+                              class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                                  fill="white" style="fill: white; fill-opacity: 1" />
+                              </svg>
+                            </span>
+                            <div class="flex flex-col">
+                              <span class="font-AProM text-white2 xl:text-[16px]">Liam
+                                Johnson</span>
+                              <span class="text-[14px] text-grey">03.04.2024</span>
+                            </div>
+                          </div>
+                          <div class="flex flex-col items-end justify-start">
+                            <span class="text-right font-AProM text-[16px] text-white2">
+                              25 822.80 UAH
+                            </span>
+                            <span class="text-[14px] text-grey">662,89 USD</span>
+                          </div>
+                        </div>
+                        <div class="mt-2 text-[14px] text-grey xl:w-[290px]" x-show="openItem"
+                          @click.outside="openItem = false">
+                          Welcome to your trusted partner in the realm of international financial
+                          transactions.
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+
 
                 </ul>
               </div>
             </div>
             <div class="flex h-full w-full flex-col gap-4 rounded-[35px] p-4 ml:hidden">
-              <div class="flex justify-between">
-                <h3 class="leading-none  text-[22px] text-white2">Transactions</h3>
-                <a class="  cursor-pointer  text-[14px] leading-snug text-main" href="./transactions.html">
-                  See all
-                </a>
-              </div>
+              <h3 class="w-full font-AProM text-[22px] text-white2">Transactions</h3>
+
               <div class="lg:overflow-hidden">
                 <ul class="">
-                  <li class="mb-2 trans-item ">
-                    <div class="rotate-box rounded-[15px] bg-white10 p-4">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                          <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                  <li class="mb-2 rounded-[15px] bg-[#161617] p-4">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center">
+                        <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                          <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                              fill="white" style="fill: white; fill-opacity: 1" />
+                          </svg>
+                        </span>
+                        <div class="flex flex-col">
+                          <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
+                          <span class="text-[12px] text-grey">03.04.2024</span>
+                        </div>
+                      </div>
+                      <div class="flex flex-col items-end justify-start">
+                        <span class="flex items-center text-right font-AProM text-[14px] text-white2">
+                          <span class="mr-2 mt-1">25 822.80 UAH </span>
+                          <span>
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" fill="black"
-                                d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z" />
+                              <g clip-path="url(#clip0_2103_11424)">
+                                <path
+                                  d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                  fill="#9B9B9B" style="
+                                       fill: #9b9b9b;
+                                       fill: color(display-p3 0.6078 0.6078 0.6078);
+                                       fill-opacity: 1;
+                                     " />
+                                <path
+                                  d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                  fill="#9B9B9B" style="
+                                       fill: #9b9b9b;
+                                       fill: color(display-p3 0.6078 0.6078 0.6078);
+                                       fill-opacity: 1;
+                                     " />
+                                <path
+                                  d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                  fill="#9B9B9B" style="
+                                       fill: #9b9b9b;
+                                       fill: color(display-p3 0.6078 0.6078 0.6078);
+                                       fill-opacity: 1;
+                                     " />
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_2103_11424">
+                                  <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
+                                    transform="translate(0 0.5)" />
+                                </clipPath>
+                              </defs>
                             </svg>
                           </span>
-                          <div class="flex flex-col">
-                            <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                            <span class="text-[12px] text-grey">03.04.2024</span>
-                          </div>
-                        </div>
-                        <div class="flex flex-col items-end justify-start">
-                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
-                            <span class="mr-2 mt-1">25 822.80 UAH </span>
-                            <span>
-                              <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2103_11424)">
-                                  <path
-                                    d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2103_11424">
-                                    <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
-                                      transform="translate(0 0.5)" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                          </span>
-                          <span class="text-[12px] text-grey">662,89 USD</span>
-                        </div>
+                        </span>
+                        <span class="text-[12px] text-grey">662,89 USD</span>
                       </div>
                     </div>
                   </li>
-                  <li class="mb-2 trans-item ">
-                    <div class="rotate-box rounded-[15px] bg-white10 p-4">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                          <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                  <li class="mb-2 rounded-[15px] bg-[#161617] p-4">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center">
+                        <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                          <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                              fill="white" style="fill: white; fill-opacity: 1" />
+                          </svg>
+                        </span>
+                        <div class="flex flex-col">
+                          <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
+                          <span class="text-[12px] text-grey">03.04.2024</span>
+                        </div>
+                      </div>
+                      <div class="flex flex-col items-end justify-start">
+                        <span class="flex items-center text-right font-AProM text-[14px] text-white2">
+                          <span class="mr-2 mt-1">25 822.80 UAH </span>
+                          <span>
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" fill="black"
-                                d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z" />
+                              <g clip-path="url(#clip0_2103_11424)">
+                                <path
+                                  d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                  fill="#9B9B9B" style="
+                                       fill: #9b9b9b;
+                                       fill: color(display-p3 0.6078 0.6078 0.6078);
+                                       fill-opacity: 1;
+                                     " />
+                                <path
+                                  d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                  fill="#9B9B9B" style="
+                                       fill: #9b9b9b;
+                                       fill: color(display-p3 0.6078 0.6078 0.6078);
+                                       fill-opacity: 1;
+                                     " />
+                                <path
+                                  d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                  fill="#9B9B9B" style="
+                                       fill: #9b9b9b;
+                                       fill: color(display-p3 0.6078 0.6078 0.6078);
+                                       fill-opacity: 1;
+                                     " />
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_2103_11424">
+                                  <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
+                                    transform="translate(0 0.5)" />
+                                </clipPath>
+                              </defs>
                             </svg>
                           </span>
-                          <div class="flex flex-col">
-                            <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                            <span class="text-[12px] text-grey">03.04.2024</span>
-                          </div>
-                        </div>
-                        <div class="flex flex-col items-end justify-start">
-                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
-                            <span class="mr-2 mt-1">25 822.80 UAH </span>
-                            <span>
-                              <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2103_11424)">
-                                  <path
-                                    d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2103_11424">
-                                    <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
-                                      transform="translate(0 0.5)" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                          </span>
-                          <span class="text-[12px] text-grey">662,89 USD</span>
-                        </div>
+                        </span>
+                        <span class="text-[12px] text-grey">662,89 USD</span>
                       </div>
                     </div>
                   </li>
-                  <li class="mb-2 trans-item ">
-                    <div class="rotate-box rounded-[15px] bg-white10 p-4">
-                      <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                          <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd" fill="black"
-                                d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z" />
-                            </svg>
-                          </span>
-                          <div class="flex flex-col">
-                            <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
-                            <span class="text-[12px] text-grey">03.04.2024</span>
-                          </div>
-                        </div>
-                        <div class="flex flex-col items-end justify-start">
-                          <span class="flex items-center text-right font-AProM text-[14px] text-white2">
-                            <span class="mr-2 mt-1">25 822.80 UAH </span>
-                            <span>
-                              <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2103_11424)">
-                                  <path
-                                    d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                  <path
-                                    d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
-                                    fill="#9B9B9B" style="
-                                         fill: #9b9b9b;
-                                         fill: color(display-p3 0.6078 0.6078 0.6078);
-                                         fill-opacity: 1;
-                                       " />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2103_11424">
-                                    <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
-                                      transform="translate(0 0.5)" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                          </span>
-                          <span class="text-[12px] text-grey">662,89 USD</span>
+                  <li class="mb-2 rounded-[15px] bg-[#161617] p-4">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center">
+                        <span class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white10">
+                          <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M1.43189 7.18777L0.954595 6.71048L6.99591e-07 7.66507L0.477298 8.14237L5.13723 12.8023C5.40083 13.0659 5.82822 13.0659 6.09182 12.8023L10.7518 8.14237L11.229 7.66507L10.2745 6.71048L9.79716 7.18778L6.28884 10.6961L6.28884 0.887603L4.93884 0.887603L4.93884 10.6947L1.43189 7.18777Z"
+                              fill="white" style="fill: white; fill-opacity: 1" />
+                          </svg>
+                        </span>
+                        <div class="flex flex-col">
+                          <span class="font-AProM text-[14px] text-white2">Liam Johnson</span>
+                          <span class="text-[12px] text-grey">03.04.2024</span>
                         </div>
                       </div>
+                      <div class="flex flex-col items-end justify-start">
+                        <span class="flex items-center text-right font-AProM text-[14px] text-white2">
+                          <span class="mr-2 mt-1">25 822.80 UAH </span>
+                          <span>
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_2103_11424)">
+                                <path
+                                  d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                  fill="#9B9B9B" style="
+                                       fill: #9b9b9b;
+                                       fill: color(display-p3 0.6078 0.6078 0.6078);
+                                       fill-opacity: 1;
+                                     " />
+                                <path
+                                  d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                  fill="#9B9B9B" style="
+                                       fill: #9b9b9b;
+                                       fill: color(display-p3 0.6078 0.6078 0.6078);
+                                       fill-opacity: 1;
+                                     " />
+                                <path
+                                  d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                  fill="#9B9B9B" style="
+                                       fill: #9b9b9b;
+                                       fill: color(display-p3 0.6078 0.6078 0.6078);
+                                       fill-opacity: 1;
+                                     " />
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_2103_11424">
+                                  <rect width="18" height="18" fill="white" style="fill: white; fill-opacity: 1"
+                                    transform="translate(0 0.5)" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </span>
+                        </span>
+                        <span class="text-[12px] text-grey">662,89 USD</span>
+                      </div>
                     </div>
+                  </li>
+                  <li class="mb-2 w-full">
+                    <a class="inline-block w-full cursor-pointer rounded-full bg-white2 px-6 py-3 text-center font-AProM text-[16px] leading-snug text-bg2 hover:bg-[#d1d1d1]"
+                      href="./transactions.html">
+                      See all
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -1896,67 +2261,53 @@
           </div>
 
           <!-- recent -->
-          <div class=" flex max-h-[650px] lg:order-last flex-col gap-2  lg:row-span-1">
-
+          <div class="order-2 flex max-h-[650px] flex-col gap-2 lg:order-3 lg:row-span-1">
+            <div class="rounded-[35px] bg-black">
+              <div class="rounded-[35px] bg-white10 p-6">
+                <h3 class="w-full font-AProM text-[22px] text-white2">Recent</h3>
+                <div class="mt-4 flex justify-start gap-2 overflow-hidden">
+                  <div class="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-[10px] p-2">
+                    <span
+                      class="flex h-[54px] w-[54px] items-center justify-center overflow-hidden rounded-full bg-white10">
+                      <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M16.7854 8.35713H9.7137V1.28613H8.42819V8.35713H1.35645V9.64338H8.42819V16.7144H9.7137V9.64338H16.7854V8.35713Z"
+                          fill="white" style="fill: white; fill-opacity: 1" />
+                      </svg>
+                    </span>
+                    <span class="font-AProM text-[14px] text-white2">Add New</span>
+                  </div>
+                  <div
+                    class="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-[10px] bg-transparent p-2 hover:bg-white10">
+                    <span class="h-[54px] w-[54px] overflow-hidden rounded-full">
+                      <img src="../img/profile/foto-person/foto1.png" alt="" />
+                    </span>
+                    <span class="font-AProM text-[14px] text-white2">Hailey</span>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="relative overflow-hidden rounded-[35px] bg-black/[0.9]">
               <div
                 class="absolute right-[50px] top-[-30%] h-[300px] w-[300px] rounded-[50%_/_0_0_100%_100%] bg-white/[0.06] blur-[50px]">
               </div>
-              <!-- header grafic -->
-              <div class="rounded-t-[35px] flex gap-2 items-center bg-white10 px-6 pb-8 pt-6">
-                <div class="relative w-[80px] h-[70px]">
+              <div class="rounded-t-[35px] bg-white10 px-6 pb-8 pt-6">
+                <h3 class="w-full font-AProM text-[22px] text-white2">Exchange rate</h3>
+                <div class="mt-6 flex items-center gap-2">
+                  <span class="text-[15px] text-grey">USD</span>
+                  <span class="font-AProM text-[22px] text-white2">39.370</span>
                   <span
-                    class="absolute top-0 left-0 w-[50px] h-[50px] rounded-full bg-[rgb(25,25,25)] flex items-center justify-center">
-                    <img class="w-10" src="../img/flag/Property 1=Bangladesh.svg" alt="">
-                  </span>
-                  <span
-                    class="absolute bottom-0 right-0 w-[50px] h-[50px] rounded-full  bg-[rgb(25,25,25)] flex items-center justify-center">
-                    <img class="w-10" src="../img/flag/Property 1=Cyprus flag.svg" alt="">
-                  </span>
-                </div>
-                <div class=" w-full">
-                  <div class="flex justify-between items-center">
-                    <h3 class="w-full  text-[22px] text-white2">Exchange rate</h3>
-                    <button class="rounded-full p-4 border-[1px] border-white10 flex items-center gap-2">
-                      EUR/USD
-                      <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_793_24534)">
-                          <path d="M1.83097 0.765624L6.23775 5.23342L10.6445 0.765625" stroke="#9B9B9B"
-                            style="stroke:#9B9B9B;stroke:color(display-p3 0.6078 0.6078 0.6078);stroke-opacity:1;"
-                            stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round" />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_793_24534">
-                            <rect width="11.5254" height="6" fill="white" style="fill:white;fill-opacity:1;"
-                              transform="translate(12 6) rotate(-180)" />
-                          </clipPath>
-                        </defs>
-                      </svg></button>
-                  </div>
-                  <div class="mt-1 flex items-center gap-4">
-                    <div class="flex items-end gap-2">
-                      <div class="flex items-start">
-                        <span class="text-[30px] text-white2 leading-none">1.0742
-                        </span>
-                        <span>5</span>
-                      </div>
-                      <span class="text-xs leading-none">USD</span>
-                    </div>
-
-                    <span class="flex items-center  gap-1  leading-none text-main">
-                      +0.089(+0,18%)
-                      <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M6.89145 5.02789L7.36285 5.4993L8.30566 4.55649L7.83426 4.08508L4.72764 0.978465C4.46729 0.718116 4.04518 0.718116 3.78483 0.978465L0.678211 4.08508L0.206807 4.55649L1.14962 5.4993L1.62102 5.02789L3.58942 3.0595L3.58942 9.07456L4.92275 9.07456L4.92275 3.05919L6.89145 5.02789Z"
-                          fill="#D7FF00" style="fill: #d7ff00; fill: color(display-p3 0.8431 1 0); fill-opacity: 1" />
-                      </svg>
-                    </span>
-                  </div>
+                    class="flex items-center justify-center gap-1 rounded-[11px] bg-white10 px-[10px] py-[5px] leading-none text-main">
+                    <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6.89145 5.02789L7.36285 5.4993L8.30566 4.55649L7.83426 4.08508L4.72764 0.978465C4.46729 0.718116 4.04518 0.718116 3.78483 0.978465L0.678211 4.08508L0.206807 4.55649L1.14962 5.4993L1.62102 5.02789L3.58942 3.0595L3.58942 9.07456L4.92275 9.07456L4.92275 3.05919L6.89145 5.02789Z"
+                        fill="#D7FF00" style="fill: #d7ff00; fill: color(display-p3 0.8431 1 0); fill-opacity: 1" />
+                    </svg>
+                    +0.089</span>
                 </div>
               </div>
-              <!-- grafic -->
-              <div class="relative flex h-[400px] w-full items-end rounded-b-[35px] bg-white10">
-                <canvas class="absolute bottom-0 rounded-b-[35px]" id="myChart"></canvas>
+              <div class="relative flex h-[300px] w-full items-end rounded-b-[35px] bg-white10">
+                <canvas class="absolute bottom-0 rounded-[35px]" id="myChart"></canvas>
               </div>
             </div>
           </div>
@@ -2039,30 +2390,13 @@
       enabled: true,
       // slidesPerView: 1,
       slidesPerView: 'auto',
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-profile',
-      },
-      onSlideChange: function () {
-        const activeSlide = this.slides[this.activeIndex]
-        activeSlide.classList.add('swiper-slide-active')
-
-        // Удаление активного класса со всех других слайдов
-        for (let i = 0; i < this.slides.length; i++) {
-          if (this.slides[i] !== activeSlide) {
-            this.slides[i].classList.remove('swiper-slide-active')
-          }
-        }
-      }
+      spaceBetween: 30
     })
   </script>
   <script>
     const card = document.querySelectorAll('.card')
     const widthCard = document.querySelector('.widthcardBlock').offsetWidth
     const cardWidth = document.querySelector('.card').offsetWidth
-    let resizeTimer;
-
-
     let mr = Math.round((-1 * (card.length * cardWidth - widthCard)) / (card.length - 1))
     card.forEach((item) => {
       item.style.marginRight = mr + 'px'
@@ -2072,28 +2406,32 @@
 
     // animate
     function rotate(event) {
-      this.querySelector('.rotate-box').classList.add('rotating');
+      const itemCard = this.querySelector('.item-card')
+      const halfHeight = itemCard.offsetHeight / 2
+      const halfWidth = itemCard.offsetWidth / 2
+      itemCard.style.transform = `rotateX(${-(event.offsetY - halfHeight) / 10}deg) rotateY(${(event.offsetX - halfWidth) / 10}deg)`
     }
 
     function stopRotate(event) {
-      this.querySelector('.rotate-box').classList.remove('rotating');
+      const itemCard = this.querySelector('.item-card')
+      itemCard.style.transform = 'rotate(0)'
     }
-
-
-    document.querySelectorAll('.swiper-slide').forEach((item) => {
-      item.addEventListener('mouseenter', rotate)
-      item.addEventListener('mouseout', stopRotate)
+    // animate mobile card
+    const swiperSlide = document.querySelectorAll('.swiper-slide')
+    function rotateMob(event) {
+      const itemCard = this.querySelector('.item-card-mobile')
+      const halfHeight = itemCard.offsetHeight / 2
+      const halfWidth = itemCard.offsetWidth / 2
+      itemCard.style.transform = `rotateX(${-(event.offsetY - halfHeight) / 10}deg) rotateY(${(event.offsetX - halfWidth) / 10}deg)`
+    }
+    function stopRotateMob(event) {
+      const itemCard = this.querySelector('.item-card-mobile')
+      itemCard.style.transform = 'rotate(0)'
+    }
+    swiperSlide.forEach((item) => {
+      item.addEventListener('mousemove', rotateMob)
+      item.addEventListener('mouseout', stopRotateMob)
     })
-    document.querySelectorAll('.trans-item').forEach((item) => {
-      item.addEventListener('mouseenter', rotate)
-      item.addEventListener('mouseout', stopRotate)
-    })
-    document.querySelectorAll('.trans-item').forEach((item) => {
-      item.addEventListener('mousemove', rotate)
-      item.addEventListener('mouseout', stopRotate)
-    })
-
-
   </script>
   <script>
     function formatNumberWithDot(value) {
@@ -2102,34 +2440,27 @@
     var ctx = document.getElementById('myChart').getContext('2d')
 
     // Создание градиента
-    var gradient = ctx.createLinearGradient(0, 0, 0, 600)
-    gradient.addColorStop(0, 'rgba(215, 255, 0,1)')
-    gradient.addColorStop(1, 'rgb(0,0,0,0)')
+    var gradient = ctx.createLinearGradient(0, 0, 0, 400)
+    gradient.addColorStop(0, 'rgba(215, 255, 0,0.3)')
+    gradient.addColorStop(1, 'rgb(0,0,0,00)')
 
     var myChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['', '', '', '', '', '', '', '', '', '17', '', '', '', '', '', '', '', '', '', '27', '', '', '', '', '', '', '',],
+        labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', ''],
         datasets: [
-
           {
-            data: [38.9, 39.5, 39.1, 39.8, 39.6, 39.7, 39, 39.5, 39.2, 39.8, 39.6, 39.7, 39, 39.5, 39.2, 39.8, 39.6, 39.39, 39.5, 39.2, 39.8, 39.6, 39.7, 39, 39.5, 39.2, 39.8, 39.6, 39.7],
-
-            borderColor: 'red',
-            tension: 0.5,
-          },
-          {
-            data: [39, 39.5, 39.2, 39.8, 39.6, 39.7, 39, 39.5, 39.2, 39.8, 39.6, 39.7, 39, 39.5, 39.2, 39.8, 39.6, 39.39, 39.5, 39.2, 39.8, 39.6, 39.7, 39, 39.5, 39.2, 39.8, 39.6, 39.7],
+            data: [5, 20, 30, 5, 15, 60, 55.5, 25, 70, 20, 55, 36, 33.3, 77],
             fill: true,
             borderColor: '#434F02',
             backgroundColor: gradient,
-            tension: 0.5,
+            tension: 0.3,
             hitRadius: 10,
             beginAtZero: true,
             pointBackgroundColor: 'rgba(215,255,0,0.5)',
             pointBorderColor: 'transparent', // Цвет границы точек
             pointBorderWidth: 2, // Ширина границы точек
-            pointRadius: 2, // Радиус точек
+            pointRadius: 1, // Радиус точек
             pointHoverRadius: 5,
             pointHoverBackgroundColor: 'rgba(215,255,0,1)',
             pointHoverBorderWidth: 10,
@@ -2142,10 +2473,11 @@
         responsive: true,
         scales: {
           x: {
+            display: false
           },
           y: {
-            suggestedMax: 40, // Задать максимальное значение на оси Y
-            suggestedMin: 38.5 // Задать максимальное значение на оси Y
+            display: false,
+            suggestedMax: 100 // Задать максимальное значение на оси Y
           }
         },
         plugins: {

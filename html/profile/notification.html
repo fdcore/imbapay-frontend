@@ -1,221 +1,449 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
-    <title>notification</title>
-    <link href="../style.css" rel="stylesheet" />
-  </head>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
+  <title>notification</title>
+  <link href="../style.css" rel="stylesheet" />
+</head>
 
-  <body>
-    <div class="relative">
-      <img
-        class="fixed right-0 top-[-10px] -z-20 w-full -rotate-90 md:max-w-[900px] ml:bottom-0 ml:top-auto ml:h-auto ml:rotate-0"
-        src="../img/bg-right.png"
-        alt=""
-      />
-     
-      <!-- bg-[#d7ff00]/[0.1] -->
+<body>
+  <div class="relative">
+    <div
+      class="hidden ml:block pointer-events-none  fixed top-0 left-0 w-full h-full bg-gradient-to-tr from-transparent from-30%  via-[rgba(215,225,0,0.1)] via-50% to-transparent to-80%">
+    </div>
+    <div class="ml:hidden fixed bottom-0 right-0 w-full h-full opacity-30 -z-10 bg-main">
+      <img class="fixed bottom-0 right-0 w-full h-full mix-blend-luminosity  -z-10"
+        src="../img/registration/abstract-blue-background-web-design-templates-product-studio-with-smooth-gradient-color 1.png"
+        alt="">
+    </div>
 
-      <!-- content  -->
-      <div class="mb-[20px] grid w-full grid-cols-1 ">
-        <!-- notifiaction-->
+    <!-- bg-[#d7ff00]/[0.1] -->
 
-        
-          
-          <div class="rounded-b-[35px]  py-[22px] px-4">
-            <div class="">
-              <div class="flex w-full items-start justify-between gap-4">
-                <a
-                  href="./index.html"
-                  class="flex h-[44px] w-[54px] cursor-pointer items-center justify-center transition-all duration-300 rounded-full bg-bg3 hover:bg-main group"
-                >
-                  <svg
-                    width="12"
-                    height="10"
-                    viewBox="0 0 12 10"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path class="fill-white group-hover:fill-black"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M5.67139 1.46474L5.95423 1.1819L5.38854 0.616211L5.1057 0.899053L0.983368 5.02139C0.827158 5.1776 0.827159 5.43086 0.983368 5.58707L5.1057 9.7094L5.38854 9.99225L5.95423 9.42656L5.67139 9.14372L2.23109 5.70342L11.3847 5.70342L11.3847 4.90342L2.2327 4.90342L5.67139 1.46474Z"
-                      
-                    />
+    <!-- content  -->
+    <div class="mb-[20px] grid w-full grid-cols-1 ">
+      <!-- notifiaction-->
+
+
+
+      <div class="rounded-b-[35px]  py-[22px] px-4">
+        <div class="">
+          <div class="flex w-full items-start justify-between gap-4">
+            <a href="./index.html"
+              class="flex h-[44px] w-[44px] cursor-pointer items-center justify-center transition-all duration-300 rounded-full bg-bg3 hover:bg-main group">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.25896 18.4493L6.40038 18.5907L6.5418 18.4493L12.0004 12.9907L17.459 18.4493L17.6004 18.5907L17.7418 18.4493L18.4498 17.7413L18.5912 17.5999L18.4498 17.4585L12.9912 11.9999L18.4498 6.54132L18.5912 6.39989L18.4498 6.25847L17.7418 5.55047L17.6004 5.40905L17.459 5.55047L12.0004 11.0091L6.5418 5.55047L6.40038 5.40905L6.25896 5.55047L5.55096 6.25847L5.40954 6.39989L5.55096 6.54132L11.0095 11.9999L5.55096 17.4585L5.40954 17.5999L5.55096 17.7413L6.25896 18.4493Z"
+                  fill="white" stroke="white" style="fill:white;fill-opacity:1;stroke:white;stroke-opacity:1;"
+                  stroke-width="0.4" />
+              </svg>
+            </a>
+            <h3 class=" text-[30px]  text-center  text-white2">
+              <span class="mr-[50px] inline-block">Notification
+              </span>
+            </h3>
+            <a href="/"
+              class="flex h-[44px] w-[44px] cursor-pointer items-center justify-center transition-all duration-300 rounded-full bg-bg3 hover:bg-main group">
+              <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.7341 9.00105L13.6766 9.56067C13.8245 9.64936 13.9125 9.76692 13.9125 9.97317C13.942 10.1203 13.942 10.2681 13.854 10.4152L12.4983 12.7431C12.4103 12.8607 12.292 12.9782 12.1449 13.0078C11.9971 13.0374 11.85 13.0374 11.7028 12.9494L10.7596 12.389C10.2591 12.8311 9.6699 13.1556 9.02159 13.3907V14.4811C9.02104 14.6372 8.95879 14.7868 8.84842 14.8971C8.73804 15.0075 8.58849 15.0698 8.4324 15.0703H5.72159C5.56549 15.0698 5.41594 15.0075 5.30557 14.8971C5.19519 14.7868 5.13294 14.6372 5.1324 14.4811V13.3323C4.50121 13.0973 3.91359 12.7588 3.39371 12.3306L2.45115 12.8902C2.3329 12.9782 2.15621 12.9782 2.00909 12.9494C1.86196 12.9198 1.74371 12.8311 1.65571 12.684L0.29996 10.3561C0.240835 10.2385 0.21196 10.0619 0.240835 9.91405C0.270398 9.76692 0.359085 9.64936 0.50621 9.56067L1.44946 9.00105C1.39072 8.67038 1.36104 8.3352 1.36077 7.99936C1.36077 7.67486 1.39034 7.35105 1.44946 6.99698L0.50621 6.43736C0.388648 6.34936 0.270398 6.23111 0.240835 6.08398C0.21196 5.93686 0.21196 5.78905 0.29996 5.64192L1.71415 3.25561C1.80284 3.13736 1.9204 3.0198 2.06821 2.99023C2.21534 2.96067 2.36246 2.96067 2.50959 3.04936L3.45284 3.60898C3.95334 3.16692 4.54321 2.84311 5.19084 2.6073V1.51692C5.19138 1.36071 5.25372 1.21106 5.36425 1.10066C5.47477 0.990266 5.6245 0.928097 5.78071 0.927734H8.49084C8.64705 0.928097 8.79677 0.990266 8.9073 1.10066C9.01782 1.21106 9.08017 1.36071 9.08071 1.51692V2.63686C9.71164 2.87195 10.299 3.21048 10.8187 3.63855L11.762 3.07823C11.8795 2.99023 12.0562 2.99023 12.204 3.0198C12.3511 3.04936 12.4687 3.13736 12.5574 3.28448L13.8822 5.64192C13.9709 5.75948 13.9709 5.93686 13.9413 6.08398C13.9118 6.23111 13.8238 6.34936 13.676 6.43736L12.7334 6.99698C12.7925 7.32148 12.8214 7.67486 12.8214 7.99936C12.8214 8.32317 12.7932 8.64698 12.7341 9.00105ZM11.6437 7.99936C11.6437 7.61573 11.5853 7.2328 11.4966 6.84986C11.4375 6.58448 11.5261 6.3198 11.8204 6.17198L12.6454 5.70105L11.8795 4.37486L11.0545 4.84648C10.9438 4.91307 10.814 4.94053 10.6858 4.92445C10.5576 4.90837 10.4386 4.84967 10.3478 4.7578C9.78746 4.22773 9.11027 3.81523 8.34371 3.60898C8.21718 3.58024 8.10431 3.50904 8.02388 3.40722C7.94345 3.3054 7.90031 3.17911 7.90165 3.04936V2.10611H6.3699V3.07823C6.37139 3.2081 6.32833 3.33455 6.24789 3.43651C6.16745 3.53847 6.05448 3.60978 5.92784 3.63855C5.17005 3.83721 4.47866 4.23367 3.92446 4.78736C3.83361 4.8794 3.71443 4.93819 3.58611 4.95428C3.45779 4.97037 3.32778 4.94281 3.21702 4.87605L2.39202 4.40442L1.62615 5.73061L2.45115 6.20155C2.6574 6.3198 2.77496 6.58448 2.71584 6.84986C2.62339 7.22645 2.57403 7.61232 2.56871 8.00005C2.56871 8.38298 2.62784 8.76592 2.71584 9.14886C2.80452 9.38467 2.68696 9.65005 2.45115 9.79717L1.62615 10.2688L2.39202 11.5943L3.1579 11.1522C3.26866 11.0855 3.39866 11.0579 3.52698 11.074C3.65531 11.0901 3.77448 11.1489 3.86534 11.2409C4.42496 11.771 5.10284 12.1835 5.86871 12.3897C5.99536 12.4185 6.10832 12.4898 6.18876 12.5918C6.26921 12.6937 6.31227 12.8202 6.31077 12.95V13.8926H7.84321V12.9205C7.84321 12.6551 8.0199 12.4193 8.28459 12.3609C9.04269 12.1621 9.73434 11.7654 10.2886 11.2114C10.3795 11.1195 10.4985 11.0608 10.6267 11.0447C10.7548 11.0286 10.8847 11.0561 10.9954 11.1227L11.8204 11.5943L12.587 10.2688L11.762 9.79717C11.5557 9.67961 11.4375 9.41423 11.4966 9.14886C11.5889 8.77272 11.6383 8.38732 11.6437 8.00005V7.99936ZM4.15959 7.99936C4.16176 7.21853 4.47291 6.47031 5.02504 5.91819C5.57717 5.36606 6.32539 5.05491 7.10621 5.05273C7.88704 5.05491 8.63526 5.36606 9.18739 5.91819C9.73951 6.47031 10.0507 7.21853 10.0528 7.99936C10.0505 8.78006 9.73925 9.52811 9.18714 10.0801C8.63503 10.6321 7.88692 10.9431 7.10621 10.9453C6.32562 10.9431 5.57761 10.6322 5.02552 10.0803C4.47343 9.5285 4.16213 8.78063 4.15959 8.00005V7.99936ZM5.33865 7.99936C5.3401 8.4677 5.52679 8.91644 5.85796 9.24761C6.18913 9.57878 6.63787 9.76547 7.10621 9.76692C7.57467 9.76565 8.02359 9.57904 8.35491 9.24785C8.68622 8.91667 8.87301 8.46782 8.87446 7.99936C8.87319 7.53078 8.68649 7.08176 8.35515 6.75042C8.02381 6.41908 7.57479 6.23238 7.10621 6.23111C6.63763 6.23256 6.18868 6.41944 5.85747 6.75091C5.52627 7.08237 5.33974 7.53147 5.33865 8.00005V7.99936Z"
+                  fill="white" style="fill:white;fill-opacity:1;" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="px-4 " x-data="check()">
+        <!-- notification block-->
+
+
+        <div class="flex gap-2 mb-4">
+          <span class="border-[1px] border-stroke20 py-2 px-4 rounded-full "
+            :class="item === 1 ? 'bg-[#d7dd00]/[0.2] text-main border-main': 'text-grey'" @click="checked(1)">All</span>
+          <span class="border-[1px] border-stroke20 py-2 px-4 rounded-full "
+            :class="item === 2 ? 'bg-[#d7dd00]/[0.2] text-main border-main': 'text-grey'"
+            @click="checked(2)">Transactions</span>
+          <span class="border-[1px] border-stroke20 py-2 px-4 rounded-full "
+            :class="item === 3 ? 'bg-[#d7dd00]/[0.2] text-main border-main': 'text-grey'"
+            @click="checked(3)">News</span>
+        </div>
+        <div class="" x-show="item === 1">
+          <div class="">
+            <span class="text-[16px] text-grey">News</span>
+            <div class="mt-4 flex flex-col gap-2">
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
                   </svg>
-                </a>
-                <h3 class="font-AProM text-[22px] w-full text-center  text-white2"><span class="mr-[50px] inline-block">Notification</span></h3>
-                
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
-          
+          </div>
+          <div class="mt-4">
+            <span class="text-[16px] text-grey">Last 24 Hours</span>
+            <div class="mt-4 flex flex-col gap-2">
+              <!-- elem -->
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- elem -->
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- elem -->
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- elem -->
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="px-4 " >
-          <!-- notification block-->
-                
-                  
-                      
-                      <div class="">
-                        <span class="text-[16px] text-grey">News</span>
-                        <div class="mt-4 flex flex-col gap-2">
-                          <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
-                            <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
-                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z" fill="white" style="fill:white;fill-opacity:1;" />
-</svg>
-                            </span> 
-                            <div class="flex flex-col w-full">
-                              <div class="flex justify-between w-full">
-                                <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
-                                <span class="text-[12px] text-grey">12:45 am</span>
-                              </div>
-                              <div class="flex justify-between items-end">
-                                <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00 USD</span>
-                                <span class="">
-                                  <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="4" cy="4.36621" r="4" fill="#D7FF00" style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-</svg>
-                                </span>  
-                              </div>
-                            </div>
-                          </div>
-                          <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
-                            <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
-                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z" fill="white" style="fill:white;fill-opacity:1;" />
-</svg>
-                            </span> 
-                            <div class="flex flex-col w-full">
-                              <div class="flex justify-between w-full">
-                                <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
-                                <span class="text-[12px] text-grey">12:45 am</span>
-                              </div>
-                              <div class="flex justify-between items-end">
-                                <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00 USD</span>
-                                <span class="">
-                                  <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="4" cy="4.36621" r="4" fill="#D7FF00" style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-</svg>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mt-4">
-                        <span class="text-[16px] text-grey">Last 24 Hours</span>
-                        <div class="mt-4 flex flex-col gap-2">
-                           <!-- elem -->
-                          <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
-                            <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
-                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z" fill="white" style="fill:white;fill-opacity:1;" />
-</svg>
-                            </span> 
-                            <div class="flex flex-col w-full">
-                              <div class="flex justify-between w-full">
-                                <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
-                                <span class="text-[12px] text-grey">12:45 am</span>
-                              </div>
-                              <div class="flex justify-between items-end">
-                                <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00 USD</span>
-                                <span class="">
-                                  <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="4" cy="4.36621" r="4" fill="#D7FF00" style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-</svg>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                           <!-- elem -->
-                          <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
-                            <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
-                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z" fill="white" style="fill:white;fill-opacity:1;" />
-</svg>
-                            </span> 
-                            <div class="flex flex-col w-full">
-                              <div class="flex justify-between w-full">
-                                <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
-                                <span class="text-[12px] text-grey">12:45 am</span>
-                              </div>
-                              <div class="flex justify-between items-end">
-                                <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00 USD</span>
-                                <span class="">
-                                  <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="4" cy="4.36621" r="4" fill="#D7FF00" style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-</svg>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                           <!-- elem -->
-                          <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
-                            <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
-                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z" fill="white" style="fill:white;fill-opacity:1;" />
-</svg>
-                            </span> 
-                            <div class="flex flex-col w-full">
-                              <div class="flex justify-between w-full">
-                                <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
-                                <span class="text-[12px] text-grey">12:45 am</span>
-                              </div>
-                              <div class="flex justify-between items-end">
-                                <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00 USD</span>
-                                <span class="">
-                                  <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="4" cy="4.36621" r="4" fill="#D7FF00" style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-</svg>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                           <!-- elem -->
-                          <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
-                            <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
-                              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z" fill="white" style="fill:white;fill-opacity:1;" />
-</svg>
-                            </span> 
-                            <div class="flex flex-col w-full">
-                              <div class="flex justify-between w-full">
-                                <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
-                                <span class="text-[12px] text-grey">12:45 am</span>
-                              </div>
-                              <div class="flex justify-between items-end">
-                                <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00 USD</span>
-                                <span class="">
-                                  <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="4" cy="4.36621" r="4" fill="#D7FF00" style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
-</svg>
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  
+        <div class="" x-show="item === 2">
+          <div class="mb-4">
+            <span class="text-[16px] text-grey">News2</span>
+            <div class="mt-4 flex flex-col gap-2">
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+        <div class="" x-show="item === 3">
+          <div class="mb-4">
+            <span class="text-[16px] text-grey">Last 24 Hours</span>
+            <div class="mt-4 flex flex-col gap-2">
+              <!-- elem -->
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- elem -->
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- elem -->
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- elem -->
+              <div class="rounded-[15px] bg-[rgb(22,22,23)] p-4 flex gap-2 items-center">
+                <span class="inline-flex rounded-full w-[50px] h-[44px] bg-bg3  items-center justify-center">
+                  <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M10.5681 6.17844L11.0454 6.65573L12 5.70114L11.5227 5.22384L6.86277 0.563914C6.59917 0.30031 6.17178 0.30031 5.90818 0.563914L1.24825 5.22384L0.770953 5.70114L1.72555 6.65573L2.20284 6.17844L5.71116 2.67012L5.71117 12.4786L7.06117 12.4786L7.06116 2.67149L10.5681 6.17844Z"
+                      fill="white" style="fill:white;fill-opacity:1;" />
+                  </svg>
+                </span>
+                <div class="flex flex-col w-full">
+                  <div class="flex justify-between w-full">
+                    <span class="font-AProM text-[14px] text-white2 leading-snug">Transfer Success</span>
+                    <span class="text-[12px] text-grey">12:45 am</span>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <span class="text-[12px] text-grey leading-snug">You have successfully sent <br> Johnatan 10.00
+                      USD</span>
+                    <span class="">
+                      <svg class="hidden" width="8" height="9" viewBox="0 0 8 9" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4.36621" r="4" fill="#D7FF00"
+                          style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </body>
+  </div>
+  <script>
+    function check() {
+      return {
+        count: 1,
+        item: 1,
+        checked: function (i) {
+          this.count = i
+          if (this.count === this.item) {
+            this.item = 0
+          } else {
+            this.item = this.count
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
 </html>

@@ -27,6 +27,13 @@
       });
    });
 
+   closeClick.forEach(element => {
+      element.addEventListener('swiped-down', (e) => {
+         e.preventDefault();
+         closeModal();
+      });
+   });
+
    const closeModal = () => {
       modal.querySelector('.modal').classList.remove('visible');
       setTimeout(() => {
@@ -35,12 +42,3 @@
       }, 400);
 
    }
-   closeClick.forEach(elem => {
-      elem.addEventListener('click', (e) => {
-         closeModal();
-      })
-   })
-
-   mobileClose.addEventListener('swiped-down', function (e) {
-      closeModal();
-   });
