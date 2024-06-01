@@ -7,9 +7,9 @@
    .swipe-down {
       transform: none;
       transform: translateY(150vh);
+      
       transition: transform 0.3s;
-      bottom: 4px;
-      left: 0;
+      
    }
    
    .visible {
