@@ -62,3 +62,7 @@
   @apply inline-flex w-full cursor-pointer select-none items-center justify-center bg-transparent border-[1px]  transition-colors duration-300  border-main py-3  leading-none text-main h-[54px]
      hover:bg-[#272727] ;
 }
+.button.is-borderGrey {
+  @apply inline-flex w-full cursor-pointer select-none items-center justify-center bg-transparent border-[1px]  transition-colors duration-300  border-grey py-3  leading-none text-grey h-[54px]
+     hover:bg-[#272727] ;
+}
