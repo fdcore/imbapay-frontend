@@ -19,12 +19,21 @@
 
 
    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
-   <title>Создать счёт</title>
+   <title>Convert Money</title>
    <link href="../style.css" rel="stylesheet" />
 </head>
 <!-- class="overflow-hidden" -->
 
 <body x-data="{open: false}">
+
+   <button class="fixed cursor-pointer gap-2 z-10 items-center top-10 left-6 hidden ml:flex ">
+      <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M7.5105 1.69857L7.93476 1.27431L7.08623 0.425781L6.66197 0.850045L0.47847 7.03355C0.244156 7.26786 0.244156 7.64776 0.47847 7.88208L6.66197 14.0656L7.08623 14.4898L7.93476 13.6413L7.5105 13.217L2.3494 8.05595L16.0804 8.05595L16.0804 6.85595L2.35312 6.85595L7.5105 1.69857Z"
+            fill="white" style="fill:white;fill-opacity:1;" />
+      </svg>
+      <span class="text-grey text-[14px]">Back</span>
+   </button>
    <!-- block desktop ml:flex-->
    <div
       class="fixed bottom-0 left-0 right-0 top-0 z-[10000] hidden h-[100vh] w-full items-center justify-center bg-[rgba(68,68,68,0.9)]">
@@ -45,10 +54,10 @@
                </clipPath>
             </defs>
          </svg>
-         <span class="text-center font-AProM text-[22px] leading-none text-white2">
+         <span class="text-center   text-[22px] leading-none text-white2">
             You need to verify your account
          </span>
-         <a class="flex h-[56px] items-center justify-center rounded-full bg-main px-8 font-AProM text-[16px] text-black hover:bg-[rgb(145,233,2)]"
+         <a class="flex h-[56px] items-center justify-center rounded-full bg-main px-8   text-[16px] text-black hover:bg-[rgb(145,233,2)]"
             href="/">
             Proceed to verification
          </a>
@@ -61,10 +70,10 @@
       <div class="relative flex w-full flex-col items-center justify-end gap-6 rounded-[35px] bg-white2 p-6 pt-[70px]">
          <img class="absolute left-[50%] top-[-42px] w-[100px] translate-x-[-50%]" src="../img/profile/warrior.png"
             alt="" />
-         <span class="text-center font-AProM text-[16px] leading-none text-black">
+         <span class="text-center   text-[16px] leading-none text-black">
             You need to verify your account
          </span>
-         <a class="flex h-[56px] w-full items-center justify-center rounded-full bg-main px-3 font-AProM text-[16px] text-black hover:bg-[rgb(145,233,2)]"
+         <a class="flex h-[56px] w-full items-center justify-center rounded-full bg-main px-3   text-[16px] text-black hover:bg-[rgb(145,233,2)]"
             href="../profile/index.html">
             Proceed to verification
          </a>
@@ -74,7 +83,7 @@
       <div
          class="hidden ml:block pointer-events-none fixed top-0 left-0 w-full h-full bg-gradient-to-tr from-transparent from-30%  via-[rgba(215,225,0,0.1)] via-50% to-transparent to-80%">
       </div>
-      <div class="ml:hidden fixed  pointer-events-none  bottom-0 right-0 w-full h-full opacity-30 -z-10 bg-main">
+      <div class="ml:hidden fixed  pointer-events-none bottom-0 right-0 w-full h-full opacity-30 -z-10 bg-main">
          <img class="fixed bottom-0 right-0 w-full h-full mix-blend-luminosity  -z-10"
             src="../img/registration/abstract-blue-background-web-design-templates-product-studio-with-smooth-gradient-color 1.png"
             alt="">
@@ -83,7 +92,6 @@
       <div class="profile-container ">
          <div class="">
 
-            <!-- content -->
             <div
                class="grid grid-cols-1 gap-4 xl:mb-0 mb-[100px] ml:mt-0 ml:grid-cols-[218px_calc(100%_-_248px)] ml:grid-rows-[136px_1fr] ml:gap-0 ml:gap-x-[30px]">
                <!-- logo -->
@@ -108,7 +116,7 @@
                       " />
                            </svg>
                         </span>
-                        <span class="mt-[2px] pl-2 font-AProM text-[14px] text-black">Send</span>
+                        <span class="mt-[2px] pl-2   text-[14px] text-black">Send</span>
                      </a>
                      <a class="button is-black-profile w-auto" href="/">
                         <span>
@@ -119,7 +127,7 @@
                                  style="fill: white; fill-opacity: 1" />
                            </svg>
                         </span>
-                        <span class="ml-2 mt-[4px] font-AProM text-[14px]">Recharge</span>
+                        <span class="ml-2 mt-[4px]   text-[14px]">Recharge</span>
                      </a>
                      <a class="button is-black-profile w-auto" href="/">
                         <span>
@@ -130,7 +138,7 @@
                                  fill="white" style="fill: white; fill-opacity: 1" />
                            </svg>
                         </span>
-                        <span class="ml-2 mt-[4px] font-AProM text-[14px]">Request</span>
+                        <span class="ml-2 mt-[4px]   text-[14px]">Request</span>
                      </a>
                   </div>
                   <!-- block_header_lang -->
@@ -1192,559 +1200,954 @@
                </div>
                <!-- content  -->
                <div class="w-full relative ">
-                  <div class="mb-[22px] px-4 sm:px-0 mt-4 ml:mt-0 w-full text-center relative ">
+                  <!-- mobile header -->
+                  <div class="pb-[22px] px-4 sm:px-0 pt-4 ml:mt-0  w-full text-center relative ">
                      <a href="../profile/myProfile.html"
                         class="absolute top-[50%] translate-y-[-50%] left-4 group z-10 cursor-pointer ml:hidden ">
 
-                        <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M7.51001 1.69821L7.93427 1.27394L7.08574 0.425415L6.66148 0.849679L0.477982 7.03318C0.243667 7.2675 0.243667 7.6474 0.477982 7.88171L6.66148 14.0652L7.08575 14.4895L7.93427 13.6409L7.51001 13.2167L2.34891 8.05558L16.0799 8.05558L16.0799 6.85558L2.35263 6.85558L7.51001 1.69821Z"
-                              class="group-hover:fill-main fill-white transition-all duration-150" />
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M6.25799 18.4493L6.39941 18.5907L6.54083 18.4493L11.9994 12.9907L17.458 18.4493L17.5994 18.5907L17.7408 18.4493L18.4488 17.7413L18.5903 17.5999L18.4488 17.4585L12.9902 11.9999L18.4488 6.54132L18.5903 6.39989L18.4488 6.25847L17.7408 5.55047L17.5994 5.40905L17.458 5.55047L11.9994 11.0091L6.54083 5.55047L6.39941 5.40905L6.25799 5.55047L5.54998 6.25847L5.40856 6.39989L5.54998 6.54132L11.0086 11.9999L5.54998 17.4585L5.40856 17.5999L5.54998 17.7413L6.25799 18.4493Z"
+                              fill="white" stroke="white"
+                              style="fill:white;fill-opacity:1;stroke:white;stroke-opacity:1;" stroke-width="0.4" />
                         </svg>
 
                      </a>
                      <div
-                        class="relative flex flex-col ml:flex-row justify-between w-full h-full text-[30px] font-AProM ml:items-center mb-4">
-
-                        <span>
-                           Create an invoice
-                        </span>
-
+                        class="relative  flex-col ml:flex-row justify-between w-full h-full text-[30px] hidden ml:flex  ml:items-center ">
+                        Convert money
                      </div>
                   </div>
 
-                  <div class="px-4 sm:p-0 flex flex-col gap-4">
-                     <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
-                        <div class="flex flex-col w-full">
-                           <label class="text-[14px] text-grey " for="">To</label>
-                           <input class="rounded-[20px] px-5  mt-1 h-[56px] bg-transparent" type="text" name="" id=""
-                              placeholder="Full Name / Company">
-                        </div>
-                        <div class="flex flex-col  w-full">
-                           <label class="text-[14px] text-grey" for="">Payer's phone number</label>
+                  <div class="grid grid-cols-1 xl:grid-cols-2 xl:grid-rows-[minmax(200px_440px)_441px] gap-[10px]">
+                     <div class="bg-white10 rounded-[30px] ml:rounded-[35px] relative ">
+                        <div class="h-full w-full absolute -z-10 backdrop-blur-[15px]"></div>
+                        <div class="p-4 ml:p-6">
+                           <form action="" class="w-full flex flex-col gap-4">
+                              <div class="w-full flex flex-col gap-1">
+                                 <label class="text-grey text-[14px]" for="method">Select account</label>
+                                 <div class="relative">
+                                    <input
+                                       class="bg-transparent placeholder:text-[16px]   w-full h-[56px] rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 "
+                                       type="number" id="method" placeholder="" disabled>
+                                    <div class="absolute flex items-center gap-2 top-0 h-full left-[20px]">
+                                       <img src="../img/profile/flag/use.svg" alt="">
+                                       <span>USD balance</span>
+                                    </div>
 
-                           <div class="relative flex gap-2 ml:gap-0 h-[56px] bg-transparent" x-data="{open:false}">
-
-                              <div
-                                 class="  h-[60px] ml:mt-[2px] mr-2 rounded-[20px] border-[2px] border-[rgba(255,255,255,0.3)]  px-2 flex items-center gap-2"
-                                 @click="open = ! open">
-
-                                 <span class="text-[16px] font-AProR text-grey leading-none ">+381</span>
-                                 <span>
-                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <path
-                                          d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                          fill="white" style="fill:white;fill-opacity:1;" />
-                                    </svg>
-                                 </span>
-
-                              </div>
-                              <input
-                                 class="bg-transparent mt-[1px] placeholder:text-[16px] rounded-[20px] placeholder:text-white2  w-full h-[56px] ml:mt-1  pr-5 pl-5  text-white2 "
-                                 type="number" id="amount" placeholder=" ">
-                              <!-- select currencies -->
-                              <div class="bg-white2 p-2  rounded-[20px] w-[80px]  absolute z-10 top-[70px]"
-                                 x-show="open" @click.outside="open = false">
-                                 <span
-                                    class="text-[16px] text-grey mb-2 hover:bg-[#fff29c] inline-block hover:rounded-[5px] w-full">+382</span>
-                                 <span
-                                    class="text-[16px] text-grey mb-2 hover:bg-[#fff29c] inline-block hover:rounded-[5px] w-full">+382</span>
-                                 <span
-                                    class="text-[16px] text-grey mb-2 hover:bg-[#fff29c] inline-block hover:rounded-[5px] w-full">+382</span>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="flex flex-col w-full">
-                           <label class="text-[14px] text-grey" for="">Payer's Email</label>
-                           <input class="rounded-[20px] px-5   mt-1  h-[56px] bg-transparent" type="text" name="" id=""
-                              placeholder="">
-                        </div>
-                     </div>
-                     <div class="flex flex-col ml:flex-row w-full gap-4 itm justify-between">
-                        <div class="flex flex-col w-full">
-                           <label class="text-[14px] text-grey " for="">Valid Until</label>
-                           <input class="rounded-[20px] px-5  mt-1  h-[56px] bg-transparent" type="text" name="" id=""
-                              placeholder="DD / MM / YYYY">
-                        </div>
-
-
-                        <div class="relative w-full" x-data="{open:false}">
-                           <span class="text-[14px] text-grey pb-1">Letter Language</span>
-
-                           <div
-                              class=" h-[56px] right-5 flex items-center gap-1 w-full  justify-between rounded-[20px] px-5  text-grey border-[2px] border-white/[0.3]"
-                              @click="open = ! open">
-
-                              <span class="leading-none">Русский</span>
-                              <span>
-                                 <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                       d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                       fill="white" style="fill:white;fill-opacity:1;" />
-                                 </svg>
-                              </span>
-
-                           </div>
-                           <!-- select currencies -->
-                           <div class="bg-white2 p-6 pr-0 rounded-[25px] w-full  absolute z-10 top-[85px]" x-show="open"
-                              @click.outside="open = false">
-                              <div class="h-[64px] w-full mb-4 relative pr-6">
-                                 <svg class="absolute left-[16px] top-[50%] translate-y-[-50%]" width="19" height="18"
-                                    viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                       d="M18.286 16.543L14.257 12.514C15.329 11.186 15.929 9.514 15.929 7.714C15.929 3.471 12.457 0 8.214 0C3.971 0 0.5 3.471 0.5 7.714C0.5 11.957 3.971 15.429 8.214 15.429C10.014 15.429 11.686 14.786 13.014 13.757L17.043 17.786L18.286 16.543ZM8.257 13.714C4.957 13.714 2.257 11.014 2.257 7.714C2.257 4.414 4.957 1.714 8.257 1.714C11.557 1.714 14.257 4.414 14.257 7.714C14.257 11.014 11.557 13.714 8.257 13.714Z"
-                                       fill="rgba(34, 34, 34, 0.1)"
-                                       style="fill: rgba(34, 34, 34, 0.1); fill-opacity: 1"></path>
-                                 </svg>
-                                 <input
-                                    class="h-full w-full rounded-[25px] border-[1px] border-bgdark bg-transparent pl-[45px] text-[14px] text-grey"
-                                    type="text" placeholder="Choose currency/country">
-                              </div>
-                              <div class="overflow-y-auto h-[300px] pl-2 scroll-block ">
-                                 <div class="text-black2 text-[14px] mb-6 mt-6">Popular currencies</div>
-                                 <ul class=" pr-6">
-                                    <li class="mb-6">
-                                       <div class="flex justify-between items-center">
-                                          <div class="flex gap-2 justify-start items-center">
-                                             <span>
-                                                <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg" alt="">
-                                             </span>
-                                             <span class="text-[14px] ml:text-[16px] text-black2">EUR</span>
-                                             <span class="text-[12px] ml:text-[14px] text-grey">Euro</span>
-                                          </div>
-                                          <span class="w-8 h-8 bg-main rounded-full flex justify-center items-center">
-                                             <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                   d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                   fill="black" style="fill:black;fill-opacity:1;"></path>
-                                             </svg>
-                                          </span>
-                                       </div>
-                                    </li>
-
-                                    <li class="mb-6">
-                                       <div class="flex justify-between items-center">
-                                          <div class="flex gap-2 justify-start items-center">
-                                             <span>
-                                                <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg" alt="">
-                                             </span>
-                                             <span class="text-[14px] ml:text-[16px] text-black2">GPB</span>
-                                             <span class="text-[12px] ml:text-[14px] text-grey">Pound
-                                                Sterling</span>
-                                          </div>
-                                          <span
-                                             class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
-                                             <svg class="hidden" width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                   d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                   fill="black" style="fill:black;fill-opacity:1;"></path>
-                                             </svg>
-                                          </span>
-                                       </div>
-                                    </li>
-                                    <li class="mb-6">
-                                       <div class="flex justify-between items-center">
-                                          <div class="flex gap-2 justify-start items-center">
-                                             <span>
-                                                <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg" alt="">
-                                             </span>
-                                             <span class="text-[14px] ml:text-[16px] text-black2">INR</span>
-                                             <span class="text-[12px] ml:text-[14px] text-grey">Indian
-                                                Rupee</span>
-                                          </div>
-                                          <span
-                                             class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
-                                             <svg class="hidden" width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                   d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                   fill="black" style="fill:black;fill-opacity:1;"></path>
-                                             </svg>
-                                          </span>
-                                       </div>
-                                    </li>
-
-                                 </ul>
-                                 <div class="text-black2 text-[14px] mb-6 pr-6">All currencies</div>
-                                 <ul class=" pr-6">
-                                    <li class="mb-6">
-                                       <div class="flex justify-between items-center">
-                                          <div class="flex gap-2 justify-start items-center">
-                                             <span>
-                                                <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg" alt="">
-                                             </span>
-                                             <span class="text-[14px] ml:text-[16px] text-black2">EUR</span>
-                                             <span class="text-[12px] ml:text-[14px] text-grey">Euro</span>
-                                          </div>
-                                          <span class="w-8 h-8 bg-main rounded-full flex justify-center items-center">
-                                             <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                   d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                   fill="black" style="fill:black;fill-opacity:1;"></path>
-                                             </svg>
-                                          </span>
-                                       </div>
-                                    </li>
-
-                                    <li class="mb-6">
-                                       <div class="flex justify-between items-center">
-                                          <div class="flex gap-2 justify-start items-center">
-                                             <span>
-                                                <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg" alt="">
-                                             </span>
-                                             <span class="text-[14px] ml:text-[16px] text-black2">GPB</span>
-                                             <span class="text-[12px] ml:text-[14px] text-grey">Pound
-                                                Sterling</span>
-                                          </div>
-                                          <span
-                                             class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
-                                             <svg class="hidden" width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                   d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                   fill="black" style="fill:black;fill-opacity:1;"></path>
-                                             </svg>
-                                          </span>
-                                       </div>
-                                    </li>
-                                    <li class="mb-6">
-                                       <div class="flex justify-between items-center">
-                                          <div class="flex gap-2 justify-start items-center">
-                                             <span>
-                                                <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg" alt="">
-                                             </span>
-                                             <span class="text-[14px] ml:text-[16px] text-black2">INR</span>
-                                             <span class="text-[12px] ml:text-[14px] text-grey">Indian
-                                                Rupee</span>
-                                          </div>
-                                          <span
-                                             class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
-                                             <svg class="hidden" width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                   d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                   fill="black" style="fill:black;fill-opacity:1;"></path>
-                                             </svg>
-                                          </span>
-                                       </div>
-                                    </li>
-
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class=" relative  mt-6  bg-white10   rounded-[25px] ml:rounded-[35px] mx-4 sm:mx-0">
-                     <div class=" ml:block absolute rounded-[25px] -z-10 h-full w-full backdrop-blur-[15px]"></div>
-                     <div class="rounded-[25px] ml:rounded-[35px] p-4 ml:p-6">
-                        <h3>Product Name</h3>
-                        <form action="">
-                           <div class="flex flex-col gap-4">
-                              <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
-                                 <div class="flex flex-col w-full">
-                                    <label class="text-[14px] text-grey " for="">Product Name</label>
-                                    <input class="rounded-[20px] px-5  mt-1  h-[56px] bg-transparent" type="text"
-                                       name="" id="">
+                                    <button
+                                       class="absolute top-[50%] translate-y-[-50%] right-[20px] border-[1px] border-grey h-8 px-4 rounded-full">
+                                       Change
+                                    </button>
                                  </div>
-                                 <div class="flex flex-col w-full">
-                                    <label class="text-[14px] text-grey" for="">Description</label>
-                                    <input class="rounded-[20px] px-5   mt-1  h-[56px] bg-transparent" type="text"
-                                       name="" id="">
-                                 </div>
+
                               </div>
-                              <div class="flex flex-col ml:flex-row w-full gap-4 justify-between">
-                                 <div class="flex flex-col w-full">
-                                    <label class="text-[14px] text-grey" for="">Quantity</label>
-                                    <input class="rounded-[20px] px-5   mt-1 outline-red2 h-[56px] bg-transparent"
-                                       type="text" name="" id="">
-                                    <span class="flex items-center gap-1 text-red2">
-                                       <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <path fill-rule="evenodd" clip-rule="evenodd"
-                                             d="M1.14258 8.49942C1.14258 12.2708 4.22858 15.3561 7.99991 15.3561C11.7712 15.3561 14.8572 12.2708 14.8572 8.50009C14.8572 4.72676 11.7712 1.64209 7.99991 1.64209C4.22858 1.64209 1.14258 4.72676 1.14258 8.49942ZM2.28591 8.49942C2.28591 5.35609 4.85724 2.78476 7.99991 2.78476C11.1426 2.78476 13.7146 5.35609 13.7146 8.49942C13.7146 11.6421 11.1426 14.2134 7.99991 14.2134C4.85724 14.2134 2.28591 11.6421 2.28591 8.49942ZM8.57125 5.07142H7.42858V9.64342H8.57125V5.07142ZM7.99991 12.5008C8.11447 12.504 8.2285 12.4841 8.33527 12.4425C8.44204 12.4009 8.53938 12.3383 8.62153 12.2584C8.70369 12.1785 8.76899 12.0829 8.81358 11.9774C8.85817 11.8718 8.88115 11.7584 8.88115 11.6438C8.88115 11.5292 8.85817 11.4157 8.81358 11.3102C8.76899 11.2046 8.70369 11.109 8.62153 11.0291C8.53938 10.9492 8.44204 10.8866 8.33527 10.845C8.2285 10.8034 8.11447 10.7836 7.99991 10.7868C7.77856 10.7955 7.56918 10.8896 7.41565 11.0493C7.26213 11.209 7.17638 11.4219 7.17638 11.6434C7.17638 11.8649 7.26213 12.0779 7.41565 12.2376C7.56918 12.3973 7.77856 12.492 7.99991 12.5008Z"
-                                             fill="#FF2102"
-                                             style="fill:#FF2102;fill:color(display-p3 1.0000 0.1299 0.0083);fill-opacity:1;" />
-                                       </svg>
-                                       Recipient not found</span>
-                                 </div>
-                                 <div class="w-full flex flex-col gap-1">
-                                    <label class="text-grey text-[14px]" for="amount">Top-up amount</label>
-                                    <div class="relative" x-data="{open:false}">
-                                       <input
-                                          class="bg-transparent placeholder:text-[16px] placeholder:text-grey  w-full h-[56px]  rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 "
-                                          type="number" id="amount" placeholder="00,00">
-                                       <div class="absolute top-[20px]  right-5 flex items-center gap-1"
-                                          @click="open = ! open">
+                              <div class="w-full flex flex-col gap-1">
+                                 <label class="text-grey text-[14px]" for="amount">Amount</label>
+                                 <div class="relative" x-data="{open:false}">
+                                    <!-- focus:outline-red2 focus:outline-[2px]  bg-[#ff0909]/[0.1] -->
+                                    <input
+                                       class="bg-transparent placeholder:text-[22px] placeholder:text-grey   w-full h-[64px] md:h-[75px]  rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 "
+                                       type="number" id="amount" placeholder="0,00">
+                                    <div class="absolute top-[20px] md:top-[25px]  right-5 flex items-center gap-1"
+                                       @click="open = ! open">
 
-                                          <img src="../img/profile/flag/use.svg" alt="">
-                                          <span class="md:text-[22px]   leading-none ">EN</span>
-                                          <span>
-                                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                   d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
-                                                   fill="white" style="fill:white;fill-opacity:1;" />
-                                             </svg>
-                                          </span>
+                                       <img src="../img/profile/flag/use.svg" alt="">
+                                       <span class="md:text-[22px]   leading-none">EN</span>
+                                       <span>
+                                          <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                fill="white" style="fill:white;fill-opacity:1;" />
+                                          </svg>
+                                       </span>
 
+                                    </div>
+                                    <!-- select currencies -->
+                                    <div class="bg-white2 p-6 pr-0 rounded-[25px] w-full  absolute z-10 top-[85px]"
+                                       x-show="open" @click.outside="open = false">
+                                       <div class="h-[64px] w-full mb-4 relative pr-6">
+                                          <svg class="absolute left-[16px] top-[50%] translate-y-[-50%]" width="19"
+                                             height="18" viewBox="0 0 19 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M18.286 16.543L14.257 12.514C15.329 11.186 15.929 9.514 15.929 7.714C15.929 3.471 12.457 0 8.214 0C3.971 0 0.5 3.471 0.5 7.714C0.5 11.957 3.971 15.429 8.214 15.429C10.014 15.429 11.686 14.786 13.014 13.757L17.043 17.786L18.286 16.543ZM8.257 13.714C4.957 13.714 2.257 11.014 2.257 7.714C2.257 4.414 4.957 1.714 8.257 1.714C11.557 1.714 14.257 4.414 14.257 7.714C14.257 11.014 11.557 13.714 8.257 13.714Z"
+                                                fill="rgba(34, 34, 34, 0.1)"
+                                                style="fill: rgba(34, 34, 34, 0.1); fill-opacity: 1"></path>
+                                          </svg>
+                                          <input
+                                             class="h-full w-full rounded-[25px] border-[1px] border-bgdark bg-transparent pl-[45px] text-[14px] text-grey"
+                                             type="text" placeholder="Choose currency/country">
                                        </div>
-                                       <!-- select currencies -->
-                                       <div class="mb-[200px] ml:m-0" x-show="open" @click.outside="open = false">
-                                          <div
-                                             class="bg-white2  p-6 pr-0 rounded-[25px] w-full  absolute z-10 top-[85px]">
-                                             <div class="h-[64px] w-full mb-4 relative pr-6">
-                                                <svg class="absolute left-[16px] top-[50%] translate-y-[-50%]"
-                                                   width="19" height="18" viewBox="0 0 19 18" fill="none"
-                                                   xmlns="http://www.w3.org/2000/svg">
-                                                   <path
-                                                      d="M18.286 16.543L14.257 12.514C15.329 11.186 15.929 9.514 15.929 7.714C15.929 3.471 12.457 0 8.214 0C3.971 0 0.5 3.471 0.5 7.714C0.5 11.957 3.971 15.429 8.214 15.429C10.014 15.429 11.686 14.786 13.014 13.757L17.043 17.786L18.286 16.543ZM8.257 13.714C4.957 13.714 2.257 11.014 2.257 7.714C2.257 4.414 4.957 1.714 8.257 1.714C11.557 1.714 14.257 4.414 14.257 7.714C14.257 11.014 11.557 13.714 8.257 13.714Z"
-                                                      fill="rgba(34, 34, 34, 0.1)"
-                                                      style="fill: rgba(34, 34, 34, 0.1); fill-opacity: 1"></path>
-                                                </svg>
-                                                <input
-                                                   class="h-full w-full rounded-[25px] border-[1px] border-bgdark bg-transparent pl-[45px] text-[14px] text-grey"
-                                                   type="text" placeholder="Choose currency/country">
-                                             </div>
-                                             <div class="overflow-y-auto h-[300px] pl-2 scroll-block ">
-                                                <div class="text-black2 text-[14px] mb-6 mt-6">Popular currencies</div>
-                                                <ul class=" pr-6">
-                                                   <li class="mb-6">
-                                                      <div class="flex justify-between items-center hover:bg-white">
-                                                         <div class="flex gap-2 justify-start items-center">
-                                                            <span>
-                                                               <img class="w-5 h-5"
-                                                                  src="../img/flag/Property 1=Andorra.svg" alt="">
-                                                            </span>
-                                                            <span
-                                                               class="text-[14px] ml:text-[16px] text-black2">EUR</span>
-                                                            <span
-                                                               class="text-[12px] ml:text-[14px] text-grey">Euro</span>
-                                                         </div>
-                                                         <span
-                                                            class="w-8 h-8 bg-main rounded-full flex justify-center items-center">
-                                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                                               xmlns="http://www.w3.org/2000/svg">
-                                                               <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                  d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                                  fill="black" style="fill:black;fill-opacity:1;">
-                                                               </path>
-                                                            </svg>
-                                                         </span>
-                                                      </div>
-                                                   </li>
+                                       <div class="overflow-y-auto h-[300px] pl-2 scroll-block ">
+                                          <div class="text-black2 text-[14px] mb-6 mt-6">Popular currencies</div>
+                                          <ul class=" pr-6">
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">EUR</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Euro</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-main rounded-full flex justify-center items-center">
+                                                      <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
 
-                                                   <li class="mb-6">
-                                                      <div class="flex justify-between items-center hover:bg-white">
-                                                         <div class="flex gap-2 justify-start items-center">
-                                                            <span>
-                                                               <img class="w-5 h-5"
-                                                                  src="../img/flag/Property 1=Andorra.svg" alt="">
-                                                            </span>
-                                                            <span
-                                                               class="text-[14px] ml:text-[16px] text-black2">GPB</span>
-                                                            <span class="text-[12px] ml:text-[14px] text-grey">Pound
-                                                               Sterling</span>
-                                                         </div>
-                                                         <span
-                                                            class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
-                                                            <svg class="hidden" width="18" height="19"
-                                                               viewBox="0 0 18 19" fill="none"
-                                                               xmlns="http://www.w3.org/2000/svg">
-                                                               <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                  d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                                  fill="black" style="fill:black;fill-opacity:1;">
-                                                               </path>
-                                                            </svg>
-                                                         </span>
-                                                      </div>
-                                                   </li>
-                                                   <li class="mb-6">
-                                                      <div class="flex justify-between items-center hover:bg-white">
-                                                         <div class="flex gap-2 justify-start items-center">
-                                                            <span>
-                                                               <img class="w-5 h-5"
-                                                                  src="../img/flag/Property 1=Andorra.svg" alt="">
-                                                            </span>
-                                                            <span
-                                                               class="text-[14px] ml:text-[16px] text-black2">INR</span>
-                                                            <span class="text-[12px] ml:text-[14px] text-grey">Indian
-                                                               Rupee</span>
-                                                         </div>
-                                                         <span
-                                                            class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
-                                                            <svg class="hidden" width="18" height="19"
-                                                               viewBox="0 0 18 19" fill="none"
-                                                               xmlns="http://www.w3.org/2000/svg">
-                                                               <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                  d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                                  fill="black" style="fill:black;fill-opacity:1;">
-                                                               </path>
-                                                            </svg>
-                                                         </span>
-                                                      </div>
-                                                   </li>
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">GPB</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Pound
+                                                         Sterling</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
+                                                      <svg class="hidden" width="18" height="19" viewBox="0 0 18 19"
+                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">INR</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Indian
+                                                         Rupee</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
+                                                      <svg class="hidden" width="18" height="19" viewBox="0 0 18 19"
+                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
 
-                                                </ul>
-                                                <div class="text-black2 text-[14px] mb-6 pr-6">All currencies</div>
-                                                <ul class=" pr-6">
-                                                   <li class="mb-6">
-                                                      <div class="flex justify-between items-center hover:bg-white">
-                                                         <div class="flex gap-2 justify-start items-center">
-                                                            <span>
-                                                               <img class="w-5 h-5"
-                                                                  src="../img/flag/Property 1=Andorra.svg" alt="">
-                                                            </span>
-                                                            <span
-                                                               class="text-[14px] ml:text-[16px] text-black2">EUR</span>
-                                                            <span
-                                                               class="text-[12px] ml:text-[14px] text-grey">Euro</span>
-                                                         </div>
-                                                         <span
-                                                            class="w-8 h-8 bg-main rounded-full flex justify-center items-center">
-                                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                                               xmlns="http://www.w3.org/2000/svg">
-                                                               <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                  d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                                  fill="black" style="fill:black;fill-opacity:1;">
-                                                               </path>
-                                                            </svg>
-                                                         </span>
-                                                      </div>
-                                                   </li>
+                                          </ul>
+                                          <div class="text-black2 text-[14px] mb-6 pr-6">All currencies</div>
+                                          <ul class=" pr-6">
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">EUR</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Euro</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-main rounded-full flex justify-center items-center">
+                                                      <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
 
-                                                   <li class="mb-6">
-                                                      <div class="flex justify-between items-center hover:bg-white">
-                                                         <div class="flex gap-2 justify-start items-center">
-                                                            <span>
-                                                               <img class="w-5 h-5"
-                                                                  src="../img/flag/Property 1=Andorra.svg" alt="">
-                                                            </span>
-                                                            <span
-                                                               class="text-[14px] ml:text-[16px] text-black2">GPB</span>
-                                                            <span class="text-[12px] ml:text-[14px] text-grey">Pound
-                                                               Sterling</span>
-                                                         </div>
-                                                         <span
-                                                            class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
-                                                            <svg class="hidden" width="18" height="19"
-                                                               viewBox="0 0 18 19" fill="none"
-                                                               xmlns="http://www.w3.org/2000/svg">
-                                                               <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                  d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                                  fill="black" style="fill:black;fill-opacity:1;">
-                                                               </path>
-                                                            </svg>
-                                                         </span>
-                                                      </div>
-                                                   </li>
-                                                   <li class="mb-6">
-                                                      <div class="flex justify-between items-center hover:bg-white">
-                                                         <div class="flex gap-2 justify-start items-center">
-                                                            <span>
-                                                               <img class="w-5 h-5"
-                                                                  src="../img/flag/Property 1=Andorra.svg" alt="">
-                                                            </span>
-                                                            <span
-                                                               class="text-[14px] ml:text-[16px] text-black2">INR</span>
-                                                            <span class="text-[12px] ml:text-[14px] text-grey">Indian
-                                                               Rupee</span>
-                                                         </div>
-                                                         <span
-                                                            class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
-                                                            <svg class="hidden" width="18" height="19"
-                                                               viewBox="0 0 18 19" fill="none"
-                                                               xmlns="http://www.w3.org/2000/svg">
-                                                               <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                  d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
-                                                                  fill="black" style="fill:black;fill-opacity:1;">
-                                                               </path>
-                                                            </svg>
-                                                         </span>
-                                                      </div>
-                                                   </li>
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">GPB</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Pound
+                                                         Sterling</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
+                                                      <svg class="hidden" width="18" height="19" viewBox="0 0 18 19"
+                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">INR</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Indian
+                                                         Rupee</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
+                                                      <svg class="hidden" width="18" height="19" viewBox="0 0 18 19"
+                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
 
-                                                </ul>
-                                             </div>
-                                          </div>
+                                          </ul>
                                        </div>
                                     </div>
                                  </div>
+                                 <div class="w-full  text-[14px] flex justify-between">
+                                    <span class="text-red2">
+                                       <span class="visible flex items-center gap-1">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M1.14258 7.99942C1.14258 11.7708 4.22858 14.8561 7.99991 14.8561C11.7712 14.8561 14.8572 11.7708 14.8572 8.00009C14.8572 4.22676 11.7712 1.14209 7.99991 1.14209C4.22858 1.14209 1.14258 4.22676 1.14258 7.99942ZM2.28591 7.99942C2.28591 4.85609 4.85724 2.28476 7.99991 2.28476C11.1426 2.28476 13.7146 4.85609 13.7146 7.99942C13.7146 11.1421 11.1426 13.7134 7.99991 13.7134C4.85724 13.7134 2.28591 11.1421 2.28591 7.99942ZM8.57125 4.57142H7.42858V9.14342H8.57125V4.57142ZM7.99991 12.0008C8.11447 12.004 8.2285 11.9841 8.33527 11.9425C8.44204 11.9009 8.53938 11.8383 8.62153 11.7584C8.70369 11.6785 8.76899 11.5829 8.81358 11.4774C8.85817 11.3718 8.88115 11.2584 8.88115 11.1438C8.88115 11.0292 8.85817 10.9157 8.81358 10.8102C8.76899 10.7046 8.70369 10.609 8.62153 10.5291C8.53938 10.4492 8.44204 10.3866 8.33527 10.345C8.2285 10.3034 8.11447 10.2836 7.99991 10.2868C7.77856 10.2955 7.56918 10.3896 7.41565 10.5493C7.26213 10.709 7.17638 10.9219 7.17638 11.1434C7.17638 11.3649 7.26213 11.5779 7.41565 11.7376C7.56918 11.8973 7.77856 11.992 7.99991 12.0008Z"
+                                                fill="#FF2102"
+                                                style="fill:#FF2102;fill:color(display-p3 1.0000 0.1299 0.0083);fill-opacity:1;" />
+                                          </svg>
+                                          Execeeds balance
+                                       </span>
+                                    </span>
+                                    <span class="text-grey">Balance: 1,267.93 USD</span>
+                                 </div>
                               </div>
-                              <div
-                                 class="flex border-b-[1px] ml:border-y-[1px] pb-4 ml:py-4 border-white10 justify-between flex-col sm:flex-row gap-[22px] sm:gap-0">
-                                 <div
-                                    class="sm:justify-start cursor-pointer group hover:text-main text-white2 justify-center flex items-center gap-2">
-                                    <span class=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <rect width="16" height="16" rx="8" fill-opacity="0.1"
-                                             class="group-hover:fill-main fill-white2" />
-                                          <path class="group-hover:fill-main fill-white2"
-                                             d="M7.21839 11.4403V4.55957H8.77947V11.4403H7.21839ZM4.55859 8.78045V7.21937H11.4393V8.78045H4.55859Z" />
-                                       </svg></span>
-                                    <span class="font-AProM mt-1">Add Product</span>
+                              <div class="relative w-full flex justify-center">
+                                 <span
+                                    class="w-full h-[1px] absolute top-[50%] translate-y-[-50%] inline-block bg-white10"></span>
+                                 <button
+                                    class="flex justify-center py-1 px-[22px] items-center rounded-full bg-main cursor-pointer">
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M17.7352 11.3191L13.1519 15.9024C13.089 15.9699 13.0131 16.0241 12.9287 16.0617C12.8444 16.0993 12.7534 16.1195 12.661 16.1211C12.5687 16.1227 12.477 16.1058 12.3914 16.0712C12.3058 16.0366 12.2281 15.9851 12.1628 15.9198C12.0975 15.8546 12.046 15.7768 12.0115 15.6912C11.9769 15.6056 11.9599 15.5139 11.9615 15.4216C11.9631 15.3293 11.9834 15.2382 12.0209 15.1539C12.0585 15.0696 12.1127 14.9937 12.1802 14.9307L15.5893 11.5207H3.4994C3.31706 11.5207 3.14219 11.4483 3.01326 11.3194C2.88433 11.1904 2.8119 11.0156 2.8119 10.8332C2.8119 10.6509 2.88433 10.476 3.01326 10.3471C3.14219 10.2182 3.31706 10.1457 3.4994 10.1457H17.2494C17.3853 10.1458 17.5181 10.1862 17.631 10.2618C17.744 10.3373 17.832 10.4447 17.884 10.5702C17.936 10.6958 17.9496 10.8339 17.9231 10.9672C17.8966 11.1005 17.8313 11.2229 17.7352 11.3191ZM15.1869 6.2499C15.1869 6.06756 15.1145 5.89269 14.9855 5.76376C14.8566 5.63483 14.6817 5.5624 14.4994 5.5624H2.40948L5.81856 2.1524C5.88611 2.08946 5.94029 2.01356 5.97786 1.92922C6.01544 1.84489 6.03564 1.75385 6.03727 1.66154C6.0389 1.56923 6.02192 1.47754 5.98734 1.39193C5.95276 1.30633 5.9013 1.22856 5.83601 1.16328C5.77073 1.09799 5.69297 1.04653 5.60736 1.01195C5.52175 0.977373 5.43006 0.960392 5.33775 0.962021C5.24544 0.96365 5.1544 0.983855 5.07007 1.02143C4.98574 1.05901 4.90984 1.11318 4.8469 1.18073L0.263562 5.76406C0.167536 5.86021 0.102155 5.98266 0.0756774 6.11594C0.0492 6.24922 0.0628138 6.38736 0.114799 6.51291C0.166785 6.63846 0.25481 6.74579 0.367758 6.82134C0.480705 6.89689 0.613509 6.93728 0.749396 6.9374H14.4994C14.6817 6.9374 14.8566 6.86496 14.9855 6.73603C15.1145 6.6071 15.1869 6.43223 15.1869 6.2499Z"
+                                          fill="black" style="fill:black;fill-opacity:1;" />
+                                    </svg>
+                                 </button>
+                              </div>
+                              <div class="w-full flex flex-col gap-1">
+                                 <label class="text-grey text-[14px]" for="method">Recipient account</label>
+                                 <div class="relative">
+                                    <input
+                                       class="bg-transparent placeholder:text-[22px]   w-full h-[56px] rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 "
+                                       type="number" id="method" placeholder="" disabled>
+                                    <div class="absolute flex items-center gap-2 top-0 h-full left-[20px]">
+                                       <img src="../img/profile/flag/use.svg" alt="">
+                                       <span>USD balance</span>
+                                    </div>
+
+                                    <button
+                                       class="absolute top-[50%] translate-y-[-50%] right-[20px] border-[1px] border-grey h-8 px-4 rounded-full">
+                                       Change
+                                    </button>
                                  </div>
 
                               </div>
-                              <div class="flex flex-col gap-3">
-                                 <div class="text-white2 text-[14px] ml:text-[16px] flex justify-between">
-                                    <span>Quantity</span>
-                                    <span>0</span>
-                                 </div>
-                                 <div class="text-white2 text-[14px] ml:text-[16px] flex justify-between">
-                                    <span>Transfer fee</span>
-                                    <span class="uppercase">0 usd</span>
-                                 </div>
-                                 <div class="text-white2 text-[14px] ml:text-[16px] flex justify-between">
-                                    <span>Amount</span>
-                                    <span class="uppercase">0 usd</span>
-                                 </div>
-                                 <div class="text-white2 mt-2 text-[14px] ml:text-[16px] flex justify-between">
-                                    <span>Total</span>
-                                    <span class="uppercase text-[22px]">0,00 usd</span>
-                                 </div>
+                              <div class="w-full flex flex-col gap-1">
+                                 <label class="text-grey text-[14px]" for="amount">Converted to</label>
+                                 <div class="relative" x-data="{open:false}">
+                                    <input
+                                       class="bg-transparent placeholder:text-[22px] placeholder:text-grey     w-full h-[64px] md:h-[75px]  rounded-[20px] pl-5 pr-[140px] text-[22px] text-white2 "
+                                       type="number" id="amount" placeholder="0,00">
+                                    <div class="absolute top-[20px] md:top-[25px]  right-5 flex items-center gap-1"
+                                       @click="open = ! open">
 
+                                       <img src="../img/profile/flag/use.svg" alt="">
+                                       <span class="md:text-[22px]   leading-none">EN</span>
+                                       <span>
+                                          <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8.514 11.5865C8.46239 11.6406 8.40032 11.6837 8.33157 11.7132C8.26281 11.7426 8.1888 11.7578 8.114 11.7578C8.0392 11.7578 7.96519 11.7426 7.89643 11.7132C7.82768 11.6837 7.76561 11.6406 7.714 11.5865L2 5.87251L2.8 5.07251L8.114 10.3865L13.4287 5.07251L14.2287 5.87251L8.514 11.5865Z"
+                                                fill="white" style="fill:white;fill-opacity:1;" />
+                                          </svg>
+                                       </span>
+
+                                    </div>
+                                    <!-- select currencies -->
+                                    <div class="bg-white2 p-6 pr-0 rounded-[25px] w-full  absolute z-10 top-[85px]"
+                                       x-show="open" @click.outside="open = false">
+                                       <div class="h-[64px] w-full mb-4 relative pr-6">
+                                          <svg class="absolute left-[16px] top-[50%] translate-y-[-50%]" width="19"
+                                             height="18" viewBox="0 0 19 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M18.286 16.543L14.257 12.514C15.329 11.186 15.929 9.514 15.929 7.714C15.929 3.471 12.457 0 8.214 0C3.971 0 0.5 3.471 0.5 7.714C0.5 11.957 3.971 15.429 8.214 15.429C10.014 15.429 11.686 14.786 13.014 13.757L17.043 17.786L18.286 16.543ZM8.257 13.714C4.957 13.714 2.257 11.014 2.257 7.714C2.257 4.414 4.957 1.714 8.257 1.714C11.557 1.714 14.257 4.414 14.257 7.714C14.257 11.014 11.557 13.714 8.257 13.714Z"
+                                                fill="rgba(34, 34, 34, 0.1)"
+                                                style="fill: rgba(34, 34, 34, 0.1); fill-opacity: 1"></path>
+                                          </svg>
+                                          <input
+                                             class="h-full w-full rounded-[25px] border-[1px] border-bgdark bg-transparent pl-[45px] text-[14px] text-grey"
+                                             type="text" placeholder="Choose currency/country">
+                                       </div>
+                                       <div class="overflow-y-auto h-[300px] pl-2 scroll-block ">
+                                          <div class="text-black2 text-[14px] mb-6 mt-6">Popular currencies</div>
+                                          <ul class=" pr-6">
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">EUR</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Euro</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-main rounded-full flex justify-center items-center">
+                                                      <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
+
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">GPB</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Pound
+                                                         Sterling</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
+                                                      <svg class="hidden" width="18" height="19" viewBox="0 0 18 19"
+                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">INR</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Indian
+                                                         Rupee</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
+                                                      <svg class="hidden" width="18" height="19" viewBox="0 0 18 19"
+                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
+
+                                          </ul>
+                                          <div class="text-black2 text-[14px] mb-6 pr-6">All currencies</div>
+                                          <ul class=" pr-6">
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">EUR</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Euro</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-main rounded-full flex justify-center items-center">
+                                                      <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
+
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">GPB</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Pound
+                                                         Sterling</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
+                                                      <svg class="hidden" width="18" height="19" viewBox="0 0 18 19"
+                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
+                                             <li class="mb-6">
+                                                <div class="flex justify-between items-center hover:bg-white">
+                                                   <div class="flex gap-2 justify-start items-center">
+                                                      <span>
+                                                         <img class="w-5 h-5" src="../img/flag/Property 1=Andorra.svg"
+                                                            alt="">
+                                                      </span>
+                                                      <span class="text-[14px] ml:text-[16px] text-black2">INR</span>
+                                                      <span class="text-[12px] ml:text-[14px] text-grey">Indian
+                                                         Rupee</span>
+                                                   </div>
+                                                   <span
+                                                      class="w-8 h-8 bg-transparent rounded-full flex justify-center items-center">
+                                                      <svg class="hidden" width="18" height="19" viewBox="0 0 18 19"
+                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                         <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18 4.52081L7.02187 15.2632C6.62567 15.6509 5.98972 15.6423 5.6041 15.2441L0 9.45689L1.12967 8.33271L6.3334 13.7064L16.9006 3.36621L18 4.52081Z"
+                                                            fill="black" style="fill:black;fill-opacity:1;"></path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </li>
+
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="w-full text-grey text-[14px] text-right">Balance: 1,267.93 EUR</div>
                               </div>
-                              <div class="flex flex-row w-full gap-4 justify-between">
-                                 <button class="button is-desktop open-btn w-full ml:w-[calc(25%_-_8px)]">Issue
-                                    Invoice</button>
+
+
+
+                              <div class="text-white2 mt-2">
+                                 <div class="flex justify-start gap-1 text-[18px]">
+                                    <span>$1.000 USD </span>
+                                    <span>=</span>
+                                    <span class="uppercase">€ <span class="text-main">0.9289</span> EUR</span>
+                                 </div>
+                                 <div class="w-full text-grey text-[14px] mt-2 text-left">
+                                    Mid-market exchange rate at 10:51
+                                 </div>
                               </div>
-                              <div id="button-background" class="ml:hidden">
-                                 <span class="slide-text">Issue Invoice</span>
+                              <button class="button is-desktop is-gray open-btn">Convert</button>
+                              <div id="button-background" class="ml:hidden is-gray">
+                                 <span class="slide-text">Convert</span>
                                  <div id="slider">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                        xmlns="http://www.w3.org/2000/svg">
                                        <path
                                           d="M10.8463 7.60781C10.8948 7.65845 10.9335 7.71936 10.9599 7.78683C10.9864 7.8543 11 7.92693 11 8.00033C11 8.07372 10.9864 8.14636 10.9599 8.21383C10.9335 8.2813 10.8948 8.3422 10.8463 8.39285L5.71799 14L5 13.215L9.76927 8.00033L5 2.78504L5.71799 2L10.8463 7.60781Z"
-                                          fill="#090A08"
-                                          style="fill:#090A08;fill:color(display-p3 0.0353 0.0392 0.0314);fill-opacity:1;" />
+                                          fill="white" />
                                        <path opacity="0.5"
                                           d="M15.8975 7.73854C15.9299 7.7723 15.9557 7.8129 15.9733 7.85788C15.9909 7.90286 16 7.95129 16 8.00022C16 8.04915 15.9909 8.09757 15.9733 8.14255C15.9557 8.18753 15.9299 8.22813 15.8975 8.2619L12.4787 12L12 11.4766L15.1795 8.00022L12 4.52336L12.4787 4L15.8975 7.73854Z"
-                                          fill="#090A08"
-                                          style="fill:#090A08;fill:color(display-p3 0.0353 0.0392 0.0314);fill-opacity:1;" />
+                                          fill="white" />
                                        <path opacity="0.5"
                                           d="M3.89751 7.73854C3.9299 7.7723 3.95568 7.8129 3.9733 7.85788C3.99092 7.90286 4 7.95129 4 8.00022C4 8.04915 3.99092 8.09757 3.9733 8.14255C3.95568 8.18753 3.9299 8.22813 3.89751 8.2619L0.478662 12L-2.28768e-08 11.4766L3.17951 8.00022L-3.26814e-07 4.52336L0.478662 4L3.89751 7.73854Z"
-                                          fill="#090A08"
-                                          style="fill:#090A08;fill:color(display-p3 0.0353 0.0392 0.0314);fill-opacity:1;" />
+                                          fill="white" />
                                     </svg>
                                  </div>
                               </div>
+                           </form>
+                        </div>
+                     </div>
+                     <!-- transactions block -->
+                     <div
+                        class="relative order-last  ml:bg-white10 w-full ml:pb-0 h-full rounded-[25px] ml:rounded-[35px]">
+                        <div class="absolute hidden ml:block -z-10 h-full w-full backdrop-blur-[15px]"></div>
+                        <div class="py-6 hidden ml:block">
+                           <div class="flex items-start justify-between px-6">
+                              <a href="../profile/search.html" class="w-full text-[22px] text-white2">History</a>
+
                            </div>
-                        </form>
+                           <div
+                              class="pl-6 rounded-[25px] h-[600px] scroll-block mt-2 overflow-x-hidden overflow-y-scroll ">
+                              <ul class="w-full pr-6">
+                                 <li class="mb-2 trans-item ">
+                                    <div class="rotate-box rounded-[20px] bg-white10 p-4">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.5418 7.3L5.5418 13H7.1418L7.1418 7.3L13 7.3L13 5.7L7.1418 5.7L7.1418 0L5.5418 0L5.5418 5.7L0 5.7L0 7.3L5.5418 7.3Z"
+                                                      fill="#090A08" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="  text-[14px] text-white2">To your USD
+                                                   balance</span>
+                                                <span class="text-[12px] " style="color: gray;">Added ·
+                                                   03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="flex items-center text-right   text-[14px] text-white2">
+                                                <span class="mr-2 mt-1">25 822.80 UAH
+                                                </span>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 trans-item ">
+                                    <div class="rotate-box rounded-[20px] bg-white10 p-4">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.5418 7.3L5.5418 13H7.1418L7.1418 7.3L13 7.3L13 5.7L7.1418 5.7L7.1418 0L5.5418 0L5.5418 5.7L0 5.7L0 7.3L5.5418 7.3Z"
+                                                      fill="#090A08" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="  text-[14px] text-white2">To your USD
+                                                   balance</span>
+                                                <span class="text-[12px] " style="color: gray;">Added ·
+                                                   03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="flex items-center text-right   text-[14px] text-white2">
+                                                <span class="mr-2 mt-1">25 822.80 UAH
+                                                </span>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 trans-item ">
+                                    <div class="rotate-box rounded-[20px] bg-white10 p-4">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.5418 7.3L5.5418 13H7.1418L7.1418 7.3L13 7.3L13 5.7L7.1418 5.7L7.1418 0L5.5418 0L5.5418 5.7L0 5.7L0 7.3L5.5418 7.3Z"
+                                                      fill="#090A08" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="  text-[14px] text-white2">To your USD
+                                                   balance</span>
+                                                <span class="text-[12px] " style="color: gray;">Added ·
+                                                   03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="flex items-center text-right   text-[14px] text-white2">
+                                                <span class="mr-2 mt-1">25 822.80 UAH
+                                                </span>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 trans-item ">
+                                    <div class="rotate-box rounded-[20px] bg-white10 p-4">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.5418 7.3L5.5418 13H7.1418L7.1418 7.3L13 7.3L13 5.7L7.1418 5.7L7.1418 0L5.5418 0L5.5418 5.7L0 5.7L0 7.3L5.5418 7.3Z"
+                                                      fill="#090A08" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="  text-[14px] text-white2">To your USD
+                                                   balance</span>
+                                                <span class="text-[12px] " style="color: gray;">Added ·
+                                                   03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="flex items-center text-right   text-[14px] text-white2">
+                                                <span class="mr-2 mt-1">25 822.80 UAH
+                                                </span>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 trans-item ">
+                                    <div class="rotate-box rounded-[20px] bg-white10 p-4">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.5418 7.3L5.5418 13H7.1418L7.1418 7.3L13 7.3L13 5.7L7.1418 5.7L7.1418 0L5.5418 0L5.5418 5.7L0 5.7L0 7.3L5.5418 7.3Z"
+                                                      fill="#090A08" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="  text-[14px] text-white2">To your USD
+                                                   balance</span>
+                                                <span class="text-[12px] " style="color: gray;">Added ·
+                                                   03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="flex items-center text-right   text-[14px] text-white2">
+                                                <span class="mr-2 mt-1">25 822.80 UAH
+                                                </span>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 trans-item ">
+                                    <div class="rotate-box rounded-[20px] bg-white10 p-4">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.5418 7.3L5.5418 13H7.1418L7.1418 7.3L13 7.3L13 5.7L7.1418 5.7L7.1418 0L5.5418 0L5.5418 5.7L0 5.7L0 7.3L5.5418 7.3Z"
+                                                      fill="#090A08" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="  text-[14px] text-white2">To your USD
+                                                   balance</span>
+                                                <span class="text-[12px] " style="color: gray;">Added ·
+                                                   03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="flex items-center text-right   text-[14px] text-white2">
+                                                <span class="mr-2 mt-1">25 822.80 UAH
+                                                </span>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 trans-item ">
+                                    <div class="rotate-box rounded-[20px] bg-white10 p-4">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.5418 7.3L5.5418 13H7.1418L7.1418 7.3L13 7.3L13 5.7L7.1418 5.7L7.1418 0L5.5418 0L5.5418 5.7L0 5.7L0 7.3L5.5418 7.3Z"
+                                                      fill="#090A08" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="  text-[14px] text-white2">To your USD
+                                                   balance</span>
+                                                <span class="text-[12px] " style="color: gray;">Added ·
+                                                   03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="flex items-center text-right   text-[14px] text-white2">
+                                                <span class="mr-2 mt-1">25 822.80 UAH
+                                                </span>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 trans-item ">
+                                    <div class="rotate-box rounded-[20px] bg-white10 p-4">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.5418 7.3L5.5418 13H7.1418L7.1418 7.3L13 7.3L13 5.7L7.1418 5.7L7.1418 0L5.5418 0L5.5418 5.7L0 5.7L0 7.3L5.5418 7.3Z"
+                                                      fill="#090A08" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="  text-[14px] text-white2">To your USD
+                                                   balance</span>
+                                                <span class="text-[12px] " style="color: gray;">Added ·
+                                                   03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="flex items-center text-right   text-[14px] text-white2">
+                                                <span class="mr-2 mt-1">25 822.80 UAH
+                                                </span>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+
+
+
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="flex h-full w-full flex-col gap-4 rounded-[35px] p-4 ml:hidden">
+                           <div class="flex justify-between">
+                              <h3 class="leading-none  text-[22px] text-white2">History</h3>
+                              <a class="  cursor-pointer  text-[14px] leading-snug text-main"
+                                 href="./transactions.html">
+                                 See all
+                              </a>
+                           </div>
+                           <div class="lg:overflow-hidden">
+                              <ul class="">
+                                 <li class="mb-2 trans-item ">
+                                    <div class="rotate-box rounded-[15px] bg-white10 p-4">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.5418 7.3L5.5418 13H7.1418L7.1418 7.3L13 7.3L13 5.7L7.1418 5.7L7.1418 0L5.5418 0L5.5418 5.7L0 5.7L0 7.3L5.5418 7.3Z"
+                                                      fill="#090A08" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="  text-[14px] text-white2">To your USD
+                                                   balance</span>
+                                                <span class="text-[12px]" style="color: gray;">Added · 03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="flex items-center text-right   text-[14px] text-white2">
+                                                <span class="mr-2 mt-1">25 822.80 UAH </span>
+                                                <span>
+                                                   <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <g clip-path="url(#clip0_2103_11424)">
+                                                         <path
+                                                            d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                                            fill="#9B9B9B" style="
+                             fill: #9b9b9b;
+                             fill: color(display-p3 0.6078 0.6078 0.6078);
+                             fill-opacity: 1;
+                           " />
+                                                         <path
+                                                            d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                                            fill="#9B9B9B" style="
+                             fill: #9b9b9b;
+                             fill: color(display-p3 0.6078 0.6078 0.6078);
+                             fill-opacity: 1;
+                           " />
+                                                         <path
+                                                            d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                                            fill="#9B9B9B" style="
+                             fill: #9b9b9b;
+                             fill: color(display-p3 0.6078 0.6078 0.6078);
+                             fill-opacity: 1;
+                           " />
+                                                      </g>
+                                                      <defs>
+                                                         <clipPath id="clip0_2103_11424">
+                                                            <rect width="18" height="18" fill="white"
+                                                               style="fill: white; fill-opacity: 1"
+                                                               transform="translate(0 0.5)" />
+                                                         </clipPath>
+                                                      </defs>
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                             <span class="text-[12px] text-grey">662,89 USD</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 trans-item ">
+                                    <div class="rotate-box rounded-[15px] bg-white10 p-4">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.5418 7.3L5.5418 13H7.1418L7.1418 7.3L13 7.3L13 5.7L7.1418 5.7L7.1418 0L5.5418 0L5.5418 5.7L0 5.7L0 7.3L5.5418 7.3Z"
+                                                      fill="#090A08" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="  text-[14px] text-white2">To your USD
+                                                   balance</span>
+                                                <span class="text-[12px]" style="color: gray;">Added · 03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="flex items-center text-right   text-[14px] text-white2">
+                                                <span class="mr-2 mt-1">25 822.80 UAH </span>
+                                                <span>
+                                                   <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <g clip-path="url(#clip0_2103_11424)">
+                                                         <path
+                                                            d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                                            fill="#9B9B9B" style="
+                             fill: #9b9b9b;
+                             fill: color(display-p3 0.6078 0.6078 0.6078);
+                             fill-opacity: 1;
+                           " />
+                                                         <path
+                                                            d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                                            fill="#9B9B9B" style="
+                             fill: #9b9b9b;
+                             fill: color(display-p3 0.6078 0.6078 0.6078);
+                             fill-opacity: 1;
+                           " />
+                                                         <path
+                                                            d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                                            fill="#9B9B9B" style="
+                             fill: #9b9b9b;
+                             fill: color(display-p3 0.6078 0.6078 0.6078);
+                             fill-opacity: 1;
+                           " />
+                                                      </g>
+                                                      <defs>
+                                                         <clipPath id="clip0_2103_11424">
+                                                            <rect width="18" height="18" fill="white"
+                                                               style="fill: white; fill-opacity: 1"
+                                                               transform="translate(0 0.5)" />
+                                                         </clipPath>
+                                                      </defs>
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                             <span class="text-[12px] text-grey">662,89 USD</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="mb-2 trans-item ">
+                                    <div class="rotate-box rounded-[15px] bg-white10 p-4">
+                                       <div class="flex items-center justify-between">
+                                          <div class="flex items-center">
+                                             <span
+                                                class="mr-2 flex h-[44px] w-[44px] items-center justify-center rounded-full round">
+                                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                   xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M5.5418 7.3L5.5418 13H7.1418L7.1418 7.3L13 7.3L13 5.7L7.1418 5.7L7.1418 0L5.5418 0L5.5418 5.7L0 5.7L0 7.3L5.5418 7.3Z"
+                                                      fill="#090A08" />
+                                                </svg>
+                                             </span>
+                                             <div class="flex flex-col">
+                                                <span class="  text-[14px] text-white2">To your USD
+                                                   balance</span>
+                                                <span class="text-[12px]" style="color: gray;">Added · 03.04.2024</span>
+                                             </div>
+                                          </div>
+                                          <div class="flex flex-col items-end justify-start">
+                                             <span class="flex items-center text-right   text-[14px] text-white2">
+                                                <span class="mr-2 mt-1">25 822.80 UAH </span>
+                                                <span>
+                                                   <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <g clip-path="url(#clip0_2103_11424)">
+                                                         <path
+                                                            d="M9 0.5C7.21997 0.5 5.47991 1.02784 3.99987 2.01677C2.51983 3.00571 1.36628 4.41131 0.685088 6.05585C0.00389957 7.70038 -0.17433 9.50998 0.172937 11.2558C0.520204 13.0016 1.37737 14.6053 2.63604 15.864C3.89472 17.1226 5.49836 17.9798 7.24419 18.3271C8.99002 18.6743 10.7996 18.4961 12.4442 17.8149C14.0887 17.1337 15.4943 15.9802 16.4832 14.5001C17.4722 13.0201 18 11.28 18 9.5C17.9974 7.11384 17.0484 4.82616 15.3611 3.13889C13.6738 1.45162 11.3862 0.502581 9 0.5ZM9 17C7.51664 17 6.0666 16.5601 4.83323 15.736C3.59986 14.9119 2.63856 13.7406 2.07091 12.3701C1.50325 10.9997 1.35473 9.49168 1.64411 8.03682C1.9335 6.58197 2.64781 5.24559 3.6967 4.1967C4.7456 3.14781 6.08197 2.4335 7.53683 2.14411C8.99168 1.85472 10.4997 2.00325 11.8701 2.5709C13.2406 3.13856 14.4119 4.09985 15.236 5.33322C16.0601 6.56659 16.5 8.01664 16.5 9.5C16.4978 11.4885 15.7069 13.3948 14.3009 14.8009C12.8948 16.2069 10.9885 16.9978 9 17Z"
+                                                            fill="#9B9B9B" style="
+                             fill: #9b9b9b;
+                             fill: color(display-p3 0.6078 0.6078 0.6078);
+                             fill-opacity: 1;
+                           " />
+                                                         <path
+                                                            d="M9 8H8.25C8.05109 8 7.86032 8.07902 7.71967 8.21967C7.57902 8.36032 7.5 8.55109 7.5 8.75C7.5 8.94891 7.57902 9.13968 7.71967 9.28033C7.86032 9.42098 8.05109 9.5 8.25 9.5H9V14C9 14.1989 9.07902 14.3897 9.21967 14.5303C9.36032 14.671 9.55109 14.75 9.75 14.75C9.94891 14.75 10.1397 14.671 10.2803 14.5303C10.421 14.3897 10.5 14.1989 10.5 14V9.5C10.5 9.10218 10.342 8.72064 10.0607 8.43934C9.77936 8.15804 9.39782 8 9 8Z"
+                                                            fill="#9B9B9B" style="
+                             fill: #9b9b9b;
+                             fill: color(display-p3 0.6078 0.6078 0.6078);
+                             fill-opacity: 1;
+                           " />
+                                                         <path
+                                                            d="M9 6.5C9.62132 6.5 10.125 5.99632 10.125 5.375C10.125 4.75368 9.62132 4.25 9 4.25C8.37868 4.25 7.875 4.75368 7.875 5.375C7.875 5.99632 8.37868 6.5 9 6.5Z"
+                                                            fill="#9B9B9B" style="
+                             fill: #9b9b9b;
+                             fill: color(display-p3 0.6078 0.6078 0.6078);
+                             fill-opacity: 1;
+                           " />
+                                                      </g>
+                                                      <defs>
+                                                         <clipPath id="clip0_2103_11424">
+                                                            <rect width="18" height="18" fill="white"
+                                                               style="fill: white; fill-opacity: 1"
+                                                               transform="translate(0 0.5)" />
+                                                         </clipPath>
+                                                      </defs>
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                             <span class="text-[12px] text-grey">662,89 USD</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+
+                              </ul>
+                           </div>
+                        </div>
                      </div>
                   </div>
-
                </div>
             </div>
          </div>
       </div>
    </div>
-
 
 
    <!-- footer-mobile -->
@@ -2146,185 +2549,81 @@
    </div>
 
    <!-- modal -->
-   <div class=" fixed  top-0 bottom-0 left-0 right-0 z-10 modals  hidden">
+   <div class=" fixed top-0 bottom-0 left-0 right-0 z-10 modals  hidden">
       <div
          class="fixed   top-0 bottom-0 left-0 right-0 z-10 bg-[rgba(68,68,68,0.9)] sm:bg-black/[0.9] backdrop-blur-[5px] ">
       </div>
 
       <div data-swipe-threshold="20" data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"
-         class="absolute p-4 modal pt-2 z-20 close-modal sm:bottom-auto sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]  w-full sm:w-[540px] rounded-t-[35px] sm:rounded-[35px] sm:p-6 bg-white2 sm:bg-white2"
+         class="absolute p-4 modal pt-2 z-20 bottom-2 modal close-modal sm:bottom-auto sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]  w-full sm:w-[540px] rounded-[25px] sm:rounded-[35px] sm:p-6 bg-white2 sm:bg-white2"
          x-data="{item: 1}">
-         <div class="sm:hidden w-[50px] top-3 h-1 bg-[#000]/[0.5] rounded-full mb-4 mx-auto "></div>
+         <div class="sm:hidden w-[50px] h-1 bg-white10 mb-4 mx-auto "></div>
 
-         <div class="flex justify-between items-center text-[22px] mb-[22px] text-black2">
-            <span x-show="item === 1">Confirm the data</span>
-            <span x-show="item === 2">Invoice for Payment</span>
-            <span class="hidden sm:inline-block close-modal-click">
-               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                     d="M7.17438 8.19878L12.3015 13.3259L13.3622 12.2652L8.23504 7.13812L13.5003 1.87287L12.4396 0.812212L7.17438 6.07746L2.04846 0.951536L0.987804 2.0122L6.11372 7.13812L1.12592 12.1259L2.18658 13.1866L7.17438 8.19878Z"
-                     fill="black" />
-               </svg>
-            </span>
-         </div>
 
-         <div class="text-black2">
-            <!-- item 1 -->
-            <div class="flex flex-col gap-4" x-show="item === 1">
-               <div class="flex flex-col gap-1 py-4 sm:border-none border-t-[1px] border-[#000]/[0.08]">
-                  <div class="">
-                     <span class="text-grey">To:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Payer's phone number:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Payer's Email:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Valid Until:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Letter Language:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-               </div>
-               <div class="flex flex-col gap-1 py-4 border-y-[1px] border-[#000]/[0.08]">
-                  <div class="mb-4">Product Name:</div>
-                  <div class="">
-                     <span class="text-grey">Product Name:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Description:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Quantity:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Amount:</span>
-                     <span class="uppercase">100,00 USD</span>
-                  </div>
-               </div>
-               <div class="flex flex-col gap-3 text-black2">
-                  <div class=" text-[14px] ml:text-[16px] flex justify-between">
-                     <span>Quantity</span>
-                     <span>0</span>
-                  </div>
-                  <div class=" text-[14px] ml:text-[16px] flex justify-between">
-                     <span>Transfer fee</span>
-                     <span class="uppercase">0 usd</span>
-                  </div>
-                  <div class=" text-[14px] ml:text-[16px] flex justify-between">
-                     <span>Amount</span>
-                     <span class="uppercase">0 usd</span>
-                  </div>
-                  <div class=" mt-2 text-[14px] ml:text-[16px] flex justify-between">
-                     <span>Total</span>
-                     <span class="uppercase text-[22px]">100,00 usd</span>
-                  </div>
+         <span class="hidden absolute top-6 right-6 sm:inline-block close-modal-click">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7.17438 8.19878L12.3015 13.3259L13.3622 12.2652L8.23504 7.13812L13.5003 1.87287L12.4396 0.812212L7.17438 6.07746L2.04846 0.951536L0.987804 2.0122L6.11372 7.13812L1.12592 12.1259L2.18658 13.1866L7.17438 8.19878Z"
+                  fill="gray" />
+            </svg>
+         </span>
 
-               </div>
-               <div class="flex flex-row w-full gap-4 justify-between">
-                  <button class="button w-full " @click="item = 2">Confirm</button>
+         <div class="flex flex-col items-center max-w-[530px] pt-[40px]  relative sm:py-[40px]">
+            <img src="../img/convert/icon.png" alt=""
+               class="absolute sm:hidden top-[-80px] left-[50%] translate-x-[-50%]">
+            <div class="relative w-[90px] h-[60px]">
+               <span
+                  class="absolute top-0  left-0 w-[54px] h-[54px] border-white2 border-[5px] rounded-full flex items-center justify-center">
+                  <img src="../img/flag/Property 1=Croatia.svg" alt="">
+               </span>
+               <span
+                  class="absolute top-0 right-0 w-[54px] h-[54px] border-white2 border-[5px] rounded-full flex items-center justify-center">
+                  <img src="../img/flag/Property 1=Iceland.svg" alt="">
+               </span>
+            </div>
+            <div class="text-[22px] text-black2 text-center">
+               Successfully converted <br class="sm:hidden"> 505 USD
+            </div>
+            <span class="text-grey">USD/EUR=469.47</span>
+
+            <button class="button is-desktop is-yellow open-btn mt-8" style="width: 110px;">Done</button>
+            <div id="button-background" class="ml:hidden is-gray mt-8" style="max-width: 400px;">
+               <span class="slide-text">Done</span>
+               <div id="slider">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M10.8463 7.60781C10.8948 7.65845 10.9335 7.71936 10.9599 7.78683C10.9864 7.8543 11 7.92693 11 8.00033C11 8.07372 10.9864 8.14636 10.9599 8.21383C10.9335 8.2813 10.8948 8.3422 10.8463 8.39285L5.71799 14L5 13.215L9.76927 8.00033L5 2.78504L5.71799 2L10.8463 7.60781Z"
+                        fill="white" />
+                     <path opacity="0.5"
+                        d="M15.8975 7.73854C15.9299 7.7723 15.9557 7.8129 15.9733 7.85788C15.9909 7.90286 16 7.95129 16 8.00022C16 8.04915 15.9909 8.09757 15.9733 8.14255C15.9557 8.18753 15.9299 8.22813 15.8975 8.2619L12.4787 12L12 11.4766L15.1795 8.00022L12 4.52336L12.4787 4L15.8975 7.73854Z"
+                        fill="white" />
+                     <path opacity="0.5"
+                        d="M3.89751 7.73854C3.9299 7.7723 3.95568 7.8129 3.9733 7.85788C3.99092 7.90286 4 7.95129 4 8.00022C4 8.04915 3.99092 8.09757 3.9733 8.14255C3.95568 8.18753 3.9299 8.22813 3.89751 8.2619L0.478662 12L-2.28768e-08 11.4766L3.17951 8.00022L-3.26814e-07 4.52336L0.478662 4L3.89751 7.73854Z"
+                        fill="white" />
+                  </svg>
                </div>
             </div>
-            <!-- item 1 -->
-            <div class="flex flex-col gap-4" x-show="item === 2">
-               <div class="flex flex-col gap-1 py-4 sm:border-none border-t-[1px] border-[#000]/[0.08]">
-                  <div class="">
-                     <span class="text-grey">To:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Payer's phone number:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Payer's Email:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Valid Until:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Letter Language:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-               </div>
-               <div class="flex flex-col gap-1 py-4 border-y-[1px] border-[#000]/[0.08]">
-                  <div class="mb-4">Product Name:</div>
-                  <div class="">
-                     <span class="text-grey">Product Name:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Description:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Quantity:</span>
-                     <span>Jhon Smit</span>
-                  </div>
-                  <div class="">
-                     <span class="text-grey">Amount:</span>
-                     <span class="uppercase">100,00 USD</span>
-                  </div>
-               </div>
-               <div class="flex flex-col gap-3 text-black2">
-                  <div class=" text-[14px] ml:text-[16px] flex justify-between">
-                     <span>Quantity</span>
-                     <span>0</span>
-                  </div>
-                  <div class=" text-[14px] ml:text-[16px] flex justify-between">
-                     <span>Transfer fee</span>
-                     <span class="uppercase">0 usd</span>
-                  </div>
-                  <div class=" text-[14px] ml:text-[16px] flex justify-between">
-                     <span>Amount</span>
-                     <span class="uppercase">0 usd</span>
-                  </div>
-                  <div class=" mt-2 text-[14px] ml:text-[16px] flex justify-between">
-                     <span>Total</span>
-                     <span class="uppercase text-[22px]">100,00 usd</span>
-                  </div>
-
-               </div>
-               <div class="flex flex-row w-full gap-4 justify-between">
-                  <button class="button  border-[1px] border-black2 w-full "
-                     style="background-color: transparent;">Share</button>
-               </div>
-            </div>
-
-
          </div>
-
 
       </div>
    </div>
+
+   <!-- cursor -->
+   <div class=" cursor2">
+   </div>
+   <script src="../cursor.js"></script>
+   <!-- lang_and_modal -->
    <script src="../swiped-events.min.js"></script>
    <script src="../modal.js"></script>
-   <!-- cursor -->
-   <div class="cursor2"></div>
-   <script src="../cursor.js"></script>
-   <script src="../swiper-btn.js"></script>
-
-   </script>
    <script>
-      function tabs() {
-         return {
-            item: 1,
-
-         }
+      function toggleShow() {
+         const element = document.querySelector('.absolute');
+         element.classList.toggle('hidden');
       }
    </script>
+   <script src="../rotate.js">   </script>
+
+   <script src="../swiper-btn.js"></script>
 
 </body>
 

@@ -17,6 +17,7 @@
 @import './components/elements/input_select.css';
 @import './components/animate/animated.css';
 @import './components/animate/slider.css';
+@import './components/animate/swiper-btn.css';
 
 @font-face {
   font-family: 'SF-Pro-Bo';

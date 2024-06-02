@@ -52,7 +52,7 @@
 }
 .button.is-yellow {
   @apply inline-flex w-full cursor-pointer select-none items-center justify-center bg-main py-3 transition-colors duration-300 leading-none text-black h-[54px]
-     hover:bg-[#272727] hover:text-white;
+     hover:bg-[#b7ff4a] hover:text-white;
 }
 .button.is-white10 {
   @apply inline-flex w-full cursor-pointer select-none items-center justify-center bg-white10 py-3 transition-colors duration-300 leading-none text-white h-[54px]
@@ -65,4 +65,8 @@
 .button.is-borderGrey {
   @apply inline-flex w-full cursor-pointer select-none items-center justify-center bg-transparent border-[1px]  transition-colors duration-300  border-grey py-3  leading-none text-grey h-[54px]
      hover:bg-[#272727] ;
+}
+
+.button.is-desktop {
+  @apply hidden ml:block
 }
