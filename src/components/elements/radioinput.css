@@ -21,6 +21,10 @@
    background-color: transparent; /* измените цвет при выборе */
    border: 1px solid #d7ff00;
  }
+ .custom-radio.custom-black input:checked + label {
+   background-color: transparent; /* измените цвет при выборе */
+   border: 1px solid #101010;
+ }
  
  .custom-radio label:after {
    content: '';
@@ -28,6 +32,19 @@
    width: 10px;
    height: 10px;
    background-color: #d7ff00;
+   border-radius: 50%;
+   position: absolute;
+   top: 6px;
+   left: 6px;
+   opacity: 0;
+   transition: opacity 0.2s;
+ }
+ .custom-radio.custom-black label:after {
+   content: '';
+   display: block;
+   width: 10px;
+   height: 10px;
+   background-color: #595959;
    border-radius: 50%;
    position: absolute;
    top: 6px;

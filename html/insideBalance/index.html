@@ -2315,14 +2315,14 @@
       </div>
 
       <div data-swipe-threshold="20" data-swipe-unit="px" data-swipe-timeout="500" data-swipe-ignore="false"
-         class="absolute py-4 modal pt-2 z-20 bottom-2 modal close-modal sm:bottom-auto sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]  w-full sm:w-[540px] rounded-[25px] sm:rounded-[35px] sm:p-6 bg-white2 sm:bg-white2"
+         class="absolute py-4 modal pt-2 z-20 w-full sm:w-[540px] bottom-2 modal close-modal sm:bottom-auto sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]  rounded-[25px] sm:rounded-[35px] sm:p-6 bg-white2"
          x-data="{item: 1}">
-         <div class="sm:hidden w-[50px] h-1 bg-white10 mb-4 mx-auto "></div>
+         <div class="absolute top-3 sm:hidden w-[50px] left-[50%] translate-x-[-50%] h-1 rounded-full bg-grey "></div>
 
 
 
 
-         <div class="flex flex-col items-center max-w-[530px] pt-[40px] px-4 relative sm:py-[40px]">
+         <div class="flex flex-col items-center px-4 ml:p-0  relative py-[20px]">
             <div class="flex justify-between items-center w-full">
                <span class="text-[18px] ml:text-[22px] text-black">We are closing the balance</span>
                <span class="hidden  sm:inline-block close-modal-click">
@@ -2335,29 +2335,40 @@
             </div>
 
          </div>
-         <div
-            class=" flex justify-start items-center w-full rounded-[20px] px-5 border-[1px] mt-1 border-bgdark py-3 bg-transparent">
-            <input id="file" class="field-file__input" type="file" name="uploadFile">
-            <label class="field-file__label" for="file">
-               <div class="flex items-center cursor-pointer  gap-2">
-                  <i
-                     class="field-file__icon flex items-center justify-center w-11 h-11 ml:w-[54px] ml:h-[54px] rounded-full  bg-bgdark">
-                     <img class="rotate-180 fill-black" src="../img/verificate/Upload_black.svg" alt="">
-                  </i>
+         <div class="px-4 ml:p-0">
+            <div
+               class=" flex justify-start items-center p-4 w-full rounded-[20px]  border-[1px] mt-1 border-bgdark py-3 bg-transparent">
+               <input id="file" class="field-file__input" type="file" name="uploadFile">
+               <label class="field-file__label" for="file">
+                  <div class="flex items-center cursor-pointer  gap-2">
+                     <i
+                        class="field-file__icon flex items-center justify-center w-11 h-11 ml:w-[54px] ml:h-[54px] rounded-full  bg-bgdark">
+                        <img class="rotate-180 fill-black" src="../img/verificate/Upload_black.svg" alt="">
+                     </i>
 
-                  <div class="field-file__label--text flex flex-col">
-                     <span class="  text-black text-[16px]">
-                        Transfer the remaining funds
-                     </span>
-                     <span class="field-file__label--text  text-grey text-[14px] ">
-                        Convert, transfer, or withdraw any remaining funds.
-                     </span>
+                     <div class="field-file__label--text flex flex-col">
+                        <span class="  text-black text-[16px]">
+                           Transfer the remaining funds
+                        </span>
+                        <span class="field-file__label--text  text-grey text-[14px] ">
+                           Convert, transfer, or withdraw any <br> remaining funds.
+                        </span>
+                     </div>
+
                   </div>
-
-               </div>
-            </label>
+               </label>
+            </div>
          </div>
-
+         <div class="px-4 ml:px-6">
+            <button
+               class="bg-transparent border-[1px] border-bgdark text-grey w-full mt-4 h-[56px] rounded-full hover:bg-grey hover:text-black  transition-colors duration-300">
+               Close the balance
+            </button>
+            <button
+               class="bg-transparent border-[1px] border-black text-black w-full mt-4 h-[56px] rounded-full hover:bg-grey transition-colors duration-300">
+               Cancel
+            </button>
+         </div>
       </div>
    </div>
 

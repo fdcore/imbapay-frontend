@@ -70,3 +70,7 @@
 .button.is-desktop {
   @apply hidden ml:block
 }
+
+.button.is-width {
+  width: fit-content;
+}
