@@ -1414,7 +1414,7 @@
 
         <!-- content  -->
         <div
-          class="grid h-auto w-full grid-cols-1 items-start gap-[22px] px-3 sm:p-0 md:gap-[10px] lg:grid-rows-[auto_160px_auto] lg:grid-cols-2">
+          class="grid h-auto w-full grid-cols-1 items-start gap-[22px]  sm:p-0 md:gap-[10px] lg:grid-rows-[auto_160px_auto] lg:grid-cols-2">
           <div
             class="ml:border-[1px]  relative p-6 h-[300px] ml:h-auto border-white10 rounded-[35px] flex justify-center ml:justify-between w-full lg:col-span-2 lg:row-span-1 items-center">
             <img class="absolute ml:hidden top-0 left-[50%] translate-x-[-50%] w-full -z-10 h-[280px]"
@@ -1490,7 +1490,7 @@
             </div>
           </div>
           <!-- cards slider -->
-          <div class="widthcardBlock hidden lg:row-span-1 h-full w-full ml:flex lg:col-span-2">
+          <div class="widthcardBlock hidden px-4 sm:p-0 lg:row-span-1 h-full w-full ml:flex lg:col-span-2">
             <!-- card 0-->
             <div class="card  h-full hover:z-50">
               <div style="transition: 0.2s linear;"
@@ -2363,7 +2363,7 @@
                 class="absolute right-[50px] top-[-30%] h-[300px] w-[300px] rounded-[50%_/_0_0_100%_100%] bg-white/[0.06] blur-[50px]">
               </div>
               <!-- header grafic -->
-              <div class="rounded-t-[35px] flex gap-2 items-center bg-white10 px-6 pb-8 pt-6">
+              <div class="rounded-t-[35px] flex gap-2 items-center bg-white10 px-4  pb-8 pt-6">
                 <div class="relative w-[80px] h-[70px]">
                   <span
                     class="absolute top-0 left-0 w-[50px] h-[50px] rounded-full bg-[rgb(25,25,25)] flex items-center justify-center">
@@ -2377,21 +2377,52 @@
                 <div class=" w-full">
                   <div class="flex justify-between items-center">
                     <h3 class="w-full  text-[22px] text-white2">Exchange rate</h3>
-                    <button class="rounded-full p-4 border-[1px] border-white10 flex items-center gap-2">
-                      EUR/USD
-                      <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_793_24534)">
-                          <path d="M1.83097 0.765624L6.23775 5.23342L10.6445 0.765625" stroke="#9B9B9B"
-                            style="stroke:#9B9B9B;stroke:color(display-p3 0.6078 0.6078 0.6078);stroke-opacity:1;"
-                            stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round" />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_793_24534">
-                            <rect width="11.5254" height="6" fill="white" style="fill:white;fill-opacity:1;"
-                              transform="translate(12 6) rotate(-180)" />
-                          </clipPath>
-                        </defs>
-                      </svg></button>
+                    <div class="relative" x-data="{cur: false}">
+                      <button @click="cur = true"
+                        class="rounded-full p-4 border-[1px] text-[12px] ml:text-[16px] border-white10 ml:w-[160px] flex items-center justify-center gap-4">
+                        EUR/USD
+                        <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_793_24534)">
+                            <path d="M1.83097 0.765624L6.23775 5.23342L10.6445 0.765625" stroke="#9B9B9B"
+                              style="stroke:#9B9B9B;stroke:color(display-p3 0.6078 0.6078 0.6078);stroke-opacity:1;"
+                              stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_793_24534">
+                              <rect width="11.5254" height="6" fill="white" style="fill:white;fill-opacity:1;"
+                                transform="translate(12 6) rotate(-180)" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                      <div x-show="cur" @click.outside="cur = false"
+                        class="absolute top-[65px] right-0 w-[160px] z-[99999] bg-[#2c2c2c] rounded-[25px] border-[1px] border-main py-6">
+                        <span class="absolute top-6 right-6">
+                          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M7.31478 0.942785C7.26317 0.88865 7.20111 0.845556 7.13235 0.816111C7.06359 0.786667 6.98958 0.771485 6.91478 0.771485C6.83999 0.771485 6.76597 0.786667 6.69721 0.816111C6.62846 0.845556 6.56639 0.88865 6.51478 0.942784L0.800781 6.65678L1.60078 7.45678L6.91478 2.14278L12.2294 7.45679L13.0294 6.65678L7.31478 0.942785Z"
+                              fill="#D7FF00"
+                              style="fill:#D7FF00;fill:color(display-p3 0.8431 1.0000 0.0000);fill-opacity:1;" />
+                          </svg>
+                        </span>
+                        <div class="overflow-y-scroll h-[120px] scroll-block w-full">
+                          <ul class=" text-[16px] ml:text-[18px] px-6">
+                            <li class="mb-1">EUR/USD</li>
+                            <li class="mb-1">EUR/USD</li>
+                            <li class="mb-1">EUR/USD</li>
+                            <li class="mb-1">EUR/USD</li>
+                            <li class="mb-1">EUR/USD</li>
+                            <li class="mb-1">EUR/USD</li>
+                            <li class="mb-1">EUR/USD</li>
+                            <li class="mb-1">EUR/USD</li>
+                            <li class="mb-1">EUR/USD</li>
+                            <li class="mb-1">EUR/USD</li>
+                            <li class="mb-1">EUR/USD</li>
+                            <li class="mb-1">EUR/USD</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="mt-1 flex items-center gap-4">
                     <div class="flex items-end gap-2">
@@ -2415,7 +2446,7 @@
                 </div>
               </div>
               <!-- grafic -->
-              <div class="relative flex h-[400px] w-full items-end rounded-b-[35px] bg-white10">
+              <div class="relative flex h-[400px] px-6 w-full items-end rounded-b-[35px] bg-white10">
                 <canvas class="absolute bottom-0 rounded-b-[35px]" id="myChart"></canvas>
               </div>
             </div>
